@@ -1,0 +1,125 @@
+@import "tailwindcss";
+
+/* ===========================
+   Associate Sans Font Faces
+   =========================== */
+
+@font-face {
+  font-family: "AssociateSans";
+  src: url("/fonts/AssociateSansExtralight.otf") format("opentype");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "AssociateSans";
+  src: url("/fonts/AssociateSansLight.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "AssociateSans";
+  src: url("/fonts/AssociateSansRegular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "AssociateSans";
+  src: url("/fonts/AssociateSansMedium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "AssociateSans";
+  src: url("/fonts/AssociateSansBold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Italics */
+
+@font-face {
+  font-family: "AssociateSans";
+  src: url("/fonts/AssociateSansRegularItalic.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "AssociateSans";
+  src: url("/fonts/AssociateSansBoldItalic.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* ===========================
+   CSS Variables & Theme
+   =========================== */
+
+:root {
+  --font-primary: "AssociateSans", system-ui, Arial, sans-serif;
+}
+
+@theme {
+  /* Primary Colors */
+  --color-primary: #23283C;
+  --color-secondary: #F7EFE3;
+  --color-tertinary: #FFFDF8;
+  
+  /* Font Family */
+  --font-sans: "AssociateSans", system-ui, Arial, sans-serif;
+}
+
+/* ===========================
+   Global Reset & Base Styles
+   =========================== */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+
+  /* Hide scrollbar (Firefox / IE / Edge) */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+body {
+  font-family: "AssociateSans", system-ui, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Ensure all elements inherit the font */
+*, *::before, *::after {
+  font-family: inherit;
+}
+
+/* Hide scrollbar (Chrome / Safari / Opera) */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Selection */
+::selection {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+}
