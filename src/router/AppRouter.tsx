@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "../pages/HomePage";
 import ServicesPage from "../pages/ServicesPage";
+import ServiceDetailPage from "../pages/ServiceDetailPage";
 import TeamPage from "../pages/TeamPage";
 import TeamMemberDetailPage from "../pages/TeamMemberDetailPage";
 import AboutPage from "../pages/AboutPage";
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
   {
     path: "/services",
     element: <ServicesPage />,
+  },
+  {
+    path: "/services/:serviceSlug",
+    element: <ServiceDetailPage />,
   },
   {
     path: "/team",

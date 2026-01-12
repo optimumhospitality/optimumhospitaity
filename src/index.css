@@ -75,7 +75,7 @@
   --color-primary: #23283C;
   --color-secondary: #F7EFE3;
   --color-tertinary: #FFFDF8;
-  
+
   /* Font Family */
   --font-sans: "AssociateSans", system-ui, Arial, sans-serif;
 }
@@ -90,7 +90,7 @@
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
+  overflow-x: clip;
 
   /* Hide scrollbar (Firefox / IE / Edge) */
   -ms-overflow-style: none;
@@ -105,11 +105,13 @@ body {
   color: var(--color-secondary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 /* Ensure all elements inherit the font */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   font-family: inherit;
 }
 
