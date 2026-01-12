@@ -4,7 +4,7 @@ export default function HomeStatsSection() {
   return (
     <section>
       <StatsSection />
-      <div className="bg-tertinary p-5"></div>
+      <div className="hidden md:block bg-tertinary p-5"></div>
     </section>
   );
 }

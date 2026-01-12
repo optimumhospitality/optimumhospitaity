@@ -23,7 +23,7 @@ const principles = [
 
 export default function WhatWeDo() {
   return (
-    <section className="pb-[100px] bg-tertinary">
+    <section className="pt-[100px] pb-[100px] bg-tertinary">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-[100px]">
         {/* Section Header */}
         <div className="text-center mb-12 lg:mb-16">
