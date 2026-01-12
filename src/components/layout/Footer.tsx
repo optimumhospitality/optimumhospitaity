@@ -72,7 +72,7 @@ export default function Footer() {
                   placeholder="Enter your email"
                   className="px-4 py-3 bg-primary text-white placeholder:text-[#CACACA] text-[16px] rounded-l-[12px] font-[200] focus:outline-none focus:border-white/40 flex-1 sm:flex-none sm:w-[250px] md:w-[300px] min-w-0"
                 />
-                <button className="px-4 sm:px-6 py-3 bg-[#F7EFE3] text-primary text-[16px] font-normal rounded-[12px] hover:bg-white/90 transition-colors whitespace-nowrap lg:w-[157px]">
+                <button className="px-4 sm:px-6 py-3 bg-[#F7EFE3] text-primary text-[16px]  border-secondary font-normal rounded-[11px] hover:bg-white/90 transition-colors whitespace-nowrap lg:w-[157px]">
                   SEND
                 </button>
               </div>

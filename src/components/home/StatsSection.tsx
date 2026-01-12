@@ -43,17 +43,17 @@ export default function StatsSection() {
             ))}
           </div>
 
-          {/* Mobile/Tablet: Single column with flex-row layout */}
+          {/* Mobile/Tablet: Single column with flex-col centered layout */}
           <div className="lg:hidden divide-y divide-white/20 py-4">
             {stats.map((stat) => (
               <div
                 key={stat.value}
-                className="flex flex-row items-center justify-between py-4 px-2"
+                className="flex flex-col items-center justify-center text-center py-6 px-2"
               >
-                <div className="text-2xl sm:text-3xl md:text-4xl font-normal text-white">
+                <div className="text-3xl sm:text-4xl md:text-5xl font-normal text-white mb-2">
                   {stat.value}
                 </div>
-                <div className="text-secondary/80 text-xs sm:text-sm whitespace-pre-line leading-relaxed text-right">
+                <div className="text-secondary/80 text-sm sm:text-base whitespace-pre-line leading-relaxed">
                   {stat.label}
                 </div>
               </div>

@@ -19,7 +19,7 @@ export default function HeroSection() {
       <div className="relative z-10 w-full max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-[40px]">
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 sm:gap-8 lg:gap-12">
           {/* Left Content */}
-          <div className="w-full md:w-[950px] h-auto md:h-[306px] pl-4 sm:pl-6 md:pl-8 lg:pl-[40px] pb-8 sm:pb-10 md:pb-12 lg:pb-[60px]">
+          <div className="w-full md:w-[950px] h-auto md:h-[306px] pl-0 sm:pl-0 md:pl-0 lg:pl-0 pb-8 sm:pb-10 md:pb-12 lg:pb-0">
             {/* Main Headline */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[64px] font-normal text-white leading-tight tracking-[-0.02em] mb-4 sm:mb-5 md:mb-6">
               <span className="block">We Manage Your Hotel.</span>

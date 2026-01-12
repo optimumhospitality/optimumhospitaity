@@ -31,10 +31,10 @@ export default function HeroSection() {
 
             {/* Right Button */}
             <div className="flex-shrink-0">
-              <button className="inline-flex items-center text-[20px] gap-2 px-5 sm:px-6 py-3 bg-primary text-white text-sm sm:text-base font-normal rounded-lg hover:bg-primary/90 transition-colors">
+              <button className="inline-flex items-center text-[20px] gap-2 px-5 sm:px-6 py-3 bg-primary text-white text-sm sm:text-base font-normal rounded-lg hover:bg-primary/90 transition-all duration-300 group">
                 Reserve Your Spot
                 <svg
-                  className="w-4 h-4"
+                  className="w-4 h-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
