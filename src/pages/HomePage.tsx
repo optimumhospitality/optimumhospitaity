@@ -16,8 +16,8 @@ export default function HomePage() {
       <WhatWeDo />
       <StatsSection />
       <TestimonialsSection />
-      <HotelCaseStudy />
       <CoreHotelManagement />
+      <HotelCaseStudy />
       <AboutUs />
       <Footer />
     </main>

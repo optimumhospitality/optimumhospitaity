@@ -1,14 +1,20 @@
 import { useState } from "react";
-import { MoveUp, Lightbulb, DollarSign } from "lucide-react";
-import type { LucideIcon } from "lucide-react";
+// import { MoveUp, Lightbulb, DollarSign } from "lucide-react";
+// import type { LucideIcon } from "lucide-react";
 import roomImage1 from "../../assets/image/home-page/hotel-caseStudies/roomImage1.webp";
 import roomImage2 from "../../assets/image/home-page/hotel-caseStudies/roomImage2.webp";
-import gopImageHomeSection from "../../assets/image/home-page/hotel-caseStudies/gopImageHomeSection.webp";
+// import gopImageHomeSection from "../../assets/image/home-page/hotel-caseStudies/gopImageHomeSection.webp";
+
+import partnerLogo1 from "../../assets/image/home-page/coreHotelManagement/parter-logo1.webp";
+import partnerLogo2 from "../../assets/image/home-page/coreHotelManagement/parter-logo2.webp";
+import partnerLogo3 from "../../assets/image/home-page/coreHotelManagement/parter-logo3.webp";
+import partnerLogo4 from "../../assets/image/home-page/coreHotelManagement/parter-logo4.webp";
+
 
 interface CaseStudy {
   id: number;
   hotelName: string;
-  title: string;
+  title: React.ReactNode;
   achievement: string;
   image: string;
 }
@@ -16,24 +22,31 @@ interface CaseStudy {
 const caseStudies: CaseStudy[] = [
   {
     id: 1,
-    hotelName: "Radisson Mui Ne",
-    title: "30% Cost Reduction by Implementing CRM",
+    hotelName: "Wyndham Grand Hotel Phu Quoc",
+    title: <>1,400 key 5-star Operations audit, PIP (property improvement plan), F&B outlet curation</>,
     achievement: "Achieved within 18 months",
     image: roomImage1,
   },
   {
     id: 2,
-    hotelName: "Taj Hotel",
-    title: "+32% GOP Growth by cutting edge technology",
+    hotelName: "Caravelle Hotel Saigon",
+    title: <>335 key 5-star <br/> Management, Renovation <br/> project management</> ,
     achievement: "Achieved within 6 months",
     image: roomImage2,
   },
 ];
 
-const benefits: { icon: LucideIcon; text: string }[] = [
-  { icon: MoveUp, text: "Increase revenue and cost efficiency" },
-  { icon: Lightbulb, text: "Simplify hotel operations and management" },
-  { icon: DollarSign, text: "Strengthen asset value and owner confidence" },
+// const benefits: { icon: LucideIcon; text: string }[] = [
+//   { icon: MoveUp, text: "Increase revenue and cost efficiency" },
+//   { icon: Lightbulb, text: "Simplify hotel operations and management" },
+//   { icon: DollarSign, text: "Strengthen asset value and owner confidence" },
+// ];
+
+const partners = [
+  { name: "CloudCollective", logo: partnerLogo1 },
+  { name: "ParkHaus", logo: partnerLogo2 },
+  { name: "Interiologic", logo: partnerLogo3 },
+  { name: "PurpleAsia", logo: partnerLogo4 },
 ];
 
 export default function HotelCaseStudy() {
@@ -84,15 +97,15 @@ export default function HotelCaseStudy() {
                   <p className="text-white/80 text-sm mb-2">
                     {study.hotelName}
                   </p>
-                  <h3 className="text-white text-xl sm:text-2xl lg:text-3xl font-bold mb-2 leading-tight">
+                  <h3 className="text-white text-xl sm:text-2xl lg:text-[36px] font-[300] mb-2 leading-[1.2] tracking-[-0.02em]">
                     {study.title}
                   </h3>
-                  <p className="text-white/90 text-sm mb-4">
+                  {/* <p className="text-white/90 text-sm mb-4">
                     {study.achievement}
-                  </p>
+                  </p> */}
 
                   {/* View Case Study Button */}
-                  <button className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary text-white text-xs sm:text-sm font-semibold rounded-md hover:bg-primary/90 transition-colors">
+                  {/* <button className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary text-white text-xs sm:text-sm font-semibold rounded-md hover:bg-primary/90 transition-colors">
                     VIEW CASE STUDY
                     <svg
                       className="w-4 h-4"
@@ -107,7 +120,7 @@ export default function HotelCaseStudy() {
                         d="M17 8l4 4m0 0l-4 4m4-4H3"
                       />
                     </svg>
-                  </button>
+                  </button> */}
                 </div>
               </div>
             ))}
@@ -116,61 +129,37 @@ export default function HotelCaseStudy() {
       </div>
 
       {/* How We Increase GOP Section - Dark Background */}
-      <div className="bg-primary relative overflow-hidden">
-        {/* Content Container - max 1440px centered */}
-        <div className="max-w-[1440px] mx-auto relative px-4 sm:px-6 md:pl-8 md:pr-0 lg:pl-12 xl:pl-[100px]">
-          <div className="flex flex-col lg:flex-row lg:h-[485px]">
-            {/* Left Content - Centered in flex-col mode */}
-            <div className="w-full lg:flex-1 flex flex-col justify-center items-center lg:items-start text-center lg:text-left py-8 lg:py-0 lg:pr-8">
-              <h2 className="text-2xl sm:text-[32px] md:text-4xl font-normal text-white mb-6 lg:mb-8">
-                How We Increase GOP and Asset Value
-              </h2>
+      
 
-              <ul className="space-y-4 mb-8">
-                {benefits.map((benefit, index) => {
-                  const IconComponent = benefit.icon;
-                  return (
-                    <li
-                      key={index}
-                      className="flex items-center gap-3 text-white/90"
-                    >
-                      <IconComponent className="w-5 h-5 sm:w-6 sm:h-6 text-secondary flex-shrink-0" />
-                      <span className="text-sm sm:text-base lg:text-lg">
-                        {benefit.text}
-                      </span>
-                    </li>
-                  );
-                })}
-              </ul>
-
-              {/* Request Consultation Button */}
-              <button className="inline-flex items-center gap-2 px-4 py-2.5 sm:px-6 sm:py-3 bg-secondary text-primary text-sm sm:text-base lg:text-[20px] font-normal rounded-[8px] hover:bg-secondary/90 transition-colors w-fit">
-                REQUEST CONSULTATION
-                <svg
-                  className="w-4 h-4"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                  />
-                </svg>
-              </button>
+      <div className="bg-primary">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-[100px] py-20">
+          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-10 lg:gap-16">
+            {/* Left Text */}
+            <div className="lg:max-w-md flex-shrink-0">
+              <h3 className="text-[32px] sm:text-[40px] md:text-[48px] font-bold text-white mb-4 leading-tight">
+                Our Partners
+              </h3>
+              <p className="text-white/70 text-[18px] sm:text-[20px] md:text-[24px] leading-relaxed">
+                We partner selectively with organizations that meet our
+                standards for performance, precision, and long-term value
+                creation.
+              </p>
             </div>
 
-            {/* Right Image - Squarish with rounded corners on mobile, full height on desktop */}
-            <div className="w-full lg:w-[518px] flex-shrink-0 p-4 sm:p-5 md:p-0">
-              <div className="aspect-square lg:aspect-auto w-[280px] sm:w-[320px] md:w-[380px] lg:w-full lg:h-full mx-auto lg:mx-0 rounded-xl lg:rounded-none overflow-hidden">
-                <img
-                  src={gopImageHomeSection}
-                  alt="Business consultation"
-                  className="w-full h-full object-cover"
-                />
-              </div>
+            {/* Partner Logos - 2x2 Grid */}
+            <div className="grid grid-cols-2 gap-x-8 sm:gap-x-12 md:gap-x-20 gap-y-8 items-center">
+              {partners.map((partner, index) => (
+                <div
+                  key={index}
+                  className="flex items-center justify-center h-16"
+                >
+                  <img
+                    src={partner.logo}
+                    alt={partner.name}
+                    className="h-8 sm:h-10 md:h-14 w-auto object-contain filter brightness-0 invert opacity-90"
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </div>

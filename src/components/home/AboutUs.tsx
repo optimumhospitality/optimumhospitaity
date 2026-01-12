@@ -2,7 +2,7 @@ import aboutImage from "../../assets/image/home-page/aboutUs/business-partners 1
 
 export default function AboutUs() {
   return (
-    <section className="bg-tertinary pb-10">
+    <section className="bg-tertinary pb-32 pt-15">
       {/* Section Header */}
       <div className="text-center  px-4">
         <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[48px] font-medium text-primary mb-2">
@@ -82,7 +82,7 @@ export default function AboutUs() {
           </div>
         </div>
       </div>
-      <div className="pb-1  bg-tertinary"></div>
+      {/* <div className="pb-1  bg-tertinary"></div> */}
     </section>
   );
 }

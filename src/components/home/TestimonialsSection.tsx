@@ -12,7 +12,7 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     id: 1,
-    quote: `"Optimum Hospitality brought clarity, discipline, and accountability to our operations. Within the first year, we saw a material improvement in GOP, stronger F&B performance, and better cost control across the asset. Their independent, owner-first approach made a tangible difference to both short-term results and long-term value."`,
+    quote: `"Optimum Hospitality brought clarity, discipline. Within the first year, we saw a material improvement in GOP, stronger F&B performance, and better cost control across the asset. Their independent, owner-first approach made a tangible difference to both short-term results and long-term value."`,
     title: "Hotel Owner & Asset Partner",
     location: "Malaysia",
     image: smilingMan,

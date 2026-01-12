@@ -8,29 +8,29 @@ interface StatItem {
 
 const stats: StatItem[] = [
   {
-    value: 5000,
+    value: 100,
     suffix: "+",
-    label: "Hotels Managed\n& Advised",
+    label: "Hotel Projects Managed & Advised",
   },
-  {
-    value: 35,
+{
+  value: 94,
     suffix: "%",
-    label: "GOP Uplift\nAcross Mandates",
+      label: "Revenue Uplift Achieved (Wink Hotels)",
   },
-  {
-    value: 6,
+{
+  value: 6,
     suffix: "+",
-    label: "Countries\nOperated",
+      label: "Southeast Asian Countries Market Served",
   },
-  {
-    value: 20,
-    suffix: "%",
-    label: "Operating Cost\nReduced",
+{
+  value: 1400,
+    suffix: "+",
+      label: "Keys Managed in the Largest Resort ",
   },
-  {
-    value: 25,
-    suffix: "%",
-    label: "F&B Segment\nRevenue Uplift",
+{
+  value: 30,
+    suffix: "+",
+      label: "Years of Combined Team Experience",
   },
 ];
 
@@ -39,10 +39,10 @@ export default function StatsSection() {
     <div className="bg-primary">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-1">
         {/* Desktop: 5 columns */}
-        <div className="hidden lg:grid lg:grid-cols-5 lg:divide-x divide-white/20 py-12 lg:py-16">
+        <div className="hidden lg:grid lg:grid-cols-5 lg:divide-x divide-white/20 py-12 lg:py-0">
           {stats.map((stat) => (
             <div key={stat.label} className="px-6 xl:px-10 flex flex-col">
-              <div className="text-4xl xl:text-[64px] font-normal text-white mb-auto">
+              <div className="text-4xl xl:text-[64px] font-normal text-white mb-auto lg:mt-6">
                 <CountUp
                   end={stat.value}
                   suffix={stat.suffix}
@@ -51,7 +51,7 @@ export default function StatsSection() {
                   scrollSpyOnce
                 />
               </div>
-              <div className="text-secondary/80 text-sm lg:text-base whitespace-pre-line leading-relaxed mt-8 lg:mt-10">
+              <div className="text-secondary/80 text-sm lg:text-[28px] font-[200] whitespace-pre-line leading-[1] mt-8 lg:mt-20 mb-6">
                 {stat.label}
               </div>
             </div>
