@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import { useParams, Navigate } from "react-router-dom";
-import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
 import HeroSection from "../components/service-detail/HeroSection";
 import ServiceDescription from "../components/service-detail/ServiceDescription";
@@ -24,7 +23,6 @@ export default function ServiceDetailPage() {
 
     return (
         <div className="min-h-screen">
-            <Navbar />
             <HeroSection
                 title={service.title}
                 subtitle={service.subtitle}

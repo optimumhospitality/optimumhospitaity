@@ -1,4 +1,3 @@
-import Navbar from "../components/layout/Navbar";
 import HeroSection from "../components/home/HeroSection";
 import TrustedBrands from "../components/home/TrustedBrands";
 import WhatWeDo from "../components/home/WhatWeDo";
@@ -12,7 +11,6 @@ import Footer from "../components/layout/Footer";
 export default function HomePage() {
   return (
     <main className="min-h-screen bg-background">
-      <Navbar />
       <HeroSection />
       <TrustedBrands />
       <WhatWeDo />

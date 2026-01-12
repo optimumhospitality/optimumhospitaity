@@ -89,12 +89,24 @@
 }
 
 html {
-  scroll-behavior: smooth;
   overflow-x: clip;
 
   /* Hide scrollbar (Firefox / IE / Edge) */
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+/* Locomotive Scroll container styles */
+html.has-scroll-smooth {
+  overflow: hidden;
+}
+
+html.has-scroll-smooth body {
+  overflow: hidden;
+}
+
+[data-scroll-container] {
+  min-height: 100vh;
 }
 
 body {

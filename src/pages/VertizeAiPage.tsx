@@ -1,4 +1,3 @@
-import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
 import HeroSection from "../components/vertize-ai/HeroSection";
 import WhyItMatters from "../components/vertize-ai/WhyItMatters";
@@ -13,7 +12,6 @@ import FAQSection from "../components/vertize-ai/FAQSection";
 export default function VertizeAiPage() {
     return (
         <div className="min-h-screen">
-            <Navbar />
             <HeroSection />
             <WhyItMatters />
             <WhatAiDelivers />

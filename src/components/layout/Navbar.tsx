@@ -1,6 +1,7 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useLocation, Link } from "react-router-dom";
 import optimumLogo from "../../assets/image/home-page/website-logo/optimum-logo.webp";
+import { useLocomotiveScroll } from "../LocomotiveScrollProvider";
 
 // Services data matching CoreHotelManagement.tsx
 const servicesData = [
@@ -23,24 +24,17 @@ const navLinks = [
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isScrolledPastHero, setIsScrolledPastHero] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
   const location = useLocation();
   const isHomePage = location.pathname === "/";
 
-  useEffect(() => {
-    const handleScroll = () => {
-      // Check if scrolled past the hero section (approximately viewport height)
-      const heroHeight = window.innerHeight;
-      setIsScrolledPastHero(window.scrollY >= heroHeight - 72); // 72px is navbar height
-    };
+  // Get scroll position from Locomotive Scroll context
+  const { scrollY } = useLocomotiveScroll();
 
-    window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Check initial position
-
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  // Check if scrolled past the hero section (approximately viewport height)
+  const heroHeight = typeof window !== "undefined" ? window.innerHeight : 800;
+  const isScrolledPastHero = scrollY >= heroHeight - 72; // 72px is navbar height
 
   return (
     <nav

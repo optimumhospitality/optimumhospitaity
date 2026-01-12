@@ -204,6 +204,9 @@ export default function CoreHotelManagement() {
 
     if (!container || !imageContainer) return;
 
+    // Get the scroll container for Locomotive Scroll
+    const scrollContainer = document.querySelector("[data-scroll-container]") as HTMLElement;
+
     // Set initial states - first image visible, rest hidden
     imageRefs.current.forEach((imgEl, index) => {
       if (imgEl) {
@@ -221,6 +224,7 @@ export default function CoreHotelManagement() {
       end: "bottom bottom",
       pin: imageContainer,
       pinSpacing: false,
+      scroller: scrollContainer || undefined,
     });
 
     // Create scroll triggers for each text section with single unified animation
@@ -239,6 +243,7 @@ export default function CoreHotelManagement() {
           start: "top 80%",
           end: "bottom 20%",
           scrub: 1,
+          scroller: scrollContainer || undefined,
           onUpdate: (self) => {
             const progress = self.progress;
 

@@ -1,5 +1,4 @@
 import { useParams, Link } from "react-router-dom";
-import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
 import { getTeamMemberById } from "../components/team/teamData";
 import TeamDetail from "../components/team/TeamDetail";
@@ -11,7 +10,6 @@ export default function TeamMemberDetailPage() {
   if (!member) {
     return (
       <div className="min-h-screen">
-        <Navbar />
         <div className="flex items-center justify-center min-h-[60vh]">
           <div className="text-center">
             <h1 className="text-3xl font-bold text-primary mb-4">
@@ -29,7 +27,6 @@ export default function TeamMemberDetailPage() {
 
   return (
     <div className="min-h-screen">
-      <Navbar />
       <TeamDetail member={member} />
       <Footer />
     </div>

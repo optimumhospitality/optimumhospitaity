@@ -1,15 +1,19 @@
-import WhyItMattersImg from "../../assets/image/vertize-ai/WhyItMatter.webp"
+// import WhyItMattersImg from "../../assets/image/vertize-ai/WhyItMatter.webp"
+import WhyItMattersVideo from "../../assets/image/vertize-ai/WhyItMatters.webm"
 
 export default function WhyItMatters() {
     return (
         <section className="bg-tertinary py-16 md:py-20 lg:py-24">
             <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-[100px]">
                 <div className="text-center max-w-4xl mx-auto flex flex-col items-center">
-                    {/* Image at the top */}
-                    <img
-                        src={WhyItMattersImg}
-                        alt="Why It Matters"
-                        className="w-[162px] h-[162px] max-w-3xl mb-10 rounded-lg"
+                    {/* Video animation at the top */}
+                    <video
+                        src={WhyItMattersVideo}
+                        className="w-[170px] h-[170px] max-w-3xl mb-10 rounded-lg"
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
                     />
 
                     {/* Heading */}
