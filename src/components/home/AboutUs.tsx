@@ -1,8 +1,63 @@
+import { useRef, useEffect } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import aboutImage from "../../assets/image/home-page/aboutUs/business-partners 1.webp";
 
+gsap.registerPlugin(ScrollTrigger);
+
 export default function AboutUs() {
+  const sectionRef = useRef<HTMLElement>(null);
+  const contentRef = useRef<HTMLDivElement>(null);
+  const imageRef = useRef<HTMLDivElement>(null);
+
+  // GSAP scroll animations
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      // Content fade up animation
+      if (contentRef.current) {
+        gsap.fromTo(
+          contentRef.current,
+          { opacity: 0, y: 40 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: sectionRef.current,
+              start: "top 75%",
+              toggleActions: "play none none none",
+            },
+          }
+        );
+      }
+
+      // Image fade in with delay
+      if (imageRef.current) {
+        gsap.fromTo(
+          imageRef.current,
+          { opacity: 0, x: 40 },
+          {
+            opacity: 1,
+            x: 0,
+            duration: 0.8,
+            delay: 0.2,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: sectionRef.current,
+              start: "top 75%",
+              toggleActions: "play none none none",
+            },
+          }
+        );
+      }
+    }, sectionRef);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <section className="bg-tertinary pb-32 pt-15">
+    <section ref={sectionRef} className="bg-tertinary pb-32 pt-15">
       {/* Section Header */}
       <div className="text-center  px-4">
         <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[48px] font-medium text-primary mb-2">
@@ -18,7 +73,7 @@ export default function AboutUs() {
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-[40px]">
           {/* Left Content Area */}
           <div className="flex-1 py-8 lg:py-0 flex items-center">
-            <div className="w-full">
+            <div ref={contentRef} className="w-full">
               {/* Title */}
               <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-[32px] font-[500] text-primary mb-6 leading-tight">
                 We Build for Owners Who Measure Performance
@@ -73,7 +128,7 @@ export default function AboutUs() {
           </div>
 
           {/* Right Image Area - 530 × 653 */}
-          <div className="w-full lg:w-[530px] lg:flex-shrink-0 h-[400px] sm:h-[500px] lg:h-[653px] overflow-hidden">
+          <div ref={imageRef} className="w-full lg:w-[530px] lg:flex-shrink-0 h-[400px] sm:h-[500px] lg:h-[653px] overflow-hidden">
             <img
               src={aboutImage}
               alt="Business partners discussing"

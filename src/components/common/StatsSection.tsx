@@ -1,4 +1,9 @@
+import { useRef, useEffect } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import CountUp from "react-countup";
+
+gsap.registerPlugin(ScrollTrigger);
 
 interface StatItem {
   value: number;
@@ -12,36 +17,65 @@ const stats: StatItem[] = [
     suffix: "+",
     label: "Hotel Projects Managed & Advised",
   },
-{
-  value: 94,
+  {
+    value: 94,
     suffix: "%",
-      label: "Revenue Uplift Achieved (Wink Hotels)",
+    label: "Revenue Uplift Achieved (Wink Hotels)",
   },
-{
-  value: 6,
+  {
+    value: 6,
     suffix: "+",
-      label: "Southeast Asian Countries Market Served",
+    label: "Southeast Asian Countries Market Served",
   },
-{
-  value: 1400,
+  {
+    value: 1400,
     suffix: "+",
-      label: "Keys Managed in the Largest Resort ",
+    label: "Keys Managed in the Largest Resort ",
   },
-{
-  value: 30,
+  {
+    value: 30,
     suffix: "+",
-      label: "Years of Combined Team Experience",
+    label: "Years of Combined Team Experience",
   },
 ];
 
 export default function StatsSection() {
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      // Stagger stats items
+      const items = containerRef.current?.querySelectorAll(".stat-item");
+      if (items && items.length > 0) {
+        gsap.fromTo(
+          items,
+          { opacity: 0, y: 30 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            stagger: 0.1,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: containerRef.current,
+              start: "top 85%",
+              toggleActions: "play none none none",
+            },
+          }
+        );
+      }
+    }, containerRef);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <div className="bg-primary">
+    <div className="bg-primary" ref={containerRef}>
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-1">
         {/* Desktop: 5 columns */}
         <div className="hidden lg:grid lg:grid-cols-5 lg:divide-x divide-white/20 py-12 lg:py-0">
           {stats.map((stat) => (
-            <div key={stat.label} className="px-6 xl:px-10 flex flex-col">
+            <div key={stat.label} className="stat-item px-6 xl:px-10 flex flex-col">
               <div className="text-4xl xl:text-[64px] font-normal text-white mb-auto lg:mt-6">
                 <CountUp
                   end={stat.value}
@@ -63,7 +97,7 @@ export default function StatsSection() {
           {stats.map((stat) => (
             <div
               key={stat.label}
-              className="flex flex-col items-center justify-center text-center py-6 px-2"
+              className="stat-item flex flex-col items-center justify-center text-center py-6 px-2"
             >
               <div className="text-3xl sm:text-4xl md:text-5xl font-normal text-white mb-2">
                 <CountUp

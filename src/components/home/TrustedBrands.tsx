@@ -1,6 +1,10 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import astonLogo from "../../assets/image/home-page/hotel-icon/aston.webp";
 import radissonLogo from "../../assets/image/home-page/hotel-icon/radisson-logo.webp";
+
+gsap.registerPlugin(ScrollTrigger);
 import accorLogo from "../../assets/image/home-page/hotel-icon/accor-logo.webp";
 import wyndhamLogo from "../../assets/image/home-page/hotel-icon/wyndham-logo.webp";
 import sheratonLogo from "../../assets/image/home-page/hotel-icon/sheraton-logo.webp";
@@ -30,6 +34,9 @@ const row2Brands = brands.slice(5, 10);
 export default function TrustedBrands() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
+  const headerRef = useRef<HTMLDivElement>(null);
+  const logosRef = useRef<HTMLDivElement>(null);
 
   // For mobile: show brands in groups
   const totalSlides = Math.ceil(brands.length / 2);
@@ -49,14 +56,62 @@ export default function TrustedBrands() {
     return () => clearInterval(interval);
   }, [isPaused, nextSlide]);
 
+  // GSAP scroll animations
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      // Header fade up animation
+      if (headerRef.current) {
+        gsap.fromTo(
+          headerRef.current,
+          { opacity: 0, y: 30 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: sectionRef.current,
+              start: "top 80%",
+              toggleActions: "play none none none",
+            },
+          }
+        );
+      }
+
+      // Logos fade in with stagger
+      if (logosRef.current) {
+        const logoItems = logosRef.current.querySelectorAll(".logo-item");
+        gsap.fromTo(
+          logoItems,
+          { opacity: 0, y: 20 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.6,
+            stagger: 0.1,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: logosRef.current,
+              start: "top 85%",
+              toggleActions: "play none none none",
+            },
+          }
+        );
+      }
+    }, sectionRef);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
     <section
+      ref={sectionRef}
       className="bg-primary"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
       {/* Dark Navy Header Bar */}
-      <div className="py-6 sm:py-8 md:py-10 lg:py-12">
+      <div ref={headerRef} className="py-6 sm:py-8 md:py-10 lg:py-12">
         <p className="text-center text-[#F7EFE3] text-xs sm:text-sm md:text-base lg:text-[24px] font-normal tracking-wide px-4">
           Trusted by global hospitality brands and independent owners
         </p>
@@ -64,7 +119,7 @@ export default function TrustedBrands() {
 
       {/* Logos Section */}
       <div className="pb-10 sm:pb-12 md:pb-14 lg:pb-16 xl:pb-20">
-        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-[100px]">
+        <div ref={logosRef} className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-[100px]">
           {/* Desktop View - Two Rows Grid */}
           <div className="hidden md:block">
             {/* Row 1 */}
@@ -72,7 +127,7 @@ export default function TrustedBrands() {
               {row1Brands.map((brand) => (
                 <div
                   key={brand.name}
-                  className="flex items-center justify-center h-12 lg:h-14 xl:h-16 hover:opacity-100 transition-opacity duration-300"
+                  className="logo-item flex items-center justify-center h-12 lg:h-14 xl:h-16 hover:opacity-100 transition-opacity duration-300"
                 >
                   <img
                     src={brand.logo}
@@ -87,12 +142,12 @@ export default function TrustedBrands() {
               {row2Brands.map((brand) => (
                 <div
                   key={brand.name}
-                  className="flex items-center justify-center h-12 lg:h-14 xl:h-16 hover:opacity-100 transition-opacity duration-300"
+                  className="logo-item flex items-center justify-center h-12 lg:h-14 xl:h-16 hover:opacity-100 transition-opacity duration-300"
                 >
                   <img
                     src={brand.logo}
                     alt={brand.name}
-                    className="h-8 md:h-9 lg:h-10 xl:h-12 max-w-[140px] lg:max-w-[160px] xl:max-w-[180px] w-auto object-contain opacity-80 hover:opacity-100 transition-opacity "/>
+                    className="h-8 md:h-9 lg:h-10 xl:h-12 max-w-[140px] lg:max-w-[160px] xl:max-w-[180px] w-auto object-contain opacity-80 hover:opacity-100 transition-opacity " />
                 </div>
               ))}
             </div>
@@ -134,11 +189,10 @@ export default function TrustedBrands() {
                 <button
                   key={index}
                   onClick={() => goToSlide(index)}
-                  className={`h-2 rounded-full transition-all duration-300 ${
-                    index === currentSlide
-                      ? "bg-white w-6"
-                      : "bg-white/40 hover:bg-white/60 w-2"
-                  }`}
+                  className={`h-2 rounded-full transition-all duration-300 ${index === currentSlide
+                    ? "bg-white w-6"
+                    : "bg-white/40 hover:bg-white/60 w-2"
+                    }`}
                   aria-label={`Go to slide ${index + 1}`}
                 />
               ))}

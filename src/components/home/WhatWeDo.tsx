@@ -1,4 +1,9 @@
+import { useRef, useEffect } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { User, Hotel, ChartNoAxesCombined } from "lucide-react";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const principles = [
   {
@@ -22,11 +27,62 @@ const principles = [
 ];
 
 export default function WhatWeDo() {
+  const sectionRef = useRef<HTMLElement>(null);
+  const headerRef = useRef<HTMLDivElement>(null);
+  const cardsRef = useRef<HTMLDivElement>(null);
+
+  // GSAP scroll animations
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      // Header fade up animation
+      if (headerRef.current) {
+        gsap.fromTo(
+          headerRef.current,
+          { opacity: 0, y: 40 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: sectionRef.current,
+              start: "top 75%",
+              toggleActions: "play none none none",
+            },
+          }
+        );
+      }
+
+      // Cards fade in with stagger from left
+      if (cardsRef.current) {
+        const cards = cardsRef.current.querySelectorAll(".principle-card");
+        gsap.fromTo(
+          cards,
+          { opacity: 0, x: -30 },
+          {
+            opacity: 1,
+            x: 0,
+            duration: 0.7,
+            stagger: 0.15,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: cardsRef.current,
+              start: "top 80%",
+              toggleActions: "play none none none",
+            },
+          }
+        );
+      }
+    }, sectionRef);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <section className="pt-[100px] pb-[100px] bg-tertinary">
+    <section ref={sectionRef} className="pt-[100px] pb-[100px] bg-tertinary">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-[100px]">
         {/* Section Header */}
-        <div className="text-center mb-12 lg:mb-16">
+        <div ref={headerRef} className="text-center mb-12 lg:mb-16">
           <p className="text-[#969696] text-xs sm:text-[20px] font-[300] tracking-[0.05em] uppercase mb-4">
             WHAT WE DO
           </p>
@@ -42,18 +98,17 @@ export default function WhatWeDo() {
         </div>
 
         {/* Principles Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
+        <div ref={cardsRef} className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
           {principles.map((principle, index) => {
             const IconComponent = principle.icon;
             const isLastItem = index === principles.length - 1;
             return (
               <div
                 key={principle.title}
-                className={`flex flex-col items-center text-center md:items-start md:text-left ${
-                  !isLastItem
-                    ? " md:border-r-[2px] md:border-r md:border-[#000000]/50 md:pr-8 lg:pr-10"
-                    : ""
-                }`}
+                className={`principle-card flex flex-col items-center text-center md:items-start md:text-left ${!isLastItem
+                  ? " md:border-r-[2px] md:border-r md:border-[#000000]/50 md:pr-8 lg:pr-10"
+                  : ""
+                  }`}
               >
                 {/* Icon */}
                 <div className="mb-6">

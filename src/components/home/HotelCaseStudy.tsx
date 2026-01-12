@@ -1,4 +1,8 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 // import { MoveUp, Lightbulb, DollarSign } from "lucide-react";
 // import type { LucideIcon } from "lucide-react";
 import roomImage1 from "../../assets/image/home-page/hotel-caseStudies/roomImage1.webp";
@@ -30,7 +34,7 @@ const caseStudies: CaseStudy[] = [
   {
     id: 2,
     hotelName: "Caravelle Hotel Saigon",
-    title: <>335 key 5-star <br/> Management, Renovation <br/> project management</> ,
+    title: <>335 key 5-star <br /> Management, Renovation <br /> project management</>,
     achievement: "Achieved within 6 months",
     image: roomImage2,
   },
@@ -51,14 +55,83 @@ const partners = [
 
 export default function HotelCaseStudy() {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
+  const sectionRef = useRef<HTMLElement>(null);
+  const headerRef = useRef<HTMLDivElement>(null);
+  const cardsRef = useRef<HTMLDivElement>(null);
+  const partnersRef = useRef<HTMLDivElement>(null);
+
+  // GSAP scroll animations
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      // Header fade up animation
+      if (headerRef.current) {
+        gsap.fromTo(
+          headerRef.current,
+          { opacity: 0, y: 40 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: sectionRef.current,
+              start: "top 75%",
+              toggleActions: "play none none none",
+            },
+          }
+        );
+      }
+
+      // Case cards fade in with stagger
+      if (cardsRef.current) {
+        const cards = cardsRef.current.querySelectorAll(".case-card");
+        gsap.fromTo(
+          cards,
+          { opacity: 0, y: 50 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            stagger: 0.2,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: cardsRef.current,
+              start: "top 80%",
+              toggleActions: "play none none none",
+            },
+          }
+        );
+      }
+
+      // Partners section fade in
+      if (partnersRef.current) {
+        gsap.fromTo(
+          partnersRef.current,
+          { opacity: 0 },
+          {
+            opacity: 1,
+            duration: 1,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: partnersRef.current,
+              start: "top 85%",
+              toggleActions: "play none none none",
+            }
+          }
+        );
+      }
+    }, sectionRef);
+
+    return () => ctx.revert();
+  }, []);
 
   return (
-    <section>
+    <section ref={sectionRef}>
       {/* Case Studies Section - White Background */}
       <div className="bg-white pt-[50px] pb-16 md:pb-20 lg:pb-24">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-[58px] xl:px-[58px]">
           {/* Header */}
-          <div className="text-center mb-12 md:mb-16">
+          <div ref={headerRef} className="text-center mb-12 md:mb-16">
             <p className="text-xs sm:text-[20px] font-light tracking-[0.2em] text-gray-500 uppercase mb-3">
               WHERE STRATEGY DELIVERS REAL VALUE
             </p>
@@ -72,11 +145,11 @@ export default function HotelCaseStudy() {
           </div>
 
           {/* Case Study Cards */}
-          <div className="flex flex-col lg:flex-row justify-center gap-6 lg:gap-[24px]">
+          <div ref={cardsRef} className="flex flex-col lg:flex-row justify-center gap-6 lg:gap-[24px]">
             {caseStudies.map((study) => (
               <div
                 key={study.id}
-                className="relative group rounded-2xl overflow-hidden cursor-pointer w-full h-[350px] sm:h-[400px] lg:w-[600px] lg:h-[600px] flex-shrink-0"
+                className="case-card relative group rounded-2xl overflow-hidden cursor-pointer w-full h-[350px] sm:h-[400px] lg:w-[600px] lg:h-[600px] flex-shrink-0"
                 onMouseEnter={() => setHoveredCard(study.id)}
                 onMouseLeave={() => setHoveredCard(null)}
               >
@@ -84,9 +157,8 @@ export default function HotelCaseStudy() {
                 <img
                   src={study.image}
                   alt={study.hotelName}
-                  className={`w-full h-full object-cover transition-transform duration-500 ${
-                    hoveredCard === study.id ? "scale-110" : "scale-100"
-                  }`}
+                  className={`w-full h-full object-cover transition-transform duration-500 ${hoveredCard === study.id ? "scale-110" : "scale-100"
+                    }`}
                 />
 
                 {/* Gradient Overlay */}
@@ -129,9 +201,9 @@ export default function HotelCaseStudy() {
       </div>
 
       {/* How We Increase GOP Section - Dark Background */}
-      
 
-      <div className="bg-primary">
+
+      <div className="bg-primary" ref={partnersRef}>
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-[100px] py-20">
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-10 lg:gap-16">
             {/* Left Text */}
