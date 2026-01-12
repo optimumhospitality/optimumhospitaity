@@ -90,11 +90,11 @@ export default function WhatWeDo() {
           <p className="text-[#969696] text-xs sm:text-[20px] font-[300] tracking-[0.05em] uppercase mb-4">
             WHAT WE DO
           </p>
-          <h2 className="text-primary text-2xl sm:text-3xl md:text-4xl lg:text-[48px] font-[500] leading-tight mb-4 lg:mb-6">
+          <h2 className="text-primary text-2xl sm:text-3xl md:text-4xl lg:text-[48px] font-[500] leading-tight mb-4 lg:mb-4">
             Independent Hotel Management
             <br className="hidden sm:block" /> Experts in Southeast Asia
           </h2>
-          <p className="text-[#626262] text-sm sm:text-base md:text-[20px] font-400 max-w-2xl mx-auto">
+          <p className="text-[#626262] text-sm sm:text-base md:text-[20px] font-400 max-w-2xl mx-auto lg:mb-[80px]">
             Three principles that guide every project we manage across
             <br className="hidden sm:block" /> Vietnam, Indonesia, and Southeast
             Asia
@@ -120,12 +120,12 @@ export default function WhatWeDo() {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-primary text-lg sm:text-xl lg:text-[36px] font-[500] mb-3 leading-tight">
+                <h3 className="text-primary text-lg sm:text-xl lg:text-[32px] font-[500] mb-3 leading-tight">
                   {principle.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-[#000000] text-sm sm:text-[24px] font-[300] tracking-[-0.02em] leading-relaxed">
+                <p className="text-[#000000] text-sm sm:text-[20px] font-[300] tracking-[-0.02em] leading-relaxed">
                   {principle.description}
                 </p>
               </div>

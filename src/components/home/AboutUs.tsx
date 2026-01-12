@@ -85,7 +85,7 @@ export default function AboutUs() {
               </h3>
 
               {/* First Paragraph */}
-              <p className="text-[#000000] text-base sm:text-lg md:text-xl lg:text-[24px] font-[300] leading-relaxed mb-5">
+              <p className="text-[#000000] text-base sm:text-lg md:text-xl lg:text-[20px] font-[300] leading-relaxed mb-5">
                 We help hotel owners increase profitability, protect asset
                 value, and maintain full operational control. Optimum
                 Hospitality is a boutique hotel consultancy, asset manager, and
@@ -94,7 +94,7 @@ export default function AboutUs() {
               </p>
 
               {/* Second Paragraph */}
-              <p className="text-[#000000] text-base sm:text-lg md:text-xl lg:text-[24px] font-[300] leading-relaxed mb-8">
+              <p className="text-[#000000] text-base sm:text-lg md:text-xl lg:text-[20px] font-[300] leading-relaxed mb-8">
                 From our bases in Ho Chi Minh City and Jakarta, we work with
                 luxury and upper-scale hotels to improve margins, optimize
                 operations, and unlock revenue, with particular strength in

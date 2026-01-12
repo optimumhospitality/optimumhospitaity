@@ -6,28 +6,28 @@ interface JourneyMilestone {
 
 const milestones: JourneyMilestone[] = [
     {
-        year: "2018",
+        year: "2021",
         title: "Founded in Vietnam",
         description:
-            "Established by senior luxury hoteliers with decades of regional experience",
+            "Established by senior luxury hoteliers with decades of regional experience.",
     },
     {
-        year: "2019",
-        title: "Independent Advisory Focus",
+        year: "2022",
+        title: "Independent Hotel Management",
         description:
-            "Initial work centered on asset management advisory and performance consulting",
-    },
-    {
-        year: "2021",
-        title: "Third-Party Management",
-        description:
-            "Expanded into full hotel management and development advisory services",
+            "Launched full-service hotel management and advisory services across Vietnam.",
     },
     {
         year: "2023",
         title: "Regional Expansion",
         description:
-            "Extended operations into Indonesia and broader Southeast Asia markets",
+            "Extended operations into Indonesia, Cambodia, and Laos markets.",
+    },
+    {
+        year: "2024",
+        title: "100+ Projects Milestone",
+        description:
+            "Delivered comprehensive advisory and management services across Southeast Asia",
     },
     {
         year: "2025",

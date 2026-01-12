@@ -1,7 +1,7 @@
 // Import all service icons
 import dynamicExperienceIcon from "../assets/image/home-page/coreHotelManagement/card-icon/dynamic-experience.webp";
-import aiPoweredIcon from "../assets/image/home-page/coreHotelManagement/card-icon/ai-powered-experience.webp";
-import experienceBuilderIcon from "../assets/image/home-page/coreHotelManagement/card-icon/experience-builder-icon.webp";
+// import aiPoweredIcon from "../assets/image/home-page/coreHotelManagement/card-icon/ai-powered-experience.webp";
+// import experienceBuilderIcon from "../assets/image/home-page/coreHotelManagement/card-icon/experience-builder-icon.webp";
 import gopCashFlowIcon from "../assets/image/home-page/coreHotelManagement/card-icon/gop-cash-flow-icon.webp";
 import capitalPlanningIcon from "../assets/image/home-page/coreHotelManagement/card-icon/capital-planning-icon.webp";
 import brandOperatorIcon from "../assets/image/home-page/coreHotelManagement/card-icon/brand-and-opeartor-icon.webp";
@@ -17,18 +17,18 @@ import outletPerformanceIcon from "../assets/image/home-page/coreHotelManagement
 import propertyImprovementIcon from "../assets/image/home-page/coreHotelManagement/card-icon/property-improvement-icon.webp";
 import trainingServiceIcon from "../assets/image/home-page/coreHotelManagement/card-icon/training-service-icon.webp";
 import operationalAuditIcon from "../assets/image/home-page/coreHotelManagement/card-icon/operational-audit-icon.webp";
-import distributionChannelIcon from "../assets/image/home-page/coreHotelManagement/card-icon/distribution-chanel-icon.webp";
+// import distributionChannelIcon from "../assets/image/home-page/coreHotelManagement/card-icon/distribution-chanel-icon.webp";
 import brandingSalesIcon from "../assets/image/home-page/coreHotelManagement/card-icon/branding-sales-icon.webp";
-import seoIcon from "../assets/image/home-page/coreHotelManagement/card-icon/seo-icon.webp";
+// import seoIcon from "../assets/image/home-page/coreHotelManagement/card-icon/seo-icon.webp";
 
 // Import hero images
 import hotelRoomImage1 from "../assets/image/home-page/coreHotelManagement/hotelRoomImage1.webp";
 import hotelRoomImage2 from "../assets/image/home-page/coreHotelManagement/hotelRoomImage2.webp";
 import hotelRoomImage3 from "../assets/image/home-page/coreHotelManagement/hotelRoomImage3.webp";
-import hotelRoomImage4 from "../assets/image/home-page/coreHotelManagement/hotelRoomImage4.webp";
+// import hotelRoomImage4 from "../assets/image/home-page/coreHotelManagement/hotelRoomImage4.webp";
 import hotelRoomImage5 from "../assets/image/home-page/coreHotelManagement/hotelRoomImage5.webp";
-import hotelRoomImage6 from "../assets/image/home-page/coreHotelManagement/hotelRoomImage6.webp";
-import hotelRoomImage7 from "../assets/image/home-page/coreHotelManagement/hotelRoomImage7.webp";
+// import hotelRoomImage6 from "../assets/image/home-page/coreHotelManagement/hotelRoomImage6.webp";
+// import hotelRoomImage7 from "../assets/image/home-page/coreHotelManagement/hotelRoomImage7.webp";
 // import vertizeImage from "../assets/image/home-page/coreHotelManagement/hotelRoomImage8.webp";
 
 export interface ServiceFeaturePoint {
@@ -59,7 +59,7 @@ export const serviceDetailsData: ServiceDetail[] = [
     {
         id: 1,
         slug: "hotel-management",
-        title: "Independent & Third-Party Hotel Management",
+        title: "Independent Hotel Management",
         subtitle: "White-label and third-party management focused on profitability, service quality, and operational discipline.",
         heroImage: hotelRoomImage1,
         heroDescription: "Full-service hotel management designed to maximize operational performance and owner returns.",
@@ -115,7 +115,7 @@ export const serviceDetailsData: ServiceDetail[] = [
     {
         id: 2,
         slug: "asset-management",
-        title: "Asset Management & Owner Representation",
+        title: "Asset Management and Owner Representation",
         subtitle: "Active asset oversight designed to protect value and improve financial performance.",
         heroImage: hotelRoomImage2,
         heroDescription: "Strategic asset management focused on maximizing returns and protecting owner interests.",
@@ -171,7 +171,7 @@ export const serviceDetailsData: ServiceDetail[] = [
     {
         id: 3,
         slug: "project-development",
-        title: "Project Development & Pre-Opening Services",
+        title: "Hotel Advisory, Feasibility and Pre-Opening Support",
         subtitle: "De-risking hotel development through technical expertise and disciplined execution.",
         heroImage: hotelRoomImage3,
         heroDescription: "Comprehensive project management from concept to opening, ensuring on-time, on-budget delivery.",
@@ -224,66 +224,66 @@ export const serviceDetailsData: ServiceDetail[] = [
             buttonLink: "/contact"
         }
     },
-    {
-        id: 4,
-        slug: "hotel-consulting",
-        title: "Hotel & Resort Consulting",
-        subtitle: "Strategic advisory grounded in market data, feasibility, and financial logic.",
-        heroImage: hotelRoomImage4,
-        heroDescription: "Data-driven consulting services to guide strategic decisions and maximize hotel performance.",
-        featurePoints: [
-            {
-                icon: feasibilityIcon,
-                title: "Feasibility Studies",
-                description: "Leveraging our AI tools, we provide unparalleled, rapid feasibility studies that equip owners' financial institutions with essential insights for informed decision-making."
-            },
-            {
-                icon: conceptDevelopmentIcon,
-                title: "Hotel Project Development & Strategy",
-                description: "We offer product conceptualization, review of project proposals, creation of a strategic planning roadmap, and support with contract negotiation for resort and hotel developments."
-            },
-            {
-                icon: brandOperatorIcon,
-                title: "Management Company (Operator) Search & Selection",
-                description: "We advise owners on the appropriate brand and model based on their investment strategy and assist in the selection and negotiation process."
-            },
-            {
-                icon: designOperationIcon,
-                title: "Design Review",
-                description: "We collaborate closely with hotel proprietors, architects, and interior designers to achieve designs that blend aesthetic appeal with operational efficiency to their utmost potential."
-            },
-            {
-                icon: technicalServicesIcon,
-                title: "Technical and Pre-opening Services",
-                description: "Critical Path set up, IT schematic assessments, manning guide, pre-opening budgeting, operating equipment needs, brand SOPs, manuals, testing. We ensure your resort is fully prepared for the opening."
-            },
-            {
-                icon: trainingServiceIcon,
-                title: "Recruitment & Human Resources",
-                description: "We consult owners on the appropriate organizational structure based on market and industry standards, support in the search for senior executives, and review candidates."
-            },
-            {
-                icon: preOpeningIcon,
-                title: "Soft Opening",
-                description: "Once open, we remain in the project for some months to guide management staff, establish SOPs, fine-tune operations, address issues, and refine marketing strategies."
-            },
-            {
-                icon: propertyImprovementIcon,
-                title: "Audits and Property Improvement Plans (PIPs)",
-                description: "We conduct comprehensive reviews of existing assets, develop a future asset strategy, establish measurable targets for software and hardware improved performance, and analyze operational processes."
-            }
-        ],
-        ctaBox: {
-            problem: "Investment decisions made without reliable data lead to poor positioning and underperformance.",
-            outcome: "Data-driven strategies that ensure market fit and realistic financial projections.",
-            buttonText: "Get Expert Advice",
-            buttonLink: "/contact"
-        }
-    },
+    // {
+    //     id: 4,
+    //     slug: "hotel-consulting",
+    //     title: "Hotel & Resort Consulting",
+    //     subtitle: "Strategic advisory grounded in market data, feasibility, and financial logic.",
+    //     heroImage: hotelRoomImage4,
+    //     heroDescription: "Data-driven consulting services to guide strategic decisions and maximize hotel performance.",
+    //     featurePoints: [
+    //         {
+    //             icon: feasibilityIcon,
+    //             title: "Feasibility Studies",
+    //             description: "Leveraging our AI tools, we provide unparalleled, rapid feasibility studies that equip owners' financial institutions with essential insights for informed decision-making."
+    //         },
+    //         {
+    //             icon: conceptDevelopmentIcon,
+    //             title: "Hotel Project Development & Strategy",
+    //             description: "We offer product conceptualization, review of project proposals, creation of a strategic planning roadmap, and support with contract negotiation for resort and hotel developments."
+    //         },
+    //         {
+    //             icon: brandOperatorIcon,
+    //             title: "Management Company (Operator) Search & Selection",
+    //             description: "We advise owners on the appropriate brand and model based on their investment strategy and assist in the selection and negotiation process."
+    //         },
+    //         {
+    //             icon: designOperationIcon,
+    //             title: "Design Review",
+    //             description: "We collaborate closely with hotel proprietors, architects, and interior designers to achieve designs that blend aesthetic appeal with operational efficiency to their utmost potential."
+    //         },
+    //         {
+    //             icon: technicalServicesIcon,
+    //             title: "Technical and Pre-opening Services",
+    //             description: "Critical Path set up, IT schematic assessments, manning guide, pre-opening budgeting, operating equipment needs, brand SOPs, manuals, testing. We ensure your resort is fully prepared for the opening."
+    //         },
+    //         {
+    //             icon: trainingServiceIcon,
+    //             title: "Recruitment & Human Resources",
+    //             description: "We consult owners on the appropriate organizational structure based on market and industry standards, support in the search for senior executives, and review candidates."
+    //         },
+    //         {
+    //             icon: preOpeningIcon,
+    //             title: "Soft Opening",
+    //             description: "Once open, we remain in the project for some months to guide management staff, establish SOPs, fine-tune operations, address issues, and refine marketing strategies."
+    //         },
+    //         {
+    //             icon: propertyImprovementIcon,
+    //             title: "Audits and Property Improvement Plans (PIPs)",
+    //             description: "We conduct comprehensive reviews of existing assets, develop a future asset strategy, establish measurable targets for software and hardware improved performance, and analyze operational processes."
+    //         }
+    //     ],
+    //     ctaBox: {
+    //         problem: "Investment decisions made without reliable data lead to poor positioning and underperformance.",
+    //         outcome: "Data-driven strategies that ensure market fit and realistic financial projections.",
+    //         buttonText: "Get Expert Advice",
+    //         buttonLink: "/contact"
+    //     }
+    // },
     {
         id: 5,
         slug: "fb-concept-curation",
-        title: "Restaurant & Bar Concept Curation",
+        title: "Food and Beverage Strategy and Concept Development",
         subtitle: "Creative F&B concepts built to drive revenue and sustainable margins.",
         heroImage: hotelRoomImage5,
         heroDescription: "Innovative F&B concepts designed to maximize revenue, enhance guest experience, and drive profitability.",
@@ -336,118 +336,118 @@ export const serviceDetailsData: ServiceDetail[] = [
             buttonLink: "/contact"
         }
     },
-    {
-        id: 6,
-        slug: "operational-support",
-        title: "Operational Support & Performance Turnaround",
-        subtitle: "Targeted interventions to stabilize operations and restore profitability.",
-        heroImage: hotelRoomImage6,
-        heroDescription: "Rapid response operational support to address performance challenges and drive turnaround.",
-        featurePoints: [
-            {
-                icon: propertyImprovementIcon,
-                title: "Property Improvement Planning",
-                description: "Assessment of property condition, prioritization of improvements, and development of capital plans to enhance competitiveness."
-            },
-            {
-                icon: trainingServiceIcon,
-                title: "Training & Service Excellence Programs",
-                description: "Intensive training programs, service recovery initiatives, and quality improvement plans to elevate guest satisfaction."
-            },
-            {
-                icon: operationalAuditIcon,
-                title: "Operational Audits & Turnaround Execution",
-                description: "Comprehensive operational diagnostics, root cause analysis, and hands-on turnaround execution to restore performance."
-            },
-            {
-                icon: gopCashFlowIcon,
-                title: "Cost Reduction & Efficiency Gains",
-                description: "Systematic cost analysis, waste elimination, and process optimization to improve margins without compromising quality."
-            },
-            {
-                icon: budgetPlanningIcon,
-                title: "Financial Restructuring & Controls",
-                description: "Implementation of financial controls, budget discipline, and cash flow management to stabilize finances."
-            },
-            {
-                icon: brandOperatorIcon,
-                title: "Leadership & Team Restructuring",
-                description: "Assessment of leadership capabilities, organizational restructuring, and talent optimization to build effective teams."
-            },
-            {
-                icon: technicalServicesIcon,
-                title: "Systems & Process Improvement",
-                description: "Implementation of standard operating procedures, quality systems, and operational technology to drive consistency."
-            },
-            {
-                icon: outletPerformanceIcon,
-                title: "Revenue Recovery Initiatives",
-                description: "Strategic pricing, distribution optimization, and sales initiatives to rebuild revenue and market share."
-            }
-        ],
-        ctaBox: {
-            problem: "Operational inefficiencies and service issues drive declining profitability.",
-            outcome: "Restored profitability through targeted interventions and staff training.",
-            buttonText: "Request Turnaround Support",
-            buttonLink: "/contact"
-        }
-    },
-    {
-        id: 7,
-        slug: "hotel-marketing",
-        title: "Hotel Marketing & Distribution",
-        subtitle: "Demand generation strategies focused on conversion, yield, and channel efficiency.",
-        heroImage: hotelRoomImage7,
-        heroDescription: "Strategic marketing and distribution services to maximize visibility, drive bookings, and optimize revenue.",
-        featurePoints: [
-            {
-                icon: distributionChannelIcon,
-                title: "Distribution & Channel Optimization",
-                description: "Strategic channel mix optimization, OTA management, and distribution cost reduction to maximize net revenue."
-            },
-            {
-                icon: brandingSalesIcon,
-                title: "Branding, Sales & Revenue Alignment",
-                description: "Integrated marketing and sales strategies aligned with revenue goals to drive demand and maximize yield."
-            },
-            {
-                icon: seoIcon,
-                title: "SEO-Driven Visibility & Direct Demand Growth",
-                description: "Search engine optimization, content marketing, and digital strategies to increase direct bookings and reduce dependency on OTAs."
-            },
-            {
-                icon: aiPoweredIcon,
-                title: "Digital Marketing & Social Media",
-                description: "Targeted digital advertising, social media management, and influencer partnerships to build brand awareness and drive bookings."
-            },
-            {
-                icon: gopCashFlowIcon,
-                title: "Revenue Management & Pricing Strategy",
-                description: "Dynamic pricing, yield management, and revenue optimization to maximize RevPAR and total revenue."
-            },
-            {
-                icon: brandingSalesIcon,
-                title: "Sales Team Development & CRM",
-                description: "Sales training, CRM implementation, and lead management to improve conversion rates and customer relationships."
-            },
-            {
-                icon: experienceBuilderIcon,
-                title: "Content Creation & Brand Storytelling",
-                description: "Professional photography, video production, and compelling content to showcase your property and attract guests."
-            },
-            {
-                icon: outletPerformanceIcon,
-                title: "Performance Analytics & Reporting",
-                description: "Comprehensive marketing analytics, ROI tracking, and performance reporting to optimize marketing spend."
-            }
-        ],
-        ctaBox: {
-            problem: "Lost revenue to OTAs and low direct bookings due to weak distribution.",
-            outcome: "Increased direct bookings and revenue through optimized distribution.",
-            buttonText: "Grow Your Revenue",
-            buttonLink: "/contact"
-        }
-    },
+    // {
+    //     id: 6,
+    //     slug: "operational-support",
+    //     title: "Operational Support & Performance Turnaround",
+    //     subtitle: "Targeted interventions to stabilize operations and restore profitability.",
+    //     heroImage: hotelRoomImage6,
+    //     heroDescription: "Rapid response operational support to address performance challenges and drive turnaround.",
+    //     featurePoints: [
+    //         {
+    //             icon: propertyImprovementIcon,
+    //             title: "Property Improvement Planning",
+    //             description: "Assessment of property condition, prioritization of improvements, and development of capital plans to enhance competitiveness."
+    //         },
+    //         {
+    //             icon: trainingServiceIcon,
+    //             title: "Training & Service Excellence Programs",
+    //             description: "Intensive training programs, service recovery initiatives, and quality improvement plans to elevate guest satisfaction."
+    //         },
+    //         {
+    //             icon: operationalAuditIcon,
+    //             title: "Operational Audits & Turnaround Execution",
+    //             description: "Comprehensive operational diagnostics, root cause analysis, and hands-on turnaround execution to restore performance."
+    //         },
+    //         {
+    //             icon: gopCashFlowIcon,
+    //             title: "Cost Reduction & Efficiency Gains",
+    //             description: "Systematic cost analysis, waste elimination, and process optimization to improve margins without compromising quality."
+    //         },
+    //         {
+    //             icon: budgetPlanningIcon,
+    //             title: "Financial Restructuring & Controls",
+    //             description: "Implementation of financial controls, budget discipline, and cash flow management to stabilize finances."
+    //         },
+    //         {
+    //             icon: brandOperatorIcon,
+    //             title: "Leadership & Team Restructuring",
+    //             description: "Assessment of leadership capabilities, organizational restructuring, and talent optimization to build effective teams."
+    //         },
+    //         {
+    //             icon: technicalServicesIcon,
+    //             title: "Systems & Process Improvement",
+    //             description: "Implementation of standard operating procedures, quality systems, and operational technology to drive consistency."
+    //         },
+    //         {
+    //             icon: outletPerformanceIcon,
+    //             title: "Revenue Recovery Initiatives",
+    //             description: "Strategic pricing, distribution optimization, and sales initiatives to rebuild revenue and market share."
+    //         }
+    //     ],
+    //     ctaBox: {
+    //         problem: "Operational inefficiencies and service issues drive declining profitability.",
+    //         outcome: "Restored profitability through targeted interventions and staff training.",
+    //         buttonText: "Request Turnaround Support",
+    //         buttonLink: "/contact"
+    //     }
+    // },
+    // {
+    //     id: 7,
+    //     slug: "hotel-marketing",
+    //     title: "Hotel Marketing & Distribution",
+    //     subtitle: "Demand generation strategies focused on conversion, yield, and channel efficiency.",
+    //     heroImage: hotelRoomImage7,
+    //     heroDescription: "Strategic marketing and distribution services to maximize visibility, drive bookings, and optimize revenue.",
+    //     featurePoints: [
+    //         {
+    //             icon: distributionChannelIcon,
+    //             title: "Distribution & Channel Optimization",
+    //             description: "Strategic channel mix optimization, OTA management, and distribution cost reduction to maximize net revenue."
+    //         },
+    //         {
+    //             icon: brandingSalesIcon,
+    //             title: "Branding, Sales & Revenue Alignment",
+    //             description: "Integrated marketing and sales strategies aligned with revenue goals to drive demand and maximize yield."
+    //         },
+    //         {
+    //             icon: seoIcon,
+    //             title: "SEO-Driven Visibility & Direct Demand Growth",
+    //             description: "Search engine optimization, content marketing, and digital strategies to increase direct bookings and reduce dependency on OTAs."
+    //         },
+    //         {
+    //             icon: aiPoweredIcon,
+    //             title: "Digital Marketing & Social Media",
+    //             description: "Targeted digital advertising, social media management, and influencer partnerships to build brand awareness and drive bookings."
+    //         },
+    //         {
+    //             icon: gopCashFlowIcon,
+    //             title: "Revenue Management & Pricing Strategy",
+    //             description: "Dynamic pricing, yield management, and revenue optimization to maximize RevPAR and total revenue."
+    //         },
+    //         {
+    //             icon: brandingSalesIcon,
+    //             title: "Sales Team Development & CRM",
+    //             description: "Sales training, CRM implementation, and lead management to improve conversion rates and customer relationships."
+    //         },
+    //         {
+    //             icon: experienceBuilderIcon,
+    //             title: "Content Creation & Brand Storytelling",
+    //             description: "Professional photography, video production, and compelling content to showcase your property and attract guests."
+    //         },
+    //         {
+    //             icon: outletPerformanceIcon,
+    //             title: "Performance Analytics & Reporting",
+    //             description: "Comprehensive marketing analytics, ROI tracking, and performance reporting to optimize marketing spend."
+    //         }
+    //     ],
+    //     ctaBox: {
+    //         problem: "Lost revenue to OTAs and low direct bookings due to weak distribution.",
+    //         outcome: "Increased direct bookings and revenue through optimized distribution.",
+    //         buttonText: "Grow Your Revenue",
+    //         buttonLink: "/contact"
+    //     }
+    // },
     // {
     //     id: 8,
     //     slug: "ai-hospitality",

@@ -243,7 +243,7 @@ export default function TestimonialsSection() {
                 }}
               >
                 {/* Card - flex-col on mobile/small tablet, flex-row on lg+ */}
-                <div className="flex flex-col lg:flex-row items-stretch bg-white rounded-xl shadow-xl h-auto lg:h-[474px] w-full">
+                <div className="flex flex-col border-[1px] border-[#CACACA]/50 rounded-[24px] lg:flex-row items-stretch bg-white   h-auto lg:h-[474px] w-full">
                   {/* Image - Minimal size reduction, stays stable */}
                   <div className="w-full lg:w-auto flex-shrink-0 p-4 sm:p-5 lg:p-6 xl:p-7">
                     <div className="aspect-square lg:aspect-auto w-[280px] sm:w-[300px] md:w-[340px] lg:w-[340px] xl:w-[385px] lg:h-full xl:h-[408px] mx-auto lg:mx-0 rounded-lg xl:rounded-[16px] overflow-hidden">

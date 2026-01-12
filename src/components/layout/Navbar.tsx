@@ -5,14 +5,14 @@ import { useLocomotiveScroll } from "../LocomotiveScrollProvider";
 
 // Services data matching CoreHotelManagement.tsx
 const servicesData = [
-  { name: "Independent & Third-Party Hotel Management", href: "/services/hotel-management" },
-  { name: "Asset Management & Owner Representation", href: "/services/asset-management" },
-  { name: "Project Development & Pre-Opening Services", href: "/services/project-development" },
-  { name: "Hotel & Resort Consulting", href: "/services/hotel-consulting" },
-  { name: "Restaurant & Bar Concept Curation", href: "/services/fb-concept-curation" },
-  { name: "Operational Support & Performance Turnaround", href: "/services/operational-support" },
-  { name: "Hotel Marketing & Distribution", href: "/services/hotel-marketing" },
-  { name: "AI-Enabled Hospitality (Vertize AI)", href: "/vertize-ai" },
+  { name: "Independent Hotel Management", href: "/services/hotel-management" },
+  { name: "Asset Management and Owner Representation", href: "/services/asset-management" },
+  { name: "Hotel Advisory, Feasibility and Pre-Opening Support", href: "/services/project-development" },
+  // { name: "Hotel & Resort Consulting", href: "/services/hotel-consulting" },
+  { name: "Food and Beverage Strategy and Concept Development", href: "/services/fb-concept-curation" },
+  // { name: "Operational Support & Performance Turnaround", href: "/services/operational-support" },
+  // { name: "Hotel Marketing & Distribution", href: "/services/hotel-marketing" },
+  { name: "AI driven hospitality infrastructure (Vertize AI)", href: "/vertize-ai" },
 ];
 
 const navLinks = [

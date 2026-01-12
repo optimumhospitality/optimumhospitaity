@@ -10,10 +10,10 @@ import gopImageHomeSection from "../../assets/image/home-page/hotel-caseStudies/
 import hotelRoomImage1 from "../../assets/image/home-page/coreHotelManagement/hotelRoomImage1.webp";
 import hotelRoomImage2 from "../../assets/image/home-page/coreHotelManagement/hotelRoomImage2.webp";
 import hotelRoomImage3 from "../../assets/image/home-page/coreHotelManagement/hotelRoomImage3.webp";
-import hotelRoomImage4 from "../../assets/image/home-page/coreHotelManagement/hotelRoomImage4.webp";
+// import hotelRoomImage4 from "../../assets/image/home-page/coreHotelManagement/hotelRoomImage4.webp";
 import hotelRoomImage5 from "../../assets/image/home-page/coreHotelManagement/hotelRoomImage5.webp";
-import hotelRoomImage6 from "../../assets/image/home-page/coreHotelManagement/hotelRoomImage6.webp";
-import hotelRoomImage7 from "../../assets/image/home-page/coreHotelManagement/hotelRoomImage7.webp";
+// import hotelRoomImage6 from "../../assets/image/home-page/coreHotelManagement/hotelRoomImage6.webp";
+// import hotelRoomImage7 from "../../assets/image/home-page/coreHotelManagement/hotelRoomImage7.webp";
 import hotelRoomImage8 from "../../assets/image/home-page/coreHotelManagement/hotelRoomImage8.webp";
 
 // Import card icons
@@ -26,18 +26,18 @@ import brandOperatorIcon from "../../assets/image/home-page/coreHotelManagement/
 import technicalServicesIcon from "../../assets/image/home-page/coreHotelManagement/card-icon/techical-services-icon.webp";
 import budgetPlanningIcon from "../../assets/image/home-page/coreHotelManagement/card-icon/budget-planning-icon.webp";
 import preOpeningIcon from "../../assets/image/home-page/coreHotelManagement/card-icon/pre-opening-icon.webp";
-import feasibilityIcon from "../../assets/image/home-page/coreHotelManagement/card-icon/feasiblity-icon.webp";
-import conceptDevelopmentIcon from "../../assets/image/home-page/coreHotelManagement/card-icon/concept-development-icon.webp";
-import designOperationIcon from "../../assets/image/home-page/coreHotelManagement/card-icon/design-operation-icon.webp";
+// import feasibilityIcon from "../../assets/image/home-page/coreHotelManagement/card-icon/feasiblity-icon.webp";
+// import conceptDevelopmentIcon from "../../assets/image/home-page/coreHotelManagement/card-icon/concept-development-icon.webp";
+// import designOperationIcon from "../../assets/image/home-page/coreHotelManagement/card-icon/design-operation-icon.webp";
 import marketLedIcon from "../../assets/image/home-page/coreHotelManagement/card-icon/market-led-icon.webp";
 import menuEngineeringIcon from "../../assets/image/home-page/coreHotelManagement/card-icon/menu-engineering-icon.webp";
 import outletPerformanceIcon from "../../assets/image/home-page/coreHotelManagement/card-icon/outlet-performance-icon.webp";
-import propertyImprovementIcon from "../../assets/image/home-page/coreHotelManagement/card-icon/property-improvement-icon.webp";
-import trainingServiceIcon from "../../assets/image/home-page/coreHotelManagement/card-icon/training-service-icon.webp";
-import operationalAuditIcon from "../../assets/image/home-page/coreHotelManagement/card-icon/operational-audit-icon.webp";
-import distributionChannelIcon from "../../assets/image/home-page/coreHotelManagement/card-icon/distribution-chanel-icon.webp";
-import brandingSalesIcon from "../../assets/image/home-page/coreHotelManagement/card-icon/branding-sales-icon.webp";
-import seoIcon from "../../assets/image/home-page/coreHotelManagement/card-icon/seo-icon.webp";
+// import propertyImprovementIcon from "../../assets/image/home-page/coreHotelManagement/card-icon/property-improvement-icon.webp";
+// import trainingServiceIcon from "../../assets/image/home-page/coreHotelManagement/card-icon/training-service-icon.webp";
+// import operationalAuditIcon from "../../assets/image/home-page/coreHotelManagement/card-icon/operational-audit-icon.webp";
+// import distributionChannelIcon from "../../assets/image/home-page/coreHotelManagement/card-icon/distribution-chanel-icon.webp";
+// import brandingSalesIcon from "../../assets/image/home-page/coreHotelManagement/card-icon/branding-sales-icon.webp";
+// import seoIcon from "../../assets/image/home-page/coreHotelManagement/card-icon/seo-icon.webp";
 
 // Import partner logos
 
@@ -66,9 +66,9 @@ const serviceSlugs = [
 const services: Service[] = [
   {
     id: 1,
-    title: "Independent & Third-Party Hotel Management",
+    title: "Independent Hotel Management",
     description:
-      "White-label and third-party management focused on profitability, service quality, and operational discipline.",
+      "Hands-on hotel management that prioritises owner returns, operational discipline, and long-term asset value, with or without a brand affiliation.",
     features: [
       { icon: dynamicExperienceIcon, text: "Dynamic experience builder" },
       { icon: aiPoweredIcon, text: "AI-powered experience curation" },
@@ -78,9 +78,9 @@ const services: Service[] = [
   },
   {
     id: 2,
-    title: "Asset Management & Owner Representation",
+    title: "Asset Management and Owner Representation",
     description:
-      "Active asset oversight designed to protect value and improve financial performance.",
+      "Protecting owner interests through financial oversight, operator performance monitoring, and strategic decision support.",
     features: [
       { icon: gopCashFlowIcon, text: "GOP and cash flow optimization" },
       {
@@ -96,45 +96,45 @@ const services: Service[] = [
   },
   {
     id: 3,
-    title: "Project Development & Pre-Opening Services",
+    title: "Hotel Advisory, Feasibility and Pre-Opening Support",
     description:
-      "De-risking hotel development through technical expertise and disciplined execution.",
+      "From concept to opening, we guide owners through feasibility studies, development strategy, and operational readiness.",
     features: [
       {
         icon: technicalServicesIcon,
-        text: "Technical services and design reviews",
+        text: "Feasibility studies and market analysis",
       },
-      { icon: budgetPlanningIcon, text: "Budget, timeline, and scope control" },
-      { icon: preOpeningIcon, text: "Pre-opening and soft opening leadership" },
+      { icon: budgetPlanningIcon, text: "Design review and technical services" },
+      { icon: preOpeningIcon, text: "Pre-opening leadership and budget control" },
     ],
     image: hotelRoomImage3,
   },
+  // {
+  //   id: 4,
+  //   title: "Hotel & Resort Consulting",
+  //   description:
+  //     "Strategic advisory grounded in market data, feasibility, and financial logic.",
+  //   features: [
+  //     {
+  //       icon: feasibilityIcon,
+  //       text: "Feasibility studies and highest-use analysis",
+  //     },
+  //     {
+  //       icon: conceptDevelopmentIcon,
+  //       text: "Concept development and repositioning",
+  //     },
+  //     {
+  //       icon: designOperationIcon,
+  //       text: "Design and operational efficiency review",
+  //     },
+  //   ],
+  //   image: hotelRoomImage4,
+  // },
   {
     id: 4,
-    title: "Hotel & Resort Consulting",
+    title: "Food and Beverage Strategy and Concept Development",
     description:
-      "Strategic advisory grounded in market data, feasibility, and financial logic.",
-    features: [
-      {
-        icon: feasibilityIcon,
-        text: "Feasibility studies and highest-use analysis",
-      },
-      {
-        icon: conceptDevelopmentIcon,
-        text: "Concept development and repositioning",
-      },
-      {
-        icon: designOperationIcon,
-        text: "Design and operational efficiency review",
-      },
-    ],
-    image: hotelRoomImage4,
-  },
-  {
-    id: 5,
-    title: "Restaurant & Bar Concept Curation",
-    description:
-      "Creative F&B concepts built to drive revenue and sustainable margins.",
+      "Maximising F&B profitability through concept design, operational optimisation, and market-aligned positioning.",
     features: [
       { icon: marketLedIcon, text: "Market-led concept positioning" },
       { icon: menuEngineeringIcon, text: "Menu engineering and cost control" },
@@ -142,47 +142,47 @@ const services: Service[] = [
     ],
     image: hotelRoomImage5,
   },
+  // {
+  //   id: 6,
+  //   title: "Operational Support & Performance Turnaround",
+  //   description:
+  //     "Targeted interventions to stabilize operations and restore profitability.",
+  //   features: [
+  //     { icon: propertyImprovementIcon, text: "Property improvement planning" },
+  //     {
+  //       icon: trainingServiceIcon,
+  //       text: "Training and service excellence programs",
+  //     },
+  //     {
+  //       icon: operationalAuditIcon,
+  //       text: "Operational audits and turnaround execution",
+  //     },
+  //   ],
+  //   image: hotelRoomImage6,
+  // },
+  // {
+  //   id: 7,
+  //   title: "Hotel Marketing & Distribution",
+  //   description:
+  //     "Demand generation strategies focused on conversion, yield, and channel efficiency.",
+  //   features: [
+  //     {
+  //       icon: distributionChannelIcon,
+  //       text: "Distribution and channel optimization",
+  //     },
+  //     {
+  //       icon: brandingSalesIcon,
+  //       text: "Branding, sales, and revenue alignment",
+  //     },
+  //     { icon: seoIcon, text: "SEO-driven visibility and direct demand growth" },
+  //   ],
+  //   image: hotelRoomImage7,
+  // },
   {
-    id: 6,
-    title: "Operational Support & Performance Turnaround",
+    id: 5,
+    title: "AI driven hospitality infrastructure ",
     description:
-      "Targeted interventions to stabilize operations and restore profitability.",
-    features: [
-      { icon: propertyImprovementIcon, text: "Property improvement planning" },
-      {
-        icon: trainingServiceIcon,
-        text: "Training and service excellence programs",
-      },
-      {
-        icon: operationalAuditIcon,
-        text: "Operational audits and turnaround execution",
-      },
-    ],
-    image: hotelRoomImage6,
-  },
-  {
-    id: 7,
-    title: "Hotel Marketing & Distribution",
-    description:
-      "Demand generation strategies focused on conversion, yield, and channel efficiency.",
-    features: [
-      {
-        icon: distributionChannelIcon,
-        text: "Distribution and channel optimization",
-      },
-      {
-        icon: brandingSalesIcon,
-        text: "Branding, sales, and revenue alignment",
-      },
-      { icon: seoIcon, text: "SEO-driven visibility and direct demand growth" },
-    ],
-    image: hotelRoomImage7,
-  },
-  {
-    id: 8,
-    title: "AI-Enabled Hospitality, Engineered for Performance",
-    description:
-      "Integrates advanced AI solutions into hotel operations across Southeast Asia.",
+      "Integrated AI solutions, developed with Vertize, to support guest experience, operational efficiency, and data-driven decision-making.",
     features: [
       { icon: aiPoweredIcon, text: "AI-powered guest experience" },
       {

@@ -28,15 +28,15 @@ const caseStudies: CaseStudy[] = [
   {
     id: 1,
     hotelName: "Wyndham Grand Hotel Phu Quoc",
-    title: <>1,400 key 5-star Operations audit, PIP (property improvement plan), F&B outlet curation</>,
-    achievement: "Achieved within 18 months",
+    title: <>Operations audit, PIP, F&B outlet curation</>,
+    achievement: "1,400 key,  5★ Hotel",
     image: roomImage1,
   },
   {
     id: 2,
     hotelName: "Caravelle Hotel Saigon",
-    title: <>335 key 5-star <br /> Management, Renovation <br /> project management</>,
-    achievement: "Achieved within 6 months",
+    title: <>Management, Renovation <br/> project management</> ,
+    achievement: "335 key,  5★ Hotel",
     image: roomImage2,
   },
 ];
@@ -135,14 +135,14 @@ export default function HotelCaseStudy() {
       <div className="bg-white pt-[50px] pb-16 md:pb-20 lg:pb-24">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-[58px] xl:px-[58px]">
           {/* Header */}
-          <div ref={headerRef} className="text-center mb-12 md:mb-16">
-            <p className="text-xs sm:text-[20px] font-light tracking-[0.2em] text-gray-500 uppercase mb-3">
+          <div className="text-center mb-12 md:mb-16">
+            <p className="text-xs sm:text-[20px] font-light tracking-[0.2em] text-gray-500 uppercase mb-1">
               WHERE STRATEGY DELIVERS REAL VALUE
             </p>
             <h2 className="text-[48px] font-medium text-primary">
               Selected Hotel Case Studies
             </h2>
-            <p className="mt-4 text-[#626262] text-sm sm:text-base md:text-[20px] max-w-3xl mx-auto">
+            <p className="mt-0 text-[#626262] text-sm sm:text-base md:text-[20px] max-w-3xl mx-auto">
               Real examples of how we have improved hotel operations, financial
               performance, and guest experience across Southeast Asia.
             </p>
@@ -170,15 +170,15 @@ export default function HotelCaseStudy() {
 
                 {/* Content */}
                 <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
-                  <p className="text-white/80 text-sm mb-2">
+                  <p className="text-xs sm:text-sm text-white/80 mb-1 sm:mb-2 lg:text-[24px]">
                     {study.hotelName}
                   </p>
-                  <h3 className="text-white text-xl sm:text-2xl lg:text-[36px] font-[300] mb-2 leading-[1.2] tracking-[-0.02em]">
+                  <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold mb-1 sm:mb-2 leading-tight lg:text-[36px]">
                     {study.title}
                   </h3>
-                  {/* <p className="text-white/90 text-sm mb-4">
+                  <p className="text-xs sm:text-sm text-white/70 lg:text-[24px]">
                     {study.achievement}
-                  </p> */}
+                  </p>
 
                   {/* View Case Study Button */}
                   {/* <button className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary text-white text-xs sm:text-sm font-semibold rounded-md hover:bg-primary/90 transition-colors">

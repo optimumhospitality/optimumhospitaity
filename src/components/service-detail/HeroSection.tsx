@@ -9,7 +9,7 @@ export default function HeroSection({
     title,
     subtitle,
     heroImage,
-    description,
+    // description,
 }: HeroSectionProps) {
     return (
         <section
@@ -58,9 +58,9 @@ export default function HeroSection({
                         </p>
 
                         {/* Description */}
-                        <p className="text-white/85 text-sm sm:text-base leading-relaxed max-w-xl lg:max-w-2xl">
+                        {/* <p className="text-white/85 text-sm sm:text-base leading-relaxed max-w-xl lg:max-w-2xl">
                             {description}
-                        </p>
+                        </p> */}
                     </div>
                 </div>
             </div>

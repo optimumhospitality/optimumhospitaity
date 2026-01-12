@@ -12,7 +12,7 @@ const projects = [
     image: CaseStudy1,
     hotelName: "Wyndham Grand Hotel Phu Quoc",
     title: "Operations audit, PIP (property improvement plan), F&B outlet curation",
-    details: "1400-key, 5-star",
+    details: "1400-key, 5★ Hotel",
   },
   {
     image: CaseStudy2,
@@ -38,6 +38,67 @@ const projects = [
     title: "E-commerce, distribution setup, revenue management",
     details: "520-key, 5★ luxury hotel",
   },
+  {
+    image: CaseStudy1,
+    hotelName: "Wyndham Grand Hotel Phu Quoc",
+    title: "Operations audit, PIP (property improvement plan), F&B outlet curation",
+    details: "1400-key, 5★ Hotel",
+  },
+  {
+    image: CaseStudy2,
+    hotelName: "Caravelle Hotel Saigon",
+    title: "Management, Renovation project management",
+    details: "335-key, 5★ resort",
+  },
+  {
+    image: CaseStudy3,
+    hotelName: "Arena Cam Ranh",
+    title: "E-commerce, distribution setup, revenue management",
+    details: "1450-key, 4★ luxury hotel",
+  },
+  {
+    image: CaseStudy4,
+    hotelName: "Alma Resort",
+    title: "Distribution setup, E-commerce, revenue management",
+    details: "580-key, 5★ luxury hotel",
+  },
+  {
+    image: CaseStudy5,
+    hotelName: "Empyrean Hotel Nha Trang",
+    title: "E-commerce, distribution setup, revenue management",
+    details: "520-key, 5★ luxury hotel",
+  },
+  {
+    image: CaseStudy1,
+    hotelName: "Wyndham Grand Hotel Phu Quoc",
+    title: "Operations audit, PIP (property improvement plan), F&B outlet curation",
+    details: "1400-key, 5★ Hotel",
+  },
+  {
+    image: CaseStudy2,
+    hotelName: "Caravelle Hotel Saigon",
+    title: "Management, Renovation project management",
+    details: "335-key, 5★ resort",
+  },
+  {
+    image: CaseStudy3,
+    hotelName: "Arena Cam Ranh",
+    title: "E-commerce, distribution setup, revenue management",
+    details: "1450-key, 4★ luxury hotel",
+  },
+  {
+    image: CaseStudy4,
+    hotelName: "Alma Resort",
+    title: "Distribution setup, E-commerce, revenue management",
+    details: "580-key, 5★ luxury hotel",
+  },
+  {
+    image: CaseStudy5,
+    hotelName: "Empyrean Hotel Nha Trang",
+    title: "E-commerce, distribution setup, revenue management",
+    details: "520-key, 5★ luxury hotel",
+  },
+  
 ];
 
 export default function ClientProjects() {
