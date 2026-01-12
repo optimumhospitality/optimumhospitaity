@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -48,6 +49,18 @@ import vertizeImage from "../../assets/image/home-page/coreHotelManagement/hotel
 import iconGuest from "../../assets/image/home-page/coreHotelManagement/card-icon/guest-experienct.webp";
 import iconWorkflow from "../../assets/image/home-page/coreHotelManagement/card-icon/streamline-workflow.webp";
 import iconFinance from "../../assets/image/home-page/coreHotelManagement/card-icon/improve-financial-icon.webp";
+
+// Service slug mapping (matches serviceDetailsData.ts)
+const serviceSlugs = [
+  "hotel-management",
+  "asset-management",
+  "project-development",
+  "hotel-consulting",
+  "fb-concept-curation",
+  "operational-support",
+  "hotel-marketing",
+  "ai-hospitality",
+];
 
 const services: Service[] = [
   // ...existing code...
@@ -333,7 +346,10 @@ export default function CoreHotelManagement() {
                     </ul>
 
                     {/* Know More Button */}
-                    <button className="h-[56px] text-[16px] font-normal inline-flex items-center justify-center gap-[8px] py-[16px] px-[36px] border border-primary text-primary text-[14px] font-medium rounded-[12px] hover:bg-primary hover:text-white transition-colors w-fit">
+                    <Link
+                      to={`/services/${serviceSlugs[index]}`}
+                      className="h-[56px] text-[16px] font-normal inline-flex items-center justify-center gap-[8px] py-[16px] px-[36px] border border-primary text-primary text-[14px] font-medium rounded-[12px] hover:bg-primary hover:text-white transition-colors w-fit"
+                    >
                       KNOW MORE
                       <svg
                         className="w-4 h-4"
@@ -348,7 +364,7 @@ export default function CoreHotelManagement() {
                           d="M7 17L17 7M17 7H7M17 7V17"
                         />
                       </svg>
-                    </button>
+                    </Link>
                   </div>
 
                   {/* Mobile Image - Show below content on mobile */}
