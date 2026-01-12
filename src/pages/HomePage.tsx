@@ -1,6 +1,7 @@
 import Navbar from "../components/layout/Navbar";
 import HeroSection from "../components/home/HeroSection";
 import TrustedBrands from "../components/home/TrustedBrands";
+import WhatWeDo from "../components/home/WhatWeDo";
 import StatsSection from "../components/home/StatsSection";
 import TestimonialsSection from "../components/home/TestimonialsSection";
 import HotelCaseStudy from "../components/home/HotelCaseStudy";
@@ -14,6 +15,7 @@ export default function HomePage() {
       <Navbar />
       <HeroSection />
       <TrustedBrands />
+      <WhatWeDo />
       <StatsSection />
       <TestimonialsSection />
       <HotelCaseStudy />
