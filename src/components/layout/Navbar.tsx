@@ -36,6 +36,10 @@ export default function Navbar() {
   const heroHeight = typeof window !== "undefined" ? window.innerHeight : 800;
   const isScrolledPastHero = scrollY >= heroHeight - 72; // 72px is navbar height
 
+  const isServicesActive =
+    location.pathname.startsWith("/services") ||
+    location.pathname === "/vertize-ai";
+
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b border-white/20 transition-colors duration-300 ${isHomePage && !isScrolledPastHero ? "bg-transparent/80" : "bg-primary"
@@ -57,7 +61,10 @@ export default function Navbar() {
             {/* Home Link */}
             <Link
               to="/"
-              className="text-white text-[20px] font-light tracking-wide hover:text-secondary transition"
+              className={`text-white text-[20px] font-light tracking-wide hover:text-secondary transition ${location.pathname === "/"
+                  ? "underline decoration-2 underline-offset-8"
+                  : ""
+                }`}
             >
               HOME
             </Link>
@@ -70,7 +77,10 @@ export default function Navbar() {
             >
               <button
                 onClick={() => setIsServicesOpen(!isServicesOpen)}
-                className="flex items-center gap-1 text-white text-[20px] font-light tracking-wide hover:text-secondary transition"
+                className={`flex items-center gap-1 text-white text-[20px] font-light tracking-wide hover:text-secondary transition ${isServicesActive
+                    ? "underline decoration-2 underline-offset-8"
+                    : ""
+                  }`}
               >
                 SERVICES
                 <svg
@@ -110,7 +120,10 @@ export default function Navbar() {
               <Link
                 key={link.name}
                 to={link.href}
-                className="text-white text-[20px] font-light tracking-wide hover:text-secondary transition"
+                className={`text-white text-[20px] font-light tracking-wide hover:text-secondary transition ${location.pathname === link.href
+                    ? "underline decoration-2 underline-offset-8"
+                    : ""
+                  }`}
               >
                 {link.name}
               </Link>
