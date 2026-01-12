@@ -1,16 +1,20 @@
-import ChatBotImg from "../../assets/image/vertize-ai/ChatBot.webp"
+// import ChatBotImg from "../../assets/image/vertize-ai/ChatBot.webp"
+import ChatBotVideo from "../../assets/image/vertize-ai/ChatBot.webm"
 
 export default function NotAChatbot() {
     return (
-        <section className="bg-[#FFFDF8] py-16 md:py-20 lg:py-24">
+        <section className="bg-white py-16 md:py-20 lg:py-12">
             <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-[100px]">
                 <div className="text-center max-w-5xl mx-auto">
                     {/* 3D Icon/Graphic */}
-                    <div className="mb-12 flex justify-center">
-                        <img
-                            src={ChatBotImg}
-                            alt="AI Technology"
-                            className="w-64 h-64 sm:w-80 sm:h-80 lg:w-[294px] lg:h-[294px]"
+                    <div className="flex justify-center">
+                        <video
+                            src={ChatBotVideo}
+                            className="w-[360px] h-[360px] max-w-3xl rounded-lg"
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
                         />
                     </div>
 
