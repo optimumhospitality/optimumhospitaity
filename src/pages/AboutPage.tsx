@@ -2,9 +2,13 @@ import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
 import HeroSection from "../components/about/HeroSection";
 import Consultant from "../components/about/Consultant";
-import Presence from "../components/about/Presence";
+// import Presence from "../components/about/Presence";
 import Operate from "../components/about/Operate";
 import ClientProjects from "../components/about/ClientProjects";
+import OurJourney from "../components/about/OurJourney";
+import Leadership from "../components/about/Leadership";
+import Understanding from "../components/about/Understanding";
+
 
 export default function AboutPage() {
   return (
@@ -12,9 +16,13 @@ export default function AboutPage() {
       <Navbar />
       <HeroSection />
       <Consultant />
-      <Presence />
-      <Operate />
+      <OurJourney />
+      <Leadership />
+      <Understanding />
+      {/* <Presence /> */}
+      
       <ClientProjects />
+      <Operate />
       <Footer />
     </div>
   );

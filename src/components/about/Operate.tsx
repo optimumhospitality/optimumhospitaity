@@ -24,6 +24,7 @@ const operationSteps = [
 export default function Operate() {
   return (
     <section>
+      <StatsSection />
       {/* Header Section */}
       <div className="bg-tertinary pt-[80px] ">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-[40px]">
@@ -50,7 +51,7 @@ export default function Operate() {
                 </div>
 
                 {/* Step Title with left border */}
-                <div className="border-l-4 border-primary pl-4 mb-4">
+                <div className=" mb-4">
                   <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-primary">
                     {step.title}
                   </h3>
@@ -67,7 +68,7 @@ export default function Operate() {
       </div>
 
       {/* Stats Section - Using Common Component */}
-      <StatsSection />
+      
 
       <div className="h-[80px] bg-tertinary"></div>
     </section>

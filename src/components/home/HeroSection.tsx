@@ -31,7 +31,7 @@ export default function HeroSection() {
             </h1>
 
             {/* Subtext */}
-            <p className="text-white/90 text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed mb-4 sm:mb-5 md:mb-6 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl">
+            <p className="text-white/90 text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed mb-4 sm:mb-5 md:mb-6 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl lg:font-[300]">
               Independent hotel management and advisory for owners in Southeast
               Asia who want operational excellence without complexity.
             </p>

@@ -1,25 +1,42 @@
-import quocImage from "../../assets/image/aboutus-page/hotel-images/quoc-home-image.webp";
-import radissonImage from "../../assets/image/aboutus-page/hotel-images/radison.webp";
-import wyndhamImage from "../../assets/image/aboutus-page/hotel-images/wyandham-home.webp";
+// import quocImage from "../../assets/image/aboutus-page/hotel-images/quoc-home-image.webp";
+// import radissonImage from "../../assets/image/aboutus-page/hotel-images/radison.webp";
+// import wyndhamImage from "../../assets/image/aboutus-page/hotel-images/wyandham-home.webp";
+import CaseStudy1 from "../../assets/image/home-page/hotel-caseStudies/roomImage1.webp";
+import CaseStudy2 from "../../assets/image/home-page/hotel-caseStudies/roomImage2.webp";
+import CaseStudy3 from "../../assets/image/home-page/hotel-caseStudies/roomImage3.webp";
+import CaseStudy4 from "../../assets/image/home-page/hotel-caseStudies/roomImage4.webp";
+import CaseStudy5 from "../../assets/image/home-page/hotel-caseStudies/roomImage5.webp";
 
 const projects = [
   {
-    image: quocImage,
-    hotelName: "Phu Quoc Resort",
-    title: "Operations audit, Property Improvement Plan (PIP)",
-    details: "1,200-key, 5★ resort",
+    image: CaseStudy1,
+    hotelName: "Wyndham Grand Hotel Phu Quoc",
+    title: "Operations audit, PIP (property improvement plan), F&B outlet curation",
+    details: "1400-key, 5-star",
   },
   {
-    image: wyndhamImage,
-    hotelName: "Wyndham Grand Phu Quoc",
-    title: "Operations audit, Property Improvement Plan (PIP)",
-    details: "1,400-key, 5★ resort",
+    image: CaseStudy2,
+    hotelName: "Caravelle Hotel Saigon",
+    title: "Management, Renovation project management",
+    details: "335-key, 5★ resort",
   },
   {
-    image: radissonImage,
-    hotelName: "Radisson Mui Ne",
-    title: "Operator selection, Owner representation, HMA",
-    details: "335-key, 5★ luxury hotel",
+    image: CaseStudy3,
+    hotelName: "Arena Cam Ranh",
+    title: "E-commerce, distribution setup, revenue management",
+    details: "1450-key, 4★ luxury hotel",
+  },
+  {
+    image: CaseStudy4,
+    hotelName: "Alma Resort",
+    title: "Distribution setup, E-commerce, revenue management",
+    details: "580-key, 5★ luxury hotel",
+  },
+  {
+    image: CaseStudy5,
+    hotelName: "Empyrean Hotel Nha Trang",
+    title: "E-commerce, distribution setup, revenue management",
+    details: "520-key, 5★ luxury hotel",
   },
 ];
 
@@ -64,13 +81,13 @@ export default function ClientProjects() {
 
                 {/* Content */}
                 <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-5 md:p-6 text-white">
-                  <p className="text-xs sm:text-sm text-white/80 mb-1 sm:mb-2">
+                  <p className="text-xs sm:text-sm text-white/80 mb-1 sm:mb-2 lg:text-[24px]">
                     {project.hotelName}
                   </p>
-                  <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold mb-1 sm:mb-2 leading-tight">
+                  <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold mb-1 sm:mb-2 leading-tight lg:text-[36px]">
                     {project.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-white/70">
+                  <p className="text-xs sm:text-sm text-white/70 lg:text-[24px]">
                     {project.details}
                   </p>
                 </div>
