@@ -77,7 +77,7 @@ export default function TrustedBrands() {
                   <img
                     src={brand.logo}
                     alt={brand.name}
-                    className="h-8 md:h-9 lg:h-10 xl:h-12 max-w-[140px] lg:max-w-[160px] xl:max-w-[180px] w-auto object-contain opacity-80 hover:opacity-100 transition-opacity brightness-0 invert"
+                    className="h-8 md:h-9 lg:h-10 xl:h-12 max-w-[140px] lg:max-w-[160px] xl:max-w-[180px] w-auto object-contain opacity-80 hover:opacity-100 transition-opacity "
                   />
                 </div>
               ))}
