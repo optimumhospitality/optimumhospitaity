@@ -1,4 +1,5 @@
 import { useRef, useEffect } from "react";
+import { useLocomotiveScroll } from "../LocomotiveScrollProvider";
 import { gsap } from "gsap";
 import { BadgeCheck } from "lucide-react";
 import HeroBGVideo from "../../assets/image/home-page/hero-image/bg.webm";
@@ -9,8 +10,11 @@ export default function HeroSection() {
   const subtextRef = useRef<HTMLParagraphElement>(null);
   const badgesRef = useRef<HTMLDivElement>(null);
   const ctaRef = useRef<HTMLDivElement>(null);
+  const { isReady } = useLocomotiveScroll();
 
   useEffect(() => {
+    if (!isReady) return;
+
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
 
@@ -41,7 +45,7 @@ export default function HeroSection() {
     }, containerRef);
 
     return () => ctx.revert();
-  }, []);
+  }, [isReady]);
 
   return (
     <section ref={containerRef} className="relative h-screen w-full flex items-end pb-12 sm:pb-16 md:pb-20 lg:pb-24">

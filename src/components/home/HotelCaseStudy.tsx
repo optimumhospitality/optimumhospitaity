@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import { useLocomotiveScroll } from "../LocomotiveScrollProvider";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -61,7 +62,10 @@ export default function HotelCaseStudy() {
   const partnersRef = useRef<HTMLDivElement>(null);
 
   // GSAP scroll animations
+  const { isReady } = useLocomotiveScroll();
   useEffect(() => {
+    if (!isReady) return;
+
     const ctx = gsap.context(() => {
       // Header fade up animation
       if (headerRef.current) {
@@ -123,7 +127,7 @@ export default function HotelCaseStudy() {
     }, sectionRef);
 
     return () => ctx.revert();
-  }, []);
+  }, [isReady]);
 
   return (
     <section ref={sectionRef}>

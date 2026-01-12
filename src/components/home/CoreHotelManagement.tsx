@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { useLocomotiveScroll } from "../LocomotiveScrollProvider";
 import { Link } from "react-router-dom";
 import { gsap } from "gsap";
 import { DollarSign, Lightbulb, MoveUp, type LucideIcon } from "lucide-react";
@@ -212,8 +213,11 @@ export default function CoreHotelManagement() {
   const imageContainerRef = useRef<HTMLDivElement>(null);
   const textRefs = useRef<(HTMLDivElement | null)[]>([]);
   const imageRefs = useRef<(HTMLImageElement | null)[]>([]);
+  const { isReady } = useLocomotiveScroll();
 
   useEffect(() => {
+    if (!isReady) return;
+
     const container = containerRef.current;
     const imageContainer = imageContainerRef.current;
 
@@ -287,7 +291,7 @@ export default function CoreHotelManagement() {
     return () => {
       ScrollTrigger.getAll().forEach((st) => st.kill());
     };
-  }, []);
+  }, [isReady]);
 
   return (
     <section className="pt-25 bg-white">

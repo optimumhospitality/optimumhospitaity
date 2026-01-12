@@ -10,9 +10,10 @@ gsap.registerPlugin(ScrollTrigger);
 // Context to share scroll position with components outside the scroll container (like Navbar)
 interface ScrollContextType {
     scrollY: number;
+    isReady: boolean;
 }
 
-const ScrollContext = createContext<ScrollContextType>({ scrollY: 0 });
+const ScrollContext = createContext<ScrollContextType>({ scrollY: 0, isReady: false });
 
 export const useLocomotiveScroll = () => useContext(ScrollContext);
 
@@ -26,6 +27,7 @@ export default function LocomotiveScrollProvider({ children, navbar }: Locomotiv
     const locomotiveScrollRef = useRef<LocomotiveScroll | null>(null);
     const { pathname } = useLocation();
     const [scrollY, setScrollY] = useState(0);
+    const [isReady, setIsReady] = useState(false);
 
     useEffect(() => {
         if (!containerRef.current) return;
@@ -45,6 +47,8 @@ export default function LocomotiveScrollProvider({ children, navbar }: Locomotiv
                 smooth: false, // Native scroll on tablet for better performance
             },
         });
+
+        setIsReady(true);
 
         // Integrate with GSAP ScrollTrigger and update scroll position state
         locomotiveScrollRef.current.on("scroll", (args: unknown) => {
@@ -110,7 +114,7 @@ export default function LocomotiveScrollProvider({ children, navbar }: Locomotiv
     }, [pathname]);
 
     return (
-        <ScrollContext.Provider value={{ scrollY }}>
+        <ScrollContext.Provider value={{ scrollY, isReady }}>
             {navbar}
             <div data-scroll-container ref={containerRef}>
                 {children}

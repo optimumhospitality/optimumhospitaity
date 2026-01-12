@@ -1,4 +1,5 @@
 import { useRef, useEffect } from "react";
+import { useLocomotiveScroll } from "../LocomotiveScrollProvider";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { User, Hotel, ChartNoAxesCombined } from "lucide-react";
@@ -30,9 +31,12 @@ export default function WhatWeDo() {
   const sectionRef = useRef<HTMLElement>(null);
   const headerRef = useRef<HTMLDivElement>(null);
   const cardsRef = useRef<HTMLDivElement>(null);
+  const { isReady } = useLocomotiveScroll();
 
   // GSAP scroll animations
   useEffect(() => {
+    if (!isReady) return;
+
     const ctx = gsap.context(() => {
       // Header fade up animation
       if (headerRef.current) {
@@ -76,7 +80,7 @@ export default function WhatWeDo() {
     }, sectionRef);
 
     return () => ctx.revert();
-  }, []);
+  }, [isReady]);
 
   return (
     <section ref={sectionRef} className="pt-[100px] pb-[100px] bg-tertinary">

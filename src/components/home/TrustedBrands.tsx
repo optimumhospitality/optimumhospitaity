@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback, useRef } from "react";
+import { useLocomotiveScroll } from "../LocomotiveScrollProvider";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import astonLogo from "../../assets/image/home-page/hotel-icon/aston.webp";
@@ -57,7 +58,10 @@ export default function TrustedBrands() {
   }, [isPaused, nextSlide]);
 
   // GSAP scroll animations
+  const { isReady } = useLocomotiveScroll();
   useEffect(() => {
+    if (!isReady) return;
+
     const ctx = gsap.context(() => {
       // Header fade up animation
       if (headerRef.current) {
@@ -101,7 +105,7 @@ export default function TrustedBrands() {
     }, sectionRef);
 
     return () => ctx.revert();
-  }, []);
+  }, [isReady]);
 
   return (
     <section

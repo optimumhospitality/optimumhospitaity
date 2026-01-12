@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { createPortal } from "react-dom";
 import { MapPin, Phone, Mail, X, CheckCircle } from "lucide-react";
 
 const contactInfo = [
@@ -37,23 +38,26 @@ export default function ContactForm() {
   return (
     <section className="bg-tertinary py-12 md:py-16 lg:py-20">
       {/* Success Snackbar */}
-      <div
-        className={`fixed bottom-6 left-1/2 -translate-x-1/2 z-50 transition-all duration-300 ${showSnackbar
-          ? "opacity-100 translate-y-0"
-          : "opacity-0 translate-y-4 pointer-events-none"
-          }`}
-      >
-        <div className="bg-primary text-white px-6 py-4 rounded-lg shadow-lg flex items-center gap-3">
-          <CheckCircle className="w-5 h-5 text-green-400" />
-          <span className="font-medium">Your message has been submitted successfully!</span>
-          <button
-            onClick={() => setShowSnackbar(false)}
-            className="ml-2 hover:bg-white/10 rounded-full p-1 transition-colors"
-          >
-            <X className="w-4 h-4" />
-          </button>
-        </div>
-      </div>
+      {typeof document !== 'undefined' && createPortal(
+        <div
+          className={`fixed bottom-6 left-1/2 -translate-x-1/2 z-[9999] transition-all duration-300 ${showSnackbar
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 translate-y-4 pointer-events-none"
+            }`}
+        >
+          <div className="bg-primary text-white px-6 py-4 rounded-lg shadow-lg flex items-center gap-3 border border-white/10 backdrop-blur-sm">
+            <CheckCircle className="w-5 h-5 text-green-400" />
+            <span className="font-medium">Your message has been submitted successfully!</span>
+            <button
+              onClick={() => setShowSnackbar(false)}
+              className="ml-2 hover:bg-white/10 rounded-full p-1 transition-colors"
+            >
+              <X className="w-4 h-4" />
+            </button>
+          </div>
+        </div>,
+        document.body
+      )}
 
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-[40px]">
         {/* Contact Info Bar */}

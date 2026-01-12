@@ -1,4 +1,5 @@
 import { useRef, useEffect } from "react";
+import { useLocomotiveScroll } from "../LocomotiveScrollProvider";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import aboutImage from "../../assets/image/home-page/aboutUs/business-partners 1.webp";
@@ -10,8 +11,12 @@ export default function AboutUs() {
   const contentRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLDivElement>(null);
 
+  const { isReady } = useLocomotiveScroll();
+
   // GSAP scroll animations
   useEffect(() => {
+    if (!isReady) return;
+
     const ctx = gsap.context(() => {
       // Content fade up animation
       if (contentRef.current) {
@@ -54,7 +59,7 @@ export default function AboutUs() {
     }, sectionRef);
 
     return () => ctx.revert();
-  }, []);
+  }, [isReady]);
 
   return (
     <section ref={sectionRef} className="bg-tertinary pb-32 pt-15">
