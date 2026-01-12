@@ -1,4 +1,5 @@
 import { useRef, useEffect } from "react";
+import { useLocomotiveScroll } from "../LocomotiveScrollProvider";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import CountUp from "react-countup";
@@ -41,8 +42,10 @@ const stats: StatItem[] = [
 
 export default function StatsSection() {
   const containerRef = useRef<HTMLDivElement>(null);
+  const { isReady } = useLocomotiveScroll();
 
   useEffect(() => {
+    if (!isReady) return;
     const ctx = gsap.context(() => {
       // Stagger stats items
       const items = containerRef.current?.querySelectorAll(".stat-item");
@@ -67,7 +70,7 @@ export default function StatsSection() {
     }, containerRef);
 
     return () => ctx.revert();
-  }, []);
+  }, [isReady]);
 
   return (
     <div className="bg-primary" ref={containerRef}>
