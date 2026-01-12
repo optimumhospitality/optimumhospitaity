@@ -121,6 +121,7 @@ export default function ContactForm() {
                   <input
                     id="firstName"
                     type="text"
+                    required
                     placeholder="Enter your first name"
                     className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:border-primary text-base font-[300] text-[#000000] bg-white placeholder:text-[#555353] placeholder:text-base placeholder:font-[300]"
                   />
@@ -135,6 +136,7 @@ export default function ContactForm() {
                   <input
                     id="lastName"
                     type="text"
+                    required
                     placeholder="Enter your last name"
                     className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:border-primary text-base font-[300] text-[#000000] bg-white placeholder:text-[#555353] placeholder:text-base placeholder:font-[300]"
                   />
@@ -152,6 +154,7 @@ export default function ContactForm() {
                 <input
                   id="email"
                   type="email"
+                  required
                   placeholder="Enter your email"
                   className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:border-primary text-base font-[300] text-[#000000] bg-white placeholder:text-[#555353] placeholder:text-base placeholder:font-[300]"
                 />
@@ -168,6 +171,7 @@ export default function ContactForm() {
                 <input
                   id="subject"
                   type="text"
+                  required
                   placeholder="Enter the subject of message"
                   className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:border-primary text-base font-[300] text-[#000000] bg-white placeholder:text-[#555353] placeholder:text-base placeholder:font-[300]"
                 />
@@ -183,6 +187,7 @@ export default function ContactForm() {
                 </label>
                 <textarea
                   id="message"
+                  required
                   placeholder="Explain your query"
                   rows={4}
                   className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:border-primary text-base font-[300] text-[#000000] bg-white placeholder:text-[#555353] placeholder:text-base placeholder:font-[300] resize-none"

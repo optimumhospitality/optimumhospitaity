@@ -1,6 +1,46 @@
+import { useState } from "react";
+import { createPortal } from "react-dom";
+import { CheckCircle, X } from "lucide-react";
+
 export default function Footer() {
+  const [showSnackbar, setShowSnackbar] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    // Show success snackbar
+    setShowSnackbar(true);
+    // Hide snackbar after 4 seconds
+    setTimeout(() => {
+      setShowSnackbar(false);
+    }, 4000);
+    // Reset form
+    (e.target as HTMLFormElement).reset();
+  };
+
   return (
     <footer className="relative -mt-10">
+      {/* Success Snackbar */}
+      {typeof document !== 'undefined' && createPortal(
+        <div
+          className={`fixed bottom-6 left-1/2 -translate-x-1/2 z-[9999] transition-all duration-300 ${showSnackbar
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 translate-y-4 pointer-events-none"
+            }`}
+        >
+          <div className="bg-white text-primary px-6 py-4 rounded-lg shadow-lg flex items-center gap-3 border border-gray-100 backdrop-blur-sm">
+            <CheckCircle className="w-5 h-5 text-green-600" />
+            <span className="font-medium">Thanks for subscribing!</span>
+            <button
+              onClick={() => setShowSnackbar(false)}
+              className="ml-2 hover:bg-gray-100 rounded-full p-1 transition-colors"
+            >
+              <X className="w-4 h-4" />
+            </button>
+          </div>
+        </div>,
+        document.body
+      )}
+
       {/* CTA Section - Secondary/Yellow Background - Overlapping strip */}
       <div className="relative z-10">
         {/* Split background - top tertinary, bottom primary */}
@@ -65,18 +105,19 @@ export default function Footer() {
             </div>
 
             {/* Email Input */}
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-0 w-full sm:w-auto">
+            <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 sm:gap-0 w-full sm:w-auto">
               <div className="flex border-[1px] border-secondary rounded-[12px] w-full sm:w-auto">
                 <input
                   type="email"
+                  required
                   placeholder="Enter your email"
                   className="px-4 py-3 bg-primary text-white placeholder:text-[#CACACA] text-[16px] rounded-l-[12px] font-[200] focus:outline-none focus:border-white/40 flex-1 sm:flex-none sm:w-[250px] md:w-[300px] min-w-0"
                 />
-                <button className="px-4 sm:px-6 py-3 bg-[#F7EFE3] text-primary text-[16px]  border-secondary font-normal rounded-[11px] hover:bg-white/90 transition-colors whitespace-nowrap lg:w-[157px]">
+                <button type="submit" className="px-4 sm:px-6 py-3 bg-[#F7EFE3] text-primary text-[16px]  border-secondary font-normal rounded-[11px] hover:bg-white/90 transition-colors whitespace-nowrap lg:w-[157px]">
                   SEND
                 </button>
               </div>
-            </div>
+            </form>
           </div>
 
           {/* Horizontal Divider */}
