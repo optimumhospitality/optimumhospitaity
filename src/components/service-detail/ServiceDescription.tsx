@@ -3,8 +3,8 @@ import type { ServiceFeaturePoint } from "../../data/serviceDetailsData";
 interface ServiceDescriptionProps {
     featurePoints: ServiceFeaturePoint[];
     ctaBox: {
-        heading: string;
-        description: string;
+        problem: string;
+        outcome: string;
         buttonText: string;
         buttonLink: string;
     };
@@ -17,7 +17,7 @@ export default function ServiceDescription({
     return (
         <section className="bg-tertinary py-16 sm:py-20 md:py-24 lg:py-28">
             <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-[40px]">
-                <div className="flex flex-col lg:flex-row lg:items-start gap-8 lg:gap-12 xl:gap-16">
+                <div className="flex flex-col-reverse lg:flex-row lg:items-start gap-8 lg:gap-12 xl:gap-16">
                     {/* Left Side - Scrollable Feature Points */}
                     <div className="w-full lg:w-[60%] space-y-12 sm:space-y-14 md:space-y-16 lg:space-y-20 ">
                         {featurePoints.map((point, index) => (
@@ -49,16 +49,26 @@ export default function ServiceDescription({
 
                     {/* Right Side - Sticky CTA Box */}
                     <div className="w-full lg:w-[40%] lg:sticky lg:top-[96px] lg:self-start">
-                        <div className="bg-secondary rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 lg:p-12 shadow-lg">
-                            {/* Heading */}
-                            <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-[32px] font-medium text-primary mb-4 sm:mb-5 md:mb-6 leading-tight">
-                                {ctaBox.heading}
-                            </h3>
+                        <div className="bg-secondary rounded-xl sm:rounded-2xl p-5 sm:p-6 md:p-7 lg:p-8 shadow-lg">
+                            {/* Problem Section */}
+                            <div className="mb-6 sm:mb-7 md:mb-8">
+                                <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-[28px] font-medium text-primary mb-2 sm:mb-1 leading-tight">
+                                    The Problem
+                                </h3>
+                                <p className="text-[#626262] text-sm sm:text-base md:text-lg lg:text-[20px] font-light leading-relaxed">
+                                    {ctaBox.problem}
+                                </p>
+                            </div>
 
-                            {/* Description */}
-                            <p className="text-[#626262] text-sm sm:text-base md:text-lg lg:text-[20px] font-light leading-relaxed mb-6 sm:mb-7 md:mb-8">
-                                {ctaBox.description}
-                            </p>
+                            {/* Outcome Section */}
+                            <div className="mb-6 sm:mb-7 md:mb-8">
+                                <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-[28px] font-medium text-primary mb-2 sm:mb-1 leading-tight">
+                                    The Outcome
+                                </h3>
+                                <p className="text-[#626262] text-sm sm:text-base md:text-lg lg:text-[20px] font-light leading-relaxed">
+                                    {ctaBox.outcome}
+                                </p>
+                            </div>
 
                             {/* CTA Button */}
                             <a

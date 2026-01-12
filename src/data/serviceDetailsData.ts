@@ -29,7 +29,7 @@ import hotelRoomImage4 from "../assets/image/home-page/coreHotelManagement/hotel
 import hotelRoomImage5 from "../assets/image/home-page/coreHotelManagement/hotelRoomImage5.webp";
 import hotelRoomImage6 from "../assets/image/home-page/coreHotelManagement/hotelRoomImage6.webp";
 import hotelRoomImage7 from "../assets/image/home-page/coreHotelManagement/hotelRoomImage7.webp";
-import vertizeImage from "../assets/image/home-page/coreHotelManagement/hotelRoomImage8.webp";
+// import vertizeImage from "../assets/image/home-page/coreHotelManagement/hotelRoomImage8.webp";
 
 export interface ServiceFeaturePoint {
     icon: string;
@@ -46,8 +46,10 @@ export interface ServiceDetail {
     heroDescription: string;
     featurePoints: ServiceFeaturePoint[];
     ctaBox: {
-        heading: string;
-        description: string;
+        problem: string;
+        outcome: string;
+        // heading: string;
+        // description: string;
         buttonText: string;
         buttonLink: string;
     };
@@ -63,49 +65,49 @@ export const serviceDetailsData: ServiceDetail[] = [
         heroDescription: "Full-service hotel management designed to maximize operational performance and owner returns.",
         featurePoints: [
             {
-                icon: dynamicExperienceIcon,
-                title: "Full Operational Control",
-                description: "Complete day-to-day management of all hotel operations, from front office to back-of-house, ensuring consistent service standards and operational efficiency."
+                icon: preOpeningIcon,
+                title: "Pre-Opening Services",
+                description: "For new builds, we provide comprehensive technical pre-opening services and set up your hotel for success."
+            },
+            {
+                icon: conceptDevelopmentIcon,
+                title: "Product Development",
+                description: "Define positioning, guest segmentation, and the type and style of operation with special attention to creating compelling F&B outlets."
+            },
+            {
+                icon: brandingSalesIcon,
+                title: "Branding and Distribution",
+                description: "We develop your brand and all the brand standards, or negotiate a franchise on your behalf, then create a digital footprint and online distribution system."
             },
             {
                 icon: gopCashFlowIcon,
-                title: "Revenue & Profit Optimization",
-                description: "Strategic revenue management, cost control, and GOP optimization to maximize profitability while maintaining service quality."
+                title: "Hotel Operation / Management",
+                description: "Like no-hidden-cost, flexible Hotel Management contracts for franchised and independent hotels, combined with our hands-on approach, deliver industry-leading gross operating profits (GOP)."
             },
             {
-                icon: aiPoweredIcon,
-                title: "Quality Assurance Programs",
-                description: "Rigorous quality control systems, guest satisfaction monitoring, and continuous improvement initiatives to maintain brand standards."
-            },
-            {
-                icon: experienceBuilderIcon,
-                title: "Team Development & Training",
-                description: "Comprehensive staff training programs, leadership development, and performance management to build high-performing hotel teams."
-            },
-            {
-                icon: brandOperatorIcon,
-                title: "Brand Standards Compliance",
-                description: "Ensuring adherence to brand guidelines, operational standards, and quality benchmarks across all touchpoints."
-            },
-            {
-                icon: technicalServicesIcon,
-                title: "Technology Integration",
-                description: "Implementation and management of property management systems, booking engines, and operational technology to streamline operations."
+                icon: dynamicExperienceIcon,
+                title: "Guest Satisfaction",
+                description: "Hospitality is at the core of all we do. We implement procedures and training structures that meet and exceed international standards."
             },
             {
                 icon: budgetPlanningIcon,
-                title: "Financial Planning & Reporting",
-                description: "Monthly financial reporting, budget preparation, forecasting, and variance analysis to keep owners informed and in control."
+                title: "Accountability & Cost Management",
+                description: "We ensure a profitable operation with clear targets and accountabilities, focusing on both revenue generation and cost containment."
+            },
+            {
+                icon: technicalServicesIcon,
+                title: "Technology",
+                description: "As an independent operator, our tech stack is flexible. We can partner with the latest and best new developments and are not forced to use a hotel chain's proprietary systems."
             },
             {
                 icon: capitalPlanningIcon,
-                title: "Asset Maintenance & CapEx Planning",
-                description: "Proactive property maintenance, capital expenditure planning, and asset preservation to protect long-term value."
+                title: "Asset Management",
+                description: "We ensure that all assets are well-maintained and protected. We place high importance on preventative maintenance programs."
             }
         ],
         ctaBox: {
-            heading: "Ready to Optimize Your Hotel Operations?",
-            description: "Let's discuss how our independent management approach can improve your hotel's performance and profitability.",
+            problem: "High brand fees and rigid systems that prioritize franchisors over property profitability.",
+            outcome: "Flexible, low-fee management that delivers superior GOP through owner-first operations.",
             buttonText: "Schedule a Consultation",
             buttonLink: "/contact"
         }
@@ -119,49 +121,49 @@ export const serviceDetailsData: ServiceDetail[] = [
         heroDescription: "Strategic asset management focused on maximizing returns and protecting owner interests.",
         featurePoints: [
             {
-                icon: gopCashFlowIcon,
-                title: "GOP & Cash Flow Optimization",
-                description: "Continuous monitoring and improvement of gross operating profit and cash flow generation through strategic interventions and operational discipline."
-            },
-            {
-                icon: capitalPlanningIcon,
-                title: "Capital Planning & ROI Validation",
-                description: "Strategic capital expenditure planning, investment prioritization, and ROI analysis to ensure every dollar spent drives value."
-            },
-            {
                 icon: brandOperatorIcon,
-                title: "Operator Performance Governance",
-                description: "Active oversight of hotel operators and management companies, ensuring accountability, performance standards, and contract compliance."
+                title: "Owner Representation",
+                description: "We represent the owner on-site through constant and direct process, monitor forecasting and performance of hotel operators and franchisors alike, ensuring accountability."
             },
             {
                 icon: budgetPlanningIcon,
-                title: "Budget Review & Approval",
-                description: "Detailed budget analysis, challenge, and approval processes to ensure realistic targets and optimal resource allocation."
+                title: "Financial Monitoring",
+                description: "We supervise the budget process, monitor forecasting, balance sheets, and daily business operations, and compare them with the market competitive set."
+            },
+            {
+                icon: gopCashFlowIcon,
+                title: "Revenue Management",
+                description: "We optimize sales and marketing structures, establish through daily benchmarking, and ensure complete control over revenue streams."
             },
             {
                 icon: operationalAuditIcon,
-                title: "Monthly Performance Reviews",
-                description: "Regular financial and operational performance reviews, variance analysis, and corrective action planning."
+                title: "Operational Reviews",
+                description: "We ensure that the owner's interests have a direct influence on project-level decisions and manage guest and staff satisfaction and key performance indicators (KPIs)."
             },
             {
-                icon: feasibilityIcon,
-                title: "Strategic Repositioning",
-                description: "Market analysis, competitive positioning, and strategic recommendations to maximize asset value and revenue potential."
+                icon: capitalPlanningIcon,
+                title: "Advise On Investment Strategies",
+                description: "We optimize and evaluate the investment strategy, model cash flow, conduct asset improvement initiatives, and compare them with initial investment goals and valuations."
             },
             {
                 icon: technicalServicesIcon,
-                title: "Contract Negotiation & Management",
-                description: "Negotiation of management agreements, vendor contracts, and service agreements to protect owner interests and optimize terms."
+                title: "Review & Advice On Contracts",
+                description: "We review all third-party contracts on behalf of the owner and ensure that the owner's interest is always protected."
+            },
+            {
+                icon: feasibilityIcon,
+                title: "Franchise & Operator Affiliations",
+                description: "We provide transparency and balance between owner and operator interests. We advise on initial brand selection and negotiate brand agreement."
             },
             {
                 icon: propertyImprovementIcon,
-                title: "Property Improvement Plans",
-                description: "Development and oversight of property improvement initiatives, renovations, and repositioning projects to enhance competitiveness."
+                title: "Capital Expenditures & Control",
+                description: "We establish clear rules and provide investment analysis on capital expenditures and project approvals to ensure a balanced approach between maintenance versus capital improvements."
             }
         ],
         ctaBox: {
-            heading: "Protect Your Hotel Investment",
-            description: "Our asset management services ensure your hotel investment is actively managed for maximum returns and long-term value.",
+            problem: "Limited visibility and difficulty holding operators accountable for performance.",
+            outcome: "Active oversight that maximizes GOP and ensures operators meet commitments.",
             buttonText: "Discuss Asset Management",
             buttonLink: "/contact"
         }
@@ -175,49 +177,49 @@ export const serviceDetailsData: ServiceDetail[] = [
         heroDescription: "Comprehensive project management from concept to opening, ensuring on-time, on-budget delivery.",
         featurePoints: [
             {
-                icon: technicalServicesIcon,
-                title: "Technical Services & Design Reviews",
-                description: "Expert review of architectural plans, MEP systems, and operational layouts to ensure functionality, efficiency, and guest experience."
-            },
-            {
-                icon: budgetPlanningIcon,
-                title: "Budget, Timeline & Scope Control",
-                description: "Rigorous project management, cost control, and schedule monitoring to prevent overruns and ensure timely delivery."
-            },
-            {
-                icon: preOpeningIcon,
-                title: "Pre-Opening & Soft Opening Leadership",
-                description: "Complete pre-opening management including recruitment, training, systems setup, and soft opening execution."
-            },
-            {
-                icon: designOperationIcon,
-                title: "Operational Design Consultation",
-                description: "Input on operational flow, space planning, and design decisions to optimize efficiency and guest experience from day one."
-            },
-            {
                 icon: feasibilityIcon,
-                title: "FF&E Procurement & Installation",
-                description: "Management of furniture, fixtures, and equipment procurement, quality control, and installation coordination."
+                title: "Feasibility Studies",
+                description: "Leveraging our AI tools, we provide unparalleled, rapid feasibility studies that equip owners' financial institutions with essential insights."
             },
             {
-                icon: trainingServiceIcon,
-                title: "Staff Recruitment & Training",
-                description: "Comprehensive recruitment strategies, onboarding programs, and pre-opening training to build a high-performing team."
-            },
-            {
-                icon: technicalServicesIcon,
-                title: "Systems Integration & Testing",
-                description: "Implementation and testing of PMS, POS, and operational systems to ensure seamless operations from opening day."
+                icon: conceptDevelopmentIcon,
+                title: "Hotel Project Development & Strategy",
+                description: "We offer product conceptualization, review of project proposals, creation of a strategic planning roadmap, and support with contract negotiation."
             },
             {
                 icon: brandOperatorIcon,
-                title: "Brand Standards Implementation",
-                description: "Ensuring all brand standards, operating procedures, and quality benchmarks are embedded before opening."
+                title: "Management Company (Operator) Search & Selection",
+                description: "We advise owners on the appropriate brand and model based on their investment strategy and assist in the selection and negotiation process."
+            },
+            {
+                icon: designOperationIcon,
+                title: "Design Review",
+                description: "We collaborate closely with hotel proprietors, architects, and interior designers to achieve designs that blend aesthetic appeal with operational efficiency to their utmost potential."
+            },
+            {
+                icon: technicalServicesIcon,
+                title: "Technical and Pre-opening Services",
+                description: "Critical Path set up, IT schematic assessments, manning guide, pre-opening budgeting, operating equipment needs, brand SOPs, manuals, testing, Etc. We ensure your hotel is fully prepared for the opening."
+            },
+            {
+                icon: trainingServiceIcon,
+                title: "Recruitment & Human Resources",
+                description: "We consult owners on the appropriate organizational structure based on market and industry standards, support in the search for senior executives, and review candidates."
+            },
+            {
+                icon: preOpeningIcon,
+                title: "Soft Opening",
+                description: "Once open, we remain in the project for some months to guide management staff, establish SOPs, fine-tune operations, address issues, and refine marketing strategies."
+            },
+            {
+                icon: propertyImprovementIcon,
+                title: "Audits and Property Improvement Plans (PIPs)",
+                description: "We conduct comprehensive reviews of existing assets, develop a future asset strategy, establish measurable targets for software and hardware improved performance, and analyze operational processes."
             }
         ],
         ctaBox: {
-            heading: "Planning a New Hotel Project?",
-            description: "Our development and pre-opening expertise ensures your project launches successfully, on time, and within budget.",
+            problem: "Projects run over budget and behind schedule due to poor planning and coordination.",
+            outcome: "On-time, on-budget openings with fully prepared operations from day one.",
             buttonText: "Start Your Project",
             buttonLink: "/contact"
         }
@@ -232,48 +234,48 @@ export const serviceDetailsData: ServiceDetail[] = [
         featurePoints: [
             {
                 icon: feasibilityIcon,
-                title: "Feasibility Studies & Market Analysis",
-                description: "Comprehensive market research, demand analysis, and financial feasibility studies to validate investment decisions and development concepts."
+                title: "Feasibility Studies",
+                description: "Leveraging our AI tools, we provide unparalleled, rapid feasibility studies that equip owners' financial institutions with essential insights for informed decision-making."
             },
             {
                 icon: conceptDevelopmentIcon,
-                title: "Concept Development & Positioning",
-                description: "Strategic concept development, brand positioning, and market differentiation strategies to maximize competitive advantage."
-            },
-            {
-                icon: designOperationIcon,
-                title: "Design & Operational Efficiency Review",
-                description: "Expert review of design plans and operational layouts to optimize efficiency, reduce costs, and enhance guest experience."
-            },
-            {
-                icon: capitalPlanningIcon,
-                title: "Investment Strategy & ROI Modeling",
-                description: "Financial modeling, investment analysis, and return projections to support informed decision-making."
+                title: "Hotel Project Development & Strategy",
+                description: "We offer product conceptualization, review of project proposals, creation of a strategic planning roadmap, and support with contract negotiation for resort and hotel developments."
             },
             {
                 icon: brandOperatorIcon,
-                title: "Operator Selection & Negotiation",
-                description: "Strategic guidance on operator selection, contract negotiation, and deal structuring to secure optimal terms."
+                title: "Management Company (Operator) Search & Selection",
+                description: "We advise owners on the appropriate brand and model based on their investment strategy and assist in the selection and negotiation process."
+            },
+            {
+                icon: designOperationIcon,
+                title: "Design Review",
+                description: "We collaborate closely with hotel proprietors, architects, and interior designers to achieve designs that blend aesthetic appeal with operational efficiency to their utmost potential."
+            },
+            {
+                icon: technicalServicesIcon,
+                title: "Technical and Pre-opening Services",
+                description: "Critical Path set up, IT schematic assessments, manning guide, pre-opening budgeting, operating equipment needs, brand SOPs, manuals, testing. We ensure your resort is fully prepared for the opening."
+            },
+            {
+                icon: trainingServiceIcon,
+                title: "Recruitment & Human Resources",
+                description: "We consult owners on the appropriate organizational structure based on market and industry standards, support in the search for senior executives, and review candidates."
+            },
+            {
+                icon: preOpeningIcon,
+                title: "Soft Opening",
+                description: "Once open, we remain in the project for some months to guide management staff, establish SOPs, fine-tune operations, address issues, and refine marketing strategies."
             },
             {
                 icon: propertyImprovementIcon,
-                title: "Repositioning & Renovation Strategy",
-                description: "Strategic repositioning plans, renovation scoping, and investment prioritization to maximize asset value."
-            },
-            {
-                icon: operationalAuditIcon,
-                title: "Operational Audits & Diagnostics",
-                description: "Comprehensive operational assessments, performance diagnostics, and improvement roadmaps."
-            },
-            {
-                icon: gopCashFlowIcon,
-                title: "Performance Improvement Plans",
-                description: "Detailed action plans to improve operational performance, increase revenue, and reduce costs."
+                title: "Audits and Property Improvement Plans (PIPs)",
+                description: "We conduct comprehensive reviews of existing assets, develop a future asset strategy, establish measurable targets for software and hardware improved performance, and analyze operational processes."
             }
         ],
         ctaBox: {
-            heading: "Need Strategic Hotel Guidance?",
-            description: "Our consulting services provide the insights and strategies you need to make confident decisions about your hotel investment.",
+            problem: "Investment decisions made without reliable data lead to poor positioning and underperformance.",
+            outcome: "Data-driven strategies that ensure market fit and realistic financial projections.",
             buttonText: "Get Expert Advice",
             buttonLink: "/contact"
         }
@@ -287,49 +289,49 @@ export const serviceDetailsData: ServiceDetail[] = [
         heroDescription: "Innovative F&B concepts designed to maximize revenue, enhance guest experience, and drive profitability.",
         featurePoints: [
             {
-                icon: marketLedIcon,
-                title: "Market-Led Concept Positioning",
-                description: "Market research, competitive analysis, and consumer insights to develop F&B concepts that resonate with target audiences."
-            },
-            {
-                icon: menuEngineeringIcon,
-                title: "Menu Engineering & Cost Control",
-                description: "Strategic menu design, pricing optimization, and cost engineering to maximize profitability while maintaining quality."
-            },
-            {
-                icon: outletPerformanceIcon,
-                title: "Outlet Performance Optimization",
-                description: "Revenue management, operational efficiency improvements, and service excellence programs to drive F&B performance."
-            },
-            {
                 icon: conceptDevelopmentIcon,
-                title: "Concept Design & Development",
-                description: "Complete concept development from positioning and branding to interior design and operational planning."
-            },
-            {
-                icon: designOperationIcon,
-                title: "Kitchen & Service Design",
-                description: "Functional kitchen layouts, service flow optimization, and equipment planning to ensure operational efficiency."
-            },
-            {
-                icon: trainingServiceIcon,
-                title: "Culinary Team Development",
-                description: "Chef recruitment, team training, and culinary standards development to deliver exceptional food quality."
+                title: "Concept Development",
+                description: "We conduct market research, propose concept ideas, create profit models, and business plans."
             },
             {
                 icon: brandingSalesIcon,
-                title: "F&B Marketing & Promotion",
-                description: "Strategic marketing plans, promotional campaigns, and brand building to drive covers and revenue."
+                title: "Brand Development",
+                description: "Far beyond a name and logo, we construct a brand, its story, and DNA, and develop the brand's presence and delivery."
+            },
+            {
+                icon: designOperationIcon,
+                title: "Build & Organise",
+                description: "We work with ID and kitchen suppliers, create layouts and define operating equipment needs, and create the menu, drink lists, and pricing models."
+            },
+            {
+                icon: menuEngineeringIcon,
+                title: "Menu Engineering",
+                description: "We create menus for maximum profits, distribute workload evenly, design recipes with precise yields, and ensure they can be executed by cost-effective staff."
+            },
+            {
+                icon: marketLedIcon,
+                title: "Craft Cocktail Program",
+                description: "We are in touch with global trends, we create drink lists that sell, and we focus your team on execution and consistency."
+            },
+            {
+                icon: trainingServiceIcon,
+                title: "Training",
+                description: "We integrate guiding principles and SOPs into a cohesive system. Your restaurant's service will be accolades."
+            },
+            {
+                icon: outletPerformanceIcon,
+                title: "Ongoing Support & Management",
+                description: "We inspect systems and finances regularly. We provide guidance and coaching, spotting trouble before it festers into something the guest notices."
             },
             {
                 icon: gopCashFlowIcon,
-                title: "F&B Financial Management",
-                description: "Budgeting, cost control, inventory management, and financial reporting to ensure sustainable profitability."
+                title: "Franchise",
+                description: "We negotiate favourable terms and streamline operations and then drive the franchisor to excel."
             }
         ],
         ctaBox: {
-            heading: "Transform Your F&B Operations",
-            description: "Let's create F&B concepts that drive revenue, delight guests, and deliver sustainable margins.",
+            problem: "F&B outlets underperform due to weak concepts and poor cost control.",
+            outcome: "Profitable F&B with optimized menus and disciplined execution.",
             buttonText: "Explore F&B Solutions",
             buttonLink: "/contact"
         }
@@ -384,8 +386,8 @@ export const serviceDetailsData: ServiceDetail[] = [
             }
         ],
         ctaBox: {
-            heading: "Need Urgent Performance Improvement?",
-            description: "Our turnaround specialists can quickly diagnose issues and implement solutions to restore your hotel's performance.",
+            problem: "Operational inefficiencies and service issues drive declining profitability.",
+            outcome: "Restored profitability through targeted interventions and staff training.",
             buttonText: "Request Turnaround Support",
             buttonLink: "/contact"
         }
@@ -440,68 +442,68 @@ export const serviceDetailsData: ServiceDetail[] = [
             }
         ],
         ctaBox: {
-            heading: "Boost Your Hotel's Visibility & Bookings",
-            description: "Our marketing and distribution strategies drive qualified demand, increase direct bookings, and maximize revenue.",
+            problem: "Lost revenue to OTAs and low direct bookings due to weak distribution.",
+            outcome: "Increased direct bookings and revenue through optimized distribution.",
             buttonText: "Grow Your Revenue",
             buttonLink: "/contact"
         }
     },
-    {
-        id: 8,
-        slug: "ai-hospitality",
-        title: "AI-Enabled Hospitality, Engineered for Performance",
-        subtitle: "Integrates advanced AI solutions into hotel operations across Southeast Asia.",
-        heroImage: vertizeImage,
-        heroDescription: "In partnership with Vertize, we bring cutting-edge AI technology to elevate guest experience and operational efficiency.",
-        featurePoints: [
-            {
-                icon: aiPoweredIcon,
-                title: "AI-Powered Guest Experience",
-                description: "Intelligent guest interaction systems, personalized recommendations, and 24/7 AI concierge services to enhance guest satisfaction."
-            },
-            {
-                icon: experienceBuilderIcon,
-                title: "Streamlined Operational Workflows",
-                description: "AI-driven automation of routine tasks, intelligent scheduling, and workflow optimization to improve staff productivity."
-            },
-            {
-                icon: gopCashFlowIcon,
-                title: "Improved Financial Performance",
-                description: "AI-powered revenue management, predictive analytics, and cost optimization to maximize profitability."
-            },
-            {
-                icon: dynamicExperienceIcon,
-                title: "Intelligent Booking & Upselling",
-                description: "AI-driven booking assistance, smart upselling recommendations, and personalized offers to increase revenue per guest."
-            },
-            {
-                icon: technicalServicesIcon,
-                title: "Seamless Technology Integration",
-                description: "Integration with existing PMS, POS, and operational systems for unified data and seamless operations."
-            },
-            {
-                icon: trainingServiceIcon,
-                title: "Staff Training & AI Adoption",
-                description: "Comprehensive training programs to ensure your team can effectively leverage AI tools and maximize their benefits."
-            },
-            {
-                icon: brandOperatorIcon,
-                title: "Multi-Language Support",
-                description: "AI systems supporting multiple languages to serve diverse guest demographics across Southeast Asia."
-            },
-            {
-                icon: outletPerformanceIcon,
-                title: "Performance Analytics & Insights",
-                description: "AI-powered analytics providing actionable insights on guest behavior, operational efficiency, and revenue opportunities."
-            }
-        ],
-        ctaBox: {
-            heading: "Ready to Transform with AI?",
-            description: "Discover how AI-enabled hospitality can elevate your guest experience and drive operational excellence.",
-            buttonText: "Explore AI Solutions",
-            buttonLink: "/vertise-ai"
-        }
-    }
+    // {
+    //     id: 8,
+    //     slug: "ai-hospitality",
+    //     title: "AI-Enabled Hospitality, Engineered for Performance",
+    //     subtitle: "Integrates advanced AI solutions into hotel operations across Southeast Asia.",
+    //     heroImage: vertizeImage,
+    //     heroDescription: "In partnership with Vertize, we bring cutting-edge AI technology to elevate guest experience and operational efficiency.",
+    //     featurePoints: [
+    //         {
+    //             icon: aiPoweredIcon,
+    //             title: "AI-Powered Guest Experience",
+    //             description: "Intelligent guest interaction systems, personalized recommendations, and 24/7 AI concierge services to enhance guest satisfaction."
+    //         },
+    //         {
+    //             icon: experienceBuilderIcon,
+    //             title: "Streamlined Operational Workflows",
+    //             description: "AI-driven automation of routine tasks, intelligent scheduling, and workflow optimization to improve staff productivity."
+    //         },
+    //         {
+    //             icon: gopCashFlowIcon,
+    //             title: "Improved Financial Performance",
+    //             description: "AI-powered revenue management, predictive analytics, and cost optimization to maximize profitability."
+    //         },
+    //         {
+    //             icon: dynamicExperienceIcon,
+    //             title: "Intelligent Booking & Upselling",
+    //             description: "AI-driven booking assistance, smart upselling recommendations, and personalized offers to increase revenue per guest."
+    //         },
+    //         {
+    //             icon: technicalServicesIcon,
+    //             title: "Seamless Technology Integration",
+    //             description: "Integration with existing PMS, POS, and operational systems for unified data and seamless operations."
+    //         },
+    //         {
+    //             icon: trainingServiceIcon,
+    //             title: "Staff Training & AI Adoption",
+    //             description: "Comprehensive training programs to ensure your team can effectively leverage AI tools and maximize their benefits."
+    //         },
+    //         {
+    //             icon: brandOperatorIcon,
+    //             title: "Multi-Language Support",
+    //             description: "AI systems supporting multiple languages to serve diverse guest demographics across Southeast Asia."
+    //         },
+    //         {
+    //             icon: outletPerformanceIcon,
+    //             title: "Performance Analytics & Insights",
+    //             description: "AI-powered analytics providing actionable insights on guest behavior, operational efficiency, and revenue opportunities."
+    //         }
+    //     ],
+    //     ctaBox: {
+    //         heading: "Ready to Transform with AI?",
+    //         description: "Discover how AI-enabled hospitality can elevate your guest experience and drive operational excellence.",
+    //         buttonText: "Explore AI Solutions",
+    //         buttonLink: "/vertize-ai"
+    //     }
+    // }
 ];
 
 // Helper function to get service by slug

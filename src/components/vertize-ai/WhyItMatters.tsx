@@ -1,4 +1,4 @@
-import WhyItMattersImg from "../../assets/image/vertise-ai/WhyItMatter.webp"
+import WhyItMattersImg from "../../assets/image/vertize-ai/WhyItMatter.webp"
 
 export default function WhyItMatters() {
     return (

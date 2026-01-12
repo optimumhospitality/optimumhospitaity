@@ -79,13 +79,13 @@ export default function AiUseCases() {
                     <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-[#D3D3D3]" />
                     {/* Horizontal divider */}
                     <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-px bg-[#D3D3D3]" />
-                    
+
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
                         {useCases.map((useCase, index) => {
                             return (
                                 <div
                                     key={index}
-                                    className="p-8 lg:p-12 border-b border-[#D3D3D3] lg:border-b-0 last:border-b-0"
+                                    className={`p-8 lg:p-12 border-b border-[#D3D3D3] lg:border-b-0 last:border-b-0 ${index % 2 === 0 ? "lg:w-full lg:max-w-[90%] lg:ml-auto" : ""}`}
                                 >
                                     <div className="mb-6 text-[#2A2E3C]">
                                         {useCase.icon}
@@ -96,11 +96,11 @@ export default function AiUseCases() {
                                     <ul className="space-y-4">
                                         {useCase.items.map((item, itemIndex) => (
                                             <li key={itemIndex} className="flex items-start gap-3">
-                                                <svg 
-                                                    className="w-5 h-5 text-[#2A2E3C] flex-shrink-0 mt-0.5" 
-                                                    viewBox="0 0 24 24" 
-                                                    fill="none" 
-                                                    stroke="currentColor" 
+                                                <svg
+                                                    className="w-5 h-5 text-[#2A2E3C] flex-shrink-0 mt-0.5"
+                                                    viewBox="0 0 24 24"
+                                                    fill="none"
+                                                    stroke="currentColor"
                                                     strokeWidth="2"
                                                 >
                                                     <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />

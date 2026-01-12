@@ -11,6 +11,7 @@ import hotelRoomImage4 from "../../assets/image/home-page/coreHotelManagement/ho
 import hotelRoomImage5 from "../../assets/image/home-page/coreHotelManagement/hotelRoomImage5.webp";
 import hotelRoomImage6 from "../../assets/image/home-page/coreHotelManagement/hotelRoomImage6.webp";
 import hotelRoomImage7 from "../../assets/image/home-page/coreHotelManagement/hotelRoomImage7.webp";
+import hotelRoomImage8 from "../../assets/image/home-page/coreHotelManagement/hotelRoomImage8.webp";
 
 // Import card icons
 import dynamicExperienceIcon from "../../assets/image/home-page/coreHotelManagement/card-icon/dynamic-experience.webp";
@@ -53,13 +54,14 @@ interface Service {
 
 // Service slug mapping (matches serviceDetailsData.ts)
 const serviceSlugs = [
-  "hotel-management",
-  "asset-management",
-  "project-development",
-  "hotel-consulting",
-  "fb-concept-curation",
-  "operational-support",
-  "hotel-marketing",
+  "/services/hotel-management",
+  "/services/asset-management",
+  "/services/project-development",
+  "/services/hotel-consulting",
+  "/services/fb-concept-curation",
+  "/services/operational-support",
+  "/services/hotel-marketing",
+  "/vertize-ai",
 ];
 
 const services: Service[] = [
@@ -177,6 +179,21 @@ const services: Service[] = [
     ],
     image: hotelRoomImage7,
   },
+  {
+    id: 8,
+    title: "AI-Enabled Hospitality, Engineered for Performance",
+    description:
+      "Integrates advanced AI solutions into hotel operations across Southeast Asia.",
+    features: [
+      { icon: aiPoweredIcon, text: "AI-powered guest experience" },
+      {
+        icon: experienceBuilderIcon,
+        text: "Streamlined operational workflows",
+      },
+      { icon: dynamicExperienceIcon, text: "Intelligent booking & upselling" },
+    ],
+    image: hotelRoomImage8,
+  }
 ];
 
 const partners = [
@@ -336,7 +353,7 @@ export default function CoreHotelManagement() {
 
                     {/* Know More Button */}
                     <Link
-                      to={`/services/${serviceSlugs[index]}`}
+                      to={`${serviceSlugs[index]}`}
                       className="h-[56px] text-[16px] font-normal inline-flex items-center justify-center gap-[8px] py-[16px] px-[36px] border border-primary text-primary text-[14px] font-medium rounded-[12px] hover:bg-primary hover:text-white transition-colors w-fit"
                     >
                       KNOW MORE

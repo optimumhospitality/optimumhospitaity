@@ -1,4 +1,4 @@
-import HeroBG from "../../assets/image/vertise-ai/HeroBG.webp"
+import HeroBG from "../../assets/image/vertize-ai/HeroBG.webp"
 
 export default function HeroSection() {
     return (

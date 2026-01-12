@@ -1,9 +1,9 @@
 import optimumLogo from "../../assets/image/home-page/website-logo/optimum-logo.webp";
-import VertiseLogo from "../../assets/image/vertise-ai/Vertise-Logo.png";      
+import VertizeLogo from "../../assets/image/vertize-ai/Vertize-Logo.png";
 
 export default function Partnership() {
     return (
-        <section 
+        <section
             className="py-16 md:py-20 lg:py-24"
             style={{
                 background: '#2C3348'
@@ -15,7 +15,7 @@ export default function Partnership() {
                     <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[48px] font-[500] text-[#F7EFE3] mb-6">
                         Why Optimum x Vertize?
                     </h2>
-                    
+
                     <p className="text-[#C8C8C8] text-base sm:text-lg md:text-[20px] max-w-3xl mx-auto mb-16 lg: leading-tight">
                         Combining deep hospitality expertise with advanced AI engineering to deliver measurable operational and financial impact.
                     </p>
@@ -27,13 +27,13 @@ export default function Partnership() {
                             <img
                                 src={optimumLogo}
                                 alt="Optimum Hospitality"
-                                className="h-12 sm:h-16 md:h-20 w-auto" 
+                                className="h-12 sm:h-16 md:h-20 w-auto"
                             />
-                            
+
                             <span className="text-4xl sm:text-5xl lg:text-6xl font-light text-white">×</span>
-                            
+
                             <img
-                                src={VertiseLogo}
+                                src={VertizeLogo}
                                 alt="Vertize"
                                 className="h-12 sm:h-16 md:h-20 w-auto"
                             />
@@ -43,7 +43,7 @@ export default function Partnership() {
                         <div className="flex flex-col lg:flex-row items-start justify-center gap-8 lg:gap-0 max-w-5xl mx-auto relative">
                             {/* Vertical Divider - positioned to align with × above */}
                             <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-cyan-500/50 transform -translate-x-1/2" />
-                            
+
                             {/* Optimum Description */}
                             <div className="flex-1 lg:pr-12">
                                 <p className="text-[#F9F2E4B2] text-base sm:text-lg leading-relaxed text-center lg:text-right">
@@ -51,7 +51,7 @@ export default function Partnership() {
                                 </p>
                             </div>
 
-                            {/* Vertise Description */}
+                            {/* Vertize Description */}
                             <div className="flex-1 lg:pl-12">
                                 <p className="text-[#F9F2E4B2] text-base sm:text-lg leading-relaxed text-center lg:text-left">
                                     Hospitality-specific AI engineering, automation expertise, and practical technology deployment designed for real-world operations.

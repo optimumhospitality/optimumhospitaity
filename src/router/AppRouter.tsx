@@ -6,40 +6,46 @@ import TeamPage from "../pages/TeamPage";
 import TeamMemberDetailPage from "../pages/TeamMemberDetailPage";
 import AboutPage from "../pages/AboutPage";
 import ContactPage from "../pages/ContactPage";
-import VertiseAiPage from "../pages/VertiseAiPage";
+import VertizeAiPage from "../pages/VertizeAiPage";
+import RootLayout from "../components/RootLayout";
 
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <HomePage />,
-  },
-  {
-    path: "/services",
-    element: <ServicesPage />,
-  },
-  {
-    path: "/services/:serviceSlug",
-    element: <ServiceDetailPage />,
-  },
-  {
-    path: "/team",
-    element: <TeamPage />,
-  },
-  {
-    path: "/team/:id",
-    element: <TeamMemberDetailPage />,
-  },
-  {
-    path: "/about",
-    element: <AboutPage />,
-  },
-  {
-    path: "/contact",
-    element: <ContactPage />,
-  },
-  {
-    path: "/vertise-ai",
-    element: <VertiseAiPage />,
+    element: <RootLayout />,
+    children: [
+      {
+        path: "/",
+        element: <HomePage />,
+      },
+      {
+        path: "/services",
+        element: <ServicesPage />,
+      },
+      {
+        path: "/services/:serviceSlug",
+        element: <ServiceDetailPage />,
+      },
+      {
+        path: "/team",
+        element: <TeamPage />,
+      },
+      {
+        path: "/team/:id",
+        element: <TeamMemberDetailPage />,
+      },
+      {
+        path: "/about",
+        element: <AboutPage />,
+      },
+      {
+        path: "/contact",
+        element: <ContactPage />,
+      },
+      {
+        path: "/vertize-ai",
+        element: <VertizeAiPage />,
+      },
+    ],
   },
 ]);
 
