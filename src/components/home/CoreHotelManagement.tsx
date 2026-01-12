@@ -299,12 +299,12 @@ export default function CoreHotelManagement() {
                     </h3>
 
                     {/* Description */}
-                    <p className="text-gray-600 text-sm sm:text-[20px] font-[400] mb-6 leading-relaxed">
+                    <p className="text-primary text-sm sm:text-[20px] font-[400] mb-6 leading-relaxed">
                       {service.description}
                     </p>
 
                     {/* Features */}
-                    <ul className="space-y-3 mb-8">
+                    <ul className="space-y-3 mb-8 ">
                       {service.features.map((feature, fIndex) => (
                         <li
                           key={fIndex}
@@ -315,7 +315,7 @@ export default function CoreHotelManagement() {
                             alt=""
                             className="w-5 h-5 object-contain"
                           />
-                          <span className="text-sm sm:text-[20px] font-[300]">
+                          <span className="text-sm text-primary sm:text-[20px] font-[300]">
                             {feature.text}
                           </span>
                         </li>

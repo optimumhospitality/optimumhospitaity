@@ -54,7 +54,7 @@ export default function Footer() {
       <div className="bg-primary">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-[100px] py-10">
           {/* Newsletter Row */}
-          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 pb-8">
+          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 ">
             <div>
               <h3 className="text-[28px] text-[#F3F3F3] font-normal mb-1">
                 SUBSCRIBE TO OUR NEWSLETTER
@@ -65,38 +65,48 @@ export default function Footer() {
             </div>
 
             {/* Email Input */}
-            <div className="flex gap-0">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="px-4 py-3 bg-primary border border-white/20 text-white placeholder:text-[#CACACA] text-[16px] rounded-l-md font-[200] focus:outline-none focus:border-white/40 w-[250px] sm:w-[300px]"
-              />
-              <button className="px-6 py-3 bg-white text-primary text-[16px] font-normal rounded-r-md hover:bg-white/90 transition-colors">
-                SEND
-              </button>
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-0 w-full sm:w-auto">
+              <div className="flex border-[1px] border-secondary rounded-[12px] w-full sm:w-auto">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="px-4 py-3 bg-primary text-white placeholder:text-[#CACACA] text-[16px] rounded-l-[12px] font-[200] focus:outline-none focus:border-white/40 flex-1 sm:flex-none sm:w-[250px] md:w-[300px] min-w-0"
+                />
+                <button className="px-4 sm:px-6 py-3 bg-[#F7EFE3] text-primary text-[16px] font-normal rounded-[12px] hover:bg-white/90 transition-colors whitespace-nowrap lg:w-[157px]">
+                  SEND
+                </button>
+              </div>
             </div>
           </div>
 
+          {/* Horizontal Divider */}
+          <div className="py-[60px]">
+            <div className="h-[1px] bg-[#FFFFFF]/40 w-full"></div>
+          </div>
+
           {/* Bottom Row */}
-          <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8 pt-8">
+          <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8">
             {/* Left - Copyright & Addresses */}
             <div>
-              <p className="text-white text-[16px] font-normal sm:text-sm font-normal mb-4">
+              <p className="text-white text-[16px] font-normal sm:text-[16px] font-normal mb-4">
                 © Optimum Hospitality Technology Ltd. 2025.
               </p>
               <div className="flex flex-col sm:flex-row gap-6 sm:gap-12">
-                <div className="text-white/60 text-xs leading-relaxed">
+                <div className="text-[16px] text-[#D8D8D8] font-[200] leading-[140%] tracking-[0.05em]">
                   <p>The Sentry · 15B/8 Le Thanh Ton</p>
                   <p>Street · District 1 Hồ Chí Minh, Hồ</p>
                   <p>Chí Minh City · Vietnam</p>
                 </div>
-                <div className="text-white/60 text-xs leading-relaxed">
+                <div className="hidden lg:block w-[0.9px] bg-[#FFFFFF]/40 self-stretch -mr-6"></div>
+                <div className="text-[16px] text-[#D8D8D8] font-[200] leading-[140%]  tracking-[0.05] ml-0">
                   <p>Jl. Raya Gunung Maloko No. 21</p>
                   <p>· Cisauk</p>
                   <p>BSD · Indonesia</p>
                 </div>
               </div>
             </div>
+
+            {/* Vertical Divider */}
 
             {/* Right - Connect with Us */}
             <div className="text-right">
@@ -106,7 +116,7 @@ export default function Footer() {
               <div className="flex flex-col gap-2 items-end">
                 <a
                   href="mailto:info@optimum-hospitality.com"
-                  className="flex items-center gap-2 text-white/60 text-xs hover:text-white transition-colors"
+                  className="flex items-center text-[16px] text-[#D8D8D8] font-[200] gap-2 leading-[140%] tracking-[0.05em] "
                 >
                   info@optimum-hospitality.com
                   <svg
@@ -127,7 +137,7 @@ export default function Footer() {
                   href="https://linkedin.com/company/optimum-hospitality"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-white/60 text-xs hover:text-white transition-colors"
+                  className="flex items-center text-[16px] text-[#D8D8D8] font-[200] gap-2 leading-[140%] tracking-[0.05em] "
                 >
                   optimum-hospitality
                   <svg

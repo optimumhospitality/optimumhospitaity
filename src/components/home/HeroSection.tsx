@@ -1,3 +1,4 @@
+import { BadgeCheck } from "lucide-react";
 import heroImage from "../../assets/image/home-page/hero-image/heroImage.webp";
 
 export default function HeroSection() {
@@ -34,41 +35,16 @@ export default function HeroSection() {
             {/* Benefit Badges */}
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 md:gap-6">
               <div className="flex items-center gap-2 text-white/90">
-                <div className="w-4 h-4 sm:w-5 sm:h-5 rounded-full border border-white/60 flex items-center justify-center flex-shrink-0">
-                  <svg
-                    className="w-2.5 h-2.5 sm:w-3 sm:h-3"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
-                </div>
+               
+                  <BadgeCheck className="w-5.5 h-5.50"/>
+                {/* </div> */}
                 <span className="text-xs sm:text-sm md:text-base">
                   Stronger GOP Optimisation
                 </span>
               </div>
               <div className="flex items-center gap-2 text-white/90">
-                <div className="w-4 h-4 sm:w-5 sm:h-5 rounded-full border border-white/60 flex items-center justify-center flex-shrink-0">
-                  <svg
-                    className="w-2.5 h-2.5 sm:w-3 sm:h-3"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
-                </div>
+               
+                <BadgeCheck className="w-5.5 h-5.50"/>
                 <span className="text-xs sm:text-sm md:text-base">
                   Guaranteed Higher Asset Value
                 </span>

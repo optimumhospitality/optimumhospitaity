@@ -43,7 +43,7 @@ export default function HotelCaseStudy() {
     <section>
       {/* Case Studies Section - White Background */}
       <div className="bg-white pt-[50px] pb-16 md:pb-20 lg:pb-24">
-        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-[58px] xl:px-[58px]">
           {/* Header */}
           <div className="text-center mb-12 md:mb-16">
             <p className="text-xs sm:text-[20px] font-light tracking-[0.2em] text-gray-500 uppercase mb-3">
@@ -59,11 +59,11 @@ export default function HotelCaseStudy() {
           </div>
 
           {/* Case Study Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+          <div className="flex flex-col lg:flex-row justify-center gap-6 lg:gap-[24px]">
             {caseStudies.map((study) => (
               <div
                 key={study.id}
-                className="relative group rounded-2xl overflow-hidden cursor-pointer h-[350px] sm:h-[400px] lg:h-[450px]"
+                className="relative group rounded-2xl overflow-hidden cursor-pointer w-full h-[350px] sm:h-[400px] lg:w-[600px] lg:h-[600px] flex-shrink-0"
                 onMouseEnter={() => setHoveredCard(study.id)}
                 onMouseLeave={() => setHoveredCard(null)}
               >
