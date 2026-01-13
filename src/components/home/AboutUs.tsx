@@ -62,7 +62,7 @@ export default function AboutUs() {
   }, [isReady]);
 
   return (
-    <section ref={sectionRef} className="bg-tertinary pb-32 pt-15">
+    <section ref={sectionRef} className="bg-tertinary pb-25 pt-15">
       {/* Section Header */}
       <div className="text-center  px-4">
         <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[48px] font-medium text-primary mb-2">

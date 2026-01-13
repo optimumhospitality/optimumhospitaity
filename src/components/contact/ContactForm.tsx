@@ -36,7 +36,7 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="bg-tertinary py-12 md:py-16 lg:py-20">
+    <section className="bg-tertinary py-12 md:py-25 lg:py-25 ">
       {/* Success Snackbar */}
       {typeof document !== 'undefined' && createPortal(
         <div

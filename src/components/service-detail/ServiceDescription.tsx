@@ -15,7 +15,7 @@ export default function ServiceDescription({
     ctaBox,
 }: ServiceDescriptionProps) {
     return (
-        <section className="bg-tertinary py-12 sm:py-16 md:py-20 lg:py-28">
+        <section className="bg-tertinary py-12 sm:py-16 md:py-20 lg:py-25">
             <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-[40px]">
                 <div className="flex flex-col-reverse lg:flex-row lg:items-start gap-6 sm:gap-8 lg:gap-12 xl:gap-16">
                     {/* Left Side - Scrollable Feature Points */}

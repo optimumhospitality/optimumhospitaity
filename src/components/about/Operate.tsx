@@ -39,7 +39,7 @@ export default function Operate() {
           </div>
 
           {/* Operation Steps */}
-          <div className="pb-[120px] grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-primary/30">
+          <div className="pb-[100px] grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-primary/30">
             {operationSteps.map((step) => (
               <div
                 key={step.number}
@@ -70,7 +70,7 @@ export default function Operate() {
       {/* Stats Section - Using Common Component */}
       
 
-      <div className="h-[80px] bg-tertinary"></div>
+      
     </section>
   );
 }

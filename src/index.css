@@ -72,9 +72,9 @@
 
 @theme {
   /* Primary Colors */
-  --color-primary: #23283C;
-  --color-secondary: #F7EFE3;
-  --color-tertinary: #FFFDF8;
+  --color-primary: #23283c;
+  --color-secondary: #f7efe3;
+  --color-tertinary: #fffdf8;
 
   /* Font Family */
   --font-sans: "AssociateSans", system-ui, Arial, sans-serif;
@@ -113,7 +113,7 @@ body {
   font-family: "AssociateSans", system-ui, Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: var(--color-primary);
+  background-color: var(--color-tertinary);
   color: var(--color-secondary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

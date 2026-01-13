@@ -190,7 +190,7 @@ function TeamMemberCard({ member }: { member: TeamMember }) {
 
 export default function TeamMembers() {
   return (
-    <section className="py-16 sm:py-35 bg-tertinary">
+    <section className=" sm:py-25 bg-tertinary">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-[40px]">
         {teamData.map((section, sectionIndex) => (
           <div
