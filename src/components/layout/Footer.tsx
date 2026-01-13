@@ -46,7 +46,7 @@ export default function Footer() {
       {/* CTA Section - Secondary/Yellow Background - Overlapping strip */}
       <div className="relative z-10 ">
         {/* Split background - top tertinary, bottom primary */}
-        <div className="absolute inset-0 lg:-top-10 pointer-events-none">
+        <div className="absolute inset-0 pointer-events-none">
           <div className="h-1/2 bg-tertinary"></div>
           <div className="h-1/2 bg-primary"></div>
         </div>
