@@ -496,7 +496,7 @@ export default function CoreHotelManagement() {
       </div>
 
       {/* Tertiary background spacing */}
-      <div className="h-[100px] bg-tertinary"></div>
+      <div className="h-[10px] bg-tertinary"></div>
     </section>
   );
 }
