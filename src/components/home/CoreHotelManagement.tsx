@@ -387,11 +387,11 @@ export default function CoreHotelManagement() {
                   </div>
 
                   {/* Mobile Image - Show below content on mobile */}
-                  <div className="lg:hidden w-full mt-8 rounded-lg overflow-hidden">
+                  <div className=" lg:hidden w-full mt-8 rounded-lg overflow-hidden">
                     <img
                       src={service.image}
                       alt={service.title}
-                      className="w-full h-[300px] sm:h-[400px] object-cover"
+                      className="w-full h-[250px] sm:h-[400px] object-cover"
                     />
                   </div>
                 </div>
