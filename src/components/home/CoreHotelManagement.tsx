@@ -56,11 +56,10 @@ const serviceSlugs = [
   "/services/hotel-management",
   "/services/asset-management",
   "/services/project-development",
-  "/services/hotel-consulting",
   "/services/fb-concept-curation",
-  "/services/operational-support",
-  "/services/hotel-marketing",
   "/vertize-ai",
+
+  
 ];
 
 const services: Service[] = [

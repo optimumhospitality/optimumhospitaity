@@ -1,12 +1,13 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "../pages/HomePage";
-import ServicesPage from "../pages/ServicesPage";
+// import ServicesPage from "../pages/ServicesPage";
 import ServiceDetailPage from "../pages/ServiceDetailPage";
 import TeamPage from "../pages/TeamPage";
 import TeamMemberDetailPage from "../pages/TeamMemberDetailPage";
 import AboutPage from "../pages/AboutPage";
 import ContactPage from "../pages/ContactPage";
 import VertizeAiPage from "../pages/VertizeAiPage";
+import NotFoundPage from "../pages/NotFoundPage";
 import RootLayout from "../components/RootLayout";
 
 const router = createBrowserRouter([
@@ -17,10 +18,10 @@ const router = createBrowserRouter([
         path: "/",
         element: <HomePage />,
       },
-      {
-        path: "/services",
-        element: <ServicesPage />,
-      },
+      // {
+      //   path: "/services",
+      //   element: <ServicesPage />,
+      // },
       {
         path: "/services/:serviceSlug",
         element: <ServiceDetailPage />,
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
       {
         path: "/vertize-ai",
         element: <VertizeAiPage />,
+      },
+      {
+        path: "*",
+        element: <NotFoundPage />,
       },
     ],
   },
