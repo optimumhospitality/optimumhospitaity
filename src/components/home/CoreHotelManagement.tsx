@@ -58,8 +58,6 @@ const serviceSlugs = [
   "/services/project-development",
   "/services/fb-concept-curation",
   "/vertize-ai",
-
-  
 ];
 
 const services: Service[] = [
@@ -103,8 +101,14 @@ const services: Service[] = [
         icon: technicalServicesIcon,
         text: "Feasibility studies and market analysis",
       },
-      { icon: budgetPlanningIcon, text: "Design review and technical services" },
-      { icon: preOpeningIcon, text: "Pre-opening leadership and budget control" },
+      {
+        icon: budgetPlanningIcon,
+        text: "Design review and technical services",
+      },
+      {
+        icon: preOpeningIcon,
+        text: "Pre-opening leadership and budget control",
+      },
     ],
     image: hotelRoomImage3,
   },
@@ -191,7 +195,7 @@ const services: Service[] = [
       { icon: dynamicExperienceIcon, text: "Intelligent booking & upselling" },
     ],
     image: hotelRoomImage8,
-  }
+  },
 ];
 
 // const partners = [
@@ -202,9 +206,18 @@ const services: Service[] = [
 // ];
 
 const benefits: { icon: LucideIcon; text: string }[] = [
-  { icon: MoveUp, text: "Increase revenue and lower costs through operational discipline" },
-  { icon: Lightbulb, text: "Improve efficiency with transparent systems and accountability" },
-  { icon: DollarSign, text: "Build long-term asset value with owner-aligned management" },
+  {
+    icon: MoveUp,
+    text: "Increase revenue and lower costs through operational discipline",
+  },
+  {
+    icon: Lightbulb,
+    text: "Improve efficiency with transparent systems and accountability",
+  },
+  {
+    icon: DollarSign,
+    text: "Build long-term asset value with owner-aligned management",
+  },
 ];
 
 export default function CoreHotelManagement() {
@@ -223,7 +236,9 @@ export default function CoreHotelManagement() {
     if (!container || !imageContainer) return;
 
     // Get the scroll container for Locomotive Scroll
-    const scrollContainer = document.querySelector("[data-scroll-container]") as HTMLElement;
+    const scrollContainer = document.querySelector(
+      "[data-scroll-container]"
+    ) as HTMLElement;
 
     // Set initial states - first image visible, rest hidden
     imageRefs.current.forEach((imgEl, index) => {
@@ -436,10 +451,10 @@ export default function CoreHotelManagement() {
                   return (
                     <li
                       key={index}
-                      className="flex items-center gap-3 text-white/90"
+                      className="flex items-start gap-3 text-white/90"
                     >
-                      <IconComponent className="w-5 h-5 sm:w-6 sm:h-6 text-secondary flex-shrink-0" />
-                      <span className="text-sm sm:text-base lg:text-lg">
+                      <IconComponent className="w-5 h-5 sm:w-6 sm:h-6 text-secondary flex-shrink-0 mt-0.5" />
+                      <span className="text-sm sm:text-base lg:text-lg text-left">
                         {benefit.text}
                       </span>
                     </li>
