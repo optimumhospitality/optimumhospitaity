@@ -101,10 +101,10 @@ export default function Footer() {
           {/* Newsletter Row */}
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 ">
             <div>
-              <h3 className="text-[28px] text-[#F3F3F3] font-normal mb-1">
+              <h3 className=" text-[20px] sm:text-[20px] lg:text-[28px] text-[#F3F3F3] font-normal mb-1">
                 SUBSCRIBE TO OUR NEWSLETTER
               </h3>
-              <p className="text-[20px] font-[300] text-[#F3F3F3] ">
+              <p className="text-[14px] sm:text-[14px] lg:text-[20px] font-[300] text-[#F3F3F3] ">
                 Stay in the touch with updates and industry trends.
               </p>
             </div>
@@ -119,11 +119,11 @@ export default function Footer() {
                   type="email"
                   required
                   placeholder="Enter your email"
-                  className="px-4 py-3 bg-primary text-white placeholder:text-[#CACACA] text-[16px] rounded-l-[12px] font-[200] focus:outline-none focus:border-white/40 flex-1 sm:flex-none sm:w-[250px] md:w-[300px] min-w-0"
+                  className="px-4 py-3 bg-primary text-white placeholder:text-[#CACACA] text-[14px] sm:text-[14px] lg:text-[16px] rounded-l-[12px] font-[200] focus:outline-none focus:border-white/40 flex-1 sm:flex-none sm:w-[250px] md:w-[300px] min-w-0"
                 />
                 <button
                   type="submit"
-                  className="px-4 sm:px-6 py-3 bg-[#F7EFE3] text-primary text-[16px]  border-secondary font-normal rounded-[11px] hover:bg-white/90 transition-colors whitespace-nowrap lg:w-[157px]"
+                  className="px-4 sm:px-6 py-3 bg-[#F7EFE3] text-primary text-[14px] sm:text-[14px] lg:text-[16px]  border-secondary font-normal rounded-[11px] hover:bg-white/90 transition-colors whitespace-nowrap lg:w-[157px]"
                 >
                   SEND
                 </button>
@@ -161,14 +161,14 @@ export default function Footer() {
             {/* Vertical Divider */}
 
             {/* Right - Connect with Us */}
-            <div className="text-right">
-              <p className="text-white text-xs sm:text-[16px] font-normal mb-4">
+            <div className="text-left sm:text-right">
+              <p className="text-white text-[16px] sm:text-[16px] font-normal mb-4">
                 Connect with Us
               </p>
-              <div className="flex flex-col gap-2 items-end">
+              <div className="flex flex-col gap-2 items-start sm:items-end">
                 <a
                   href="mailto:info@optimum-hospitality.com"
-                  className="flex items-center text-[16px] text-[#D8D8D8] font-[200] gap-2 leading-[140%] tracking-[0.05em] "
+                  className="flex flex-row-reverse sm:flex-row items-center text-[16px] text-[#D8D8D8] font-[200] gap-2 leading-[140%] tracking-[0.05em] "
                 >
                   info@optimum-hospitality.com
                   <Mail className="w-5 h-5" strokeWidth={1.5} />
@@ -177,7 +177,7 @@ export default function Footer() {
                   href="https://linkedin.com/company/optimum-hospitality"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center text-[16px] text-[#D8D8D8] font-[200] gap-2 leading-[140%] tracking-[0.05em] "
+                  className="flex flex-row-reverse sm:flex-row items-center text-[16px] text-[#D8D8D8] font-[200] gap-2 leading-[140%] tracking-[0.05em] "
                 >
                   optimum-hospitality
                   <span className="border border-[#D8D8D8] rounded-[4px] w-5 h-5 flex items-center justify-center">

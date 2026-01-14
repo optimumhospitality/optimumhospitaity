@@ -208,10 +208,10 @@ export default function TestimonialsSection() {
       <div className="w-full">
         {/* Section Header */}
         <div className="text-center mb-8 sm:mb-10 md:mb-12 lg:mb-14 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-primary mb-3 sm:mb-4">
+          <h2 className="text-[24px] sm:text-[24px] md:text-3xl lg:text-4xl xl:text-5xl font-bold text-primary mb-3 sm:mb-4">
             Trusted by Hotel Owners and Investors
           </h2>
-          <p className="text-[#626262] text-xs sm:text-sm md:text-[20px] font-normal max-w-xs sm:max-w-sm md:max-w-lg lg:max-w-2xl mx-auto leading-relaxed">
+          <p className="text-[#626262] text-[14px] sm:text-[14px] md:text-[20px] font-normal max-w-xs sm:max-w-sm md:max-w-lg lg:max-w-2xl mx-auto leading-relaxed">
             Owners and partners rely on Optimum Hospitality for disciplined
             execution, transparent reporting, and consistent operational
             results.

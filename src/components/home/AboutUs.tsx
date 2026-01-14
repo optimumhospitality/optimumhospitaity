@@ -74,10 +74,10 @@ export default function AboutUs() {
       </div>
 
       {/* Content Section - 1440 × 798 */}
-      <div className="max-w-[1440px] pt-15 mx-auto pl-4 sm:pl-6 md:pl-8 lg:pl-[40px] pr-4 sm:pr-6 md:pr-8 lg:pr-[40px]">
+      <div className="max-w-[1440px] pt-6 mx-auto pl-4 sm:pl-6 md:pl-8 lg:pl-[40px] pr-4 sm:pr-6 md:pr-8 lg:pr-[40px]">
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-[40px]">
           {/* Left Content Area */}
-          <div className="flex-1 py-8 lg:py-0 flex items-center">
+          <div className="flex-1 py-0 lg:py-0 flex items-center">
             <div ref={contentRef} className="w-full">
               {/* Title */}
               <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-[32px] font-[500] text-primary mb-6 leading-tight">
@@ -85,7 +85,7 @@ export default function AboutUs() {
               </h3>
 
               {/* First Paragraph */}
-              <p className="text-[#000000] text-base sm:text-lg md:text-xl lg:text-[20px] font-[300] leading-relaxed mb-5">
+              <p className="text-[#000000] text-[14px] sm:text-[14px] md:text-xl lg:text-[20px] font-[300] leading-relaxed mb-5">
                 We help hotel owners increase profitability, protect asset
                 value, and maintain full operational control. Optimum
                 Hospitality is a boutique hotel consultancy, asset manager, and
@@ -94,7 +94,7 @@ export default function AboutUs() {
               </p>
 
               {/* Second Paragraph */}
-              <p className="text-[#000000] text-base sm:text-lg md:text-xl lg:text-[20px] font-[300] leading-relaxed mb-8">
+              <p className="text-[#000000] text-[14px] sm:text-[14px] md:text-xl lg:text-[20px] font-[300] leading-relaxed mb-8">
                 From our bases in Ho Chi Minh City and Jakarta, we work with
                 luxury and upper-scale hotels to improve margins, optimize
                 operations, and unlock revenue, with particular strength in
@@ -104,16 +104,16 @@ export default function AboutUs() {
 
               {/* Quote with left border */}
               <div className="border-l-4 border-primary pl-5 mb-8">
-                <p className="text-primary  font-[400] text-sm sm:text-[24px] italic leading-relaxed italic">
+                <p className="text-primary  font-[400] text-16 sm:text-[16px] italic leading-relaxed italic">
                   We don't advise from a distance.
                 </p>
-                <p className="text-primary  font-[400] text-sm sm:text-[24px] italic leading-relaxed italic">
+                <p className="text-primary  font-[400] text-16 sm:text-[16px] italic leading-relaxed italic">
                   We take responsibility for results.
                 </p>
               </div>
 
               {/* CTA Button */}
-              <button className="mb-2 h-[44px] sm:h-[52px] lg:h-[56px] inline-flex items-center justify-center gap-[8px] py-[12px] sm:py-[14px] lg:py-[16px] px-[20px] sm:px-[28px] lg:px-[36px] bg-primary text-white text-[16px] sm:text-[16px] lg:text-[16px] font-normal tracking-[0.1em] rounded-[8px] hover:bg-primary/90 transition-colors">
+              <button className=" h-[44px] sm:h-[52px] lg:h-[56px] inline-flex items-center justify-center gap-[8px] py-[12px] sm:py-[14px] lg:py-[16px] px-[20px] sm:px-[28px] lg:px-[36px] bg-primary text-white text-[16px] sm:text-[16px] lg:text-[16px] font-normal tracking-[0.1em] rounded-[8px] hover:bg-primary/90 transition-colors">
                 BOOK MY CONSULTATION
                 <svg
                   className="w-3 h-3 sm:w-4 sm:h-4"

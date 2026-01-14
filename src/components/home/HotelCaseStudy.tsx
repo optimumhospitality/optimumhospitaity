@@ -15,7 +15,6 @@ import partnerLogo2 from "../../assets/image/home-page/coreHotelManagement/parte
 import partnerLogo3 from "../../assets/image/home-page/coreHotelManagement/parter-logo3.webp";
 import partnerLogo4 from "../../assets/image/home-page/coreHotelManagement/parter-logo4.webp";
 
-
 interface CaseStudy {
   id: number;
   hotelName: string;
@@ -35,7 +34,11 @@ const caseStudies: CaseStudy[] = [
   {
     id: 2,
     hotelName: "Caravelle Hotel Saigon",
-    title: <>Management, Renovation <br/> project management</> ,
+    title: (
+      <>
+        Management, Renovation <br /> project management
+      </>
+    ),
     achievement: "335 key,  5★ Hotel",
     image: roomImage2,
   },
@@ -120,7 +123,7 @@ export default function HotelCaseStudy() {
               trigger: partnersRef.current,
               start: "top 85%",
               toggleActions: "play none none none",
-            }
+            },
           }
         );
       }
@@ -139,7 +142,7 @@ export default function HotelCaseStudy() {
             <p className="text-xs sm:text-[20px] font-light tracking-[0.2em] text-gray-500 uppercase mb-1">
               WHERE STRATEGY DELIVERS REAL VALUE
             </p>
-            <h2 className="text-[48px] font-medium text-primary">
+            <h2 className="text-[24px] sm:text-[24px] md:text-[32px] lg:text-[48px] pb-1.5 font-medium text-primary">
               Selected Hotel Case Studies
             </h2>
             <p className="mt-0 text-[#626262] text-sm sm:text-base md:text-[20px] max-w-3xl mx-auto">
@@ -149,7 +152,10 @@ export default function HotelCaseStudy() {
           </div>
 
           {/* Case Study Cards */}
-          <div ref={cardsRef} className="flex flex-col lg:flex-row justify-center gap-6 lg:gap-[24px]">
+          <div
+            ref={cardsRef}
+            className="flex flex-col lg:flex-row justify-center gap-6 lg:gap-[24px]"
+          >
             {caseStudies.map((study) => (
               <div
                 key={study.id}
@@ -161,8 +167,9 @@ export default function HotelCaseStudy() {
                 <img
                   src={study.image}
                   alt={study.hotelName}
-                  className={`w-full h-full object-cover transition-transform duration-500 ${hoveredCard === study.id ? "scale-110" : "scale-100"
-                    }`}
+                  className={`w-full h-full object-cover transition-transform duration-500 ${
+                    hoveredCard === study.id ? "scale-110" : "scale-100"
+                  }`}
                 />
 
                 {/* Gradient Overlay */}
@@ -170,13 +177,13 @@ export default function HotelCaseStudy() {
 
                 {/* Content */}
                 <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
-                  <p className="text-xs sm:text-sm text-white/80 mb-1 sm:mb-2 lg:text-[24px]">
+                  <p className="text-[16px] sm:text-[16px] text-white/80 mb-1 sm:mb-2 lg:text-[24px]">
                     {study.hotelName}
                   </p>
-                  <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold mb-1 sm:mb-2 leading-tight lg:text-[36px]">
+                  <h3 className="text-[20px] sm:text-[20px] md:text-xl lg:text-2xl font-semibold mb-1 sm:mb-2 leading-tight lg:text-[36px]">
                     {study.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-white/70 lg:text-[24px]">
+                  <p className="text-[16px] sm:text-[16px] text-white/70 lg:text-[24px]">
                     {study.achievement}
                   </p>
 
@@ -206,16 +213,15 @@ export default function HotelCaseStudy() {
 
       {/* How We Increase GOP Section - Dark Background */}
 
-
       <div className="bg-primary" ref={partnersRef}>
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-[100px] py-20">
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-10 lg:gap-16">
             {/* Left Text */}
             <div className="lg:max-w-md flex-shrink-0">
-              <h3 className="text-[32px] sm:text-[40px] md:text-[48px] font-bold text-white mb-4 leading-tight">
+              <h3 className="text-[24px] sm:text-[24px] md:text-[48px] font-bold text-white mb-4 leading-tight">
                 Our Partners
               </h3>
-              <p className="text-white/70 text-[18px] sm:text-[20px] md:text-[20px] leading-relaxed">
+              <p className="text-white/70 text-[16px] text-[16px] sm:text-[20px] md:text-[20px] leading-relaxed">
                 We partner selectively with organizations that meet our
                 standards for performance, precision, and long-term value
                 creation.
@@ -223,11 +229,11 @@ export default function HotelCaseStudy() {
             </div>
 
             {/* Partner Logos - 2x2 Grid */}
-            <div className="grid grid-cols-2 gap-x-8 sm:gap-x-12 md:gap-x-20 gap-y-8 items-center">
+            <div className="grid grid-cols-2 gap-0 md:gap-x-20 md:gap-y-8 items-center">
               {partners.map((partner, index) => (
                 <div
                   key={index}
-                  className="flex items-center justify-center h-16"
+                  className="flex items-center justify-center h-12 md:h-16 p-0"
                 >
                   <img
                     src={partner.logo}

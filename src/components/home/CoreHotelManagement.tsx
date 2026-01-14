@@ -441,7 +441,7 @@ export default function CoreHotelManagement() {
           <div className="flex flex-col lg:flex-row lg:h-[485px]">
             {/* Left Content - Left aligned on mobile, centered on larger screens */}
             <div className="w-full lg:flex-1 flex flex-col justify-center items-start sm:items-center lg:items-start text-left sm:text-center lg:text-left py-8 lg:py-0 lg:pr-8">
-              <h2 className="text-2xl sm:text-[32px] md:text-4xl font-normal text-white mb-6 lg:mb-8">
+              <h2 className="text-[24px] sm:text-[24px] md:text-[32px] lg:text-[48px] font-normal text-white mb-6 lg:mb-8">
                 How We Increase GOP and
                 <br className="sm:hidden" /> Asset Value
               </h2>
