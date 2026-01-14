@@ -181,7 +181,7 @@ export default function Footer() {
                 >
                   optimum-hospitality
                   <span className="border border-[#D8D8D8] rounded-[4px] w-5 h-5 flex items-center justify-center">
-                    <Linkedin className="w-3 h-3" />
+                    <Linkedin className="w-3 h-3 fill-white" />
                   </span>
                 </a>
               </div>
