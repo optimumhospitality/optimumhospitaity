@@ -15,7 +15,7 @@ export default function HeroSectionButton({
   onClick,
 }: HeroSectionButtonProps) {
   const buttonClasses =
-    "inline-flex items-center gap-2 sm:gap-3 px-6 sm:px-8 py-3 sm:py-3.5 bg-primary text-white font-normal text-[16px] sm:text-[16px] md:text-[16px] lg:text-[16px] rounded-md hover:bg-primary/90 transition-all duration-300 group";
+    "inline-flex items-center justify-center gap-2 sm:gap-3 px-6 sm:px-8 h-[44px] sm:h-auto sm:py-3.5 bg-primary text-white font-normal text-[16px] sm:text-[14px] md:text-[16px] lg:text-[20px] rounded-md hover:bg-primary/90 transition-all duration-300 group";
 
   const iconElement = (
     <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />

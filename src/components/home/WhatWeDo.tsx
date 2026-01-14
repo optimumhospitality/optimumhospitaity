@@ -83,7 +83,7 @@ export default function WhatWeDo() {
   }, [isReady]);
 
   return (
-    <section ref={sectionRef} className="pt-[100px] pb-[100px] bg-tertinary">
+    <section ref={sectionRef} className="py-[60px] sm:py-[60px] md:py-[60px] lg:py-[100px] bg-tertinary">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-[100px]">
         {/* Section Header */}
         <div ref={headerRef} className="text-center mb-12 lg:mb-16">

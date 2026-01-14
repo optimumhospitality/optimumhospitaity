@@ -308,9 +308,9 @@ export default function CoreHotelManagement() {
   }, [isReady]);
 
   return (
-    <section className="pt-25 bg-white">
+    <section className="pt-15 lg:pt-25 bg-white">
       {/* Section Header */}
-      <div className="text-center px-4 pb-16">
+      <div className="text-center px-4 pb-0 lg:pb-10">
         <p className="mt-0 text-xs sm:text-[20px] tracking-[0.2em] text-[#969696] font-light uppercase mb-3">
           STRATEGY, OPERATIONS, AND PERFORMANCE
         </p>
@@ -439,10 +439,11 @@ export default function CoreHotelManagement() {
         {/* Content Container - max 1440px centered */}
         <div className="max-w-[1440px] mx-auto relative px-4 sm:px-6 md:pl-8 md:pr-0 lg:pl-12 xl:pl-[100px]">
           <div className="flex flex-col lg:flex-row lg:h-[485px]">
-            {/* Left Content - Centered in flex-col mode */}
-            <div className="w-full lg:flex-1 flex flex-col justify-center items-center lg:items-start text-center lg:text-left py-8 lg:py-0 lg:pr-8">
+            {/* Left Content - Left aligned on mobile, centered on larger screens */}
+            <div className="w-full lg:flex-1 flex flex-col justify-center items-start sm:items-center lg:items-start text-left sm:text-center lg:text-left py-8 lg:py-0 lg:pr-8">
               <h2 className="text-2xl sm:text-[32px] md:text-4xl font-normal text-white mb-6 lg:mb-8">
-                How We Increase GOP and Asset Value
+                How We Increase GOP and
+                <br className="sm:hidden" /> Asset Value
               </h2>
 
               <ul className="space-y-4 mb-8">
@@ -463,7 +464,7 @@ export default function CoreHotelManagement() {
               </ul>
 
               {/* Request Consultation Button */}
-              <button className="inline-flex items-center gap-2 px-4 py-2.5 sm:px-6 sm:py-3   lg:mt-6 bg-secondary text-primary text-[16px] sm:text-[16px] lg:text-[20px] font-normal rounded-[8px] hover:bg-secondary/90 transition-colors w-fit">
+              <button className="inline-flex items-center gap-2 px-4 h-[44px] sm:h-auto sm:px-6 sm:py-3 lg:mt-6 bg-secondary text-primary text-[16px] sm:text-[16px] lg:text-[20px] font-normal rounded-[8px] hover:bg-secondary/90 transition-colors w-fit">
                 REQUEST CONSULTATION
                 <svg
                   className="w-4 h-4"
@@ -496,7 +497,6 @@ export default function CoreHotelManagement() {
       </div>
 
       {/* Tertiary background spacing */}
-      <div className="h-[10px] bg-tertinary"></div>
     </section>
   );
 }

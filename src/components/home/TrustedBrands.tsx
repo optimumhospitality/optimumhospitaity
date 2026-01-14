@@ -116,7 +116,7 @@ export default function TrustedBrands() {
     >
       {/* Dark Navy Header Bar */}
       <div ref={headerRef} className="py-6 sm:py-8 md:py-10 lg:py-12">
-        <p className="text-center text-[#F7EFE3] text-xs sm:text-sm md:text-base lg:text-[24px] font-normal tracking-wide px-4">
+        <p className="text-center text-[#F7EFE3] text-[16px] sm:text-[16px] md:text-base lg:text-[24px] font-normal tracking-wide px-4">
           Trusted by global hospitality brands and independent owners
         </p>
       </div>

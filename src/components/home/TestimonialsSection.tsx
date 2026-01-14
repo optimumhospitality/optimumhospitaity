@@ -204,7 +204,7 @@ export default function TestimonialsSection() {
   };
 
   return (
-    <section className="bg-tertinary pt-[33px]  overflow-hidden">
+    <section className="bg-tertinary pt-[60px]  overflow-hidden">
       <div className="w-full">
         {/* Section Header */}
         <div className="text-center mb-8 sm:mb-10 md:mb-12 lg:mb-14 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
@@ -258,14 +258,14 @@ export default function TestimonialsSection() {
 
                   {/* Quote Content - Full visibility on mobile */}
                   <div className="flex-1 min-w-0 p-4 sm:p-5 lg:pt-5 lg:pr-5 lg:pb-5 xl:pt-7 xl:pr-10 xl:pb-[33px] lg:pl-2 xl:pl-3 flex flex-col justify-between">
-                    <blockquote className="text-primary text-xs font-normal sm:text-sm lg:text-[24px] xl:text-[24px] leading-relaxed">
+                    <blockquote className="text-primary text-[16px] font-normal sm:text-[16px] lg:text-[24px] xl:text-[24px] leading-relaxed">
                       {card.quote}
                     </blockquote>
                     <div className="mt-3 lg:mt-4 xl:mt-6">
-                      <p className="font-bold text-primary text-sm sm:text-base lg:text-[24px] xl:text-[24px]">
+                      <p className="font-bold text-primary text-[16px] sm:text-base lg:text-[24px] xl:text-[24px]">
                         {card.title}
                       </p>
-                      <p className="text-primary text-xs sm:text-sm lg:text-[24px] xl:text-[24px]">
+                      <p className="text-primary text-[16px] sm:text-[16px] lg:text-[24px] xl:text-[24px]">
                         {card.location}
                       </p>
                     </div>

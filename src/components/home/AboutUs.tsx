@@ -62,7 +62,7 @@ export default function AboutUs() {
   }, [isReady]);
 
   return (
-    <section ref={sectionRef} className="bg-tertinary pb-25 pt-15">
+    <section ref={sectionRef} className="bg-tertinary  pb-15 lg:pb-25 pt-15">
       {/* Section Header */}
       <div className="text-center  px-4">
         <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[48px] font-medium text-primary mb-2">
@@ -113,7 +113,7 @@ export default function AboutUs() {
               </div>
 
               {/* CTA Button */}
-              <button className="mb-2 h-[48px] sm:h-[52px] lg:h-[56px] inline-flex items-center justify-center gap-[8px] py-[12px] sm:py-[14px] lg:py-[16px] px-[20px] sm:px-[28px] lg:px-[36px] bg-primary text-white text-[14px] sm:text-[16px] lg:text-[16px] font-normal tracking-[0.1em]  rounded-[8px] hover:bg-primary/90 transition-colors">
+              <button className="mb-2 h-[44px] sm:h-[52px] lg:h-[56px] inline-flex items-center justify-center gap-[8px] py-[12px] sm:py-[14px] lg:py-[16px] px-[20px] sm:px-[28px] lg:px-[36px] bg-primary text-white text-[16px] sm:text-[16px] lg:text-[16px] font-normal tracking-[0.1em] rounded-[8px] hover:bg-primary/90 transition-colors">
                 BOOK MY CONSULTATION
                 <svg
                   className="w-3 h-3 sm:w-4 sm:h-4"
@@ -133,7 +133,10 @@ export default function AboutUs() {
           </div>
 
           {/* Right Image Area - 530 × 653 */}
-          <div ref={imageRef} className="w-full lg:w-[530px] lg:flex-shrink-0 h-[400px] sm:h-[500px] lg:h-[653px] overflow-hidden">
+          <div
+            ref={imageRef}
+            className="w-full lg:w-[530px] lg:flex-shrink-0 h-[400px] sm:h-[500px] lg:h-[653px] overflow-hidden"
+          >
             <img
               src={aboutImage}
               alt="Business partners discussing"
