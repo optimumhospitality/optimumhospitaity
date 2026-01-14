@@ -113,7 +113,7 @@ export default function AboutUs() {
               </div>
 
               {/* CTA Button */}
-              <button className="mb-2 h-[48px] sm:h-[52px] lg:h-[56px] inline-flex items-center justify-center gap-[8px] py-[12px] sm:py-[14px] lg:py-[16px] px-[20px] sm:px-[28px] lg:px-[36px] bg-primary text-white text-[14px] sm:text-[16px] lg:text-[20px] font-normal tracking-[0.1em] sm:tracking-[0.15em] lg:tracking-[0.2em] rounded-[8px] hover:bg-primary/90 transition-colors">
+              <button className="mb-2 h-[48px] sm:h-[52px] lg:h-[56px] inline-flex items-center justify-center gap-[8px] py-[12px] sm:py-[14px] lg:py-[16px] px-[20px] sm:px-[28px] lg:px-[36px] bg-primary text-white text-[14px] sm:text-[16px] lg:text-[16px] font-normal tracking-[0.1em]  rounded-[8px] hover:bg-primary/90 transition-colors">
                 BOOK MY CONSULTATION
                 <svg
                   className="w-3 h-3 sm:w-4 sm:h-4"

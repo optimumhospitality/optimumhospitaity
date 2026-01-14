@@ -215,7 +215,7 @@ export default function HotelCaseStudy() {
               <h3 className="text-[32px] sm:text-[40px] md:text-[48px] font-bold text-white mb-4 leading-tight">
                 Our Partners
               </h3>
-              <p className="text-white/70 text-[18px] sm:text-[20px] md:text-[24px] leading-relaxed">
+              <p className="text-white/70 text-[18px] sm:text-[20px] md:text-[20px] leading-relaxed">
                 We partner selectively with organizations that meet our
                 standards for performance, precision, and long-term value
                 creation.
