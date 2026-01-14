@@ -110,7 +110,7 @@ export default function WhatWeDo() {
               <div
                 key={principle.title}
                 className={`principle-card flex flex-col items-center text-center md:items-start md:text-left ${!isLastItem
-                  ? " md:border-r-[2px] md:border-r md:border-[#000000]/50 md:pr-8 lg:pr-10"
+                  ? " md:border-r-[1px] md:border-r md:border-[#000000]/50 md:pr-8 lg:pr-10"
                   : ""
                   }`}
               >
