@@ -463,7 +463,7 @@ export default function CoreHotelManagement() {
               </ul>
 
               {/* Request Consultation Button */}
-              <button className="inline-flex items-center gap-2 px-4 py-2.5 sm:px-6 sm:py-3 bg-secondary text-primary text-sm sm:text-base lg:text-[20px] font-normal rounded-[8px] hover:bg-secondary/90 transition-colors w-fit">
+              <button className="inline-flex items-center gap-2 px-4 py-2.5 sm:px-6 sm:py-3   lg:mt-6 bg-secondary text-primary text-[16px] sm:text-[16px] lg:text-[20px] font-normal rounded-[8px] hover:bg-secondary/90 transition-colors w-fit">
                 REQUEST CONSULTATION
                 <svg
                   className="w-4 h-4"
@@ -481,13 +481,13 @@ export default function CoreHotelManagement() {
               </button>
             </div>
 
-            {/* Right Image - Squarish with rounded corners on mobile, full height on desktop */}
-            <div className="w-full lg:w-[600px] flex-shrink-0 p-4 sm:p-5 md:p-0">
-              <div className="aspect-square lg:aspect-auto w-[280px] sm:w-[320px] md:w-[380px] lg:w-full lg:h-full mx-auto lg:mx-0 rounded-xl lg:rounded-none overflow-hidden">
+            {/* Right Image - Full width edge-to-edge on mobile, squarish with padding on tablet, full height on desktop */}
+            <div className="w-[calc(100%+2rem)] -ml-4 sm:w-full sm:ml-0 lg:w-[600px] flex-shrink-0 pt-6 sm:p-5 md:p-0 lg:p-0">
+              <div className="w-full sm:w-[320px] sm:aspect-square md:w-[380px] md:aspect-square lg:aspect-auto lg:w-full lg:h-full sm:mx-auto lg:mx-0 sm:rounded-xl lg:rounded-none overflow-hidden">
                 <img
                   src={gopImageHomeSection}
                   alt="Business consultation"
-                  className="w-full h-full object-cover"
+                  className="w-full aspect-[4/3] sm:aspect-square lg:aspect-auto lg:h-full object-cover"
                 />
               </div>
             </div>

@@ -204,10 +204,10 @@ export default function TestimonialsSection() {
   };
 
   return (
-    <section className="bg-tertinary pt-[33px] pb-[50px] overflow-hidden">
+    <section className="bg-tertinary pt-[33px]  overflow-hidden">
       <div className="w-full">
         {/* Section Header */}
-        <div className="text-center mb-0 sm:mb-0 md:mb-0 lg:mb-0 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
+        <div className="text-center mb-8 sm:mb-10 md:mb-12 lg:mb-14 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-primary mb-3 sm:mb-4">
             Trusted by Hotel Owners and Investors
           </h2>
@@ -223,7 +223,7 @@ export default function TestimonialsSection() {
           {/* Scroll Container */}
           <div
             ref={scrollContainerRef}
-            className="flex items-center gap-6 h-auto min-h-[520px] sm:min-h-[560px] md:h-[450px] lg:h-[474px] overflow-x-auto scroll-smooth scrollbar-hide mt-8 sm:mt-0"
+            className="flex items-center gap-6 h-auto md:h-auto lg:h-[474px] overflow-x-auto scroll-smooth scrollbar-hide"
             style={{
               scrollbarWidth: "none",
               msOverflowStyle: "none",
@@ -243,10 +243,10 @@ export default function TestimonialsSection() {
                 }}
               >
                 {/* Card - flex-col on mobile/small tablet, flex-row on lg+ */}
-                <div className="flex flex-col border-[1px] border-[#CACACA]/50 rounded-[24px] lg:flex-row items-stretch bg-white min-h-[580px] sm:min-h-[600px] lg:h-[474px] w-full">
-                  {/* Image - Full width on mobile, fixed on desktop */}
-                  <div className="w-full lg:w-auto flex-shrink-0 p-3 lg:p-6 xl:p-7">
-                    <div className="lg:aspect-auto w-full lg:w-[340px] xl:w-[385px] h-[280px] sm:h-[300px] lg:h-full xl:h-[408px] rounded-[16px] lg:rounded-lg xl:rounded-[16px] overflow-hidden">
+                <div className="flex flex-col border-[1px] border-[#CACACA]/50 rounded-[24px] lg:flex-row items-stretch bg-white   h-auto lg:h-[474px] w-full">
+                  {/* Image - Minimal size reduction, stays stable */}
+                  <div className="w-full lg:w-auto flex-shrink-0 p-4 sm:p-5 lg:p-6 xl:p-7">
+                    <div className="aspect-square lg:aspect-auto w-[280px] sm:w-[300px] md:w-[340px] lg:w-[340px] xl:w-[385px] lg:h-full xl:h-[408px] mx-auto lg:mx-0 rounded-lg xl:rounded-[16px] overflow-hidden">
                       <img
                         src={card.image}
                         alt={card.title}
@@ -257,11 +257,11 @@ export default function TestimonialsSection() {
                   </div>
 
                   {/* Quote Content - Full visibility on mobile */}
-                  <div className="flex-1 min-w-0 px-3 pb-3 pt-1 sm:px-4 sm:pb-4 sm:pt-2 lg:pt-5 lg:pr-5 lg:pb-5 xl:pt-7 xl:pr-10 xl:pb-[33px] lg:pl-2 xl:pl-3 flex flex-col justify-between">
+                  <div className="flex-1 min-w-0 p-4 sm:p-5 lg:pt-5 lg:pr-5 lg:pb-5 xl:pt-7 xl:pr-10 xl:pb-[33px] lg:pl-2 xl:pl-3 flex flex-col justify-between">
                     <blockquote className="text-primary text-xs font-normal sm:text-sm lg:text-[24px] xl:text-[24px] leading-relaxed">
                       {card.quote}
                     </blockquote>
-                    <div className="mt-2 lg:mt-4 xl:mt-6">
+                    <div className="mt-3 lg:mt-4 xl:mt-6">
                       <p className="font-bold text-primary text-sm sm:text-base lg:text-[24px] xl:text-[24px]">
                         {card.title}
                       </p>
@@ -276,7 +276,7 @@ export default function TestimonialsSection() {
           </div>
 
           {/* Navigation Dots */}
-          <div className="flex justify-center gap-2 sm:gap-2.5 mt-8 sm:mt-0 md:mt-0">
+          <div className="flex justify-center gap-2 sm:gap-2.5 mt-8 sm:mt-10 md:mt-12">
             {testimonials.map((_, index) => (
               <button
                 key={index}
