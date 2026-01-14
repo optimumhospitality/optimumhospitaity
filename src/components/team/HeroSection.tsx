@@ -1,4 +1,5 @@
 import heroImage from "../../assets/image/team-page/team-hero-image/hero-image.webp";
+import HeroSectionButton from "../common/button/HeroSectionButton";
 
 export default function HeroSection() {
   return (
@@ -36,22 +37,7 @@ export default function HeroSection() {
 
           {/* Right CTA Button */}
           <div className="lg:flex-shrink-0 mt-4 lg:mt-0">
-            <button className="inline-flex items-center gap-2 sm:gap-3 px-6 sm:px-8 py-3 sm:py-3.5 bg-primary text-white font-normal text-[20px] sm:text-base rounded-md hover:bg-primary/90 transition-all duration-300 group">
-              Reserve Your Spot
-              <svg
-                className="w-4 h-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M7 17L17 7M17 7H7M17 7V17"
-                />
-              </svg>
-            </button>
+            <HeroSectionButton text="Reserve Your Spot" />
           </div>
         </div>
       </div>
