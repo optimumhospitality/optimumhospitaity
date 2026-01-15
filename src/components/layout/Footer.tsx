@@ -97,14 +97,14 @@ export default function Footer() {
 
       {/* Footer Section - Primary/Blue Background */}
       <div className="bg-primary -mt-1">
-        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-[100px] py-10">
+        <div className="max-w-[1440px] mx-auto px-4 min-[500px]:px-3 sm:px-4 min-[750px]:px-6 md:px-8 lg:px-12 xl:px-[100px] py-8 min-[500px]:py-6 sm:py-8 min-[750px]:py-10 md:py-10 lg:py-10">
           {/* Newsletter Row */}
-          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 ">
+          <div className="flex flex-col min-[500px]:flex-row min-[500px]:items-center min-[500px]:justify-between gap-4 min-[500px]:gap-4 sm:gap-5 min-[750px]:gap-6 md:gap-6 lg:gap-6">
             <div>
-              <h3 className=" text-[20px] sm:text-[20px] lg:text-[28px] text-[#F3F3F3] font-normal mb-1">
+              <h3 className="text-[18px] min-[500px]:text-[12px] sm:text-[14px] min-[750px]:text-[18px] md:text-[20px] lg:text-[24px] xl:text-[28px] text-[#F3F3F3] font-normal mb-1 min-[500px]:mb-0.5 sm:mb-1">
                 SUBSCRIBE TO OUR NEWSLETTER
               </h3>
-              <p className="text-[14px] sm:text-[14px] lg:text-[20px] font-[300] text-[#F3F3F3] ">
+              <p className="text-[12px] min-[500px]:text-[9px] sm:text-[10px] min-[750px]:text-[12px] md:text-[14px] lg:text-[18px] xl:text-[20px] font-[300] text-[#F3F3F3]">
                 Stay in the touch with updates and industry trends.
               </p>
             </div>
@@ -112,18 +112,18 @@ export default function Footer() {
             {/* Email Input */}
             <form
               onSubmit={handleSubmit}
-              className="flex flex-col sm:flex-row gap-3 sm:gap-0 w-full sm:w-auto"
+              className="flex flex-col min-[500px]:flex-row gap-3 min-[500px]:gap-0 w-full min-[500px]:w-auto"
             >
-              <div className="flex border-[1px] border-secondary rounded-[12px] w-full sm:w-auto">
+              <div className="flex border-[1px] border-secondary rounded-[8px] min-[500px]:rounded-[6px] sm:rounded-[8px] min-[750px]:rounded-[10px] md:rounded-[12px] w-full min-[500px]:w-auto">
                 <input
                   type="email"
                   required
                   placeholder="Enter your email"
-                  className="px-4 py-3 bg-primary text-white placeholder:text-[#CACACA] text-[14px] sm:text-[14px] lg:text-[16px] rounded-l-[12px] font-[200] focus:outline-none focus:border-white/40 flex-1 sm:flex-none sm:w-[250px] md:w-[300px] min-w-0"
+                  className="px-3 min-[500px]:px-2 sm:px-3 min-[750px]:px-4 md:px-4 py-2 min-[500px]:py-1.5 sm:py-2 min-[750px]:py-2.5 md:py-3 bg-primary text-white placeholder:text-[#CACACA] text-[12px] min-[500px]:text-[9px] sm:text-[10px] min-[750px]:text-[12px] md:text-[14px] lg:text-[16px] rounded-l-[7px] min-[500px]:rounded-l-[5px] sm:rounded-l-[7px] min-[750px]:rounded-l-[9px] md:rounded-l-[11px] font-[200] focus:outline-none focus:border-white/40 flex-1 min-[500px]:flex-none min-[500px]:w-[140px] sm:w-[180px] min-[750px]:w-[220px] md:w-[260px] lg:w-[300px] min-w-0"
                 />
                 <button
                   type="submit"
-                  className="px-4 sm:px-6 py-3 bg-[#F7EFE3] text-primary text-[14px] sm:text-[14px] lg:text-[16px]  border-secondary font-normal rounded-[11px] hover:bg-white/90 transition-colors whitespace-nowrap lg:w-[157px]"
+                  className="px-3 min-[500px]:px-2 sm:px-3 min-[750px]:px-4 md:px-5 lg:px-6 py-2 min-[500px]:py-1.5 sm:py-2 min-[750px]:py-2.5 md:py-3 bg-[#F7EFE3] text-primary text-[12px] min-[500px]:text-[8px] sm:text-[10px] min-[750px]:text-[12px] md:text-[14px] lg:text-[16px] border-secondary font-normal rounded-[7px] min-[500px]:rounded-[5px] sm:rounded-[7px] min-[750px]:rounded-[9px] md:rounded-[11px] hover:bg-white/90 transition-colors whitespace-nowrap min-[500px]:w-auto lg:w-[157px]"
                 >
                   SEND
                 </button>
@@ -132,56 +132,56 @@ export default function Footer() {
           </div>
 
           {/* Horizontal Divider */}
-          <div className="py-[60px]">
+          <div className="py-[30px] min-[500px]:py-[20px] sm:py-[30px] min-[750px]:py-[40px] md:py-[50px] lg:py-[60px]">
             <div className="h-[1px] bg-[#FFFFFF]/40 w-full"></div>
           </div>
 
           {/* Bottom Row */}
-          <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8">
+          <div className="flex flex-col min-[500px]:flex-row min-[500px]:items-start min-[500px]:justify-between gap-6 min-[500px]:gap-4 sm:gap-6 min-[750px]:gap-8 md:gap-8 lg:gap-8">
             {/* Left - Copyright & Addresses */}
             <div>
-              <p className="text-white text-[16px] font-normal sm:text-[16px] font-normal mb-4">
+              <p className="text-white text-[14px] min-[500px]:text-[10px] sm:text-[12px] min-[750px]:text-[14px] md:text-[16px] font-normal mb-3 min-[500px]:mb-2 sm:mb-3 min-[750px]:mb-4">
                 © Optimum Hospitality Technology Ltd. 2025.
               </p>
-              <div className="flex flex-col sm:flex-row gap-6 sm:gap-12">
-                <div className="text-[16px] text-[#D8D8D8] font-[200] leading-[140%] tracking-[0.05em]">
+              <div className="flex flex-col min-[500px]:flex-row gap-4 min-[500px]:gap-4 sm:gap-6 min-[750px]:gap-8 md:gap-10 lg:gap-12">
+                <div className="text-[12px] min-[500px]:text-[8px] sm:text-[10px] min-[750px]:text-[12px] md:text-[14px] lg:text-[16px] text-[#D8D8D8] font-[200] leading-[140%] tracking-[0.05em]">
                   <p>The Sentry · 15B/8 Le Thanh Ton</p>
                   <p>Street · District 1 Hồ Chí Minh, Hồ</p>
                   <p>Chí Minh City · Vietnam</p>
                 </div>
-                <div className="hidden lg:block w-[0.9px] bg-[#FFFFFF]/40 self-stretch -mr-6"></div>
-                <div className="text-[16px] text-[#D8D8D8] font-[200] leading-[140%]  tracking-[0.05] ml-0">
+                <div className="hidden min-[500px]:block w-[0.9px] bg-[#FFFFFF]/40 self-stretch -mr-2 sm:-mr-4 min-[750px]:-mr-6"></div>
+                <div className="text-[12px] min-[500px]:text-[8px] sm:text-[10px] min-[750px]:text-[12px] md:text-[14px] lg:text-[16px] text-[#D8D8D8] font-[200] leading-[140%] tracking-[0.05]">
                   <p>Jl. Raya Gunung Maloko No. 21</p>
                   <p>· Cisauk · BSD · Indonesia</p>
-                  {/* <p>BSD · Indonesia</p> */}
                 </div>
               </div>
             </div>
 
-            {/* Vertical Divider */}
-
             {/* Right - Connect with Us */}
-            <div className="text-left sm:text-right">
-              <p className="text-white text-[16px] sm:text-[16px] font-normal mb-4">
+            <div className="text-left min-[500px]:text-right">
+              <p className="text-white text-[14px] min-[500px]:text-[10px] sm:text-[12px] min-[750px]:text-[14px] md:text-[16px] font-normal mb-3 min-[500px]:mb-2 sm:mb-3 min-[750px]:mb-4">
                 Connect with Us
               </p>
-              <div className="flex flex-col gap-2 items-start sm:items-end">
+              <div className="flex flex-col gap-1.5 min-[500px]:gap-1 sm:gap-1.5 min-[750px]:gap-2 items-start min-[500px]:items-end">
                 <a
                   href="mailto:info@optimum-hospitality.com"
-                  className="flex flex-row-reverse sm:flex-row items-center text-[16px] text-[#D8D8D8] font-[200] gap-2 leading-[140%] tracking-[0.05em] "
+                  className="flex flex-row-reverse min-[500px]:flex-row items-center text-[12px] min-[500px]:text-[8px] sm:text-[10px] min-[750px]:text-[12px] md:text-[14px] lg:text-[16px] text-[#D8D8D8] font-[200] gap-1.5 min-[500px]:gap-1 sm:gap-1.5 min-[750px]:gap-2 leading-[140%] tracking-[0.05em]"
                 >
                   info@optimum-hospitality.com
-                  <Mail className="w-5 h-5" strokeWidth={1.5} />
+                  <Mail
+                    className="w-4 h-4 min-[500px]:w-3 min-[500px]:h-3 sm:w-3.5 sm:h-3.5 min-[750px]:w-4 min-[750px]:h-4 md:w-4.5 md:h-4.5 lg:w-5 lg:h-5"
+                    strokeWidth={1.5}
+                  />
                 </a>
                 <a
                   href="https://linkedin.com/company/optimum-hospitality"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex flex-row-reverse sm:flex-row items-center text-[16px] text-[#D8D8D8] font-[200] gap-2 leading-[140%] tracking-[0.05em] "
+                  className="flex flex-row-reverse min-[500px]:flex-row items-center text-[12px] min-[500px]:text-[8px] sm:text-[10px] min-[750px]:text-[12px] md:text-[14px] lg:text-[16px] text-[#D8D8D8] font-[200] gap-1.5 min-[500px]:gap-1 sm:gap-1.5 min-[750px]:gap-2 leading-[140%] tracking-[0.05em]"
                 >
                   optimum-hospitality
-                  <span className="border border-[#D8D8D8] rounded-[4px] w-5 h-5 flex items-center justify-center">
-                    <Linkedin className="w-3 h-3 fill-white" />
+                  <span className="border border-[#D8D8D8] rounded-[3px] min-[500px]:rounded-[2px] sm:rounded-[3px] min-[750px]:rounded-[4px] w-4 h-4 min-[500px]:w-3 min-[500px]:h-3 sm:w-3.5 sm:h-3.5 min-[750px]:w-4 min-[750px]:h-4 md:w-4.5 md:h-4.5 lg:w-5 lg:h-5 flex items-center justify-center">
+                    <Linkedin className="w-2.5 h-2.5 min-[500px]:w-2 min-[500px]:h-2 sm:w-2 sm:h-2 min-[750px]:w-2.5 min-[750px]:h-2.5 md:w-3 md:h-3 fill-white" />
                   </span>
                 </a>
               </div>
