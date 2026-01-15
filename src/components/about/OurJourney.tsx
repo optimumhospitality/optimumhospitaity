@@ -39,7 +39,7 @@ const milestones: JourneyMilestone[] = [
 
 export default function OurJourney() {
   return (
-    <section className="bg-[#F7EFE3] pb-2 min-[500px]:pb-2 sm:pb-2 lg:pb-6 lg:max-h-[736px]">
+    <section className="bg-[#F7EFE3] min-[500px]:pb-2 sm:pb-2 lg:pb-6 lg:max-h-[736px]">
       <div className="max-w-5xl mx-auto px-4 min-[500px]:px-3 sm:px-4 min-[750px]:px-6 md:px-8 lg:px-0">
         {/* Section Title */}
         <h2 className="text-2xl min-[500px]:text-xl sm:text-2xl min-[750px]:text-3xl md:text-4xl lg:text-[48px] font-[500] text-[#23283C] text-center mb-8 min-[500px]:mb-6 sm:mb-8 min-[750px]:mb-10 md:mb-12 lg:mb-12">

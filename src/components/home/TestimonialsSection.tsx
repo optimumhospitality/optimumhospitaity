@@ -44,6 +44,7 @@ const testimonials: Testimonial[] = [
 const CARD_WIDTH = 983;
 // const CARD_HEIGHT = 474;
 const CARD_GAP = 24;
+const MOBILE_CARD_GAP = 40; // Larger gap for mobile
 
 export default function TestimonialsSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -62,15 +63,18 @@ export default function TestimonialsSection() {
     if (!scrollContainerRef.current) return;
     const container = scrollContainerRef.current;
     const containerWidth = container.offsetWidth;
-    // Use 92vw on mobile (<500px), 70vw on larger screens
-    const widthRatio = containerWidth < 500 ? 0.92 : 0.7;
-    const cardWidth = Math.min(CARD_WIDTH, containerWidth * widthRatio);
-    const cardTotalWidth = cardWidth + CARD_GAP;
+    const isMobile = containerWidth < 500;
+    // Mobile: fixed card width ~220px, larger: 70vw
+    const cardWidth = isMobile
+      ? 220
+      : Math.min(CARD_WIDTH, containerWidth * 0.7);
+    const gap = isMobile ? MOBILE_CARD_GAP : CARD_GAP;
+    const cardTotalWidth = cardWidth + gap;
 
-    // Initial padding centers the first card (50vw - half card width)
+    // Initial padding centers the first card
     const initialPadding = (containerWidth - cardWidth) / 2;
 
-    // Card's left edge position within scroll content (after initial padding)
+    // Card's left edge position within scroll content
     const cardLeftPosition = initialPadding + index * cardTotalWidth;
 
     // To center: scroll so card is centered in viewport
@@ -101,10 +105,11 @@ export default function TestimonialsSection() {
     if (!scrollContainerRef.current) return;
     const container = scrollContainerRef.current;
     const width = container.offsetWidth;
-    // Use 92vw on mobile (<500px), 70vw on larger screens
-    const widthRatio = width < 500 ? 0.92 : 0.7;
-    const cardWidth = Math.min(CARD_WIDTH, width * widthRatio);
-    const cardTotalWidth = cardWidth + CARD_GAP;
+    const isMobile = width < 500;
+    // Mobile: fixed card width ~220px, larger: 70vw
+    const cardWidth = isMobile ? 220 : Math.min(CARD_WIDTH, width * 0.7);
+    const gap = isMobile ? MOBILE_CARD_GAP : CARD_GAP;
+    const cardTotalWidth = cardWidth + gap;
     const scrollLeft = container.scrollLeft;
 
     // Calculate max scroll
@@ -148,11 +153,18 @@ export default function TestimonialsSection() {
 
   // Initialize container width and auto-scroll
   useEffect(() => {
-    if (scrollContainerRef.current) {
-      setContainerWidth(scrollContainerRef.current.offsetWidth);
-    }
+    const updateContainerWidth = () => {
+      if (scrollContainerRef.current) {
+        setContainerWidth(scrollContainerRef.current.offsetWidth);
+      }
+    };
+
+    updateContainerWidth();
+    window.addEventListener("resize", updateContainerWidth);
     resetAutoScroll();
+
     return () => {
+      window.removeEventListener("resize", updateContainerWidth);
       if (autoScrollTimerRef.current) {
         clearTimeout(autoScrollTimerRef.current);
       }
@@ -195,10 +207,13 @@ export default function TestimonialsSection() {
       };
     }
 
-    // Use 92vw on mobile (<500px), 70vw on larger screens
-    const widthRatio = containerWidth < 500 ? 0.92 : 0.7;
-    const cardTotalWidth =
-      Math.min(CARD_WIDTH, containerWidth * widthRatio) + CARD_GAP;
+    const isMobile = containerWidth < 500;
+    // Mobile: fixed card width ~220px, larger: 70vw
+    const cardWidth = isMobile
+      ? 220
+      : Math.min(CARD_WIDTH, containerWidth * 0.7);
+    const gap = isMobile ? MOBILE_CARD_GAP : CARD_GAP;
+    const cardTotalWidth = cardWidth + gap;
 
     const cardCenter = index * cardTotalWidth + cardTotalWidth / 2;
     const viewportCenter = scrollPosition + containerWidth / 2;
@@ -221,6 +236,16 @@ export default function TestimonialsSection() {
     };
   };
 
+  // Calculate dynamic padding based on container width
+  const getScrollPadding = () => {
+    const isMobile = containerWidth < 500;
+    const cardWidth = isMobile
+      ? 220
+      : Math.min(CARD_WIDTH, containerWidth * 0.7);
+    const padding = Math.max(20, (containerWidth - cardWidth) / 2);
+    return `${padding}px`;
+  };
+
   return (
     <section className="bg-tertinary pt-[60px]  overflow-hidden">
       <div className="w-full">
@@ -241,46 +266,46 @@ export default function TestimonialsSection() {
           {/* Scroll Container */}
           <div
             ref={scrollContainerRef}
-            className="flex items-center gap-6 h-auto md:h-auto lg:h-[474px] overflow-x-auto scroll-smooth scrollbar-hide"
+            className="flex items-center gap-10 min-[500px]:gap-6 h-auto md:h-auto lg:h-[474px] overflow-x-auto scroll-smooth scrollbar-hide"
             style={{
               scrollbarWidth: "none",
               msOverflowStyle: "none",
               WebkitOverflowScrolling: "touch",
-              paddingLeft: `calc((100vw - min(983px, 70vw)) / 2)`,
-              paddingRight: `calc((100vw - min(983px, 70vw)) / 2)`,
+              paddingLeft: getScrollPadding(),
+              paddingRight: getScrollPadding(),
             }}
           >
             {testimonials.map((card, index) => (
               <div
                 key={card.id}
                 onClick={() => goToSlide(index)}
-                className="flex-shrink-0 cursor-pointer transition-all duration-300 ease-out h-auto w-[92vw] min-[500px]:w-[70vw] min-[500px]:max-w-[983px]"
+                className="flex-shrink-0 cursor-pointer transition-all duration-300 ease-out h-auto w-[220px] min-[500px]:w-[70vw] min-[500px]:max-w-[983px]"
                 style={getCardStyle(index)}
               >
                 {/* Card - flex-col below 500px, flex-row from 500px+ */}
-                <div className="flex flex-col min-[500px]:flex-row border-[1px] border-[#CACACA]/50 rounded-[16px] min-[500px]:rounded-[12px] sm:rounded-[16px] md:rounded-[20px] lg:rounded-[24px] items-stretch bg-white h-auto min-[500px]:h-[180px] sm:h-[220px] min-[700px]:h-[250px] md:h-[300px] min-[900px]:h-[360px] lg:h-[474px] w-full overflow-hidden min-[500px]:overflow-visible">
+                <div className="flex flex-col min-[500px]:flex-row border-[1px] border-[#CACACA]/50 rounded-[12px] min-[500px]:rounded-[12px] sm:rounded-[16px] md:rounded-[20px] lg:rounded-[24px] items-stretch bg-white h-[380px] min-[500px]:h-[180px] sm:h-[220px] min-[700px]:h-[250px] md:h-[300px] min-[900px]:h-[360px] lg:h-[474px] w-full overflow-hidden min-[500px]:overflow-visible">
                   {/* Image - Squarish on mobile */}
-                  <div className="w-full min-[500px]:w-auto flex-shrink-0 p-3 min-[500px]:p-1.5 sm:p-2 md:p-3 lg:p-6 xl:p-7">
-                    <div className="w-full aspect-[4/3] min-[500px]:h-full min-[500px]:w-auto min-[500px]:aspect-square sm:aspect-square md:aspect-square lg:w-[340px] xl:w-[385px] xl:h-[408px] mx-auto min-[500px]:mx-0 rounded-lg min-[500px]:rounded-[8px] xl:rounded-[16px] overflow-hidden">
+                  <div className="w-full min-[500px]:w-auto flex-shrink-0 p-2 min-[500px]:p-1.5 sm:p-2 md:p-3 lg:p-6 xl:p-7">
+                    <div className="w-full aspect-square min-[500px]:h-full min-[500px]:w-auto min-[500px]:aspect-square sm:aspect-square md:aspect-square lg:w-[340px] xl:w-[385px] xl:h-[408px] mx-auto min-[500px]:mx-0 rounded-lg min-[500px]:rounded-[8px] xl:rounded-[16px] overflow-hidden max-w-[200px] min-[500px]:max-w-none">
                       <img
                         src={card.image}
                         alt={card.title}
-                        className="w-full h-full object-cover object-top"
+                        className="w-full h-full object-cover object-center"
                         draggable={false}
                       />
                     </div>
                   </div>
 
-                  {/* Quote Content - spread top to bottom with gap */}
-                  <div className="flex-1 min-w-0 px-4 pt-2 pb-4 min-[500px]:py-1.5 min-[500px]:px-2 sm:py-2 sm:px-3 md:p-3 lg:pt-5 lg:pr-5 lg:pb-5 xl:pt-7 xl:pr-10 xl:pb-[33px] lg:pl-2 xl:pl-3 flex flex-col justify-between gap-3 min-[500px]:gap-0">
-                    <blockquote className="text-primary text-[13px] min-[500px]:text-[10px] sm:text-[13px] md:text-[15px] lg:text-[20px] xl:text-[24px] font-normal leading-snug min-[500px]:leading-tight sm:leading-snug lg:leading-relaxed">
+                  {/* Quote Content */}
+                  <div className="flex-1 min-w-0 px-2.5 pt-2 pb-2.5 min-[500px]:py-1.5 min-[500px]:px-2 sm:py-2 sm:px-3 md:p-3 lg:pt-5 lg:pr-5 lg:pb-5 xl:pt-7 xl:pr-10 xl:pb-[33px] lg:pl-2 xl:pl-3 flex flex-col justify-between gap-1.5 min-[500px]:gap-0">
+                    <blockquote className="text-primary text-[10px] leading-[1.35] min-[500px]:text-[10px] sm:text-[13px] md:text-[15px] lg:text-[20px] xl:text-[24px] font-normal min-[500px]:leading-tight sm:leading-snug lg:leading-relaxed line-clamp-6 min-[500px]:line-clamp-none">
                       {card.quote}
                     </blockquote>
                     <div>
-                      <p className="font-bold text-primary text-[13px] min-[500px]:text-[10px] sm:text-[13px] md:text-[15px] lg:text-[20px] xl:text-[24px]">
+                      <p className="font-bold text-primary text-[11px] min-[500px]:text-[10px] sm:text-[13px] md:text-[15px] lg:text-[20px] xl:text-[24px]">
                         {card.title}
                       </p>
-                      <p className="text-primary text-[11px] min-[500px]:text-[9px] sm:text-[11px] md:text-[13px] lg:text-[18px] xl:text-[24px]">
+                      <p className="text-primary text-[9px] min-[500px]:text-[9px] sm:text-[11px] md:text-[13px] lg:text-[18px] xl:text-[24px]">
                         {card.location}
                       </p>
                     </div>
