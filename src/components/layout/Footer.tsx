@@ -56,7 +56,7 @@ export default function Footer() {
           <div className="bg-secondary rounded-2xl min-[500px]:rounded-xl sm:rounded-2xl md:rounded-3xl px-5 min-[500px]:px-4 sm:px-5 min-[750px]:px-6 md:px-8 lg:px-12 xl:px-16 py-6 min-[500px]:py-5 sm:py-6 min-[750px]:py-8 md:py-10 lg:py-14 xl:py-16 overflow-hidden">
             <div className="flex flex-col min-[500px]:flex-row min-[500px]:items-center min-[500px]:justify-between gap-4 min-[500px]:gap-4 sm:gap-5 min-[750px]:gap-6 md:gap-6 lg:gap-8">
               {/* Left Content */}
-              <div className="text-center min-[500px]:text-left">
+              <div className="text-left">
                 <h2 className="text-[22px] min-[500px]:text-[16px] sm:text-[18px] min-[750px]:text-[22px] md:text-[26px] lg:text-[32px] xl:text-[40px] min-[1400px]:text-5xl font-medium text-primary mb-2 min-[500px]:mb-1.5 sm:mb-2 min-[750px]:mb-2.5 md:mb-3 lg:mb-4 leading-tight">
                   Let's Improve Your
                   <br className="hidden min-[500px]:block" />
@@ -69,7 +69,7 @@ export default function Footer() {
               </div>
 
               {/* Right Button */}
-              <div className="flex justify-center min-[500px]:justify-end flex-shrink-0">
+              <div className="flex justify-start min-[500px]:justify-end flex-shrink-0">
                 <Link
                   to="/contact"
                   className="inline-flex items-center justify-center gap-1.5 min-[500px]:gap-1.5 sm:gap-1.5 md:gap-2 px-3 min-[500px]:px-3 sm:px-3.5 min-[750px]:px-4 md:px-5 lg:px-5 xl:px-6 py-2 min-[500px]:py-2 sm:py-2 min-[750px]:py-2.5 md:py-3 lg:py-3 xl:py-3.5 bg-primary text-white text-[13px] min-[500px]:text-[10px] sm:text-[11px] min-[750px]:text-[12px] md:text-[13px] lg:text-[14px] xl:text-[16px] font-[400] rounded-md min-[500px]:rounded-md sm:rounded-md hover:bg-primary/90 transition-colors uppercase whitespace-nowrap"
