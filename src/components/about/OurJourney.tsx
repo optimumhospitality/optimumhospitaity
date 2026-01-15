@@ -48,8 +48,8 @@ export default function OurJourney() {
 
         {/* Timeline */}
         <div className="relative">
-          {/* Vertical Line */}
-          <div className="absolute left-[6px] min-[500px]:left-[5px] sm:left-[7px] min-[750px]:left-[10px] md:left-[12px] lg:left-[15px] top-2 min-[500px]:top-2 sm:top-3 min-[750px]:top-4 md:top-5 lg:top-6 bottom-4 min-[500px]:bottom-4 sm:bottom-6 min-[750px]:bottom-8 md:bottom-10 lg:bottom-12 w-[1.5px] min-[500px]:w-[1.5px] sm:w-[2px] bg-[#515151]" />
+          {/* Vertical Line - calculated to end at last dot */}
+          <div className="absolute left-[6px] min-[500px]:left-[5px] sm:left-[7px] min-[750px]:left-[10px] md:left-[12px] lg:left-[15px] top-2 min-[500px]:top-2 sm:top-3 min-[750px]:top-4 md:top-5 lg:top-6 w-[1.5px] min-[500px]:w-[1.5px] sm:w-[2px] bg-[#515151] h-[calc(100%-65px)] min-[500px]:h-[calc(100%-55px)] sm:h-[calc(100%-60px)] min-[750px]:h-[calc(100%-70px)] md:h-[calc(100%-80px)] lg:h-[calc(100%-95px)]" />
 
           {/* Milestones */}
           <div className="space-y-6 min-[500px]:space-y-4 sm:space-y-5 min-[750px]:space-y-6 md:space-y-7 lg:space-y-8">
