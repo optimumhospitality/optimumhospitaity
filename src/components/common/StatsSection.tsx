@@ -36,7 +36,7 @@ const stats: StatItem[] = [
   {
     value: 30,
     suffix: "+",
-    label: "Years of Combined Team Experience",
+    label: "Years of Combined  Experience",
   },
 ];
 

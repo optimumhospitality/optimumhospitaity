@@ -21,17 +21,17 @@ export default function HeroSection() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 w-full max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-[40px]">
-        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
+      <div className="relative z-10 w-full max-w-[1440px] mx-auto px-4 min-[500px]:px-3 sm:px-4 min-[750px]:px-6 md:px-8 lg:px-10 xl:px-[40px]">
+        <div className="flex flex-col min-[500px]:flex-row min-[500px]:items-end min-[500px]:justify-between gap-4 min-[500px]:gap-4 sm:gap-5 min-[750px]:gap-6 md:gap-6 lg:gap-8">
           {/* Left Content */}
-          <div className="max-w-2xl lg:max-w-3xl">
+          <div className="max-w-full min-[500px]:flex-1">
             {/* Main Headline */}
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[56px] xl:text-[56px] font-[700] text-white leading-[1.1] mb-4 sm:mb-5 md:mb-6 whitespace-nowrap">
+            <h1 className="text-[22px] min-[500px]:text-[16px] sm:text-[20px] min-[750px]:text-[26px] md:text-[32px] lg:text-[44px] xl:text-[56px] font-[700] text-white leading-[1.1] mb-3 min-[500px]:mb-2 sm:mb-3 min-[750px]:mb-4 md:mb-5 lg:mb-6">
               Talk to Our Hospitality Experts
             </h1>
 
             {/* Subtext - 2 lines */}
-            <p className="text-[#FFFFFF] font-normal text-sm sm:text-base md:text-[24px] xl:text-[24px] leading-relaxed">
+            <p className="text-[#FFFFFF] font-normal text-[13px] min-[500px]:text-[10px] sm:text-[12px] min-[750px]:text-[14px] md:text-[18px] lg:text-[22px] xl:text-[24px] leading-relaxed">
               Get in touch to discuss how we can support your hotel or resort
               with
               <br className="hidden md:block" />
@@ -40,7 +40,7 @@ export default function HeroSection() {
           </div>
 
           {/* Right CTA Button */}
-          <div className="lg:flex-shrink-0 mt-4 lg:mt-0">
+          <div className="min-[500px]:flex-shrink-0 mt-2 min-[500px]:mt-0">
             <HeroSectionButton text="Contact Us" href="#contact-form" />
           </div>
         </div>

@@ -19,24 +19,24 @@ export default function HeroSection() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 w-full max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-[40px]">
-        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
+      <div className="relative z-10 w-full max-w-[1440px] mx-auto px-4 min-[500px]:px-3 sm:px-4 min-[750px]:px-6 md:px-8 lg:px-10 xl:px-[40px]">
+        <div className="flex flex-col min-[500px]:flex-row min-[500px]:items-end min-[500px]:justify-between gap-4 min-[500px]:gap-4 sm:gap-5 min-[750px]:gap-6 md:gap-6 lg:gap-8">
           {/* Left Content */}
-          <div className="max-w-2xl lg:max-w-3xl">
+          <div className="max-w-full min-[500px]:flex-1">
             {/* Main Headline */}
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[56px] xl:text-[56px] font-bold text-white leading-[1.1] mb-4 sm:mb-5 md:mb-6">
+            <h1 className="text-[24px] min-[500px]:text-[18px] sm:text-[22px] min-[750px]:text-[28px] md:text-[36px] lg:text-[48px] xl:text-[56px] font-bold text-white leading-[1.1] mb-3 min-[500px]:mb-2 sm:mb-3 min-[750px]:mb-4 md:mb-5 lg:mb-6">
               Our Leadership Team
             </h1>
 
             {/* Subtext */}
-            <p className="text-white/95 text-sm sm:text-base md:text-lg xl:text-xl leading-relaxed max-w-xl lg:max-w-2xl">
+            <p className="text-white/95 text-[13px] min-[500px]:text-[10px] sm:text-[12px] min-[750px]:text-[14px] md:text-[16px] lg:text-[18px] xl:text-xl leading-relaxed max-w-full min-[500px]:max-w-[90%] sm:max-w-[85%] md:max-w-xl lg:max-w-2xl">
               Experienced hospitality professionals with deep regional knowledge
               and hands-on operational expertise.
             </p>
           </div>
 
           {/* Right CTA Button */}
-          <div className="lg:flex-shrink-0 mt-4 lg:mt-0">
+          <div className="min-[500px]:flex-shrink-0 mt-2 min-[500px]:mt-0">
             <HeroSectionButton text="Reserve Your Spot" />
           </div>
         </div>
