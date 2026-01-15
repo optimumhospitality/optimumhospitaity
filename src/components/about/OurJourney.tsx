@@ -39,7 +39,7 @@ const milestones: JourneyMilestone[] = [
 
 export default function OurJourney() {
     return (
-        <section className="bg-[#F7EFE3] py-12 sm:py-16 lg:py-14 lg:max-h-[736px]">
+        <section className="bg-[#F7EFE3] pb-2 sm:pb-2 lg:pb-6 lg:max-h-[736px]">
             <div className="max-w-5xl mx-auto px-4 sm:px-8 lg:px-0">
                 {/* Section Title */}
                 <h2 className="text-3xl sm:text-4xl lg:text-[48px] font-[500] text-[#23283C] text-center mb-10 sm:mb-16 lg:mb-12">

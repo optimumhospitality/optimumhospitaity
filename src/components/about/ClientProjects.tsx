@@ -11,7 +11,8 @@ const projects = [
   {
     image: CaseStudy1,
     hotelName: "Wyndham Grand Hotel Phu Quoc",
-    title: "Operations audit, PIP (property improvement plan), F&B outlet curation",
+    title:
+      "Operations audit, PIP (property improvement plan), F&B outlet curation",
     details: "1400-key, 5★ Hotel",
   },
   {
@@ -41,7 +42,8 @@ const projects = [
   {
     image: CaseStudy1,
     hotelName: "Wyndham Grand Hotel Phu Quoc",
-    title: "Operations audit, PIP (property improvement plan), F&B outlet curation",
+    title:
+      "Operations audit, PIP (property improvement plan), F&B outlet curation",
     details: "1400-key, 5★ Hotel",
   },
   {
@@ -71,7 +73,8 @@ const projects = [
   {
     image: CaseStudy1,
     hotelName: "Wyndham Grand Hotel Phu Quoc",
-    title: "Operations audit, PIP (property improvement plan), F&B outlet curation",
+    title:
+      "Operations audit, PIP (property improvement plan), F&B outlet curation",
     details: "1400-key, 5★ Hotel",
   },
   {
@@ -98,7 +101,6 @@ const projects = [
     title: "E-commerce, distribution setup, revenue management",
     details: "520-key, 5★ luxury hotel",
   },
-  
 ];
 
 export default function ClientProjects() {
@@ -106,7 +108,7 @@ export default function ClientProjects() {
   const duplicatedProjects = [...projects, ...projects, ...projects];
 
   return (
-    <section className="bg-tertinary pt-[80px] pb-[120px] overflow-hidden">
+    <section className="bg-tertinary py-[60px] sm:py-[60px] lg:py-[100px] overflow-hidden">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-[40px]">
         {/* Section Header */}
         <div className="text-center mb-12">
@@ -142,13 +144,13 @@ export default function ClientProjects() {
 
                 {/* Content */}
                 <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-5 md:p-6 text-white">
-                  <p className="text-xs sm:text-sm text-white/80 mb-1 sm:mb-2 lg:text-[24px]">
+                  <p className="text-[16px] sm:text-[16px] text-white/80 mb-1 sm:mb-2 lg:text-[24px]">
                     {project.hotelName}
                   </p>
-                  <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold mb-1 sm:mb-2 leading-tight lg:text-[36px]">
+                  <h3 className="text-[20px] sm:text-[20px] md:text-xl lg:text-2xl font-semibold mb-1 sm:mb-2 leading-tight lg:text-[36px]">
                     {project.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-white/70 lg:text-[24px]">
+                  <p className="text-[16px] sm:text-[16px] text-white/70 lg:text-[24px]">
                     {project.details}
                   </p>
                 </div>

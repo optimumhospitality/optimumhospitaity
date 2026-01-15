@@ -437,11 +437,11 @@ export default function CoreHotelManagement() {
 
       <div className="bg-primary relative overflow-hidden">
         {/* Content Container - max 1440px centered */}
-        <div className="max-w-[1440px] mx-auto relative px-4 sm:px-6 md:pl-8 md:pr-0 lg:pl-12 xl:pl-[100px]">
+        <div className="max-w-[1440px] mx-auto relative px-4 sm:px-6 md:pl-8 md:pr-0 lg:pl-8 xl:pl-[100px]">
           <div className="flex flex-col lg:flex-row lg:h-[485px]">
             {/* Left Content - Left aligned on mobile, centered on larger screens */}
             <div className="w-full lg:flex-1 flex flex-col justify-center items-start sm:items-center lg:items-start text-left sm:text-center lg:text-left py-8 lg:py-0 lg:pr-8">
-              <h2 className="text-[24px] sm:text-[24px] md:text-[32px] lg:text-[48px] font-normal text-white mb-6 lg:mb-8">
+              <h2 className="text-[24px] sm:text-[24px] md:text-[32px] lg:text-[36px] xl:text-[48px] font-normal text-white mb-6 lg:mb-8">
                 How We Increase GOP and
                 <br className="sm:hidden" /> Asset Value
               </h2>
@@ -455,7 +455,7 @@ export default function CoreHotelManagement() {
                       className="flex items-start gap-3 text-white/90"
                     >
                       <IconComponent className="w-5 h-5 sm:w-6 sm:h-6 text-secondary flex-shrink-0 mt-0.5" />
-                      <span className="text-sm sm:text-base lg:text-lg text-left">
+                      <span className="text-sm sm:text-base lg:text-base xl:text-lg text-left">
                         {benefit.text}
                       </span>
                     </li>
@@ -464,7 +464,7 @@ export default function CoreHotelManagement() {
               </ul>
 
               {/* Request Consultation Button */}
-              <button className="inline-flex items-center gap-2 px-4 h-[44px] sm:h-auto sm:px-6 sm:py-3 lg:mt-6 bg-secondary text-primary text-[16px] sm:text-[16px] lg:text-[20px] font-normal rounded-[8px] hover:bg-secondary/90 transition-colors w-fit">
+              <button className="inline-flex items-center gap-2 px-4 h-[44px] sm:h-auto sm:px-6 sm:py-3 lg:mt-6 bg-secondary text-primary text-[16px] sm:text-[16px] lg:text-[16px] xl:text-[20px] font-normal rounded-[8px] hover:bg-secondary/90 transition-colors w-fit">
                 REQUEST CONSULTATION
                 <svg
                   className="w-4 h-4"
@@ -483,7 +483,7 @@ export default function CoreHotelManagement() {
             </div>
 
             {/* Right Image - Full width edge-to-edge on mobile, squarish with padding on tablet, full height on desktop */}
-            <div className="w-[calc(100%+2rem)] -ml-4 sm:w-full sm:ml-0 lg:w-[600px] flex-shrink-0 pt-6 sm:p-5 md:p-0 lg:p-0">
+            <div className="w-[calc(100%+2rem)] -ml-4 sm:w-full sm:ml-0 lg:w-[450px] xl:w-[600px] flex-shrink-0 pt-6 sm:p-5 md:p-0 lg:p-0">
               <div className="w-full sm:w-[320px] sm:aspect-square md:w-[380px] md:aspect-square lg:aspect-auto lg:w-full lg:h-full sm:mx-auto lg:mx-0 sm:rounded-xl lg:rounded-none overflow-hidden">
                 <img
                   src={gopImageHomeSection}

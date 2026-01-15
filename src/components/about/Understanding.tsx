@@ -22,7 +22,7 @@ const locations: Location[] = [
 
 export default function Understanding() {
     return (
-        <section className="bg-tertinary py-16 sm:py-20 lg:py-2">
+        <section className="bg-tertinary pt-16 sm:pt-20 lg:pt-25">
             <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-[100px]">
                 {/* Section Header */}
                 <div className="text-center mb-12 sm:mb-16 lg:mb-20">

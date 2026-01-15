@@ -39,7 +39,7 @@ export default function Operate() {
           </div>
 
           {/* Operation Steps */}
-          <div className="pb-[100px] grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-primary/30">
+          <div className=" py-15px sm:py-15px lg:py-[100px] grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-primary/30">
             {operationSteps.map((step) => (
               <div
                 key={step.number}

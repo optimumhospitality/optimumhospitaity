@@ -135,7 +135,7 @@ export default function HotelCaseStudy() {
   return (
     <section ref={sectionRef}>
       {/* Case Studies Section - White Background */}
-      <div className="bg-white pt-[60px] pb-16 md:pb-20 lg:pb-24">
+      <div className="bg-white pt-[60px] sm:pt-[60px] lg:pt-[100px] pb-16 md:pb-20 lg:pb-24">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-[58px] xl:px-[58px]">
           {/* Header */}
           <div className="text-center mb-12 md:mb-16">

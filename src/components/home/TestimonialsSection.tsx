@@ -12,7 +12,7 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     id: 1,
-    quote: `"Optimum Hospitality brought clarity, discipline. Within the first year, we saw a material improvement in GOP, stronger F&B performance, and better cost control across the asset. Their independent, owner-first approach made a tangible difference to both short-term results and long-term value."`,
+    quote: `"Optimum Hospitality brought clarity, discipline. Within the first year, we saw a material improvement in GOP, stronger F&B performance, and better cost control across the asset. Their independent, owner-first approach made a tangible difference "`,
     title: "Hotel Owner & Asset Partner",
     location: "Malaysia",
     image: smilingMan,
@@ -62,7 +62,9 @@ export default function TestimonialsSection() {
     if (!scrollContainerRef.current) return;
     const container = scrollContainerRef.current;
     const containerWidth = container.offsetWidth;
-    const cardWidth = Math.min(CARD_WIDTH, containerWidth * 0.9);
+    // Use 92vw on mobile (<500px), 70vw on larger screens
+    const widthRatio = containerWidth < 500 ? 0.92 : 0.7;
+    const cardWidth = Math.min(CARD_WIDTH, containerWidth * widthRatio);
     const cardTotalWidth = cardWidth + CARD_GAP;
 
     // Initial padding centers the first card (50vw - half card width)
@@ -99,22 +101,35 @@ export default function TestimonialsSection() {
     if (!scrollContainerRef.current) return;
     const container = scrollContainerRef.current;
     const width = container.offsetWidth;
-    const cardTotalWidth = Math.min(CARD_WIDTH, width * 0.9) + CARD_GAP;
+    // Use 92vw on mobile (<500px), 70vw on larger screens
+    const widthRatio = width < 500 ? 0.92 : 0.7;
+    const cardWidth = Math.min(CARD_WIDTH, width * widthRatio);
+    const cardTotalWidth = cardWidth + CARD_GAP;
     const scrollLeft = container.scrollLeft;
-    const centerOffset = (width - cardTotalWidth) / 2;
+
+    // Calculate max scroll
+    const maxScroll = container.scrollWidth - container.clientWidth;
 
     // Update scroll position state for card styling
     setScrollPosition(scrollLeft);
     setContainerWidth(width);
 
-    const newIndex = Math.round((scrollLeft + centerOffset) / cardTotalWidth);
-    const clampedIndex = Math.max(
-      0,
-      Math.min(testimonials.length - 1, newIndex)
-    );
+    // If we're near the end of scroll, show last card
+    if (scrollLeft >= maxScroll - 50) {
+      if (currentIndex !== testimonials.length - 1) {
+        setCurrentIndex(testimonials.length - 1);
+      }
+    } else {
+      const centerOffset = (width - cardWidth) / 2;
+      const newIndex = Math.round((scrollLeft + centerOffset) / cardTotalWidth);
+      const clampedIndex = Math.max(
+        0,
+        Math.min(testimonials.length - 1, newIndex)
+      );
 
-    if (clampedIndex !== currentIndex) {
-      setCurrentIndex(clampedIndex);
+      if (clampedIndex !== currentIndex) {
+        setCurrentIndex(clampedIndex);
+      }
     }
 
     // Reset auto-scroll when user scrolls
@@ -180,9 +195,10 @@ export default function TestimonialsSection() {
       };
     }
 
+    // Use 92vw on mobile (<500px), 70vw on larger screens
+    const widthRatio = containerWidth < 500 ? 0.92 : 0.7;
     const cardTotalWidth =
-      Math.min(CARD_WIDTH, containerWidth * 0.9) + CARD_GAP;
-    // const centerOffset = (containerWidth - cardTotalWidth) / 2;
+      Math.min(CARD_WIDTH, containerWidth * widthRatio) + CARD_GAP;
 
     const cardCenter = index * cardTotalWidth + cardTotalWidth / 2;
     const viewportCenter = scrollPosition + containerWidth / 2;
@@ -191,14 +207,16 @@ export default function TestimonialsSection() {
 
     const normalizedDistance = Math.min(distance / maxDistance, 1);
 
-    // Center card (distance ~0) should be fully visible
+    // Center card (distance ~0) should be fully visible with NO blur
     const opacity = 1 - normalizedDistance * 0.4;
-    const blur = normalizedDistance * 1.5;
+    // Only apply blur if not in center zone (threshold 0.15)
+    const blur =
+      normalizedDistance < 0.15 ? 0 : (normalizedDistance - 0.15) * 1.8;
     const scale = 1 - normalizedDistance * 0.15;
 
     return {
       opacity: Math.max(0.6, opacity),
-      filter: blur < 0.1 ? "none" : `blur(${blur}px)`,
+      filter: blur < 0.05 ? "none" : `blur(${blur}px)`,
       transform: `scale(${Math.max(0.85, scale)})`,
     };
   };
@@ -228,25 +246,22 @@ export default function TestimonialsSection() {
               scrollbarWidth: "none",
               msOverflowStyle: "none",
               WebkitOverflowScrolling: "touch",
-              paddingLeft: `calc(50vw - min(${CARD_WIDTH / 2}px, 45vw))`,
-              paddingRight: `calc(50vw - min(${CARD_WIDTH / 2}px, 45vw))`,
+              paddingLeft: `4vw`,
+              paddingRight: `4vw`,
             }}
           >
             {testimonials.map((card, index) => (
               <div
                 key={card.id}
                 onClick={() => goToSlide(index)}
-                className="flex-shrink-0 cursor-pointer transition-all duration-300 ease-out h-auto md:h-[474px]"
-                style={{
-                  width: `min(${CARD_WIDTH}px, 90vw)`,
-                  ...getCardStyle(index),
-                }}
+                className="flex-shrink-0 cursor-pointer transition-all duration-300 ease-out h-auto w-[92vw] min-[500px]:w-[70vw] min-[500px]:max-w-[983px]"
+                style={getCardStyle(index)}
               >
-                {/* Card - flex-col on mobile/small tablet, flex-row on lg+ */}
-                <div className="flex flex-col border-[1px] border-[#CACACA]/50 rounded-[24px] lg:flex-row items-stretch bg-white   h-auto lg:h-[474px] w-full">
-                  {/* Image - Minimal size reduction, stays stable */}
-                  <div className="w-full lg:w-auto flex-shrink-0 p-4 sm:p-5 lg:p-6 xl:p-7">
-                    <div className="aspect-square lg:aspect-auto w-[280px] sm:w-[300px] md:w-[340px] lg:w-[340px] xl:w-[385px] lg:h-full xl:h-[408px] mx-auto lg:mx-0 rounded-lg xl:rounded-[16px] overflow-hidden">
+                {/* Card - flex-col below 500px, flex-row from 500px+ */}
+                <div className="flex flex-col min-[500px]:flex-row border-[1px] border-[#CACACA]/50 rounded-[16px] min-[500px]:rounded-[12px] sm:rounded-[16px] md:rounded-[20px] lg:rounded-[24px] items-stretch bg-white h-auto min-[500px]:h-[180px] sm:h-[220px] min-[700px]:h-[250px] md:h-[300px] min-[900px]:h-[360px] lg:h-[474px] w-full overflow-hidden min-[500px]:overflow-visible">
+                  {/* Image - Squarish on mobile */}
+                  <div className="w-full min-[500px]:w-auto flex-shrink-0 p-3 min-[500px]:p-1.5 sm:p-2 md:p-3 lg:p-6 xl:p-7">
+                    <div className="w-full aspect-[4/3] min-[500px]:h-full min-[500px]:w-auto min-[500px]:aspect-square sm:aspect-square md:aspect-square lg:w-[340px] xl:w-[385px] xl:h-[408px] mx-auto min-[500px]:mx-0 rounded-lg min-[500px]:rounded-[8px] xl:rounded-[16px] overflow-hidden">
                       <img
                         src={card.image}
                         alt={card.title}
@@ -256,16 +271,16 @@ export default function TestimonialsSection() {
                     </div>
                   </div>
 
-                  {/* Quote Content - Full visibility on mobile */}
-                  <div className="flex-1 min-w-0 p-4 sm:p-5 lg:pt-5 lg:pr-5 lg:pb-5 xl:pt-7 xl:pr-10 xl:pb-[33px] lg:pl-2 xl:pl-3 flex flex-col justify-between">
-                    <blockquote className="text-primary text-[16px] font-normal sm:text-[16px] lg:text-[24px] xl:text-[24px] leading-relaxed">
+                  {/* Quote Content - spread top to bottom with gap */}
+                  <div className="flex-1 min-w-0 px-4 pt-2 pb-4 min-[500px]:py-1.5 min-[500px]:px-2 sm:py-2 sm:px-3 md:p-3 lg:pt-5 lg:pr-5 lg:pb-5 xl:pt-7 xl:pr-10 xl:pb-[33px] lg:pl-2 xl:pl-3 flex flex-col justify-between gap-3 min-[500px]:gap-0">
+                    <blockquote className="text-primary text-[13px] min-[500px]:text-[10px] sm:text-[13px] md:text-[15px] lg:text-[20px] xl:text-[24px] font-normal leading-snug min-[500px]:leading-tight sm:leading-snug lg:leading-relaxed">
                       {card.quote}
                     </blockquote>
-                    <div className="mt-3 lg:mt-4 xl:mt-6">
-                      <p className="font-bold text-primary text-[16px] sm:text-base lg:text-[24px] xl:text-[24px]">
+                    <div>
+                      <p className="font-bold text-primary text-[13px] min-[500px]:text-[10px] sm:text-[13px] md:text-[15px] lg:text-[20px] xl:text-[24px]">
                         {card.title}
                       </p>
-                      <p className="text-primary text-[16px] sm:text-[16px] lg:text-[24px] xl:text-[24px]">
+                      <p className="text-primary text-[11px] min-[500px]:text-[9px] sm:text-[11px] md:text-[13px] lg:text-[18px] xl:text-[24px]">
                         {card.location}
                       </p>
                     </div>
@@ -275,8 +290,8 @@ export default function TestimonialsSection() {
             ))}
           </div>
 
-          {/* Navigation Dots */}
-          <div className="flex justify-center gap-2 sm:gap-2.5 mt-8 sm:mt-10 md:mt-12">
+          {/* Navigation Dots - 60px gap from card */}
+          <div className="flex justify-center gap-2 sm:gap-2.5 mt-[60px]">
             {testimonials.map((_, index) => (
               <button
                 key={index}

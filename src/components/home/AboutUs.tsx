@@ -3,6 +3,7 @@ import { useLocomotiveScroll } from "../LocomotiveScrollProvider";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import aboutImage from "../../assets/image/home-page/aboutUs/business-partners 1.webp";
+import BookMyConsultation from "../common/button/BookMyConsulation";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -62,7 +63,7 @@ export default function AboutUs() {
   }, [isReady]);
 
   return (
-    <section ref={sectionRef} className="bg-tertinary  pb-15 lg:pb-25 pt-15">
+    <section ref={sectionRef} className="bg-tertinary  py-15 sm:py-15 lg:py-25">
       {/* Section Header */}
       <div className="text-center  px-4">
         <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[48px] font-medium text-primary mb-2">
@@ -113,22 +114,7 @@ export default function AboutUs() {
               </div>
 
               {/* CTA Button */}
-              <button className=" h-[44px] sm:h-[52px] lg:h-[56px] inline-flex items-center justify-center gap-[8px] py-[12px] sm:py-[14px] lg:py-[16px] px-[20px] sm:px-[28px] lg:px-[36px] bg-primary text-white text-[16px] sm:text-[16px] lg:text-[16px] font-normal tracking-[0.1em] rounded-[8px] hover:bg-primary/90 transition-colors">
-                BOOK MY CONSULTATION
-                <svg
-                  className="w-3 h-3 sm:w-4 sm:h-4"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M7 17L17 7M17 7H7M17 7V17"
-                  />
-                </svg>
-              </button>
+              <BookMyConsultation />
             </div>
           </div>
 

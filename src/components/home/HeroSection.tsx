@@ -51,7 +51,7 @@ export default function HeroSection() {
   return (
     <section
       ref={containerRef}
-      className="relative h-screen w-full flex items-end pb-12 sm:pb-16 md:pb-20 lg:pb-24"
+      className="relative h-[100dvh] w-full flex items-end pb-12 sm:pb-16 md:pb-20 lg:pb-24 overflow-hidden"
     >
       {/* Background Video */}
       <div className="absolute inset-0 z-0 h-full w-full">
@@ -69,9 +69,9 @@ export default function HeroSection() {
 
       {/* Content */}
       <div className="relative z-10 w-full max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-[40px]">
-        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 sm:gap-8 lg:gap-12">
+        <div className="flex flex-col min-[1210px]:flex-row min-[1210px]:items-end min-[1210px]:justify-between gap-6 sm:gap-8 min-[1210px]:gap-12">
           {/* Left Content */}
-          <div className="w-full md:w-[950px] h-auto md:h-[306px] pl-0 sm:pl-0 md:pl-0 lg:pl-0 pb-8 sm:pb-10 md:pb-12 lg:pb-0">
+          <div className="w-full md:w-[950px] h-auto md:h-[306px] pl-0 sm:pl-0 md:pl-0 min-[1210px]:pl-0 pb-8 sm:pb-10 md:pb-12 min-[1210px]:pb-0">
             {/* Main Headline */}
             <h1
               ref={headlineRef}
@@ -112,7 +112,7 @@ export default function HeroSection() {
           </div>
 
           {/* Right Content - CTA Button */}
-          <div ref={ctaRef} className="lg:flex-shrink-0 mt-4 sm:mt-0">
+          <div ref={ctaRef} className="min-[1210px]:flex-shrink-0 mt-4 sm:mt-0">
             <HeroSectionButton
               text="BOOK MY CONSULTATION"
               href="#consultation"
