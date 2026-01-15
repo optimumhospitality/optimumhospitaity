@@ -463,7 +463,7 @@ export default function CoreHotelManagement() {
               </ul>
 
               {/* Request Consultation Button */}
-              <button className="inline-flex items-center gap-1.5 min-[500px]:gap-1 sm:gap-1.5 md:gap-2 px-3 min-[500px]:px-2.5 sm:px-3 md:px-4 lg:px-6 h-[40px] min-[500px]:h-[28px] sm:h-[32px] md:h-[38px] lg:h-[44px] xl:h-auto xl:py-3 bg-secondary text-primary text-[14px] min-[500px]:text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[20px] font-normal rounded-[6px] min-[500px]:rounded-[4px] sm:rounded-[6px] md:rounded-[8px] hover:bg-secondary/90 transition-colors w-fit">
+              <button className=" mt-3 inline-flex items-center gap-1.5 min-[500px]:gap-1 sm:gap-1.5 md:gap-2 px-3 min-[500px]:px-2.5 sm:px-3 md:px-4 lg:px-6 h-[40px] min-[500px]:h-[28px] sm:h-[32px] md:h-[38px] lg:h-[44px] xl:h-auto xl:py-3 bg-secondary text-primary text-[14px] min-[500px]:text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[20px] font-normal rounded-[6px] min-[500px]:rounded-[4px] sm:rounded-[6px] md:rounded-[8px] hover:bg-secondary/90 transition-colors w-fit">
                 REQUEST CONSULTATION
                 <svg
                   className="w-3 h-3 min-[500px]:w-2.5 min-[500px]:h-2.5 sm:w-3 sm:h-3 md:w-3.5 md:h-3.5 lg:w-4 lg:h-4"
