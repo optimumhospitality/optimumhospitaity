@@ -332,7 +332,7 @@ export default function CoreHotelManagement() {
               {services.map((service, index) => (
                 <div
                   key={service.id}
-                  className={` min-h-[80vh] lg:h-screen flex flex-col lg:items-center justify-center  lg:py-0`}
+                  className={`py-8 min-h-[80vh] lg:h-screen flex flex-col lg:items-center justify-center  `}
                 >
                   {/* Inner content container */}
                   <div
