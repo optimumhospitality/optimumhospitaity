@@ -52,31 +52,28 @@ export default function Footer() {
           <div className="h-1/2 bg-primary"></div>
         </div>
         {/* CTA Content */}
-        <div className="relative z-10 max-w-[1440px] mx-auto px-4 sm:px-6 max-lg:px-4 lg:px-10">
-          <div className="bg-secondary rounded-2xl sm:rounded-3xl px-5 sm:px-6 max-lg:px-6 lg:px-16 py-8 sm:py-10 md:py-12 lg:py-16 overflow-hidden">
-            <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 sm:gap-8">
+        <div className="relative z-10 max-w-[1440px] mx-auto px-4 min-[500px]:px-3 sm:px-4 min-[750px]:px-5 md:px-6 lg:px-10">
+          <div className="bg-secondary rounded-2xl min-[500px]:rounded-xl sm:rounded-2xl md:rounded-3xl px-5 min-[500px]:px-4 sm:px-5 min-[750px]:px-6 md:px-8 lg:px-12 xl:px-16 py-6 min-[500px]:py-5 sm:py-6 min-[750px]:py-8 md:py-10 lg:py-14 xl:py-16 overflow-hidden">
+            <div className="flex flex-col min-[500px]:flex-row min-[500px]:items-center min-[500px]:justify-between gap-4 min-[500px]:gap-4 sm:gap-5 min-[750px]:gap-6 md:gap-6 lg:gap-8">
               {/* Left Content */}
-              <div className="text-center lg:text-left">
-                <h2 className="text-lg sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-medium text-primary mb-2 sm:mb-3 md:mb-4 leading-tight sm:whitespace-nowrap lg:whitespace-normal">
-                  Let's Improve Your
-                  <br className="hidden lg:block" />
-                  <span className="lg:hidden"> </span>
-                  Hotel's Performance
+              <div className="text-center min-[500px]:text-left">
+                <h2 className="text-[22px] min-[500px]:text-[16px] sm:text-[18px] min-[750px]:text-[22px] md:text-[26px] lg:text-[32px] xl:text-[40px] min-[1400px]:text-5xl font-medium text-primary mb-2 min-[500px]:mb-1.5 sm:mb-2 min-[750px]:mb-2.5 md:mb-3 lg:mb-4 leading-tight">
+                  Let's Improve Your Hotel's Performance
                 </h2>
-                <p className="text-primary text-sm sm:text-base md:text-lg lg:text-xl xl:text-[24px] font-normal">
+                <p className="text-primary text-[14px] min-[500px]:text-[11px] sm:text-[12px] min-[750px]:text-[14px] md:text-[16px] lg:text-[18px] xl:text-[22px] min-[1400px]:text-[24px] font-normal">
                   Sign up and start selling travel in less than 1 minute.
                 </p>
               </div>
 
               {/* Right Button */}
-              <div className="flex justify-center lg:justify-end flex-shrink-0">
+              <div className="flex justify-center min-[500px]:justify-end flex-shrink-0">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center justify-center gap-2 px-4 py-2.5 sm:px-5 sm:py-3 md:px-6 md:py-3.5 bg-primary text-white text-sm sm:text-sm md:text-base lg:text-[16px] font-[400] rounded-md hover:bg-primary/90 transition-colors text-transform: uppercase "
+                  className="inline-flex items-center justify-center gap-1.5 min-[500px]:gap-1.5 sm:gap-1.5 md:gap-2 px-3 min-[500px]:px-3 sm:px-3.5 min-[750px]:px-4 md:px-5 lg:px-5 xl:px-6 py-2 min-[500px]:py-2 sm:py-2 min-[750px]:py-2.5 md:py-3 lg:py-3 xl:py-3.5 bg-primary text-white text-[13px] min-[500px]:text-[10px] sm:text-[11px] min-[750px]:text-[12px] md:text-[13px] lg:text-[14px] xl:text-[16px] font-[400] rounded-md min-[500px]:rounded-md sm:rounded-md hover:bg-primary/90 transition-colors uppercase whitespace-nowrap"
                 >
                   Speak with Optimum Hospitality
                   <svg
-                    className="w-3 h-3 sm:w-4 sm:h-4 flex-shrink-0"
+                    className="w-3 h-3 min-[500px]:w-2.5 min-[500px]:h-2.5 sm:w-2.5 sm:h-2.5 min-[750px]:w-3 min-[750px]:h-3 md:w-3 md:h-3 lg:w-3.5 lg:h-3.5 xl:w-4 xl:h-4 flex-shrink-0"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"

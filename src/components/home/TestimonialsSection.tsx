@@ -246,8 +246,8 @@ export default function TestimonialsSection() {
               scrollbarWidth: "none",
               msOverflowStyle: "none",
               WebkitOverflowScrolling: "touch",
-              paddingLeft: `4vw`,
-              paddingRight: `4vw`,
+              paddingLeft: `calc((100vw - min(983px, 70vw)) / 2)`,
+              paddingRight: `calc((100vw - min(983px, 70vw)) / 2)`,
             }}
           >
             {testimonials.map((card, index) => (

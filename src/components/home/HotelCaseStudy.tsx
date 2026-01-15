@@ -138,14 +138,14 @@ export default function HotelCaseStudy() {
       <div className="bg-white pt-[60px] sm:pt-[60px] lg:pt-[100px] pb-16 md:pb-20 lg:pb-24">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-[58px] xl:px-[58px]">
           {/* Header */}
-          <div className="text-center mb-12 md:mb-16">
-            <p className="text-xs sm:text-[20px] font-light tracking-[0.2em] text-gray-500 uppercase mb-1">
+          <div className="text-center mb-8 min-[500px]:mb-8 sm:mb-10 md:mb-12 lg:mb-16">
+            <p className="text-[10px] min-[500px]:text-[10px] sm:text-xs md:text-sm lg:text-[20px] font-light tracking-[0.2em] text-gray-500 uppercase mb-1">
               WHERE STRATEGY DELIVERS REAL VALUE
             </p>
-            <h2 className="text-[24px] sm:text-[24px] md:text-[32px] lg:text-[48px] pb-1.5 font-medium text-primary">
+            <h2 className="text-[24px] min-[500px]:text-[20px] sm:text-[24px] md:text-[32px] lg:text-[48px] pb-1.5 font-medium text-primary">
               Selected Hotel Case Studies
             </h2>
-            <p className="mt-0 text-[#626262] text-sm sm:text-base md:text-[20px] max-w-3xl mx-auto">
+            <p className="mt-0 text-[#626262] text-[13px] min-[500px]:text-[11px] sm:text-sm md:text-base lg:text-[20px] max-w-3xl mx-auto">
               Real examples of how we have improved hotel operations, financial
               performance, and guest experience across Southeast Asia.
             </p>
@@ -154,12 +154,12 @@ export default function HotelCaseStudy() {
           {/* Case Study Cards */}
           <div
             ref={cardsRef}
-            className="flex flex-col lg:flex-row justify-center gap-6 lg:gap-[24px]"
+            className="flex flex-col min-[500px]:flex-row justify-center gap-4 min-[500px]:gap-3 sm:gap-4 md:gap-5 lg:gap-6 xl:gap-[24px]"
           >
             {caseStudies.map((study) => (
               <div
                 key={study.id}
-                className="case-card relative group rounded-2xl overflow-hidden cursor-pointer w-full h-[350px] sm:h-[400px] lg:w-[600px] lg:h-[600px] flex-shrink-0"
+                className="case-card relative group rounded-xl min-[500px]:rounded-lg sm:rounded-xl md:rounded-2xl overflow-hidden cursor-pointer w-full h-[300px] min-[500px]:w-[48%] min-[500px]:h-[180px] sm:h-[220px] md:h-[300px] min-[900px]:h-[380px] lg:h-[450px] xl:h-[550px] min-[1400px]:h-[600px]"
                 onMouseEnter={() => setHoveredCard(study.id)}
                 onMouseLeave={() => setHoveredCard(null)}
               >
@@ -176,14 +176,14 @@ export default function HotelCaseStudy() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
 
                 {/* Content */}
-                <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
-                  <p className="text-[16px] sm:text-[16px] text-white/80 mb-1 sm:mb-2 lg:text-[24px]">
+                <div className="absolute bottom-0 left-0 right-0 p-4 min-[500px]:p-3 sm:p-4 md:p-5 min-[900px]:p-6 lg:p-7 xl:p-8">
+                  <p className="text-[14px] min-[500px]:text-[10px] sm:text-[11px] md:text-[13px] min-[900px]:text-[16px] lg:text-[18px] xl:text-[22px] min-[1400px]:text-[24px] text-white/80 mb-1">
                     {study.hotelName}
                   </p>
-                  <h3 className="text-[20px] sm:text-[20px] md:text-xl lg:text-2xl font-semibold mb-1 sm:mb-2 leading-tight lg:text-[36px]">
+                  <h3 className="text-[18px] min-[500px]:text-[11px] sm:text-[13px] md:text-[16px] min-[900px]:text-[22px] lg:text-[26px] xl:text-[32px] min-[1400px]:text-[36px] font-semibold mb-1 leading-tight">
                     {study.title}
                   </h3>
-                  <p className="text-[16px] sm:text-[16px] text-white/70 lg:text-[24px]">
+                  <p className="text-[14px] min-[500px]:text-[10px] sm:text-[11px] md:text-[13px] min-[900px]:text-[16px] lg:text-[18px] xl:text-[22px] min-[1400px]:text-[24px] text-white/70">
                     {study.achievement}
                   </p>
 
@@ -214,14 +214,14 @@ export default function HotelCaseStudy() {
       {/* How We Increase GOP Section - Dark Background */}
 
       <div className="bg-primary" ref={partnersRef}>
-        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-[100px] py-20">
-          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-10 lg:gap-16">
+        <div className="max-w-[1440px] mx-auto px-4 min-[500px]:px-4 sm:px-6 md:px-8 lg:px-12 xl:px-[100px] py-10 min-[500px]:py-8 sm:py-12 md:py-16 lg:py-20">
+          <div className="flex flex-col min-[500px]:flex-row min-[500px]:items-center min-[500px]:justify-between gap-6 min-[500px]:gap-4 sm:gap-6 md:gap-10 lg:gap-16">
             {/* Left Text */}
-            <div className="lg:max-w-md flex-shrink-0">
-              <h3 className="text-[24px] sm:text-[24px] md:text-[48px] font-bold text-white mb-4 leading-tight">
+            <div className="min-[500px]:max-w-[45%] sm:max-w-[50%] lg:max-w-md flex-shrink-0">
+              <h3 className="text-[24px] min-[500px]:text-[18px] sm:text-[24px] md:text-[36px] lg:text-[48px] font-bold text-white mb-2 min-[500px]:mb-2 sm:mb-3 md:mb-4 leading-tight">
                 Our Partners
               </h3>
-              <p className="text-white/70 text-[16px] text-[16px] sm:text-[20px] md:text-[20px] leading-relaxed">
+              <p className="text-white/70 text-[14px] min-[500px]:text-[10px] sm:text-[14px] md:text-[18px] lg:text-[20px] leading-relaxed">
                 We partner selectively with organizations that meet our
                 standards for performance, precision, and long-term value
                 creation.
@@ -229,16 +229,16 @@ export default function HotelCaseStudy() {
             </div>
 
             {/* Partner Logos - 2x2 Grid */}
-            <div className="grid grid-cols-2 gap-0 md:gap-x-20 md:gap-y-8 items-center">
+            <div className="grid grid-cols-2 gap-2 min-[500px]:gap-2 sm:gap-4 md:gap-x-20 md:gap-y-8 items-center">
               {partners.map((partner, index) => (
                 <div
                   key={index}
-                  className="flex items-center justify-center h-12 md:h-16 p-0"
+                  className="flex items-center justify-center h-10 min-[500px]:h-8 sm:h-10 md:h-16 p-0"
                 >
                   <img
                     src={partner.logo}
                     alt={partner.name}
-                    className="h-8 sm:h-10 md:h-14 w-auto object-contain filter brightness-0 invert opacity-90"
+                    className="h-6 min-[500px]:h-5 sm:h-8 md:h-14 w-auto object-contain filter brightness-0 invert opacity-90"
                   />
                 </div>
               ))}
