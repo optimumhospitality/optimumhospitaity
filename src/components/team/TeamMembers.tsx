@@ -134,10 +134,10 @@ function TeamMemberCard({ member }: { member: TeamMember }) {
     // Fixed height card for consistent alignment across all cards
     <Link
       to={`/team/${member.id}`}
-      className="w-full max-w-[320px] sm:max-w-[350px] md:max-w-[380px] lg:w-[calc((100%-80px)/3)] lg:max-w-[430px] h-[480px] sm:h-[580px] md:h-[650px] lg:h-[707px] flex flex-col bg-tertinary border-[1px] border-[#23283C]/50 rounded-[12px] sm:rounded-[14px] lg:rounded-[16px] overflow-hidden cursor-pointer hover:border-primary/50 transition-colors"
+      className="w-full max-w-[320px] sm:max-w-[350px] md:max-w-[380px] lg:w-[calc((100%-80px)/3)] lg:max-w-[430px] h-[520px] sm:h-[580px] md:h-[650px] lg:h-[707px] flex flex-col bg-tertinary border-[1px] border-[#23283C]/50 rounded-[12px] sm:rounded-[14px] lg:rounded-[16px] overflow-hidden cursor-pointer hover:border-primary/50 transition-colors"
     >
       {/* Image - fixed height for alignment */}
-      <div className="h-[220px] sm:h-[280px] md:h-[320px] lg:h-[372px] w-full flex-shrink-0 overflow-hidden">
+      <div className="h-[260px] sm:h-[280px] md:h-[320px] lg:h-[372px] w-full flex-shrink-0 overflow-hidden">
         <img
           src={member.image}
           alt={member.name}
