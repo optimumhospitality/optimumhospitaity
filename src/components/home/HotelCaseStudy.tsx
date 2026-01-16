@@ -229,7 +229,7 @@ export default function HotelCaseStudy() {
             </div>
 
             {/* Partner Logos - 2x2 Grid */}
-            <div className="grid grid-cols-2 gap-2 min-[500px]:gap-2 sm:gap-4 md:gap-x-20 md:gap-y-8 items-center">
+            <div className="grid grid-cols-2  min-[500px]:gap-2 sm:gap-4 md:gap-x-20 md:gap-y-8 items-center">
               {partners.map((partner, index) => (
                 <div
                   key={index}
@@ -238,7 +238,7 @@ export default function HotelCaseStudy() {
                   <img
                     src={partner.logo}
                     alt={partner.name}
-                    className="h-6 min-[500px]:h-5 sm:h-8 md:h-14 w-auto object-contain filter brightness-0 invert opacity-90"
+                    className="h-6 min-[500px]:h-5 sm:h-8 md:h-14 w-full object-contain filter brightness-0 invert opacity-90"
                   />
                 </div>
               ))}

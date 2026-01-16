@@ -72,11 +72,11 @@ export default function Footer() {
               <div className="flex justify-start min-[500px]:justify-end flex-shrink-0">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center justify-center gap-1.5 min-[500px]:gap-1.5 sm:gap-1.5 md:gap-2 px-3 min-[500px]:px-3 sm:px-3.5 min-[750px]:px-4 md:px-5 lg:px-5 xl:px-6 py-2 min-[500px]:py-2 sm:py-2 min-[750px]:py-2.5 md:py-3 lg:py-3 xl:py-3.5 bg-primary text-white text-[13px] min-[500px]:text-[10px] sm:text-[11px] min-[750px]:text-[12px] md:text-[13px] lg:text-[14px] xl:text-[16px] font-[400] rounded-md min-[500px]:rounded-md sm:rounded-md hover:bg-primary/90 transition-colors uppercase whitespace-nowrap"
+                  className="inline-flex items-center justify-center gap-2 px-4 lg:px-6 h-[44px] lg:h-[56px] bg-primary text-white text-[14px] lg:text-[20px] font-[400] rounded-md lg:rounded-[12px] hover:bg-primary/90 transition-colors uppercase whitespace-nowrap"
                 >
                   Speak with Optimum Hospitality
                   <svg
-                    className="w-3 h-3 min-[500px]:w-2.5 min-[500px]:h-2.5 sm:w-2.5 sm:h-2.5 min-[750px]:w-3 min-[750px]:h-3 md:w-3 md:h-3 lg:w-3.5 lg:h-3.5 xl:w-4 xl:h-4 flex-shrink-0"
+                    className="w-3.5 h-3.5 lg:w-5 lg:h-5 flex-shrink-0"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -114,16 +114,16 @@ export default function Footer() {
               onSubmit={handleSubmit}
               className="flex flex-col min-[500px]:flex-row gap-3 min-[500px]:gap-0 w-full min-[500px]:w-auto"
             >
-              <div className="flex border-[1px] border-secondary rounded-[8px] min-[500px]:rounded-[6px] sm:rounded-[8px] min-[750px]:rounded-[10px] md:rounded-[12px] w-full min-[500px]:w-auto">
+              <div className="flex items-stretch border-[1px] border-secondary rounded-md lg:rounded-[12px] w-full min-[500px]:w-auto">
                 <input
                   type="email"
                   required
                   placeholder="Enter your email"
-                  className="px-3 min-[500px]:px-2 sm:px-3 min-[750px]:px-4 md:px-4 py-2 min-[500px]:py-1.5 sm:py-2 min-[750px]:py-2.5 md:py-3 bg-primary text-white placeholder:text-[#CACACA] text-[12px] min-[500px]:text-[9px] sm:text-[10px] min-[750px]:text-[12px] md:text-[14px] lg:text-[16px] rounded-l-[7px] min-[500px]:rounded-l-[5px] sm:rounded-l-[7px] min-[750px]:rounded-l-[9px] md:rounded-l-[11px] font-[200] focus:outline-none focus:border-white/40 flex-1 min-[500px]:flex-none min-[500px]:w-[140px] sm:w-[180px] min-[750px]:w-[220px] md:w-[260px] lg:w-[300px] min-w-0"
+                  className="h-[44px] lg:h-[56px] px-3 min-[500px]:px-2 sm:px-3 min-[750px]:px-4 md:px-4 bg-primary text-white placeholder:text-[#CACACA] text-[12px] lg:text-[16px] rounded-l-md lg:rounded-l-[11px] font-[200] focus:outline-none focus:border-white/40 flex-1 min-[500px]:flex-none min-[500px]:w-[140px] sm:w-[180px] min-[750px]:w-[220px] md:w-[260px] lg:w-[300px] min-w-0"
                 />
                 <button
                   type="submit"
-                  className="px-3 min-[500px]:px-2 sm:px-3 min-[750px]:px-4 md:px-5 lg:px-6 py-2 min-[500px]:py-1.5 sm:py-2 min-[750px]:py-2.5 md:py-3 bg-[#F7EFE3] text-primary text-[12px] min-[500px]:text-[8px] sm:text-[10px] min-[750px]:text-[12px] md:text-[14px] lg:text-[16px] border-secondary font-normal rounded-[7px] min-[500px]:rounded-[5px] sm:rounded-[7px] min-[750px]:rounded-[9px] md:rounded-[11px] hover:bg-white/90 transition-colors whitespace-nowrap min-[500px]:w-auto lg:w-[157px]"
+                  className="h-[44px] lg:h-[56px] px-6 bg-[#F7EFE3] text-primary text-[14px] lg:text-[20px] border-secondary font-normal rounded-md lg:rounded-[11px] hover:bg-white/90 transition-colors whitespace-nowrap w-[120px] min-[500px]:w-[100px] sm:w-[120px] min-[750px]:w-[140px] md:w-[150px] lg:w-[157px]"
                 >
                   SEND
                 </button>
