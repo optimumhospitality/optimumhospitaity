@@ -64,9 +64,9 @@ export default function TestimonialsSection() {
     const container = scrollContainerRef.current;
     const containerWidth = container.offsetWidth;
     const isMobile = containerWidth < 500;
-    // Mobile: fixed card width ~220px, larger: 70vw
+    // Mobile: fixed card width ~280px (increased for better content fit), larger: 70vw
     const cardWidth = isMobile
-      ? 220
+      ? 280
       : Math.min(CARD_WIDTH, containerWidth * 0.7);
     const gap = isMobile ? MOBILE_CARD_GAP : CARD_GAP;
     const cardTotalWidth = cardWidth + gap;
@@ -106,8 +106,8 @@ export default function TestimonialsSection() {
     const container = scrollContainerRef.current;
     const width = container.offsetWidth;
     const isMobile = width < 500;
-    // Mobile: fixed card width ~220px, larger: 70vw
-    const cardWidth = isMobile ? 220 : Math.min(CARD_WIDTH, width * 0.7);
+    // Mobile: fixed card width ~280px (increased for better content fit), larger: 70vw
+    const cardWidth = isMobile ? 280 : Math.min(CARD_WIDTH, width * 0.7);
     const gap = isMobile ? MOBILE_CARD_GAP : CARD_GAP;
     const cardTotalWidth = cardWidth + gap;
     const scrollLeft = container.scrollLeft;
@@ -208,9 +208,9 @@ export default function TestimonialsSection() {
     }
 
     const isMobile = containerWidth < 500;
-    // Mobile: fixed card width ~220px, larger: 70vw
+    // Mobile: fixed card width ~280px (increased for better content fit), larger: 70vw
     const cardWidth = isMobile
-      ? 220
+      ? 280
       : Math.min(CARD_WIDTH, containerWidth * 0.7);
     const gap = isMobile ? MOBILE_CARD_GAP : CARD_GAP;
     const cardTotalWidth = cardWidth + gap;
@@ -240,7 +240,7 @@ export default function TestimonialsSection() {
   const getScrollPadding = () => {
     const isMobile = containerWidth < 500;
     const cardWidth = isMobile
-      ? 220
+      ? 280
       : Math.min(CARD_WIDTH, containerWidth * 0.7);
     const padding = Math.max(20, (containerWidth - cardWidth) / 2);
     return `${padding}px`;
@@ -279,14 +279,14 @@ export default function TestimonialsSection() {
               <div
                 key={card.id}
                 onClick={() => goToSlide(index)}
-                className="flex-shrink-0 cursor-pointer transition-all duration-300 ease-out h-auto w-[220px] min-[500px]:w-[70vw] min-[500px]:max-w-[983px]"
+                className="flex-shrink-0 cursor-pointer transition-all duration-300 ease-out h-auto w-[280px] min-[500px]:w-[70vw] min-[500px]:max-w-[983px]"
                 style={getCardStyle(index)}
               >
                 {/* Card - flex-col below 500px, flex-row from 500px+ */}
-                <div className="flex flex-col min-[500px]:flex-row border-[1px] border-[#CACACA]/50 rounded-[12px] min-[500px]:rounded-[12px] sm:rounded-[16px] md:rounded-[20px] lg:rounded-[24px] items-stretch bg-white h-[380px] min-[500px]:h-[180px] sm:h-[220px] min-[700px]:h-[250px] md:h-[300px] min-[900px]:h-[360px] lg:h-[474px] w-full overflow-hidden min-[500px]:overflow-visible">
-                  {/* Image - Squarish on mobile */}
-                  <div className="w-full min-[500px]:w-auto flex-shrink-0 p-2 min-[500px]:p-1.5 sm:p-2 md:p-3 lg:p-6 xl:p-7">
-                    <div className="w-full aspect-square min-[500px]:h-full min-[500px]:w-auto min-[500px]:aspect-square sm:aspect-square md:aspect-square lg:w-[340px] xl:w-[385px] xl:h-[408px] mx-auto min-[500px]:mx-0 rounded-lg min-[500px]:rounded-[8px] xl:rounded-[16px] overflow-hidden max-w-[200px] min-[500px]:max-w-none">
+                <div className="flex flex-col min-[500px]:flex-row border-[1px] border-[#CACACA]/50 rounded-[12px] min-[500px]:rounded-[12px] sm:rounded-[16px] md:rounded-[20px] lg:rounded-[24px] items-stretch bg-white min-h-[395px] h-auto min-[500px]:min-h-0 min-[500px]:h-[220px] sm:h-[260px] min-[700px]:h-[300px] md:h-[340px] min-[900px]:h-[400px] lg:h-[474px] w-full overflow-hidden min-[500px]:overflow-visible">
+                  {/* Image - full width on mobile, 45% width on larger screens */}
+                  <div className="w-full min-[500px]:w-[45%] flex-shrink-0 px-3 pt-3 min-[500px]:p-1.5 sm:p-2 md:p-3 lg:p-6 xl:p-7">
+                    <div className="w-full h-[188px] min-[500px]:h-full min-[500px]:w-full rounded-lg min-[500px]:rounded-[8px] xl:rounded-[16px] overflow-hidden">
                       <img
                         src={card.image}
                         alt={card.title}
@@ -296,16 +296,16 @@ export default function TestimonialsSection() {
                     </div>
                   </div>
 
-                  {/* Quote Content */}
-                  <div className="flex-1 min-w-0 px-2.5 pt-2 pb-2.5 min-[500px]:py-1.5 min-[500px]:px-2 sm:py-2 sm:px-3 md:p-3 lg:pt-5 lg:pr-5 lg:pb-5 xl:pt-7 xl:pr-10 xl:pb-[33px] lg:pl-2 xl:pl-3 flex flex-col justify-between gap-1.5 min-[500px]:gap-0">
-                    <blockquote className="text-primary text-[10px] leading-[1.35] min-[500px]:text-[10px] sm:text-[13px] md:text-[15px] lg:text-[20px] xl:text-[24px] font-normal min-[500px]:leading-tight sm:leading-snug lg:leading-relaxed line-clamp-6 min-[500px]:line-clamp-none">
+                  {/* Quote Content - 55% width on larger screens */}
+                  <div className="flex-1 min-[500px]:w-[55%] min-w-0 px-3 pt-2 pb-3 min-[500px]:py-1.5 min-[500px]:px-2 min-[500px]:pr-3 sm:py-2 sm:px-3 md:p-3 lg:pt-5 lg:pr-5 lg:pb-5 xl:pt-7 xl:pr-10 xl:pb-[33px] lg:pl-2 xl:pl-3 flex flex-col justify-between gap-2 min-[500px]:gap-0">
+                    <blockquote className="text-[12px] lg:text-[24px] font-normal text-primary leading-snug">
                       {card.quote}
                     </blockquote>
-                    <div>
-                      <p className="font-bold text-primary text-[11px] min-[500px]:text-[10px] sm:text-[13px] md:text-[15px] lg:text-[20px] xl:text-[24px]">
+                    <div className="mt-2 min-[500px]:mt-0">
+                      <p className="font-bold text-[14px] lg:text-[24px] text-primary">
                         {card.title}
                       </p>
-                      <p className="text-primary text-[9px] min-[500px]:text-[9px] sm:text-[11px] md:text-[13px] lg:text-[18px] xl:text-[24px]">
+                      <p className="text-[14px] lg:text-[24px] text-primary">
                         {card.location}
                       </p>
                     </div>

@@ -51,11 +51,7 @@ export default function HeroSection() {
   return (
     <section
       ref={containerRef}
-      className="relative w-full flex items-end pb-12 sm:pb-16 md:pb-20 lg:pb-24 overflow-hidden"
-      style={{
-        minHeight: "100svh",
-        height: "100svh",
-      }}
+      className="relative w-full flex items-end pb-12 sm:pb-16 md:pb-20 lg:pb-24 overflow-hidden h-[700px] sm:h-[100svh]"
     >
       {/* Background Video */}
       <div className="absolute inset-0 z-0 h-full w-full">
