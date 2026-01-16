@@ -26,20 +26,20 @@ export default function Operate() {
     <section>
       <StatsSection />
       {/* Header Section */}
-      <div className="bg-tertinary pt-[80px] ">
+      <div className="bg-tertinary py-[60px] lg:py-[100px] ">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-[40px]">
           {/* Section Header */}
-          <div className="text-center mb-12">
+          <div className="text-center mb-6">
             <h2 className="text-2xl sm:text-3xl md:text-[48px] lg:text-[48px] font-[500] text-primary mb-3">
               How we Operate
             </h2>
-            <p className="text-[#969696] font-[300] text-base sm:text-lg md:text-[20px] tracking-[0.2em] uppercase">
+            <p className="text-[#969696] font-[300] text-[14px] sm:text-[20px]   uppercase">
               WE ARE PRESENT ACROSS 17+ CITIES IN SOUTH EAST ASIA
             </p>
           </div>
 
           {/* Operation Steps */}
-          <div className=" py-15px sm:py-15px lg:py-[100px] grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-primary/30">
+          <div className="  grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-primary/30">
             {operationSteps.map((step) => (
               <div
                 key={step.number}

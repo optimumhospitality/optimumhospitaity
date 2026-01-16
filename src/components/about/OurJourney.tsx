@@ -39,8 +39,8 @@ const milestones: JourneyMilestone[] = [
 
 export default function OurJourney() {
   return (
-    <section className="bg-[#F7EFE3] min-[500px]:pb-2 sm:pb-2 lg:pb-6 lg:max-h-[736px]">
-      <div className="max-w-5xl mx-auto px-4 min-[500px]:px-3 sm:px-4 min-[750px]:px-6 md:px-8 lg:px-0">
+    <section className="bg-[#F7EFE3] py-10 sm:py-15">
+      <div className="max-w-5xl  mx-auto px-4 min-[500px]:px-3 sm:px-4 min-[750px]:px-6 md:px-8 lg:px-0">
         {/* Section Title */}
         <h2 className="text-2xl min-[500px]:text-xl sm:text-2xl min-[750px]:text-3xl md:text-4xl lg:text-[48px] font-[500] text-[#23283C] text-center mb-8 min-[500px]:mb-6 sm:mb-8 min-[750px]:mb-10 md:mb-12 lg:mb-12">
           Our Journey
@@ -72,7 +72,7 @@ export default function OurJourney() {
                 </div>
 
                 {/* Content */}
-                <div className="flex-1 pt-1 min-[500px]:pt-0 sm:pt-0 pl-4 min-[500px]:pl-4 sm:pl-6 min-[750px]:pl-10 md:pl-14 lg:pl-20">
+                <div className="flex-1 pt-0 min-[500px]:pt-0 sm:pt-0 pl-4 min-[500px]:pl-4 sm:pl-6 min-[750px]:pl-10 md:pl-14 lg:pl-20">
                   <h3 className="text-base min-[500px]:text-[11px] sm:text-[13px] min-[750px]:text-lg md:text-xl lg:text-[36px] font-[400] text-[#2C3E50] mb-0.5 min-[500px]:mb-0.5 sm:mb-1 min-[750px]:mb-1.5 md:mb-2">
                     {milestone.title}
                   </h3>

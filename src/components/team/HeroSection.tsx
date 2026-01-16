@@ -24,12 +24,12 @@ export default function HeroSection() {
           {/* Left Content */}
           <div className="max-w-full min-[500px]:flex-1">
             {/* Main Headline */}
-            <h1 className="text-[24px] min-[500px]:text-[18px] sm:text-[22px] min-[750px]:text-[28px] md:text-[36px] lg:text-[48px] xl:text-[56px] font-bold text-white leading-[1.1] mb-3 min-[500px]:mb-2 sm:mb-3 min-[750px]:mb-4 md:mb-5 lg:mb-6">
+            <h1 className="text-[24px] lg:text-[56px] font-bold text-white leading-[1.1] mb-3 min-[500px]:mb-2 sm:mb-3 min-[750px]:mb-4 md:mb-5 lg:mb-6">
               Our Leadership Team
             </h1>
 
             {/* Subtext */}
-            <p className="text-white/95 text-[13px] min-[500px]:text-[10px] sm:text-[12px] min-[750px]:text-[14px] md:text-[16px] lg:text-[18px] xl:text-xl leading-relaxed max-w-full min-[500px]:max-w-[90%] sm:max-w-[85%] md:max-w-xl lg:max-w-2xl">
+            <p className="text-white/95 text-[16px] lg:text-[20px]  max-w-full min-[500px]:max-w-[90%] sm:max-w-[85%] md:max-w-xl lg:max-w-2xl">
               Experienced hospitality professionals with deep regional knowledge
               and hands-on operational expertise.
             </p>

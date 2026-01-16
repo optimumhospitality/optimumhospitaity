@@ -61,7 +61,7 @@ export default function TeamDetail({ member }: TeamDetailProps) {
       </section>
 
       {/* About Section */}
-      <section className="bg-tertinary pt-10 md:py-10 lg:pt-6 pb-16">
+      <section className="bg-tertinary pt-10 lg:pt-10 pb-15">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-[40px]">
 
           {/* About Content */}
@@ -83,7 +83,7 @@ export default function TeamDetail({ member }: TeamDetailProps) {
           </div>
 
           {/* Signature Section */}
-          <div className="mt-4 lg:mt-16 pt-8 pb-12 ">
+          <div className="pb-0 lg:mt-16 pt-10 lg:pb-12 ">
             <img
               src={member.signatureImage}
               alt={`${member.name} signature`}

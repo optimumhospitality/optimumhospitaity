@@ -10,6 +10,7 @@ import tomBeirnaert from "../../assets/image/team-page/team-member/tom.webp";
 import nobertVas from "../../assets/image/team-page/team-member/nobert-vas.webp";
 import martinNugroho from "../../assets/image/team-page/team-member/martin-nugroho.webp";
 import { Link } from "react-router-dom";
+import { ArrowUpRight } from "lucide-react";
 
 interface TeamMember {
   id: string;
@@ -131,7 +132,10 @@ const teamData: TeamSection[] = [
 function TeamMemberCard({ member }: { member: TeamMember }) {
   return (
     // Fixed height card for consistent alignment across all cards
-    <div className="w-full max-w-[320px] sm:max-w-[350px] md:max-w-[380px] lg:w-[calc((100%-80px)/3)] lg:max-w-[430px] h-[480px] sm:h-[580px] md:h-[650px] lg:h-[707px] flex flex-col bg-tertinary border-[1px] border-[#23283C]/50 rounded-[12px] sm:rounded-[14px] lg:rounded-[16px] overflow-hidden">
+    <Link
+      to={`/team/${member.id}`}
+      className="w-full max-w-[320px] sm:max-w-[350px] md:max-w-[380px] lg:w-[calc((100%-80px)/3)] lg:max-w-[430px] h-[480px] sm:h-[580px] md:h-[650px] lg:h-[707px] flex flex-col bg-tertinary border-[1px] border-[#23283C]/50 rounded-[12px] sm:rounded-[14px] lg:rounded-[16px] overflow-hidden cursor-pointer hover:border-primary/50 transition-colors"
+    >
       {/* Image - fixed height for alignment */}
       <div className="h-[220px] sm:h-[280px] md:h-[320px] lg:h-[372px] w-full flex-shrink-0 overflow-hidden">
         <img
@@ -166,25 +170,12 @@ function TeamMemberCard({ member }: { member: TeamMember }) {
 
       {/* Button - fixed at bottom */}
       <div className="mt-auto flex-shrink-0">
-        <Link
-          to={`/team/${member.id}`}
-          className="w-full h-[50px] sm:h-[56px] lg:h-[63px] text-[14px] sm:text-[15px] lg:text-[16px] font-[500] inline-flex items-center justify-center gap-2 bg-primary text-white font-medium hover:bg-primary/90 transition-colors"
-        >
+        <div className="uppercase w-full h-[50px] sm:h-[56px] lg:h-[63px] text-[14px] sm:text-[16px] lg:text-[18px] font-[500] inline-flex items-center justify-center gap-2 bg-primary text-white font-medium hover:bg-primary/90 transition-colors">
           Know more about {member.gender}
-          <svg
-            className="w-3 h-3 sm:w-3.5 sm:h-3.5 lg:w-[15px] lg:h-[15px]"
-            viewBox="0 0 15 15"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M1.31376 14.076L0 12.7622L10.8854 1.8768H4.692V0H14.076V9.384H12.1992V3.19056L1.31376 14.076Z"
-              fill="#F7EFE3"
-            />
-          </svg>
-        </Link>
+          <ArrowUpRight className="w-3.5 h-3.5 sm:w-5 sm:h-5" />
+        </div>
       </div>
-    </div>
+    </Link>
   );
 }
 

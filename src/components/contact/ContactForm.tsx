@@ -36,7 +36,7 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="bg-tertinary py-12 min-[500px]:py-10 sm:py-12 min-[750px]:py-16 md:py-20 lg:py-25">
+    <section className="bg-tertinary py-15   lg:py-25">
       {/* Success Snackbar */}
       {typeof document !== "undefined" &&
         createPortal(
@@ -73,15 +73,15 @@ export default function ContactForm() {
                 className="flex flex-col items-center text-center"
               >
                 {/* Icon Circle */}
-                <div className="w-16 h-16 min-[500px]:w-10 min-[500px]:h-10 sm:w-12 sm:h-12 min-[750px]:w-14 min-[750px]:h-14 md:w-16 md:h-16 min-[1000px]:w-20 min-[1000px]:h-20 lg:w-[90px] lg:h-[90px] xl:w-[100px] xl:h-[100px] rounded-full bg-white flex items-center justify-center mb-2 min-[500px]:mb-1.5 sm:mb-2 min-[750px]:mb-3">
+                <div className="w-12 h-12 md:h-14 md:w-14 lg:w-20  lg:h-20 rounded-full bg-white flex items-center justify-center mb-2 min-[500px]:mb-1.5 sm:mb-2 min-[750px]:mb-3">
                   <info.icon className="w-6 h-6 min-[500px]:w-4 min-[500px]:h-4 sm:w-5 sm:h-5 min-[750px]:w-5 min-[750px]:h-5 md:w-6 md:h-6 min-[1000px]:w-8 min-[1000px]:h-8 lg:w-9 lg:h-9 xl:w-10 xl:h-10 text-primary" />
                 </div>
                 {/* Label */}
-                <p className="text-white/70 text-[10px] min-[500px]:text-[8px] sm:text-[9px] min-[750px]:text-[9px] md:text-[10px] min-[1000px]:text-[11px] lg:text-xs tracking-[0.1em] uppercase mb-0.5 min-[500px]:mb-0.5 sm:mb-1">
+                <p className="text-white/70 text-[12px] md:text-[16px] lg:text-[20px] uppercase mb-0.5 min-[500px]:mb-0.5 sm:mb-1">
                   {info.label}
                 </p>
                 {/* Value */}
-                <p className="text-white text-[13px] min-[500px]:text-[9px] sm:text-[10px] min-[750px]:text-[11px] md:text-[12px] min-[1000px]:text-[13px] lg:text-sm xl:text-base font-medium">
+                <p className="text-white text-[16px] md:text-[20px] lg:text-[24px]  font-medium">
                   {info.value}
                 </p>
               </div>
@@ -204,7 +204,7 @@ export default function ContactForm() {
               {/* Submit Button */}
               <button
                 type="submit"
-                className="px-10 min-[500px]:px-6 sm:px-8 min-[750px]:px-12 md:px-14 lg:px-16 py-2.5 min-[500px]:py-2 sm:py-2.5 min-[750px]:py-3 md:py-3.5 bg-[#222E60] text-white text-[13px] min-[500px]:text-[10px] sm:text-[11px] min-[750px]:text-[13px] md:text-sm lg:text-base font-medium tracking-[0.1em] rounded-lg hover:bg-primary/90 transition-colors"
+                className="h-[44px] whitespace-nowrap px-6 lg:px-8 gap-2 lg:h-[56px] font-normal rounded-md lg:rounded-lg inline-flex items-center justify-center bg-primary text-white text-[14px] lg:text-[20px] hover:bg-primary/90 transition-colors"
               >
                 SUBMIT
               </button>

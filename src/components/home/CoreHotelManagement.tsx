@@ -381,11 +381,11 @@ export default function CoreHotelManagement() {
                     {/* Know More Button */}
                     <Link
                       to={`${serviceSlugs[index]}`}
-                      className="h-[44px] sm:h-[56px] text-[14px] sm:text-[16px] font-normal inline-flex items-center justify-center gap-[8px] py-[16px] px-[24px] sm:px-[36px] border border-primary text-primary font-medium rounded-[12px] hover:bg-primary hover:text-white transition-colors w-fit"
+                      className="border-1 border-primary h-[44px] whitespace-nowrap px-6 lg:px-8 gap-2 lg:h-[56px] font-normal rounded-md lg:rounded-lg inline-flex items-center justify-center bg-tertiary text-primary text-[14px] lg:text-[20px]  hover:bg-primary hover:text-white transition-colors w-fit"
                     >
                       KNOW MORE
                       <svg
-                        className="w-4 h-4"
+                        className="w-3.5 h-3.5 sm:w-5 sm:h-5"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"

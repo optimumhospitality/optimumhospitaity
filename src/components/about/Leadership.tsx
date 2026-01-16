@@ -9,8 +9,8 @@ export default function Leadership() {
     <section className="bg-tertinary pt-15 md:pt-15 sm:pt-15 lg:pt-25 ">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-[100px]">
         {/* Section Header */}
-        <div className="text-center mb-12 sm:mb-16 lg:mb-20">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[48px] font-medium text-primary mb-4">
+        <div className="text-center mb-6  sm:mb-10 ">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[48px] font-medium text-primary mb-1">
             Leadership Built on Experience
           </h2>
           <p className="text-[#626262] text-sm sm:text-base md:text-lg lg:text-[20px] font-light max-w-2xl mx-auto">

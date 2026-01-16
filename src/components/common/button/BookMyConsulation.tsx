@@ -12,10 +12,10 @@ export default function BookMyConsultation({
   return (
     <button
       onClick={onClick}
-      className="h-[44px] sm:h-[52px] lg:h-[56px] inline-flex items-center justify-center gap-[8px] py-[12px] sm:py-[14px] lg:py-[16px] px-[20px] sm:px-[28px] lg:px-[36px] bg-primary text-white text-[16px] sm:text-[16px] lg:text-[16px] font-normal tracking-[0.1em] rounded-[8px] hover:bg-primary/90 transition-colors"
+      className="h-[44px] whitespace-nowrap px-6 lg:px-8 gap-2 lg:h-[56px] font-normal rounded-md lg:rounded-lg inline-flex items-center justify-center bg-primary text-white text-[14px] lg:text-[20px] hover:bg-primary/90 transition-colors"
     >
       {text}
-      <ArrowUpRight className="w-3 h-3 sm:w-4 sm:h-4" />
+      <ArrowUpRight className="w-3.5 h-3.5 sm:w-5 sm:h-5" />
     </button>
   );
 }
