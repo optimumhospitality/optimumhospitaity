@@ -22,6 +22,7 @@ export interface TeamMemberData {
   image: string;
   signatureImage: string;
   country: string;
+  gender:string;
 }
 
 export const teamMembersData: TeamMemberData[] = [
@@ -39,7 +40,8 @@ export const teamMembersData: TeamMemberData[] = [
     ],
     image: johnGardner,
     signatureImage: signature,
-    country: "VIETNAM"
+    country: "VIETNAM",
+    gender:"him"
   },
   {
     id: "khang-nguyen",
@@ -54,7 +56,8 @@ export const teamMembersData: TeamMemberData[] = [
     ],
     image: khangNguyen,
     signatureImage: signature,
-    country: "VIETNAM"
+    country: "VIETNAM",
+    gender:"him"
   },
   {
     id: "gaurav-rai",
@@ -69,7 +72,8 @@ export const teamMembersData: TeamMemberData[] = [
     ],
     image: gauravRai,
     signatureImage: signature,
-    country: "VIETNAM"
+    country: "VIETNAM",
+    gender:"him"
   },
   {
     id: "aye-mon",
@@ -84,7 +88,8 @@ export const teamMembersData: TeamMemberData[] = [
     ],
     image: ayeMon,
     signatureImage: signature,
-    country: "VIETNAM"
+    country: "VIETNAM",
+    gender:"her"
   },
   {
     id: "minh-nguyen",
@@ -99,7 +104,8 @@ export const teamMembersData: TeamMemberData[] = [
     ],
     image: minhNguyen,
     signatureImage: signature,
-    country: "VIETNAM"
+    country: "VIETNAM",
+    gender:"him"
   },
   {
     id: "lanny-tran",
@@ -114,7 +120,8 @@ export const teamMembersData: TeamMemberData[] = [
     ],
     image: lannyTran,
     signatureImage: signature,
-    country: "VIETNAM"
+    country: "VIETNAM",
+    gender:"her",
   },
   {
     id: "colm-hutchinson",
@@ -129,7 +136,8 @@ export const teamMembersData: TeamMemberData[] = [
     ],
     image: colmHutchinson,
     signatureImage: signature,
-    country: "VIETNAM"
+    country: "VIETNAM",
+    gender:"him"
   },
   {
     id: "tom-beirnaert",
@@ -144,7 +152,8 @@ export const teamMembersData: TeamMemberData[] = [
     ],
     image: tomBeirnaert,
     signatureImage: signature,
-    country: "VIETNAM"
+    country: "VIETNAM",
+    gender:"him"
   },
   {
     id: "nobert-vas",
@@ -159,7 +168,8 @@ export const teamMembersData: TeamMemberData[] = [
     ],
     image: nobertVas,
     signatureImage: signature,
-    country: "INDONESIA"
+    country: "INDONESIA",
+    gender:"him"
   },
   {
     id: "martin-nugroho",
@@ -174,7 +184,8 @@ export const teamMembersData: TeamMemberData[] = [
     ],
     image: martinNugroho,
     signatureImage: signature,
-    country: "INDONESIA"
+    country: "INDONESIA",
+    gender:'him'
   }
 ];
 
