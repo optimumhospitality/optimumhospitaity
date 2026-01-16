@@ -52,7 +52,7 @@ export default function TeamDetail({ member }: TeamDetailProps) {
             </p>
             <Link
               to="/contact"
-              className="inline-flex bg-[#FFFDF8] items-center gap-2 px-8 py-2.5 md:px-18 md:py-3 lg:mt-8 border border-white text-[#222E60] text-sm md:text-[13px] font-[500] rounded-md hover:bg-primary hover:border-white hover:text-white transition-colors w-fit"
+              className="h-[44px] whitespace-nowrap px-6 lg:px-8 gap-2 lg:h-[56px] font-normal rounded-md lg:rounded-lg inline-flex items-center justify-center bg-secondary text-primary text-[14px] lg:text-[20px] hover:border-2 hover:bg-primary/90 hover:border-white  hover:text-white transition-colors"
             >
               CONTACT
             </Link>

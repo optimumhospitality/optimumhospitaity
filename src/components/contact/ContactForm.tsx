@@ -66,22 +66,22 @@ export default function ContactForm() {
       <div className="max-w-[1440px] mx-auto px-4 min-[500px]:px-3 sm:px-4 min-[750px]:px-6 md:px-8 lg:px-[40px]">
         {/* Contact Info Bar */}
         <div className="bg-primary rounded-2xl min-[500px]:rounded-xl sm:rounded-2xl p-6 min-[500px]:p-4 sm:p-5 min-[750px]:p-6 md:p-6 min-[1000px]:p-8 lg:p-8 xl:p-10 mb-8 min-[500px]:mb-6 sm:mb-8 min-[750px]:mb-10 md:mb-12 lg:mb-16 h-auto min-[500px]:h-auto lg:h-[318px] flex items-center justify-center">
-          <div className="grid grid-cols-1 min-[500px]:grid-cols-3 gap-6 min-[500px]:gap-2 sm:gap-3 min-[750px]:gap-4 md:gap-6 min-[1000px]:gap-8 min-[1250px]:gap-12 lg:gap-16 xl:gap-24 w-full max-w-[1000px]">
+          <div className="grid grid-cols-1 min-[500px]:grid-cols-3 gap-6 min-[500px]:gap-2 sm:gap-3 min-[750px]:gap-4 md:gap-4 min-[1000px]:gap-6 min-[1250px]:gap-10 lg:gap-12 xl:gap-20 w-full max-w-[1000px]">
             {contactInfo.map((info) => (
               <div
                 key={info.label}
-                className="flex flex-col items-center text-center"
+                className="flex flex-col items-center text-center min-w-0"
               >
                 {/* Icon Circle */}
-                <div className="w-12 h-12 md:h-14 md:w-14 lg:w-20  lg:h-20 rounded-full bg-white flex items-center justify-center mb-2 min-[500px]:mb-1.5 sm:mb-2 min-[750px]:mb-3">
-                  <info.icon className="w-6 h-6 min-[500px]:w-4 min-[500px]:h-4 sm:w-5 sm:h-5 min-[750px]:w-5 min-[750px]:h-5 md:w-6 md:h-6 min-[1000px]:w-8 min-[1000px]:h-8 lg:w-9 lg:h-9 xl:w-10 xl:h-10 text-primary" />
+                <div className="w-12 h-12 min-[1000px]:w-16 min-[1000px]:h-16 lg:w-20 lg:h-20 rounded-full bg-white flex items-center justify-center mb-2 min-[500px]:mb-1.5 sm:mb-2 min-[750px]:mb-3 flex-shrink-0">
+                  <info.icon className="w-6 h-6 min-[500px]:w-4 min-[500px]:h-4 sm:w-5 sm:h-5 min-[750px]:w-5 min-[750px]:h-5 md:w-6 md:h-6 min-[1000px]:w-7 min-[1000px]:h-7 lg:w-9 lg:h-9 xl:w-10 xl:h-10 text-primary" />
                 </div>
                 {/* Label */}
-                <p className="text-white/70 text-[12px] md:text-[16px] lg:text-[20px] uppercase mb-0.5 min-[500px]:mb-0.5 sm:mb-1">
+                <p className="text-white/70 text-[12px] md:text-[14px] min-[1000px]:text-[16px] lg:text-[20px] uppercase mb-0.5 min-[500px]:mb-0.5 sm:mb-1">
                   {info.label}
                 </p>
                 {/* Value */}
-                <p className="text-white text-[16px] md:text-[20px] lg:text-[24px]  font-medium">
+                <p className="text-white text-[14px] min-[500px]:text-[11px] sm:text-[13px] md:text-[14px] min-[1000px]:text-[16px] lg:text-[18px] xl:text-[24px] font-medium whitespace-nowrap">
                   {info.value}
                 </p>
               </div>
