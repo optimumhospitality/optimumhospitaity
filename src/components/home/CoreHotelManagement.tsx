@@ -237,7 +237,7 @@ export default function CoreHotelManagement() {
 
     // Get the scroll container for Locomotive Scroll
     const scrollContainer = document.querySelector(
-      "[data-scroll-container]"
+      "[data-scroll-container]",
     ) as HTMLElement;
 
     // Set initial states - first image visible, rest hidden
@@ -436,59 +436,62 @@ export default function CoreHotelManagement() {
       </div>
 
       <div className="bg-primary relative overflow-hidden">
-        {/* Flex container for full-width layout */}
-        <div className="flex flex-col min-[500px]:flex-row min-[500px]:h-[280px] sm:h-[320px] md:h-[380px] lg:h-[440px] xl:h-[485px]">
-          {/* Left Content - with max-width constraint */}
-          <div className="w-full min-[500px]:w-[55%] sm:w-[60%] md:w-[55%] lg:w-auto lg:flex-1 flex justify-end">
-            <div className="w-full lg:max-w-[720px] xl:max-w-[840px] flex flex-col justify-center items-start text-left py-6 min-[500px]:py-4 sm:py-6 md:py-8 lg:py-0 px-4 min-[500px]:px-4 sm:px-6 md:px-8 lg:pl-10 xl:pl-[100px] min-[500px]:pr-4 sm:pr-6 md:pr-8 lg:pr-8">
-              <h2 className="text-[24px] min-[500px]:text-[18px] sm:text-[22px] md:text-[28px] lg:text-[36px] xl:text-[48px] font-normal text-white mb-4 min-[500px]:mb-3 sm:mb-4 md:mb-5 lg:mb-8">
-                How We Increase GOP and Asset Value
-              </h2>
+        {/* Container with max-width for >1440px screens */}
+        <div className="2xl:max-w-[1440px] 2xl:mx-auto">
+          {/* Flex container for full-width layout */}
+          <div className="flex flex-col min-[500px]:flex-row min-[500px]:h-[280px] sm:h-[320px] md:h-[380px] lg:h-[440px] xl:h-[485px]">
+            {/* Left Content - with max-width constraint */}
+            <div className="w-full min-[500px]:w-[55%] sm:w-[60%] md:w-[55%] lg:w-auto lg:flex-1 flex justify-end">
+              <div className="w-full lg:max-w-[720px] xl:max-w-[840px] flex flex-col justify-center items-start text-left py-6 min-[500px]:py-4 sm:py-6 md:py-8 lg:py-0 px-4 min-[500px]:px-4 sm:px-6 md:px-8 lg:pl-10 xl:pl-[100px] min-[500px]:pr-4 sm:pr-6 md:pr-8 lg:pr-8">
+                <h2 className="text-[24px] min-[500px]:text-[18px] sm:text-[22px] md:text-[28px] lg:text-[36px] xl:text-[48px] font-normal text-white mb-4 min-[500px]:mb-3 sm:mb-4 md:mb-5 lg:mb-8">
+                  How We Increase GOP and Asset Value
+                </h2>
 
-              <ul className="space-y-2 min-[500px]:space-y-1.5 sm:space-y-2 md:space-y-3 lg:space-y-4 mb-4 min-[500px]:mb-3 sm:mb-4 md:mb-6 lg:mb-8">
-                {benefits.map((benefit, index) => {
-                  const IconComponent = benefit.icon;
-                  return (
-                    <li
-                      key={index}
-                      className="flex items-start gap-2 min-[500px]:gap-1.5 sm:gap-2 md:gap-3 text-white/90"
-                    >
-                      <IconComponent className="w-4 h-4 min-[500px]:w-3.5 min-[500px]:h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 text-secondary flex-shrink-0 mt-0.5" />
-                      <span className="text-[13px] min-[500px]:text-[10px] sm:text-[12px] md:text-[14px] lg:text-base xl:text-lg text-left leading-snug">
-                        {benefit.text}
-                      </span>
-                    </li>
-                  );
-                })}
-              </ul>
+                <ul className="space-y-2 min-[500px]:space-y-1.5 sm:space-y-2 md:space-y-3 lg:space-y-4 mb-4 min-[500px]:mb-3 sm:mb-4 md:mb-6 lg:mb-8">
+                  {benefits.map((benefit, index) => {
+                    const IconComponent = benefit.icon;
+                    return (
+                      <li
+                        key={index}
+                        className="flex items-start gap-2 min-[500px]:gap-1.5 sm:gap-2 md:gap-3 text-white/90"
+                      >
+                        <IconComponent className="w-4 h-4 min-[500px]:w-3.5 min-[500px]:h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 text-secondary flex-shrink-0 mt-0.5" />
+                        <span className="text-[13px] min-[500px]:text-[10px] sm:text-[12px] md:text-[14px] lg:text-base xl:text-lg text-left leading-snug">
+                          {benefit.text}
+                        </span>
+                      </li>
+                    );
+                  })}
+                </ul>
 
-              {/* Request Consultation Button */}
-              <button className=" mt-3 inline-flex items-center gap-1.5 min-[500px]:gap-1 sm:gap-1.5 md:gap-2 px-3 min-[500px]:px-2.5 sm:px-3 md:px-4 lg:px-6 h-[40px] min-[500px]:h-[28px] sm:h-[32px] md:h-[38px] lg:h-[44px] xl:h-auto xl:py-3 bg-secondary text-primary text-[14px] min-[500px]:text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[20px] font-normal rounded-[6px] min-[500px]:rounded-[4px] sm:rounded-[6px] md:rounded-[8px] hover:bg-secondary/90 transition-colors w-fit">
-                REQUEST CONSULTATION
-                <svg
-                  className="w-3 h-3 min-[500px]:w-2.5 min-[500px]:h-2.5 sm:w-3 sm:h-3 md:w-3.5 md:h-3.5 lg:w-4 lg:h-4"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                  />
-                </svg>
-              </button>
+                {/* Request Consultation Button */}
+                <button className=" mt-3 inline-flex items-center gap-1.5 min-[500px]:gap-1 sm:gap-1.5 md:gap-2 px-3 min-[500px]:px-2.5 sm:px-3 md:px-4 lg:px-6 h-[40px] min-[500px]:h-[28px] sm:h-[32px] md:h-[38px] lg:h-[44px] xl:h-auto xl:py-3 bg-secondary text-primary text-[14px] min-[500px]:text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[20px] font-normal rounded-[6px] min-[500px]:rounded-[4px] sm:rounded-[6px] md:rounded-[8px] hover:bg-secondary/90 transition-colors w-fit">
+                  REQUEST CONSULTATION
+                  <svg
+                    className="w-3 h-3 min-[500px]:w-2.5 min-[500px]:h-2.5 sm:w-3 sm:h-3 md:w-3.5 md:h-3.5 lg:w-4 lg:h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    />
+                  </svg>
+                </button>
+              </div>
             </div>
-          </div>
 
-          {/* Right Image - extends to right edge of screen */}
-          <div className="w-[calc(100%+2rem)] -ml-4 min-[500px]:w-[45%] min-[500px]:ml-0 sm:w-[40%] md:w-[45%] lg:w-[450px] xl:w-[600px] flex-shrink-0">
-            <img
-              src={gopImageHomeSection}
-              alt="Business consultation"
-              className="w-full aspect-[4/3] min-[500px]:aspect-auto min-[500px]:h-full object-cover"
-            />
+            {/* Right Image - extends to right edge of screen */}
+            <div className="w-[calc(100%+2rem)] -ml-4 min-[500px]:w-[45%] min-[500px]:ml-0 sm:w-[40%] md:w-[45%] lg:w-[450px] xl:w-[600px] flex-shrink-0">
+              <img
+                src={gopImageHomeSection}
+                alt="Business consultation"
+                className="w-full aspect-[4/3] min-[500px]:aspect-auto min-[500px]:h-full object-cover"
+              />
+            </div>
           </div>
         </div>
       </div>
