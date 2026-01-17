@@ -8,7 +8,7 @@ const leadershipTeam = teamMembersData.slice(0, 3);
 export default function Leadership() {
   return (
     <section className="bg-tertinary pt-15 md:pt-15 sm:pt-15 lg:pt-25 ">
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-[100px]">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-[40px]">
         {/* Section Header */}
         <div className="text-center mb-6  sm:mb-10 ">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[48px] font-medium text-primary mb-1">
@@ -21,12 +21,12 @@ export default function Leadership() {
         </div>
 
         {/* Leadership Cards Grid */}
-        <div className="flex flex-wrap justify-center gap-6 sm:gap-8 lg:gap-10">
+        <div className="flex flex-wrap justify-center gap-6 sm:gap-8 lg:gap-10 xl:gap-6">
           {leadershipTeam.map((member) => (
             <Link
               key={member.id}
               to={`/team/${member.id}`}
-              className="w-full max-w-[320px] sm:max-w-[350px] md:max-w-[380px] lg:w-[calc((100%-80px)/3)] lg:max-w-[430px] h-[520px] sm:h-[580px] md:h-[650px] lg:h-[707px] flex flex-col bg-tertinary border-[1px] border-[#23283C]/50 rounded-[12px] sm:rounded-[14px] lg:rounded-[16px] overflow-hidden cursor-pointer hover:border-primary/50 transition-colors"
+              className="w-[320px] sm:w-[350px] md:w-[380px] xl:w-[calc((100%-48px)/3)] xl:min-w-[380px] xl:max-w-[430px] flex-shrink-0 h-[520px] sm:h-[580px] md:h-[650px] lg:h-[707px] flex flex-col bg-tertinary border-[1px] border-[#23283C]/50 rounded-[12px] sm:rounded-[14px] lg:rounded-[16px] overflow-hidden cursor-pointer hover:border-primary/50 transition-colors"
             >
               {/* Member Image - fixed height for alignment */}
               <div className="h-[260px] sm:h-[280px] md:h-[320px] lg:h-[372px] w-full flex-shrink-0 overflow-hidden">

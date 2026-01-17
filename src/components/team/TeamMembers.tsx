@@ -134,7 +134,7 @@ function TeamMemberCard({ member }: { member: TeamMember }) {
     // Fixed height card for consistent alignment across all cards
     <Link
       to={`/team/${member.id}`}
-      className="w-full max-w-[320px] sm:max-w-[350px] md:max-w-[380px] lg:w-[calc((100%-80px)/3)] lg:max-w-[430px] h-[520px] sm:h-[580px] md:h-[650px] lg:h-[707px] flex flex-col bg-tertinary border-[1px] border-[#23283C]/50 rounded-[12px] sm:rounded-[14px] lg:rounded-[16px] overflow-hidden cursor-pointer hover:border-primary/50 transition-colors"
+      className="w-[320px] sm:w-[350px] md:w-[380px] xl:w-[calc((100%-48px)/3)] xl:min-w-[380px] xl:max-w-[430px] flex-shrink-0 h-[520px] sm:h-[580px] md:h-[650px] lg:h-[707px] flex flex-col bg-tertinary border-[1px] border-[#23283C]/50 rounded-[12px] sm:rounded-[14px] lg:rounded-[16px] overflow-hidden cursor-pointer hover:border-primary/50 transition-colors"
     >
       {/* Image - fixed height for alignment */}
       <div className="h-[260px] sm:h-[280px] md:h-[320px] lg:h-[372px] w-full flex-shrink-0 overflow-hidden">
@@ -198,8 +198,8 @@ export default function TeamMembers() {
               </h2>
             </div>
 
-            {/* Team Grid - 3 cards per row on large screens, centered incomplete rows */}
-            <div className="flex flex-wrap justify-center gap-6 sm:gap-8 lg:gap-10">
+            {/* Team Grid - 3 cards per row on xl+ screens, centered incomplete rows */}
+            <div className="flex flex-wrap justify-center gap-6 sm:gap-8 lg:gap-10 xl:gap-6">
               {section.members.map((member) => (
                 <TeamMemberCard key={member.name} member={member} />
               ))}
