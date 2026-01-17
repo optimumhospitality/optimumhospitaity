@@ -23,25 +23,25 @@ export default function HeroSection() {
       tl.fromTo(
         headlineRef.current,
         { opacity: 0, y: 50 },
-        { opacity: 1, y: 0, duration: 1, delay: 0.2 }
+        { opacity: 1, y: 0, duration: 1, delay: 0.2 },
       )
         .fromTo(
           subtextRef.current,
           { opacity: 0, y: 30 },
           { opacity: 1, y: 0, duration: 0.8 },
-          "-=0.6"
+          "-=0.6",
         )
         .fromTo(
           badgesRef.current?.children || [],
           { opacity: 0, y: 20 },
           { opacity: 1, y: 0, duration: 0.6, stagger: 0.2 },
-          "-=0.4"
+          "-=0.4",
         )
         .fromTo(
           ctaRef.current,
           { opacity: 0, scale: 0.9 },
           { opacity: 1, scale: 1, duration: 0.5 },
-          "-=0.2"
+          "-=0.2",
         );
     }, containerRef);
 
@@ -51,7 +51,7 @@ export default function HeroSection() {
   return (
     <section
       ref={containerRef}
-      className="relative w-full flex items-end pb-12 sm:pb-16 md:pb-20 lg:pb-24 overflow-hidden h-[700px] sm:h-[100svh]"
+      className="relative w-full flex items-end pb-12 sm:pb-16 md:pb-20 lg:pb-24 overflow-hidden h-[100svh]"
     >
       {/* Background Video */}
       <div className="absolute inset-0 z-0 h-full w-full">
