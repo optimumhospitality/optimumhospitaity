@@ -30,8 +30,7 @@ export default function HeroSection() {
 
             {/* Subtext */}
             <p className="text-white/95 text-[16px] lg:text-[20px] max-w-full min-[500px]:max-w-[90%] sm:max-w-[85%] md:max-w-xl lg:max-w-2xl">
-              A boutique hotel advisory and independent operator focused on
-              performance, accountability, and owner returns.
+              A bespoke hotel advisory and independent operator focused on performance, accountability, and owner returns.
             </p>
           </div>
 

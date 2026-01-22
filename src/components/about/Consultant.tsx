@@ -23,10 +23,12 @@ export default function Consultant() {
               {/* Second Paragraph */}
               <p className="text-[#000000] text-[14px] min-[500px]:text-[10px] sm:text-[12px] min-[750px]:text-[14px] md:text-[16px] lg:text-[18px] xl:text-[20px] font-[300] leading-relaxed mb-5 min-[500px]:mb-3 sm:mb-4 min-[750px]:mb-6 md:mb-8">
                 From our bases in Ho Chi Minh City and Jakarta, we work with
-                luxury and upper-scale hotels to improve margins, optimize
-                operations, and unlock revenue, with particular strength in
-                F&B-led assets. Independent by design, every decision we make is
-                aligned with owner returns, not brand agendas.
+                luxury and upper-scale hotels to improve hotel designs, manage
+                new hotel pre-opening Technical Services, optimise margins,
+                strengthen operations, and unlock revenue, with particular
+                strength in F&B-led assets. Independent by design, every
+                decision we make is aligned with owner returns, not brand
+                agendas.
               </p>
 
               {/* CTA Button */}

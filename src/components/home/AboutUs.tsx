@@ -93,7 +93,7 @@ export default function AboutUs() {
                 We help hotel owners increase profitability, protect asset
                 value, and maintain full operational control. Optimum
                 Hospitality is a boutique hotel consultancy, asset manager, and
-                independent hotel management company operating across Southeast
+                independent hotel management company operating across South East
                 Asia.
               </p>
 

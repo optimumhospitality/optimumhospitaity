@@ -64,7 +64,7 @@ export default function Footer() {
                   Hotel's Performance
                 </h2>
                 <p className="text-primary text-[14px] min-[500px]:text-[11px] sm:text-[12px] min-[750px]:text-[14px] md:text-[16px] lg:text-[18px] xl:text-[22px] min-[1400px]:text-[24px] font-normal">
-                  Sign up and start selling travel in less than 1 minute.
+                  Sign up and start a conversation with us in less than 1 minute.
                 </p>
               </div>
 
