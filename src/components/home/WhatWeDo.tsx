@@ -11,19 +11,19 @@ const principles = [
     icon: User,
     title: "Independent and Owner-First",
     description:
-      "Boutique management from Ho Chi Minh City and Jakarta. Every decision prioritizes your returns with transparent, low-fee contracts.",
+      "Bespoke management from Ho Chi Minh City, Jakarta and throughout S.E.Asia. Every decision prioritizes your returns with transparent, low-fee contracts.",
   },
   {
     icon: Hotel,
     title: "Luxury Hotels and F&B Expertise",
     description:
-      "30+ years managing Caravelle Saigon, Four Seasons, Mandarin Oriental, and 100+ projects across Southeast Asia.",
+      "30+ years managing various brands globally including Caravelle Hotel Saigon, Accor, IHG, Four Seasons, Mandarin Oriental, and numerous projects across Southeast Asia and the world.",
   },
   {
     icon: ChartNoAxesCombined,
     title: "Accountable for GOP Results",
     description:
-      "We take full operational responsibility with hands-on revenue and cost control that delivers superior GOP.",
+      "We take full operational responsibility with hands-on management, revenue generation and cost control that delivers superior GOPs.",
   },
 ];
 
@@ -91,13 +91,12 @@ export default function WhatWeDo() {
             WHAT WE DO
           </p>
           <h2 className="text-primary text-2xl sm:text-3xl md:text-4xl lg:text-[48px] font-[500] leading-tight mb-4 lg:mb-4">
-            Independent Hotel Management
-            <br className="hidden sm:block" /> Experts in Southeast Asia
+            Independent Hotel Management and Hotel Advisory
+            <br className="hidden sm:block" /> Experts in South East Asia
           </h2>
           <p className="text-[#626262] text-sm sm:text-base md:text-[20px] font-400 max-w-2xl mx-auto lg:mb-[80px]">
             Three principles that guide every project we manage across
-            <br className="hidden sm:block" /> Vietnam, Indonesia, and Southeast
-            Asia
+            <br className="hidden sm:block" /> Vietnam, Indonesia, and South East Asia
           </p>
         </div>
 

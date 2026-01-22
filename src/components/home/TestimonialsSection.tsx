@@ -129,7 +129,7 @@ export default function TestimonialsSection() {
       const newIndex = Math.round((scrollLeft + centerOffset) / cardTotalWidth);
       const clampedIndex = Math.max(
         0,
-        Math.min(testimonials.length - 1, newIndex)
+        Math.min(testimonials.length - 1, newIndex),
       );
 
       if (clampedIndex !== currentIndex) {
