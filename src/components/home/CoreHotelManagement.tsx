@@ -69,7 +69,7 @@ const services: Service[] = [
     features: [
       { icon: dynamicExperienceIcon, text: "Dynamic experience builder" },
       { icon: aiPoweredIcon, text: "AI-powered experience curation" },
-      { icon: experienceBuilderIcon, text: "Experience partner connectivity" },
+      { icon: experienceBuilderIcon, text: "Experienced  partner connectivity" },
     ],
     image: hotelRoomImage1,
   },
@@ -79,7 +79,7 @@ const services: Service[] = [
     description:
       "Protecting owner interests through financial oversight, operator performance monitoring, and strategic decision support.",
     features: [
-      { icon: gopCashFlowIcon, text: "GOP and cash flow optimization" },
+      { icon: gopCashFlowIcon, text: "Revenue, GOP and cash flow optimization" },
       {
         icon: capitalPlanningIcon,
         text: "Capital planning and ROI validation",
@@ -88,6 +88,10 @@ const services: Service[] = [
         icon: brandOperatorIcon,
         text: "Brand and operator performance governance",
       },
+      {
+        icon: outletPerformanceIcon,
+        text:"Operational and financial performance analysis"
+      }
     ],
     image: hotelRoomImage2,
   },
@@ -109,6 +113,10 @@ const services: Service[] = [
         icon: preOpeningIcon,
         text: "Pre-opening leadership and budget control",
       },
+      {
+        icon:budgetPlanningIcon,
+        text:"Operations Audit with Property Improvement Plan (PIP)"
+      }
     ],
     image: hotelRoomImage3,
   },
