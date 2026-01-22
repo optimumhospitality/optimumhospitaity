@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import { useLocomotiveScroll } from "../LocomotiveScrollProvider";
 import { Link } from "react-router-dom";
 import { gsap } from "gsap";
-import { DollarSign, Lightbulb, MoveUp, type LucideIcon } from "lucide-react";
+import { BarChart3, Bot, Building2, Calendar, ChefHat, ClipboardList, DollarSign, DoorOpen, Lightbulb, MoveUp, Sparkles, Target, TrendingUp, Users, Workflow, Wrench, type LucideIcon } from "lucide-react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gopImageHomeSection from "../../assets/image/home-page/hotel-caseStudies/gopImageHomeSection.webp";
 
@@ -17,21 +17,21 @@ import hotelRoomImage5 from "../../assets/image/home-page/coreHotelManagement/ho
 import hotelRoomImage8 from "../../assets/image/home-page/coreHotelManagement/hotelRoomImage8.webp";
 
 // Import card icons
-import dynamicExperienceIcon from "../../assets/image/home-page/coreHotelManagement/card-icon/dynamic-experience.webp";
-import aiPoweredIcon from "../../assets/image/home-page/coreHotelManagement/card-icon/ai-powered-experience.webp";
-import experienceBuilderIcon from "../../assets/image/home-page/coreHotelManagement/card-icon/experience-builder-icon.webp";
-import gopCashFlowIcon from "../../assets/image/home-page/coreHotelManagement/card-icon/gop-cash-flow-icon.webp";
-import capitalPlanningIcon from "../../assets/image/home-page/coreHotelManagement/card-icon/capital-planning-icon.webp";
-import brandOperatorIcon from "../../assets/image/home-page/coreHotelManagement/card-icon/brand-and-opeartor-icon.webp";
-import technicalServicesIcon from "../../assets/image/home-page/coreHotelManagement/card-icon/techical-services-icon.webp";
-import budgetPlanningIcon from "../../assets/image/home-page/coreHotelManagement/card-icon/budget-planning-icon.webp";
-import preOpeningIcon from "../../assets/image/home-page/coreHotelManagement/card-icon/pre-opening-icon.webp";
+// import dynamicExperienceIcon from "../../assets/image/home-page/coreHotelManagement/card-icon/dynamic-experience.webp";
+// import aiPoweredIcon from "../../assets/image/home-page/coreHotelManagement/card-icon/ai-powered-experience.webp";
+// import experienceBuilderIcon from "../../assets/image/home-page/coreHotelManagement/card-icon/experience-builder-icon.webp";
+// import gopCashFlowIcon from "../../assets/image/home-page/coreHotelManagement/card-icon/gop-cash-flow-icon.webp";
+// import capitalPlanningIcon from "../../assets/image/home-page/coreHotelManagement/card-icon/capital-planning-icon.webp";
+// import brandOperatorIcon from "../../assets/image/home-page/coreHotelManagement/card-icon/brand-and-opeartor-icon.webp";
+// import technicalServicesIcon from "../../assets/image/home-page/coreHotelManagement/card-icon/techical-services-icon.webp";
+// import budgetPlanningIcon from "../../assets/image/home-page/coreHotelManagement/card-icon/budget-planning-icon.webp";
+// import preOpeningIcon from "../../assets/image/home-page/coreHotelManagement/card-icon/pre-opening-icon.webp";
 // import feasibilityIcon from "../../assets/image/home-page/coreHotelManagement/card-icon/feasiblity-icon.webp";
 // import conceptDevelopmentIcon from "../../assets/image/home-page/coreHotelManagement/card-icon/concept-development-icon.webp";
 // import designOperationIcon from "../../assets/image/home-page/coreHotelManagement/card-icon/design-operation-icon.webp";
-import marketLedIcon from "../../assets/image/home-page/coreHotelManagement/card-icon/market-led-icon.webp";
-import menuEngineeringIcon from "../../assets/image/home-page/coreHotelManagement/card-icon/menu-engineering-icon.webp";
-import outletPerformanceIcon from "../../assets/image/home-page/coreHotelManagement/card-icon/outlet-performance-icon.webp";
+// import marketLedIcon from "../../assets/image/home-page/coreHotelManagement/card-icon/market-led-icon.webp";
+// import menuEngineeringIcon from "../../assets/image/home-page/coreHotelManagement/card-icon/menu-engineering-icon.webp";
+// import outletPerformanceIcon from "../../assets/image/home-page/coreHotelManagement/card-icon/outlet-performance-icon.webp";
 // import propertyImprovementIcon from "../../assets/image/home-page/coreHotelManagement/card-icon/property-improvement-icon.webp";
 // import trainingServiceIcon from "../../assets/image/home-page/coreHotelManagement/card-icon/training-service-icon.webp";
 // import operationalAuditIcon from "../../assets/image/home-page/coreHotelManagement/card-icon/operational-audit-icon.webp";
@@ -47,7 +47,7 @@ interface Service {
   id: number;
   title: string;
   description: string;
-  features: { icon: string; text: string }[];
+  features: { icon: LucideIcon; text: string }[];
   image: string;
 }
 
@@ -67,9 +67,9 @@ const services: Service[] = [
     description:
       "Hands-on hotel management that prioritises owner returns, operational discipline, and long-term asset value, with or without a brand affiliation.",
     features: [
-      { icon: dynamicExperienceIcon, text: "Dynamic experience builder" },
-      { icon: aiPoweredIcon, text: "AI-powered experience curation" },
-      { icon: experienceBuilderIcon, text: "Experienced  partner connectivity" },
+      { icon: Sparkles, text: "Dynamic experience builder" },
+      { icon: Bot, text: "AI-powered experience curation" },
+      { icon: Users, text: "Experienced  partner connectivity" },
     ],
     image: hotelRoomImage1,
   },
@@ -79,17 +79,17 @@ const services: Service[] = [
     description:
       "Protecting owner interests through financial oversight, operator performance monitoring, and strategic decision support.",
     features: [
-      { icon: gopCashFlowIcon, text: "Revenue, GOP and cash flow optimization" },
+      { icon: TrendingUp, text: "Revenue, GOP and cash flow optimization" },
       {
-        icon: capitalPlanningIcon,
+        icon: Calendar,
         text: "Capital planning and ROI validation",
       },
       {
-        icon: brandOperatorIcon,
+        icon: Building2,
         text: "Brand and operator performance governance",
       },
       {
-        icon: outletPerformanceIcon,
+        icon: BarChart3,
         text:"Operational and financial performance analysis"
       }
     ],
@@ -102,19 +102,19 @@ const services: Service[] = [
       "From concept to opening, we guide owners through feasibility studies, development strategy, and operational readiness.",
     features: [
       {
-        icon: technicalServicesIcon,
+        icon: Target,
         text: "Feasibility studies and market analysis",
       },
       {
-        icon: budgetPlanningIcon,
+        icon: Wrench,
         text: "Design review and technical services",
       },
       {
-        icon: preOpeningIcon,
+        icon: DoorOpen,
         text: "Pre-opening leadership and budget control",
       },
       {
-        icon:budgetPlanningIcon,
+        icon:ClipboardList,
         text:"Operations Audit with Property Improvement Plan (PIP)"
       }
     ],
@@ -147,9 +147,9 @@ const services: Service[] = [
     description:
       "Maximising F&B profitability through concept design, operational optimisation, and market-aligned positioning.",
     features: [
-      { icon: marketLedIcon, text: "Market-led concept positioning" },
-      { icon: menuEngineeringIcon, text: "Menu engineering and cost control" },
-      { icon: outletPerformanceIcon, text: "Outlet performance optimization" },
+      { icon: Target, text: "Market-led concept positioning" },
+      { icon: ChefHat, text: "Menu engineering and cost control" },
+      { icon: BarChart3, text: "Outlet performance optimization" },
     ],
     image: hotelRoomImage5,
   },
@@ -195,12 +195,12 @@ const services: Service[] = [
     description:
       "Integrated AI solutions, developed with Vertize, to support guest experience, operational efficiency, and data-driven decision-making.",
     features: [
-      { icon: aiPoweredIcon, text: "AI-powered guest experience" },
+      { icon: Bot, text: "AI-powered guest experience" },
       {
-        icon: experienceBuilderIcon,
+        icon: Workflow,
         text: "Streamlined operational workflows",
       },
-      { icon: dynamicExperienceIcon, text: "Intelligent booking & upselling" },
+      { icon: Sparkles, text: "Intelligent booking & upselling" },
     ],
     image: hotelRoomImage8,
   },
@@ -369,21 +369,23 @@ export default function CoreHotelManagement() {
 
                     {/* Features */}
                     <ul className="space-y-3 mb-8 ">
-                      {service.features.map((feature, fIndex) => (
+                      {service.features.map((feature, fIndex) => {
+                        const IconCompoent=feature.icon;
+
+                        return (
                         <li
                           key={fIndex}
                           className="flex items-center gap-3 text-gray-700"
                         >
-                          <img
-                            src={feature.icon}
-                            alt=""
-                            className="w-5 h-5 object-contain"
-                          />
+                          <div>
+                             <IconCompoent className="w-5 h-5"/>
+                          </div>
+                          
                           <span className="text-sm text-primary sm:text-[20px] font-[300]">
                             {feature.text}
                           </span>
-                        </li>
-                      ))}
+                        </li>)
+                       })}
                     </ul>
 
                     {/* Know More Button */}
