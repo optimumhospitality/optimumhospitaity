@@ -4,14 +4,15 @@ import { Link } from "react-router-dom";
 import { gsap } from "gsap";
 import { DollarSign, Lightbulb, MoveUp, type LucideIcon } from "lucide-react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import gopImageHomeSection from "../../assets/image/home-page/hotel-caseStudies/gopImageHomeSection.webp";
+import gopImageHomeSection from "../../assets/image/home-page/coreHotelManagement/gop.webp";
+
 
 // Import images
-import hotelRoomImage1 from "../../assets/image/home-page/coreHotelManagement/hotelRoomImage1.webp";
-import hotelRoomImage2 from "../../assets/image/home-page/coreHotelManagement/hotelRoomImage2.webp";
-import hotelRoomImage3 from "../../assets/image/home-page/coreHotelManagement/hotelRoomImage3.webp";
+import hotelRoomImage1 from "../../assets/image/home-page/coreHotelManagement/IndependentHotelManagement.webp";
+import hotelRoomImage2 from "../../assets/image/home-page/coreHotelManagement/AssetManagement.webp";
+import hotelRoomImage3 from "../../assets/image/home-page/coreHotelManagement/ProjectDevelopmentGroupPhoto.webp";
 // import hotelRoomImage4 from "../../assets/image/home-page/coreHotelManagement/hotelRoomImage4.webp";
-import hotelRoomImage5 from "../../assets/image/home-page/coreHotelManagement/hotelRoomImage5.webp";
+import hotelRoomImage5 from "../../assets/image/home-page/coreHotelManagement/RestaurentAndBarCocept.webp";
 // import hotelRoomImage6 from "../../assets/image/home-page/coreHotelManagement/hotelRoomImage6.webp";
 // import hotelRoomImage7 from "../../assets/image/home-page/coreHotelManagement/hotelRoomImage7.webp";
 import hotelRoomImage8 from "../../assets/image/home-page/coreHotelManagement/hotelRoomImage8.webp";
@@ -39,8 +40,8 @@ import outletPerformanceIcon from "../../assets/image/home-page/coreHotelManagem
 // import brandingSalesIcon from "../../assets/image/home-page/coreHotelManagement/card-icon/branding-sales-icon.webp";
 // import seoIcon from "../../assets/image/home-page/coreHotelManagement/card-icon/seo-icon.webp";
 
-// Import partner logos
 
+// Import partner logos
 gsap.registerPlugin(ScrollTrigger);
 
 interface Service {
