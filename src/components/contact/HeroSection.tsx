@@ -41,7 +41,7 @@ export default function HeroSection() {
 
           {/* Right CTA Button */}
           <div className="min-[500px]:flex-shrink-0 mt-2 min-[500px]:mt-0">
-            <HeroSectionButton text="Contact Us" href="#contact-form" />
+            <HeroSectionButton text="Let's chat" href="#contact-form" />
           </div>
         </div>
       </div>

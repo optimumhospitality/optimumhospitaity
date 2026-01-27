@@ -227,7 +227,7 @@ export default function Navbar() {
               onClick={() => handleNavigation("/contact")}
               className="hidden text-[14px] lg:inline-flex items-center gap-2 px-6 py-2.5 bg-white text-primary font-normal rounded-md hover:bg-gray-100 transition"
             >
-              RESERVE
+              BOOK
               <svg
                 className="w-4 h-4"
                 fill="none"

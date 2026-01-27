@@ -77,8 +77,8 @@ export default function HeroSection() {
               ref={headlineRef}
               className="text-[28px] min-[500px]:text-[20px] sm:text-[26px] min-[750px]:text-[32px] md:text-[40px] lg:text-[52px] xl:text-[64px] font-normal text-white leading-tight tracking-[-0.02em] mb-3 min-[500px]:mb-2 sm:mb-3 min-[750px]:mb-4 md:mb-5 lg:mb-6"
             >
-              <span className="block">We Manage Your Hotel.</span>
-              <span className="block">You Collect Higher Profits.</span>
+              <span className="block">We protect your hotel, </span>
+              <span className="block">then we make it perform</span>
             </h1>
 
             {/* Subtext */}
@@ -86,8 +86,10 @@ export default function HeroSection() {
               ref={subtextRef}
               className="text-white/90 text-[14px] min-[500px]:text-[11px] sm:text-[13px] min-[750px]:text-[15px] md:text-[17px] lg:text-[19px] xl:text-xl leading-relaxed mb-3 min-[500px]:mb-2 sm:mb-3 min-[750px]:mb-4 md:mb-5 lg:mb-6 max-w-full min-[500px]:max-w-[90%] sm:max-w-[85%] md:max-w-md lg:max-w-lg xl:max-w-xl lg:font-[300]"
             >
-              Independent hotel management and advisory for owners in Southeast
-              Asia who want operational excellence without complexity.
+              Independent asset management, hotel operations, and advisory for
+              owners across Southeast Asia-covering pre-opening, operator
+              selection, and ongoing performance-delivering disciplined results
+              without unnecessary complexity.
             </p>
 
             {/* Benefit Badges */}
