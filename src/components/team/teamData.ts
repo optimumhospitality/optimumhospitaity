@@ -12,6 +12,17 @@ import martinNugroho from "../../assets/image/team-page/team-member/martin-nugro
 
 // Signature image (common for all)
 import signature from "../../assets/image/team-page/signature/john-signature.webp";
+import john from "../../assets/image/team-page/signature/john-gardenr.webp";
+import lanny from "../../assets/image/team-page/signature/lanny-tran.webp";
+import khang from "../../assets/image/team-page/signature/khang-ngugen.webp";
+import colm from "../../assets/image/team-page/signature/colm-huttision.webp";
+import gaurav from "../../assets/image/team-page/signature/gaurav-rai.webp";
+import tom from "../../assets/image/team-page/signature/tom-beinarat.webp";
+import aye from "../../assets/image/team-page/signature/aye-nugyen.webp";
+import nobert from "../../assets/image/team-page/signature/nobert-vas.webp";
+import minh from "../../assets/image/team-page/signature/minh-nyugen.webp";
+import martin from "../../assets/image/team-page/signature/martin-nugodo.webp";
+
 
 export interface TeamMemberData {
   id: string;
@@ -39,7 +50,7 @@ export const teamMembersData: TeamMemberData[] = [
       "John is well versed in project management, experience gained during many pre-openings and renovations throughout his career. During his nearly 20 years of working and living in Vietnam, being on the board of the New Zealand Chamber of Commerce Vietnam and being involved in many charity and social events, John has built up an extensive network within the country both in the hospitality industry and the community at large."
     ],
     image: johnGardner,
-    signatureImage: signature,
+    signatureImage: john,
     country: "VIETNAM",
     gender:"him"
   },
@@ -55,7 +66,7 @@ export const teamMembersData: TeamMemberData[] = [
       "His commitment to excellence and passion for the hospitality industry drives continuous improvement in all aspects of hotel operations."
     ],
     image: khangNguyen,
-    signatureImage: signature,
+    signatureImage: khang,
     country: "VIETNAM",
     gender:"him"
   },
@@ -71,7 +82,7 @@ export const teamMembersData: TeamMemberData[] = [
       "Gaurav's strategic vision and hands-on approach to special projects have consistently delivered exceptional results for property owners and stakeholders."
     ],
     image: gauravRai,
-    signatureImage: signature,
+    signatureImage: gaurav,
     country: "VIETNAM",
     gender:"him"
   },
@@ -87,7 +98,7 @@ export const teamMembersData: TeamMemberData[] = [
       "Her passion for holistic wellness and commitment to exceptional service standards drives innovation in spa and wellness programming."
     ],
     image: ayeMon,
-    signatureImage: signature,
+    signatureImage:aye,
     country: "VIETNAM",
     gender:"her"
   },
@@ -103,7 +114,7 @@ export const teamMembersData: TeamMemberData[] = [
       "Minh's analytical approach and business acumen make him an invaluable resource for property owners seeking to maximize their investments."
     ],
     image: minhNguyen,
-    signatureImage: signature,
+    signatureImage: minh,
     country: "VIETNAM",
     gender:"him"
   },
@@ -119,7 +130,7 @@ export const teamMembersData: TeamMemberData[] = [
       "Her dedication to data-driven decision-making and attention to detail ensure projects are well-planned and executed effectively."
     ],
     image: lannyTran,
-    signatureImage: signature,
+    signatureImage: lanny,
     country: "VIETNAM",
     gender:"her",
   },
@@ -135,7 +146,7 @@ export const teamMembersData: TeamMemberData[] = [
       "His passion for storytelling and understanding of guest psychology drives compelling marketing campaigns that resonate with travelers."
     ],
     image: colmHutchinson,
-    signatureImage: signature,
+    signatureImage: colm,
     country: "VIETNAM",
     gender:"him"
   },
@@ -151,7 +162,7 @@ export const teamMembersData: TeamMemberData[] = [
       "Tom's vision for the future of hospitality technology continues to drive innovation and digital excellence across the organization."
     ],
     image: tomBeirnaert,
-    signatureImage: signature,
+    signatureImage: tom,
     country: "VIETNAM",
     gender:"him"
   },
@@ -167,7 +178,7 @@ export const teamMembersData: TeamMemberData[] = [
       "Nobert's leadership and strategic vision continue to drive the growth and success of Optimum Hospitality's Indonesian operations."
     ],
     image: nobertVas,
-    signatureImage: signature,
+    signatureImage: nobert,
     country: "INDONESIA",
     gender:"him"
   },
@@ -183,7 +194,7 @@ export const teamMembersData: TeamMemberData[] = [
       "Martin's operational excellence and strategic development approach ensure sustainable growth and exceptional service delivery."
     ],
     image: martinNugroho,
-    signatureImage: signature,
+    signatureImage: martin,
     country: "INDONESIA",
     gender:'him'
   }
