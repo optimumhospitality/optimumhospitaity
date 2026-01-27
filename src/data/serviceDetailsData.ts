@@ -24,7 +24,7 @@ import brandingSalesIcon from "../assets/image/home-page/coreHotelManagement/car
 // Import hero images
 import hotelRoomImage1 from "../assets/image/home-page/coreHotelManagement/hotelRoomImage1.webp";
 import hotelRoomImage2 from "../assets/image/home-page/coreHotelManagement/hotelRoomImage2.webp";
-import hotelRoomImage3 from "../assets/image/home-page/coreHotelManagement/hotelRoomImage3.webp";
+import hotelRoomImage3 from "../assets/image/home-page/coreHotelManagement/ProjectDevelopmentGroupPhoto.webp";
 // import hotelRoomImage4 from "../assets/image/home-page/coreHotelManagement/hotelRoomImage4.webp";
 import hotelRoomImage5 from "../assets/image/home-page/coreHotelManagement/hotelRoomImage5.webp";
 // import hotelRoomImage6 from "../assets/image/home-page/coreHotelManagement/hotelRoomImage6.webp";
