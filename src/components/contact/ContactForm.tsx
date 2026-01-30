@@ -11,7 +11,7 @@ const contactInfo = [
   {
     icon: Phone,
     label: "CONTACT US",
-    value: "+91 9240252",
+    value: "+84 938200520",
   },
   {
     icon: Mail,

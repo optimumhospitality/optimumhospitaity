@@ -21,7 +21,7 @@ const stats: StatItem[] = [
   {
     value: 94,
     suffix: "%",
-    label: "Revenue Uplift Achieved (Wink Hotels)",
+    label: "Revenue Uplift Achieved",
   },
   {
     value: 6,
@@ -75,7 +75,7 @@ export default function StatsSection() {
                 }, 500);
               },
             },
-          }
+          },
         );
       }
     }, containerRef);
@@ -89,8 +89,11 @@ export default function StatsSection() {
         {/* Desktop: 5 columns */}
         <div className="hidden lg:grid lg:grid-cols-5 lg:divide-x divide-white/20 py-12 lg:py-0">
           {stats.map((stat, index) => (
-            <div key={stat.label} className="stat-item px-6 xl:px-10 flex flex-col">
-              <div className="text-4xl xl:text-[64px] font-normal text-white mb-auto lg:mt-6">
+            <div
+              key={stat.label}
+              className="stat-item px-6 xl:px-10 flex flex-col"
+            >
+              <div className="text-4xl xl:text-[64px] font-normal text-white lg:mt-6">
                 {startCount ? (
                   <CountUp
                     end={stat.value}

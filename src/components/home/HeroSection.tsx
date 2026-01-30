@@ -77,8 +77,8 @@ export default function HeroSection() {
               ref={headlineRef}
               className="text-[28px] min-[500px]:text-[20px] sm:text-[26px] min-[750px]:text-[32px] md:text-[40px] lg:text-[52px] xl:text-[64px] font-normal text-white leading-tight tracking-[-0.02em] mb-3 min-[500px]:mb-2 sm:mb-3 min-[750px]:mb-4 md:mb-5 lg:mb-6"
             >
-              <span className="block">We protect your hotel, </span>
-              <span className="block">then we make it perform</span>
+              <span className="block capitalize">We protect your hotel. </span>
+              <span className="block capitalize">then we make it perform.</span>
             </h1>
 
             {/* Subtext */}
