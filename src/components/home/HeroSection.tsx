@@ -64,11 +64,11 @@ export default function HeroSection() {
           className="w-full h-full object-cover"
         />
         {/* Dark Overlay - gradient from left */}
-        {/* <div className="absolute inset-0 bg-gradient-to-r from-primary/70 via-primary/40 to-transparent" /> */}
+        <div className="absolute inset-0 bg-linear-to-r from-primary/70 via-primary/40 to-transparent" />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 w-full max-w-[1440px] mx-auto px-4 min-[500px]:px-3 sm:px-4 min-[750px]:px-6 md:px-8 lg:px-12 xl:px-[40px]">
+      <div className="relative z-10 w-full max-w-360 mx-auto px-4 min-[500px]:px-3 sm:px-4 min-[750px]:px-6 md:px-8 lg:px-12 xl:px-[40px]">
         <div className="flex flex-col min-[500px]:flex-row min-[500px]:items-end min-[500px]:justify-between gap-4 min-[500px]:gap-4 sm:gap-6 min-[750px]:gap-8 md:gap-10 lg:gap-12">
           {/* Left Content */}
           <div className="w-full min-[500px]:flex-1 pb-4 min-[500px]:pb-0">
