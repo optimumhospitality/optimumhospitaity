@@ -97,7 +97,7 @@ export default function TestimonialsSection() {
         setCurrentIndex(nextIndex);
         scrollToCard(nextIndex);
       }
-    }, 3000);
+    }, 5000);
   }, [currentIndex, scrollToCard]);
 
   // Handle scroll event to detect current card
@@ -255,7 +255,9 @@ export default function TestimonialsSection() {
             Trusted by Hotel Owners and Investors
           </h2>
           <p className="text-[#626262] text-[14px] sm:text-[14px] md:text-[20px] font-normal max-w-xs sm:max-w-sm md:max-w-lg lg:max-w-2xl mx-auto leading-relaxed">
-           Owners and partners rely on Optimum Hospitality for professional advisory services, disciplined execution, transparent reporting, and consistent operational results.
+            Owners and partners rely on Optimum Hospitality for professional
+            advisory services, disciplined execution, transparent reporting, and
+            consistent operational results.
           </p>
         </div>
 
