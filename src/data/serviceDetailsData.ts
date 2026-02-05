@@ -87,7 +87,7 @@ export const serviceDetailsData: ServiceDetail[] = [
             {
                 icon: dynamicExperienceIcon,
                 title: "Guest Satisfaction",
-                description: "Hospitality is at the core of all we do. We implement procedures and training structures that meet and exceed international standards."
+                description: "Hospitality is at the core of all that we do. We implement procedures and training structures that meet and exceed international standards."
             },
             {
                 icon: budgetPlanningIcon,
@@ -214,7 +214,7 @@ export const serviceDetailsData: ServiceDetail[] = [
             {
                 icon: propertyImprovementIcon,
                 title: "Audits and Property Improvement Plans (PIPs)",
-                description: "We conduct comprehensive reviews of existing assets, develop a future asset strategy, establish measurable targets for software and hardware improved performance, and analyze operational processes."
+                description: "We conduct comprehensive operation audits of existing assets, develop a future asset strategy, establish measurable targets for software and hardware improved performance, and analyze operational processes."
             }
         ],
         ctaBox: {

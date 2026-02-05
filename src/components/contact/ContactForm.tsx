@@ -6,7 +6,13 @@ const contactInfo = [
   {
     icon: MapPin,
     label: "LOCATION",
-    value: "Ho Chi Minh City, Vietnam",
+    value: (
+      <>
+        Ho Chi Minh City, Vietnam
+        <br />
+        Jakarta, Indonesia
+      </>
+    ),
   },
   {
     icon: Phone,
@@ -60,7 +66,7 @@ export default function ContactForm() {
               </button>
             </div>
           </div>,
-          document.body
+          document.body,
         )}
 
       <div className="max-w-[1440px] mx-auto px-4 min-[500px]:px-3 sm:px-4 min-[750px]:px-6 md:px-8 lg:px-[40px]">
