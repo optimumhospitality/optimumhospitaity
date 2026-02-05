@@ -30,7 +30,7 @@ export default function Understanding() {
                         Deep Regional Understanding
                     </h2>
                     <p className="text-[#626262] text-sm sm:text-base md:text-lg lg:text-[20px] font-light max-w-3xl mx-auto leading-relaxed">
-                        Long-term presence in Southeast Asia with on-the-ground expertise in
+                        Long-term presence in South East Asia with on-the-ground expertise in
                         local regulations, labour markets, owner expectations, and regional
                         guest behaviour.
                     </p>

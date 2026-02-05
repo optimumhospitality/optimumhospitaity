@@ -92,7 +92,7 @@ export default function AboutUs() {
               <p className="text-[#000000] text-[14px] min-[500px]:text-[10px] sm:text-[12px] min-[750px]:text-[14px] md:text-[16px] lg:text-[18px] xl:text-[20px] font-[300] leading-relaxed mb-3 min-[500px]:mb-2 sm:mb-3 min-[750px]:mb-4 md:mb-5">
                 We help hotel owners increase profitability, protect asset
                 value, and maintain full operational control. Optimum
-                Hospitality is a boutique hotel consultancy, asset manager, and
+                Hospitality is a bespoke hotel and advisory, asset manager, and
                 independent hotel management company operating across South East
                 Asia.
               </p>

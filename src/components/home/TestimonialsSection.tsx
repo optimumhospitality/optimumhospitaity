@@ -14,14 +14,14 @@ const testimonials: Testimonial[] = [
     id: 1,
     quote: `"Optimum Hospitality brought clarity, discipline. Within the first year, we saw a material improvement in GOP, stronger F&B performance, and better cost control across the asset. Their independent, owner-first approach made a tangible difference "`,
     title: "Hotel Owner & Asset Partner",
-    location: "Malaysia",
+    location: "Indonesia",
     image: smilingMan,
   },
   {
     id: 2,
-    quote: `"The team at Optimum Hospitality transformed our hotel operations. Their data-driven approach and deep industry expertise helped us achieve remarkable improvements in both revenue and guest satisfaction scores."`,
+    quote: `"The team at Optimum Hospitality transformed our hotel operations. Their data-driven approach and deep industry expertise helped us achieved tangible improvements in both revenue and guest satisfaction scores."`,
     title: "Resort General Manager",
-    location: "Thailand",
+    location: "Vietnam",
     image: smilingMan,
   },
   {
@@ -33,9 +33,9 @@ const testimonials: Testimonial[] = [
   },
   {
     id: 4,
-    quote: `"The transparency and regular reporting from Optimum Hospitality gave us complete visibility into our hotel's performance. Their strategic recommendations have driven significant value appreciation."`,
+    quote: `"We were impressed by Optimum Hospitality to our property needs and their strategic recommendations"`,
     title: "Investment Director",
-    location: "Singapore",
+    location: "Indonesia",
     image: smilingMan,
   },
 ];

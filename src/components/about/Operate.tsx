@@ -31,10 +31,10 @@ export default function Operate() {
           {/* Section Header */}
           <div className="text-center mb-6">
             <h2 className="text-2xl sm:text-3xl md:text-[48px] lg:text-[48px] font-[500] text-primary mb-3">
-              How we Operate
+              How We Operate
             </h2>
             <p className="text-[#969696] font-[300] text-[14px] sm:text-[20px]   uppercase">
-              WE ARE PRESENT ACROSS 17+ CITIES IN SOUTH EAST ASIA
+              Our flexible approach to owners and developers needs
             </p>
           </div>
 

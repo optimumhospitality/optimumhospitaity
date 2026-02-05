@@ -21,7 +21,7 @@ const projects = [
   },
   {
     image: CaseStudy3,
-    hotelName: "Arena Cam Ranh",
+    hotelName: "Imperium Cam Ranh",
     title: "E-commerce, distribution setup, revenue management",
     details: "1450-key, 4★ luxury hotel",
   },
@@ -33,7 +33,7 @@ const projects = [
   },
   {
     image: CaseStudy5,
-    hotelName: "Empyrean Hotel Nha Trang",
+    hotelName: "Arena Hotel Nha Trang",
     title: "E-commerce, distribution setup, revenue management",
     details: "520-key, 5★ luxury hotel",
   },

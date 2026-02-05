@@ -7,34 +7,34 @@ import CountUp from "react-countup";
 gsap.registerPlugin(ScrollTrigger);
 
 interface StatItem {
-  value: number;
+  value: number ;
   suffix: string;
   label: string;
 }
 
 const stats: StatItem[] = [
   {
-    value: 100,
+    value: 30,
     suffix: "+",
     label: "Hotel Projects Managed & Advised",
   },
   {
-    value: 94,
-    suffix: "%",
+    value: 45,
+    suffix: "+%",
     label: "Revenue Uplift Achieved",
   },
   {
     value: 6,
     suffix: "+",
-    label: "Southeast Asian Countries Market Served",
+    label: "South East Asian Countries Market Served",
   },
   {
     value: 1400,
     suffix: "+",
-    label: "Keys Managed in the Largest Resort ",
+    label: "Keys advised in the Largest Resort ",
   },
   {
-    value: 30,
+    value: 80,
     suffix: "+",
     label: "Years of Combined  Experience",
   },

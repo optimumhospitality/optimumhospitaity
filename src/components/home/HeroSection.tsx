@@ -64,7 +64,7 @@ export default function HeroSection() {
           className="w-full h-full object-cover"
         />
         {/* Dark Overlay - gradient from left */}
-        <div className="absolute inset-0 bg-linear-to-r from-primary/70 via-primary/40 to-transparent" />
+        <div className="absolute inset-0 " />
       </div>
 
       {/* Content */}
@@ -87,7 +87,7 @@ export default function HeroSection() {
               className="text-white/90 text-[14px] min-[500px]:text-[11px] sm:text-[13px] min-[750px]:text-[15px] md:text-[17px] lg:text-[19px] xl:text-xl leading-relaxed mb-3 min-[500px]:mb-2 sm:mb-3 min-[750px]:mb-4 md:mb-5 lg:mb-6 max-w-full min-[500px]:max-w-[90%] sm:max-w-[85%] md:max-w-md lg:max-w-lg xl:max-w-xl lg:font-[300]"
             >
               Independent asset management, hotel operations, and advisory for
-              owners across Southeast Asia-covering pre-opening, operator
+              owners across South-east Asia-covering Pre-opening, operator
               selection, and ongoing performance-delivering disciplined results
               without unnecessary complexity.
             </p>

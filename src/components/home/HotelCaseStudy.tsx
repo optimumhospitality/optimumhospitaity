@@ -147,7 +147,7 @@ export default function HotelCaseStudy() {
             </h2>
             <p className="mt-0 text-[#626262] text-[13px] min-[500px]:text-[11px] sm:text-sm md:text-base lg:text-[20px] max-w-3xl mx-auto">
               Real examples of how we have improved hotel operations, financial
-              performance, and guest experience across Southeast Asia.
+              performance, and guest experience across South East Asia.
             </p>
           </div>
 

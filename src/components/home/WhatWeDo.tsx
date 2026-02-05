@@ -11,13 +11,13 @@ const principles = [
     icon: User,
     title: "Independent and Owner-First",
     description:
-      "Bespoke management from Ho Chi Minh City, Jakarta and throughout S.E.Asia. Every decision prioritizes your returns with transparent, low-fee contracts.",
+      "Bespoke management from Vietnam & Indonesia and throughout S.E.Asia. Every decision prioritises your returns with transparent, low-fee contracts.",
   },
   {
     icon: Hotel,
     title: "Luxury Hotels and F&B Expertise",
     description:
-      "30+ years managing various brands globally including Caravelle Hotel Saigon, Accor, IHG, Four Seasons, Mandarin Oriental, and numerous projects across Southeast Asia and the world.",
+      "30+ years managing various brands globally including Caravelle Hotel Saigon, Accor, IHG, Four Seasons, Mandarin Oriental, and numerous projects across South East Asia and the world.",
   },
   {
     icon: ChartNoAxesCombined,

@@ -67,7 +67,7 @@ export const serviceDetailsData: ServiceDetail[] = [
             {
                 icon: preOpeningIcon,
                 title: "Pre-Opening Services",
-                description: "For new builds, we provide comprehensive technical pre-opening services and set up your hotel for success."
+                description: "For new builds, we provide comprehensive pre-opening technical services and set up your hotel for success."
             },
             {
                 icon: conceptDevelopmentIcon,
@@ -77,12 +77,12 @@ export const serviceDetailsData: ServiceDetail[] = [
             {
                 icon: brandingSalesIcon,
                 title: "Branding and Distribution",
-                description: "We develop your brand and all the brand standards, or negotiate a franchise on your behalf, then create a digital footprint and online distribution system."
+                description: "We develop your brand and all the brand standards, or negotiate a franchise on your behalf, with a global brand and then work with a franchisor to create a digital footprint and online distribution system ."
             },
             {
                 icon: gopCashFlowIcon,
                 title: "Hotel Operation / Management",
-                description: "Like no-hidden-cost, flexible Hotel Management contracts for franchised and independent hotels, combined with our hands-on approach, deliver industry-leading gross operating profits (GOP)."
+                description: "No-hidden-cost, flexible Hotel Management contracts for franchised and independent hotels, combined with our hands-on approach, deliver optimised gross operating profits (GOP)."
             },
             {
                 icon: dynamicExperienceIcon,
@@ -102,7 +102,7 @@ export const serviceDetailsData: ServiceDetail[] = [
             {
                 icon: capitalPlanningIcon,
                 title: "Asset Management",
-                description: "We ensure that all assets are well-maintained and protected. We place high importance on preventative maintenance programs."
+                description: "We ensure not only the business side performs to its maximum ,but all assets are well maintained"
             }
         ],
         ctaBox: {
@@ -138,7 +138,7 @@ export const serviceDetailsData: ServiceDetail[] = [
             {
                 icon: operationalAuditIcon,
                 title: "Operational Reviews",
-                description: "We ensure that the owner's interests have a direct influence on project-level decisions and manage guest and staff satisfaction and key performance indicators (KPIs)."
+                description: "We ensure that the owner's interests have a direct influence on project-level decisions and monitor guest and staff satisfaction and key performance indicators (KPIs)."
             },
             {
                 icon: capitalPlanningIcon,
@@ -148,7 +148,7 @@ export const serviceDetailsData: ServiceDetail[] = [
             {
                 icon: technicalServicesIcon,
                 title: "Review & Advice On Contracts",
-                description: "We review all third-party contracts on behalf of the owner and ensure that the owner's interest is always protected."
+                description: "We review third-party contracts on behalf of the owner and ensure that the owner's interest is always protected."
             },
             {
                 icon: feasibilityIcon,
@@ -179,7 +179,7 @@ export const serviceDetailsData: ServiceDetail[] = [
             {
                 icon: feasibilityIcon,
                 title: "Feasibility Studies",
-                description: "Leveraging our AI tools, we provide unparalleled, rapid feasibility studies that equip owners' financial institutions with essential insights."
+                description: "Leveraging on our hands-on experience and AI tools, we provide unparalleled, rapid feasibility studies that equip owners' financial institutions with essential insights."
             },
             {
                 icon: conceptDevelopmentIcon,
@@ -194,11 +194,11 @@ export const serviceDetailsData: ServiceDetail[] = [
             {
                 icon: designOperationIcon,
                 title: "Design Review",
-                description: "We collaborate closely with hotel proprietors, architects, and interior designers to achieve designs that blend aesthetic appeal with operational efficiency to their utmost potential."
+                description: "We collaborate closely with hotel developers, architects, and interior designers to achieve designs that blend aesthetic appeal with operational efficiency to their utmost potential."
             },
             {
                 icon: technicalServicesIcon,
-                title: "Technical and Pre-opening Services",
+                title: "Pre-opening Technical Services",
                 description: "Critical Path set up, IT schematic assessments, manning guide, pre-opening budgeting, operating equipment needs, brand SOPs, manuals, testing, Etc. We ensure your hotel is fully prepared for the opening."
             },
             {
@@ -209,12 +209,12 @@ export const serviceDetailsData: ServiceDetail[] = [
             {
                 icon: preOpeningIcon,
                 title: "Soft Opening",
-                description: "Once open, we remain in the project for some months to guide management staff, establish SOPs, fine-tune operations, address issues, and refine marketing strategies."
+                description: "Once open, we remain in the project for some months if required to guide management staff, establish SOPs, fine-tune operations, address issues, and refine marketing strategies."
             },
             {
                 icon: propertyImprovementIcon,
                 title: "Audits and Property Improvement Plans (PIPs)",
-                description: "We conduct comprehensive operation audits of existing assets, develop a future asset strategy, establish measurable targets for software and hardware improved performance, and analyze operational processes."
+                description: "We conduct comprehensive operation audits of existing assets, develop a future asset strategy, establish measurable targets for software and hardware improved performance, and analyse operational processes."
             }
         ],
         ctaBox: {
@@ -306,7 +306,7 @@ export const serviceDetailsData: ServiceDetail[] = [
             {
                 icon: menuEngineeringIcon,
                 title: "Menu Engineering",
-                description: "We create menus for maximum profits, distribute workload evenly, design recipes with precise yields, and ensure they can be executed by cost-effective staff."
+                description: "We create menus for maximum profits, distribute workload evenly, design recipes , and ensure they can be executed by cost-effective staff."
             },
             {
                 icon: marketLedIcon,
@@ -316,7 +316,7 @@ export const serviceDetailsData: ServiceDetail[] = [
             {
                 icon: trainingServiceIcon,
                 title: "Training",
-                description: "We integrate guiding principles and SOPs into a cohesive system. Your restaurant's service will be accolades."
+                description: "We integrate guiding principles and SOPs into a cohesive system. Your restaurant's service will win accolades."
             },
             {
                 icon: outletPerformanceIcon,

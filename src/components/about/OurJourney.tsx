@@ -25,9 +25,9 @@ const milestones: JourneyMilestone[] = [
   },
   {
     year: "2024",
-    title: "100+ Projects Milestone",
+    title: "30+ Projects Milestone",
     description:
-      "Delivered comprehensive advisory and management services across Southeast Asia",
+      "Delivered comprehensive advisory and management services across South East Asia",
   },
   {
     year: "2025",
