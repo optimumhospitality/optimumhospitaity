@@ -1,5 +1,8 @@
 import { useState, useEffect, useCallback, useRef } from "react";
-import smilingMan from "../../assets/image/home-page/testimonial/smilling-man.webp";
+import hotelimage1 from "../../assets/image/home-page/testimonial/testimonial-img.webp";
+import hotelimage2 from "../../assets/image/home-page/testimonial/testimonila-img-2.webp";
+import hotelimage3 from "../../assets/image/home-page/testimonial/testimoinal-ima3.webp";
+import hotelimage4 from "../../assets/image/home-page/testimonial/testimoinial-imag4.webp";
 
 interface Testimonial {
   id: number;
@@ -15,28 +18,28 @@ const testimonials: Testimonial[] = [
     quote: `"Optimum Hospitality brought clarity, discipline. Within the first year, we saw a material improvement in GOP, stronger F&B performance, and better cost control across the asset. Their independent, owner-first approach made a tangible difference "`,
     title: "Hotel Owner & Asset Partner",
     location: "Indonesia",
-    image: smilingMan,
+    image: hotelimage1,
   },
   {
     id: 2,
     quote: `"The team at Optimum Hospitality transformed our hotel operations. Their data-driven approach and deep industry expertise helped us achieved tangible improvements in both revenue and guest satisfaction scores."`,
     title: "Resort General Manager",
     location: "Vietnam",
-    image: smilingMan,
+    image: hotelimage2,
   },
   {
     id: 3,
     quote: `"Working with Optimum Hospitality has been a game-changer for our property. Their hands-on management style and commitment to excellence have exceeded our expectations in every way."`,
     title: "Property Owner",
     location: "Vietnam",
-    image: smilingMan,
+    image: hotelimage3,
   },
   {
     id: 4,
     quote: `"We were impressed by Optimum Hospitality to our property needs and their strategic recommendations"`,
     title: "Investment Director",
     location: "Indonesia",
-    image: smilingMan,
+    image: hotelimage4,
   },
 ];
 

@@ -14,6 +14,8 @@ import shangrilaLogo from "../../assets/image/home-page/hotel-icon/shangri-logo.
 import caravelleLogo from "../../assets/image/home-page/hotel-icon/caravelle-logo.webp";
 import marriottLogo from "../../assets/image/home-page/hotel-icon/marriotte-logo.webp";
 import theAnamLogo from "../../assets/image/home-page/hotel-icon/the-anam-logo.webp";
+import theAlmaLogo from "../../assets/image/home-page/hotel-icon/alma.webp";
+import theAngsanaLogo from "../../assets/image/home-page/hotel-icon/angsana.webp";
 
 const brands = [
   { name: "ASTON", logo: astonLogo },
@@ -26,11 +28,13 @@ const brands = [
   { name: "Caravelle", logo: caravelleLogo },
   { name: "Marriott", logo: marriottLogo },
   { name: "The Anam", logo: theAnamLogo },
+  { name: "The Alma", logo: theAlmaLogo },
+  { name: "The Angsana", logo: theAngsanaLogo },
 ];
 
 // Split brands into two rows for the slider
-const row1Brands = brands.slice(0, 5);
-const row2Brands = brands.slice(5, 10);
+const row1Brands = brands.slice(0, 6);
+const row2Brands = brands.slice(6, 12);
 
 export default function TrustedBrands() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -78,7 +82,7 @@ export default function TrustedBrands() {
               start: "top 80%",
               toggleActions: "play none none none",
             },
-          }
+          },
         );
       }
 
@@ -99,7 +103,7 @@ export default function TrustedBrands() {
               start: "top 85%",
               toggleActions: "play none none none",
             },
-          }
+          },
         );
       }
     }, sectionRef);
@@ -123,11 +127,14 @@ export default function TrustedBrands() {
 
       {/* Logos Section */}
       <div className="pb-10 sm:pb-12 md:pb-14 lg:pb-16 xl:pb-20">
-        <div ref={logosRef} className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-[100px]">
+        <div
+          ref={logosRef}
+          className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-[100px]"
+        >
           {/* Desktop View - Two Rows Grid */}
           <div className="hidden md:block">
-            {/* Row 1 */}
-            <div className="grid grid-cols-5 gap-8 lg:gap-12 xl:gap-16 items-center mb-10 lg:mb-12 xl:mb-14">
+            {/* Row 1 - 6 logos */}
+            <div className="grid grid-cols-3 md:grid-cols-6 gap-6 md:gap-8 lg:gap-10 xl:gap-12 items-center mb-8 lg:mb-10 xl:mb-12">
               {row1Brands.map((brand) => (
                 <div
                   key={brand.name}
@@ -136,13 +143,13 @@ export default function TrustedBrands() {
                   <img
                     src={brand.logo}
                     alt={brand.name}
-                    className="h-8 md:h-9 lg:h-10 xl:h-12 max-w-[140px] lg:max-w-[160px] xl:max-w-[180px] w-auto object-contain opacity-80 hover:opacity-100 transition-opacity "
+                    className="h-7 md:h-8 lg:h-9 xl:h-10 max-w-[120px] lg:max-w-[140px] xl:max-w-[160px] w-auto object-contain opacity-80 hover:opacity-100 transition-opacity"
                   />
                 </div>
               ))}
             </div>
-            {/* Row 2 */}
-            <div className="grid grid-cols-5 gap-8 lg:gap-12 xl:gap-16 items-center">
+            {/* Row 2 - 6 logos */}
+            <div className="grid grid-cols-3 md:grid-cols-6 gap-6 md:gap-8 lg:gap-10 xl:gap-12 items-center">
               {row2Brands.map((brand) => (
                 <div
                   key={brand.name}
@@ -151,7 +158,8 @@ export default function TrustedBrands() {
                   <img
                     src={brand.logo}
                     alt={brand.name}
-                    className="h-8 md:h-9 lg:h-10 xl:h-12 max-w-[140px] lg:max-w-[160px] xl:max-w-[180px] w-auto object-contain opacity-80 hover:opacity-100 transition-opacity " />
+                    className="h-7 md:h-8 lg:h-9 xl:h-10 max-w-[120px] lg:max-w-[140px] xl:max-w-[160px] w-auto object-contain opacity-80 hover:opacity-100 transition-opacity"
+                  />
                 </div>
               ))}
             </div>
@@ -193,10 +201,11 @@ export default function TrustedBrands() {
                 <button
                   key={index}
                   onClick={() => goToSlide(index)}
-                  className={`h-2 rounded-full transition-all duration-300 ${index === currentSlide
-                    ? "bg-white w-6"
-                    : "bg-white/40 hover:bg-white/60 w-2"
-                    }`}
+                  className={`h-2 rounded-full transition-all duration-300 ${
+                    index === currentSlide
+                      ? "bg-white w-6"
+                      : "bg-white/40 hover:bg-white/60 w-2"
+                  }`}
                   aria-label={`Go to slide ${index + 1}`}
                 />
               ))}
