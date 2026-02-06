@@ -55,7 +55,7 @@ export default function Leadership() {
                 {/* Description - fixed height */}
                 <div className="h-[50px] sm:h-[60px] lg:h-[70px] flex-shrink-0 overflow-hidden">
                   <p className="text-[#393E4F] text-sm sm:text-base lg:text-[20px] font-[300] leading-relaxed line-clamp-2">
-                    {member.character}
+                    {member.about}
                   </p>
                 </div>
               </div>

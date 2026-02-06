@@ -48,7 +48,7 @@ export default function TeamDetail({ member }: TeamDetailProps) {
               {member.role}
             </p>
             <p className="text-sm sm:text-base md:text-[20px] font-[300] text-[#B8B8B8] leading-relaxed mb-4 md:mb-6 max-w-xl">
-              {member.character}
+              {/* {member.character} */}
             </p>
             <Link
               to="/contact"
