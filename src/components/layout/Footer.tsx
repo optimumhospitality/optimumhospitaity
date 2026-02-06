@@ -145,14 +145,22 @@ export default function Footer() {
               </p>
               <div className="flex flex-col min-[500px]:flex-row gap-4 min-[500px]:gap-4 sm:gap-6 min-[750px]:gap-8 md:gap-10 lg:gap-12">
                 <div className="text-[12px] min-[500px]:text-[8px] sm:text-[10px] min-[750px]:text-[12px] md:text-[14px] lg:text-[16px] text-[#D8D8D8] font-[200] leading-[140%] tracking-[0.05em]">
-                  <p>The Sentry · 15B/8 Le Thanh Ton</p>
+                  {/* <p>The Sentry · 15B/8 Le Thanh Ton</p>
                   <p>Street · District 1 Hồ Chí Minh, Hồ</p>
-                  <p>Chí Minh City · Vietnam</p>
+                  <p>Chí Minh City · Vietnam</p> */}
+                  <p>Ho Chi Minh City,Vietnam</p>
+                  <p>Optimum Hospitality</p>
+                  <p>The Sentry, 15B/8 Le Thanh Ton,Saigon Ward</p>
+                  <p>Chí Minh City , Vietnam</p>
                 </div>
                 <div className="hidden min-[500px]:block w-[0.9px] bg-[#FFFFFF]/40 self-stretch -mr-2 sm:-mr-4 min-[750px]:-mr-6"></div>
                 <div className="text-[12px] min-[500px]:text-[8px] sm:text-[10px] min-[750px]:text-[12px] md:text-[14px] lg:text-[16px] text-[#D8D8D8] font-[200] leading-[140%] tracking-[0.05]">
-                  <p>Jl. Raya Gunung Maloko No. 21</p>
-                  <p>· Cisauk · BSD · Indonesia</p>
+                  {/* <p>Jl. Raya Gunung Maloko No. 21</p>
+                  <p>· Cisauk · BSD · Indonesia</p> */}
+                  <p>Jakarta,Indonesia</p>
+                  <p>Optimum Hospitality</p>
+                  <p>Jalan Raya Gunung Maloko No 21</p>
+                  <p>Tanerange , Inodonesia</p>
                 </div>
               </div>
             </div>
