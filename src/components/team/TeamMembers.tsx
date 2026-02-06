@@ -35,7 +35,7 @@ const teamData: TeamSection[] = [
         name: "John Gardner",
         title: "Founding Partner & CEO",
         description:
-          "Leads marketing-led growth in India and is a core leader in Media & Marketing",
+          "John is a well-seasoned and passionate 5 star hotelier experienced in general management, cluster management of multiple properties, pre-openings, renovations as well as asset management.",
         image: johnGardner,
         gender: "him",
       },
@@ -44,7 +44,7 @@ const teamData: TeamSection[] = [
         name: "Khang Nguyen",
         title: "Operations Director & Business Development",
         description:
-          "Plays a pivotal role as an Owner Representative in ensuring harmonious collaboration.",
+          "Khang is an experienced hospitality professional with extensive expertise in operations management and business development across Southeast Asia.",
         image: khangNguyen,
         gender: "him",
       },
@@ -53,7 +53,7 @@ const teamData: TeamSection[] = [
         name: "Gaurav Rai",
         title: "Director of Special Projects",
         description:
-          "seasoned hospitality executive with over 30 years of international experience",
+          "Gaurav is a seasoned hospitality executive with over 30 years of international experience in luxury hotel management and special projects.",
         image: gauravRai,
         gender: "him",
       },
@@ -62,7 +62,7 @@ const teamData: TeamSection[] = [
         name: "Aye Mon",
         title: "Spa & Wellness",
         description:
-          "Her expertise includes pre-opening, rebranding, and operational strategy.",
+          "Aye Mon is a wellness industry specialist with comprehensive experience in spa operations, pre-openings, and operational excellence.",
         image: ayeMon,
         gender: "her",
       },
@@ -71,7 +71,7 @@ const teamData: TeamSection[] = [
         name: "Minh Nguyen",
         title: "Advisor",
         description:
-          "Plays a pivotal role as an Owner Representative in ensuring harmonious collaboration.",
+          "Minh is a trusted advisor with deep expertise in hospitality investments and owner representation.",
         image: minhNguyen,
         gender: "him",
       },
@@ -80,7 +80,7 @@ const teamData: TeamSection[] = [
         name: "Lanny Tran",
         title: "Project Analyst and Strategy Advisor",
         description:
-          "seasoned hospitality executive with over 30 years of international experience",
+          "Lanny is a skilled project analyst and strategy advisor with extensive experience in hospitality consulting and market analysis.",
         image: lannyTran,
         gender: "her",
       },
@@ -89,7 +89,7 @@ const teamData: TeamSection[] = [
         name: "Colm Hutchinson",
         title: "Marketing Content & Strategy",
         description:
-          "Her expertise includes pre-opening, rebranding, and operational strategy.",
+          "Colm is a creative marketing professional with extensive experience in hospitality marketing, content strategy, and brand development.",
         image: colmHutchinson,
         gender: "him",
       },
@@ -98,7 +98,7 @@ const teamData: TeamSection[] = [
         name: "Tom Beirnaert",
         title: "AI Strategy Partner, Vertize",
         description:
-          "Innovative hospitality-focused technology entrepreneur with extensive experience",
+          "Tom is an innovative hospitality-focused technology entrepreneur with extensive experience in AI strategy, automation, and digital transformation across hotels, resorts, and F&B concepts in Southeast Asia. His career spans commercial consulting, operational optimisation, and the development of advanced AI systems that enhance guest experience, streamline workflows, and unlock new revenue opportunities for operators and owners. Having lived in Vietnam for a total of +5 years, he has developed a strong understanding of the local business culture and the operational realities of the region's hospitality industry.",
         image: tomBeirnaert,
         gender: "him",
       },
@@ -112,7 +112,7 @@ const teamData: TeamSection[] = [
         name: "Nobert Vas",
         title: "CEO of Optimum Hospitality- Indonesia",
         description:
-          "Fluent in four languages and passionate about connecting capital",
+          "Nobert is a multilingual hospitality executive fluent in four languages with a passion for connecting capital with premium hospitality opportunities.",
         image: nobertVas,
         gender: "him",
       },
@@ -121,7 +121,7 @@ const teamData: TeamSection[] = [
         name: "Martin Nugroho",
         title: "COO & VP Development",
         description:
-          "distinguished executive within the Indonesian real estate industry,",
+          "Martin is a distinguished executive within the Indonesian real estate and hospitality industry with decades of leadership experience.",
         image: martinNugroho,
         gender: "him",
       },

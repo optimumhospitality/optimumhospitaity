@@ -4,6 +4,7 @@ import CaseStudy2 from "../../assets/image/home-page/hotel-caseStudies/roomImage
 import CaseStudy3 from "../../assets/image/home-page/hotel-caseStudies/roomImage3.webp";
 import CaseStudy4 from "../../assets/image/home-page/hotel-caseStudies/roomImage4.webp";
 import CaseStudy5 from "../../assets/image/home-page/hotel-caseStudies/roomImage5.webp";
+import CaseStudy6 from "../../assets/image/home-page/hotel-caseStudies/angsana.webp";
 
 const projects = [
   {
@@ -37,6 +38,12 @@ const projects = [
     title: "E-commerce, distribution setup, revenue management",
     details: "520-key, 5★ luxury hotel",
   },
+   {
+    image:CaseStudy6,
+    hotelName:"Angsana Ho Tram ",
+    title: " E-commerce, distribution setup for Asset management",
+    details: "600-key, 4★ luxury hotel"
+  }
 ];
 
 export default function ClientProjects() {
