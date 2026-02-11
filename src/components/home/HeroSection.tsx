@@ -4,8 +4,10 @@ import { gsap } from "gsap";
 import { BadgeCheck } from "lucide-react";
 import HeroBGVideo from "../../assets/image/home-page/hero-image/bg.webm";
 import HeroSectionButton from "../common/button/HeroSectionButton";
+import { useNavigate } from "react-router-dom";
 
 export default function HeroSection() {
+  const navigate=useNavigate();
   const containerRef = useRef<HTMLElement>(null);
   const headlineRef = useRef<HTMLHeadingElement>(null);
   const subtextRef = useRef<HTMLParagraphElement>(null);
@@ -118,8 +120,11 @@ export default function HeroSection() {
             className="min-[500px]:flex-shrink-0 mt-2 min-[500px]:mt-0"
           >
             <HeroSectionButton
+              
+              onClick={()=>{navigate('contact#contact-form')}}
+
               text="BOOK MY CONSULTATION"
-              href="#consultation"
+              // href="#consultation"
             />
           </div>
         </div>
