@@ -12,7 +12,7 @@ import hotelRoomImage1 from "../../assets/image/home-page/coreHotelManagement/In
 import hotelRoomImage2 from "../../assets/image/home-page/coreHotelManagement/AssetManagement.webp";
 import hotelRoomImage3 from "../../assets/image/home-page/coreHotelManagement/upscale_group_photo.webp";
 // import hotelRoomImage4 from "../../assets/image/home-page/coreHotelManagement/hotelRoomImage4.webp";
-import hotelRoomImage5 from "../../assets/image/home-page/coreHotelManagement/upscale_image_food.webp";
+import hotelRoomImage4 from "../../assets/image/home-page/coreHotelManagement/hotelFoodAndBeverages.webp";
 // import hotelRoomImage6 from "../../assets/image/home-page/coreHotelManagement/hotelRoomImage6.webp";
 // import hotelRoomImage7 from "../../assets/image/home-page/coreHotelManagement/hotelRoomImage7.webp";
 import hotelRoomImage8 from "../../assets/image/home-page/coreHotelManagement/hotelRoomImage8.webp";
@@ -152,7 +152,7 @@ const services: Service[] = [
       { icon: ChefHat, text: "Menu engineering and cost control" },
       { icon: BarChart3, text: "Outlet performance optimization" },
     ],
-    image: hotelRoomImage5,
+    image: hotelRoomImage4,
   },
   // {
   //   id: 6,

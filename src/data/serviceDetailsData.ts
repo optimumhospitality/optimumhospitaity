@@ -26,7 +26,7 @@ import hotelRoomImage1 from "../assets/image/home-page/coreHotelManagement/hotel
 import hotelRoomImage2 from "../assets/image/home-page/coreHotelManagement/hotelRoomImage2.webp";
 import hotelRoomImage3 from "../assets/image/home-page/coreHotelManagement/upscale_group_photo.webp";
 // import hotelRoomImage4 from "../assets/image/home-page/coreHotelManagement/hotelRoomImage4.webp";
-import hotelRoomImage5 from "../assets/image/home-page/coreHotelManagement/upscale_image_food.webp";
+import hotelRoomImage4 from "../assets/image/home-page/coreHotelManagement/hotelFoodAndBeverages.webp";
 // import hotelRoomImage6 from "../assets/image/home-page/coreHotelManagement/hotelRoomImage6.webp";
 // import hotelRoomImage7 from "../assets/image/home-page/coreHotelManagement/hotelRoomImage7.webp";
 // import vertizeImage from "../assets/image/home-page/coreHotelManagement/hotelRoomImage8.webp";
@@ -285,7 +285,7 @@ export const serviceDetailsData: ServiceDetail[] = [
         slug: "fb-concept-curation",
         title: "Food and Beverage Strategy and Concept Development",
         subtitle: "Creative F&B concepts built to drive revenue and sustainable margins.",
-        heroImage: hotelRoomImage5,
+        heroImage: hotelRoomImage4,
         heroDescription: "Innovative F&B concepts designed to maximize revenue, enhance guest experience, and drive profitability.",
         featurePoints: [
             {
