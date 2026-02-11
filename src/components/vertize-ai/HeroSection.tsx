@@ -1,6 +1,9 @@
+import { useNavigate } from "react-router-dom";
 import HeroBG from "../../assets/image/vertize-ai/HeroBG.webp";
 
+
 export default function HeroSection() {
+  const navigate=useNavigate();
   return (
     <section className="relative min-h-screen bg-[#0a1628] flex items-start sm:items-center overflow-hidden">
       {/* Background Image */}
@@ -42,7 +45,7 @@ export default function HeroSection() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-0 sm:mb-60">
-              <button className="inline-flex items-center gap-2 px-5 sm:px-8 py-3 sm:py-4 bg-white text-[#1E2D42] text-sm sm:text-base font-normal rounded-lg hover:bg-gray-100 transition-all shadow-lg">
+              <button onClick={() => navigate("/contact#contact-form")} className="inline-flex items-center gap-2 px-5 sm:px-8 py-3 sm:py-4 bg-white text-[#1E2D42] text-sm sm:text-base font-normal rounded-lg hover:bg-gray-100 transition-all shadow-lg">
                 REQUEST AI CONSULTATION
                 <svg
                   className="w-4 h-4 sm:w-5 sm:h-5"

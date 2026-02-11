@@ -109,9 +109,10 @@ export const serviceDetailsData: ServiceDetail[] = [
             problem: "High brand fees and rigid systems that prioritize franchisors over property profitability.",
             outcome: "Flexible, low-fee management that delivers superior GOP through owner-first operations.",
             buttonText: "Schedule a Consultation",
-            buttonLink: "/contact"
+            buttonLink: "/contact#contact-form"
         }
     },
+    
     {
         id: 2,
         slug: "asset-management",
@@ -165,7 +166,7 @@ export const serviceDetailsData: ServiceDetail[] = [
             problem: "Limited visibility and difficulty holding operators accountable for performance.",
             outcome: "Active oversight that maximizes GOP and ensures operators meet commitments.",
             buttonText: "Discuss Asset Management",
-            buttonLink: "/contact"
+            buttonLink: "/contact#contact-form"
         }
     },
     {
@@ -221,7 +222,7 @@ export const serviceDetailsData: ServiceDetail[] = [
             problem: "Projects run over budget and behind schedule due to poor planning and coordination.",
             outcome: "On-time, on-budget openings with fully prepared operations from day one.",
             buttonText: "Start Your Project",
-            buttonLink: "/contact"
+            buttonLink: "/contact#contact-form"
         }
     },
     // {
@@ -333,7 +334,7 @@ export const serviceDetailsData: ServiceDetail[] = [
             problem: "F&B outlets underperform due to weak concepts and poor cost control.",
             outcome: "Profitable F&B with optimized menus and disciplined execution.",
             buttonText: "Explore F&B Solutions",
-            buttonLink: "/contact"
+            buttonLink: "/contact#contact-form"
         }
     },
     // {

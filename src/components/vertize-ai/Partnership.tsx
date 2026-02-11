@@ -1,7 +1,9 @@
+import { useNavigate } from "react-router-dom";
 import optimumLogo from "../../assets/image/home-page/website-logo/optimum-logo.webp";
 import VertizeLogo from "../../assets/image/vertize-ai/Vertize-Logo.png";
 
 export default function Partnership() {
+  const navigate=useNavigate();
   return (
     <section
       className="py-16 md:py-20 lg:py-24"
@@ -77,7 +79,7 @@ export default function Partnership() {
           </div>
 
           {/* CTA Button */}
-          <button className="inline-flex items-center gap-2 sm:gap-3 px-5 sm:px-6 md:px-8 py-3 sm:py-4 bg-[#E8DCC8] text-[#2C3348] text-sm sm:text-base font-semibold rounded-lg hover:bg-[#DCC9AF] transition-all">
+          <button onClick={() => navigate("/contact#contact-form")} className="inline-flex items-center gap-2 sm:gap-3 px-5 sm:px-6 md:px-8 py-3 sm:py-4 bg-[#E8DCC8] text-[#2C3348] text-sm sm:text-base font-semibold rounded-lg hover:bg-[#DCC9AF] transition-all">
             <span className="whitespace-nowrap">
               Request an AI Operational Review
             </span>

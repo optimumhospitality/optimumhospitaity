@@ -1,7 +1,9 @@
+import { useNavigate } from "react-router-dom";
 import heroImage from "../../assets/image/team-page/team-hero-image/hero-image.webp";
 import HeroSectionButton from "../common/button/HeroSectionButton";
 
 export default function HeroSection() {
+  const navigate=useNavigate();
   return (
     <section
       className="relative w-full flex items-end pb-10 sm:pb-14 lg:pb-[80px]"
@@ -37,7 +39,7 @@ export default function HeroSection() {
 
           {/* Right CTA Button */}
           <div className="min-[500px]:flex-shrink-0 mt-2 min-[500px]:mt-0">
-            <HeroSectionButton text="Reserve Your Spot" />
+            <HeroSectionButton onClick={() => navigate("/contact#contact-form")} text="Reserve Your Spot" />
           </div>
         </div>
       </div>

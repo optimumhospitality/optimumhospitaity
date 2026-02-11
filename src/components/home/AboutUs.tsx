@@ -4,10 +4,12 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import aboutImage from "../../assets/image/home-page/aboutUs/business-partners 1.webp";
 import BookMyConsultation from "../common/button/BookMyConsulation";
+import { useNavigate } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function AboutUs() {
+  const navigate=useNavigate();
   const sectionRef = useRef<HTMLElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLDivElement>(null);
@@ -117,7 +119,7 @@ export default function AboutUs() {
               </div>
 
               {/* CTA Button */}
-              <BookMyConsultation />
+              <BookMyConsultation onClick={() => navigate("/contact#contact-form")} />
             </div>
           </div>
 

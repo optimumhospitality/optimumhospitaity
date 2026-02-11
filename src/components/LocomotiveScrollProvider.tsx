@@ -25,7 +25,7 @@ interface LocomotiveScrollProviderProps {
 export default function LocomotiveScrollProvider({ children, navbar }: LocomotiveScrollProviderProps) {
     const containerRef = useRef<HTMLDivElement>(null);
     const locomotiveScrollRef = useRef<LocomotiveScroll | null>(null);
-    const { pathname } = useLocation();
+    const { pathname, hash } = useLocation();
     const [scrollY, setScrollY] = useState(0);
     const [isReady, setIsReady] = useState(false);
 
@@ -98,12 +98,22 @@ export default function LocomotiveScrollProvider({ children, navbar }: Locomotiv
         };
     }, []);
 
-    // Handle route changes - scroll to top and update scroll
+    // Handle route changes - scroll to top or hash element
     useEffect(() => {
         if (locomotiveScrollRef.current) {
-            // Scroll to top on route change
-            locomotiveScrollRef.current.scrollTo(0, { duration: 0, disableLerp: true });
-            setScrollY(0); // Reset scroll position state
+            if (hash) {
+                // Scroll to hash element after DOM is ready
+                setTimeout(() => {
+                    const element = document.querySelector(hash);
+                    if (element && locomotiveScrollRef.current) {
+                        locomotiveScrollRef.current.scrollTo(element as HTMLElement, { duration: 600, disableLerp: true });
+                    }
+                }, 300);
+            } else {
+                // Scroll to top on route change
+                locomotiveScrollRef.current.scrollTo(0, { duration: 0, disableLerp: true });
+                setScrollY(0);
+            }
 
             // Update scroll after DOM changes
             setTimeout(() => {
@@ -111,7 +121,7 @@ export default function LocomotiveScrollProvider({ children, navbar }: Locomotiv
                 ScrollTrigger.refresh();
             }, 200);
         }
-    }, [pathname]);
+    }, [pathname, hash]);
 
     return (
         <ScrollContext.Provider value={{ scrollY, isReady }}>
