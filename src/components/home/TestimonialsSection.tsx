@@ -1,14 +1,14 @@
 import { useState, useEffect, useCallback, useRef } from "react";
-import hotelimage1 from "../../assets/image/home-page/testimonial/testimonial-img.webp";
-import hotelimage2 from "../../assets/image/home-page/testimonial/testimonila-img-2.webp";
-import hotelimage3 from "../../assets/image/home-page/testimonial/testimoinal-ima3.webp";
-import hotelimage4 from "../../assets/image/home-page/testimonial/testimoinial-imag4.webp";
+import hotelimage1 from "../../assets/image/home-page/testimonial/Arena Cam Ranh.webp";
+import hotelimage2 from "../../assets/image/home-page/testimonial/almaResortUpscale.webp";
+import hotelimage3 from "../../assets/image/home-page/testimonial/marriot_nusa_penida.webp";
+import hotelimage4 from "../../assets/image/home-page/testimonial/tano_bano.webp";
 
 interface Testimonial {
   id: number;
   quote: string;
   title: string;
-  location: string;
+  hotel_name: string;
   image: string;
 }
 
@@ -17,28 +17,28 @@ const testimonials: Testimonial[] = [
     id: 1,
     quote: `"Optimum Hospitality brought clarity, discipline. Within the first year, we saw a material improvement in GOP, stronger F&B performance, and better cost control across the asset. Their independent, owner-first approach made a tangible difference "`,
     title: "Hotel Owner & Asset Partner",
-    location: "Indonesia",
+    hotel_name: "Arena Cam Ranh",
     image: hotelimage1,
   },
   {
     id: 2,
     quote: `"The team at Optimum Hospitality transformed our hotel operations. Their data-driven approach and deep industry expertise helped us achieved tangible improvements in both revenue and guest satisfaction scores."`,
     title: "Resort General Manager",
-    location: "Vietnam",
+    hotel_name: "Alma Resort",
     image: hotelimage2,
   },
   {
     id: 3,
     quote: `"Working with Optimum Hospitality has been a game-changer for our property. Their hands-on management style and commitment to excellence have exceeded our expectations in every way."`,
     title: "Property Owner",
-    location: "Vietnam",
+    hotel_name: "Marriott Nusa Penida",
     image: hotelimage3,
   },
   {
     id: 4,
     quote: `"We were impressed by Optimum Hospitality to our property needs and their strategic recommendations"`,
     title: "Investment Director",
-    location: "Indonesia",
+    hotel_name: "Tana Bana",
     image: hotelimage4,
   },
 ];
@@ -56,6 +56,8 @@ export default function TestimonialsSection() {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const autoScrollTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const isUserScrolling = useRef(false);
+  const currentIndexRef = useRef(currentIndex);
+  currentIndexRef.current = currentIndex;
 
   const goToSlide = (index: number) => {
     setCurrentIndex(index);
@@ -96,12 +98,12 @@ export default function TestimonialsSection() {
     }
     autoScrollTimerRef.current = setTimeout(() => {
       if (!isUserScrolling.current) {
-        const nextIndex = (currentIndex + 1) % testimonials.length;
+        const nextIndex = (currentIndexRef.current + 1) % testimonials.length;
         setCurrentIndex(nextIndex);
         scrollToCard(nextIndex);
       }
     }, 5000);
-  }, [currentIndex, scrollToCard]);
+  }, [scrollToCard]);
 
   // Handle scroll event to detect current card
   const handleScroll = useCallback(() => {
@@ -309,8 +311,9 @@ export default function TestimonialsSection() {
                         {card.title}
                       </p>
                       <p className="text-[14px] lg:text-[24px] text-primary">
-                        {card.location}
+                        {card.hotel_name}
                       </p>
+
                     </div>
                   </div>
                 </div>
