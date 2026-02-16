@@ -24,11 +24,10 @@ export default function Footer() {
       {typeof document !== "undefined" &&
         createPortal(
           <div
-            className={`fixed bottom-6 left-1/2 -translate-x-1/2 z-[9999] transition-all duration-300 ${
-              showSnackbar
+            className={`fixed bottom-6 left-1/2 -translate-x-1/2 z-[9999] transition-all duration-300 ${showSnackbar
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-4 pointer-events-none"
-            }`}
+              }`}
           >
             <div className="bg-white text-primary px-6 py-4 rounded-lg shadow-lg flex items-center gap-3 border border-gray-100 backdrop-blur-sm">
               <CheckCircle className="w-5 h-5 text-green-600" />
@@ -148,19 +147,19 @@ export default function Footer() {
                   {/* <p>The Sentry · 15B/8 Le Thanh Ton</p>
                   <p>Street · District 1 Hồ Chí Minh, Hồ</p>
                   <p>Chí Minh City · Vietnam</p> */}
-                  <p>Ho Chi Minh City,Vietnam</p>
+                  <p>Ho Chi Minh City, Vietnam</p>
                   <p>Optimum Hospitality</p>
                   <p>The Sentry, 15B/8 Le Thanh Ton,Saigon Ward</p>
-                  <p>Chí Minh City , Vietnam</p>
+                  <p>Chí Minh City, Vietnam</p>
                 </div>
                 <div className="hidden min-[500px]:block w-[0.9px] bg-[#FFFFFF]/40 self-stretch -mr-2 sm:-mr-4 min-[750px]:-mr-6"></div>
                 <div className="text-[12px] min-[500px]:text-[8px] sm:text-[10px] min-[750px]:text-[12px] md:text-[14px] lg:text-[16px] text-[#D8D8D8] font-[200] leading-[140%] tracking-[0.05]">
                   {/* <p>Jl. Raya Gunung Maloko No. 21</p>
                   <p>· Cisauk · BSD · Indonesia</p> */}
-                  <p>Jakarta,Indonesia</p>
+                  <p>Jakarta, Indonesia</p>
                   <p>Optimum Hospitality</p>
                   <p>Jalan Raya Gunung Maloko No 21</p>
-                  <p>Tanerange , Inodonesia</p>
+                  <p>Tanerange, Indonesia</p>
                 </div>
               </div>
             </div>
