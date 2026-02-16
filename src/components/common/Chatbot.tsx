@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { MessageSquare, X } from "lucide-react";
 
 export default function Chatbot() {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -27,32 +28,9 @@ export default function Chatbot() {
         aria-label={isExpanded ? "Minimize chat" : "Expand chat"}
       >
         {isExpanded ? (
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="black"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <line x1="18" y1="6" x2="6" y2="18" />
-            <line x1="6" y1="6" x2="18" y2="18" />
-          </svg>
+          <X size={24} className="text-black" />
         ) : (
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="black"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
-          </svg>
+          <MessageSquare size={24} className="text-black" />
         )}
       </button>
 
@@ -64,7 +42,7 @@ export default function Chatbot() {
           bottom: "90px",
           right: "20px",
           width: "min(420px, calc(100vw - 40px))",
-          height: "min(620px, calc(100vh - 120px))",
+          height: "min(620px, calc(100dvh - 120px))",
           zIndex: 9999,
           transform: isExpanded ? "scale(1)" : "scale(0)",
           transformOrigin: "bottom right",
