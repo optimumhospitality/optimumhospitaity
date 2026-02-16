@@ -15,21 +15,14 @@ export default function Chatbot() {
           width: "60px",
           height: "60px",
           borderRadius: "50%",
-          background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+          background: "rgb(201, 169, 98)",
           border: "none",
           cursor: "pointer",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
           zIndex: 10000,
-          boxShadow: "0 4px 12px rgba(0, 0, 0, 0.15)",
-          transition: "transform 0.3s ease",
-        }}
-        onMouseEnter={(e) => {
-          e.currentTarget.style.transform = "scale(1.1)";
-        }}
-        onMouseLeave={(e) => {
-          e.currentTarget.style.transform = "scale(1)";
+          boxShadow: "none",
         }}
         aria-label={isExpanded ? "Minimize chat" : "Expand chat"}
       >
@@ -39,7 +32,7 @@ export default function Chatbot() {
             height="24"
             viewBox="0 0 24 24"
             fill="none"
-            stroke="white"
+            stroke="black"
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -53,7 +46,7 @@ export default function Chatbot() {
             height="24"
             viewBox="0 0 24 24"
             fill="none"
-            stroke="white"
+            stroke="black"
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -64,27 +57,37 @@ export default function Chatbot() {
       </button>
 
       {/* Chatbot iframe - Always rendered, toggled via styles */}
-      <iframe
-        src="https://optimumchatbot.netlify.app/?embedded=true"
+      {/* Chatbot Container - Animates scaling */}
+      <div
         style={{
           position: "fixed",
-          bottom: isExpanded ? "90px" : "20px",
+          bottom: "90px",
           right: "20px",
-          width: isExpanded ? "420px" : "60px",
-          height: isExpanded ? "620px" : "60px",
-          border: "none",
+          width: "min(420px, calc(100vw - 40px))",
+          height: "min(620px, calc(100vh - 120px))",
           zIndex: 9999,
-          background: "transparent",
-          borderRadius: isExpanded ? "12px" : "50%",
-          boxShadow: isExpanded ? "0 8px 24px rgba(0, 0, 0, 0.2)" : "none",
-          pointerEvents: isExpanded ? "auto" : "none",
+          transform: isExpanded ? "scale(1)" : "scale(0)",
+          transformOrigin: "bottom right",
+          transition: "transform 0.3s ease-in-out, opacity 0.3s ease-in-out",
           opacity: isExpanded ? 1 : 0,
-          transition: "all 0.3s ease",
-          overflow: "hidden",
+          pointerEvents: isExpanded ? "auto" : "none",
         }}
-        allow="clipboard-write"
-        title="Chat Support"
-      />
+      >
+        <iframe
+          src="https://optimumchatbot.netlify.app/?embedded=true"
+          style={{
+            width: "100%",
+            height: "100%",
+            border: "none",
+            background: "transparent",
+            borderRadius: "12px",
+            boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
+            overflow: "hidden",
+          }}
+          allow="clipboard-write"
+          title="Chat Support"
+        />
+      </div>
     </>
   );
 }
