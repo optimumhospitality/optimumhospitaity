@@ -44,7 +44,7 @@ const teamData: TeamSection[] = [
         name: "Khang Nguyen",
         title: "Operations Director & Business Development",
         description:
-          "Khang is an experienced hospitality professional with extensive expertise in operations management and business development across Southeast Asia.",
+          "Khang is an experienced hospitality professional with extensive expertise in operations management and business development across south east asia- focusing on Vietnam and Indonesia.",
         image: khangNguyen,
         gender: "him",
       },
@@ -98,7 +98,7 @@ const teamData: TeamSection[] = [
         name: "Tom Beirnaert",
         title: "AI Strategy Partner, Vertize",
         description:
-          "Tom is an innovative hospitality-focused technology entrepreneur with extensive experience in AI strategy, automation, and digital transformation across hotels, resorts, and F&B concepts in Southeast Asia. His career spans commercial consulting, operational optimisation, and the development of advanced AI systems that enhance guest experience, streamline workflows, and unlock new revenue opportunities for operators and owners. Having lived in Vietnam for a total of +5 years, he has developed a strong understanding of the local business culture and the operational realities of the region's hospitality industry.",
+          "Tom is an innovative hospitality-focused technology entrepreneur with extensive experience in AI strategy, automation, and digital transformation across hotels, resorts, and F&B concepts in south east asia- focusing on Vietnam and Indonesia. His career spans commercial consulting, operational optimisation, and the development of advanced AI systems that enhance guest experience, streamline workflows, and unlock new revenue opportunities for operators and owners. Having lived in Vietnam for a total of +5 years, he has developed a strong understanding of the local business culture and the operational realities of the region's hospitality industry.",
         image: tomBeirnaert,
         gender: "him",
       },

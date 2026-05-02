@@ -8,9 +8,13 @@ gsap.registerPlugin(ScrollTrigger);
 // import type { LucideIcon } from "lucide-react";
 import roomImage1 from "../../assets/image/home-page/hotel-caseStudies/roomImage1.webp";
 import roomImage2 from "../../assets/image/home-page/hotel-caseStudies/roomImage2.webp";
+import roomImage3 from "../../assets/image/home-page/hotel-caseStudies/roomImage3.webp";
+import roomImage4 from "../../assets/image/home-page/hotel-caseStudies/roomImage4.webp";
+import roomImage5 from "../../assets/image/home-page/hotel-caseStudies/roomImage5.webp";
+import roomImage6 from "../../assets/image/home-page/hotel-caseStudies/angsana.webp";
 // import gopImageHomeSection from "../../assets/image/home-page/hotel-caseStudies/gopImageHomeSection.webp";
 
-import partnerLogo1 from "../../assets/image/home-page/coreHotelManagement/parter-logo1.webp";
+import partnerLogo1 from "../../assets/image/home-page/coreHotelManagement/partner-logo1.webp";
 import partnerLogo2 from "../../assets/image/home-page/coreHotelManagement/parter-logo2.webp";
 import partnerLogo3 from "../../assets/image/home-page/coreHotelManagement/parter-logo3.webp";
 import partnerLogo4 from "../../assets/image/home-page/coreHotelManagement/parter-logo4.webp";
@@ -27,20 +31,44 @@ const caseStudies: CaseStudy[] = [
   {
     id: 1,
     hotelName: "Wyndham Grand Hotel Phu Quoc",
-    title: <>Operations audit, PIP, F&B outlet curation</>,
-    achievement: "1,400 key,  5★ Hotel",
+    title: "Operations audit, PIP (property improvement plan), F&B outlet curation",
+    achievement: "1400-key, 5★ Hotel",
     image: roomImage1,
   },
   {
     id: 2,
     hotelName: "Caravelle Hotel Saigon",
-    title: (
-      <>
-        Management, Renovation <br /> project management
-      </>
-    ),
-    achievement: "335 key,  5★ Hotel",
+    title: "Management, Renovation project management",
+    achievement: "335-key, 5★ resort",
     image: roomImage2,
+  },
+  {
+    id: 3,
+    hotelName: "Imperium Cam Ranh",
+    title: "E-commerce, distribution setup, revenue management",
+    achievement: "1450-key, 4★ luxury hotel",
+    image: roomImage3,
+  },
+  {
+    id: 4,
+    hotelName: "Alma Resort",
+    title: "Distribution setup, E-commerce, revenue management",
+    achievement: "580-key, 5★ luxury hotel",
+    image: roomImage4,
+  },
+  {
+    id: 5,
+    hotelName: "Arena Hotel Nha Trang",
+    title: "E-commerce, distribution setup, revenue management",
+    achievement: "520-key, 5★ luxury hotel",
+    image: roomImage5,
+  },
+  {
+    id: 6,
+    hotelName: "Angsana Ho Tram",
+    title: "E-commerce, distribution setup for Asset management",
+    achievement: "600-key, 4★ luxury hotel",
+    image: roomImage6,
   },
 ];
 
@@ -51,7 +79,7 @@ const caseStudies: CaseStudy[] = [
 // ];
 
 const partners = [
-  { name: "CloudCollective", logo: partnerLogo1 },
+  { name: "Heads on Pillows", logo: partnerLogo1 },
   { name: "ParkHaus", logo: partnerLogo2 },
   { name: "Interiologic", logo: partnerLogo3 },
   { name: "PurpleAsia", logo: partnerLogo4 },
@@ -154,12 +182,12 @@ export default function HotelCaseStudy() {
           {/* Case Study Cards */}
           <div
             ref={cardsRef}
-            className="flex flex-col min-[500px]:flex-row justify-center gap-4 min-[500px]:gap-3 sm:gap-4 md:gap-5 lg:gap-6 xl:gap-[24px]"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-4 md:gap-5 lg:gap-6 xl:gap-[24px]"
           >
             {caseStudies.map((study) => (
               <div
                 key={study.id}
-                className="case-card relative group rounded-xl min-[500px]:rounded-lg sm:rounded-xl md:rounded-2xl overflow-hidden cursor-pointer w-full h-[300px] min-[500px]:w-[48%] min-[500px]:h-[180px] sm:h-[220px] md:h-[300px] min-[900px]:h-[380px] lg:h-[450px] xl:h-[550px] min-[1400px]:h-[600px]"
+                className="case-card relative group rounded-xl overflow-hidden cursor-pointer w-full h-[300px] sm:h-[220px] md:h-[300px] lg:h-[380px] xl:h-[450px] min-[1400px]:h-[600px]"
                 onMouseEnter={() => setHoveredCard(study.id)}
                 onMouseLeave={() => setHoveredCard(null)}
               >
@@ -238,7 +266,11 @@ export default function HotelCaseStudy() {
                   <img
                     src={partner.logo}
                     alt={partner.name}
-                    className="h-6 min-[500px]:h-5 sm:h-8 md:h-14 w-full object-contain filter brightness-0 invert opacity-90"
+                    className={`w-full object-contain filter brightness-0 invert opacity-90 ${
+                      index === 0
+                        ? "h-20 min-[500px]:h-18 sm:h-22 md:h-38"
+                        : "h-6 min-[500px]:h-5 sm:h-8 md:h-14"
+                    }`}
                   />
                 </div>
               ))}

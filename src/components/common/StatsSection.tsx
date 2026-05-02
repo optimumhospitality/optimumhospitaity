@@ -19,9 +19,9 @@ const stats: StatItem[] = [
     label: "Hotel Projects Managed & Advised",
   },
   {
-    value: 45,
+    value: 92,
     suffix: "+%",
-    label: "Revenue Uplift Achieved",
+    label: "Our Clients experience Revenue Uplift",
   },
   {
     value: 6,

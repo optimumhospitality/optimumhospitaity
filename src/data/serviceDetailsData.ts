@@ -134,12 +134,17 @@ export const serviceDetailsData: ServiceDetail[] = [
             {
                 icon: gopCashFlowIcon,
                 title: "Revenue Management",
-                description: "We optimize sales and marketing structures, establish through daily benchmarking, and ensure complete control over revenue streams."
+                description: "We optimize sales and marketing structures, established through daily benchmarking, and ensure complete control over revenue streams."
             },
             {
                 icon: operationalAuditIcon,
                 title: "Operational Reviews",
                 description: "We ensure that the owner's interests have a direct influence on project-level decisions and monitor guest and staff satisfaction and key performance indicators (KPIs)."
+            },
+            {
+                icon: operationalAuditIcon,
+                title: "Operations and Quality Audits",
+                description: "We conduct structured operations and quality audits to identify gaps, strengthen service standards, and improve performance consistency."
             },
             {
                 icon: capitalPlanningIcon,
@@ -154,7 +159,7 @@ export const serviceDetailsData: ServiceDetail[] = [
             {
                 icon: feasibilityIcon,
                 title: "Franchise & Operator Affiliations",
-                description: "We provide transparency and balance between owner and operator interests. We advise on initial brand selection and negotiate brand agreement."
+                description: "We provide transparency and balance between owner and operator interests. We advise on initial brand selection and negotiate brand agreements."
             },
             {
                 icon: propertyImprovementIcon,
@@ -200,7 +205,7 @@ export const serviceDetailsData: ServiceDetail[] = [
             {
                 icon: technicalServicesIcon,
                 title: "Pre-opening Technical Services",
-                description: "Critical Path set up, IT schematic assessments, manning guide, pre-opening budgeting, operating equipment needs, brand SOPs, manuals, testing, Etc. We ensure your hotel is fully prepared for the opening."
+                description: "Critical Path set up, IT schematic assessments, manning guide, pre-opening budgeting, operating equipment needs, (FFE, OSE) brand SOPs, manuals, testing, Etc. We ensure your hotel is fully prepared for the opening."
             },
             {
                 icon: trainingServiceIcon,
@@ -307,7 +312,7 @@ export const serviceDetailsData: ServiceDetail[] = [
             {
                 icon: menuEngineeringIcon,
                 title: "Menu Engineering",
-                description: "We create menus for maximum profits, distribute workload evenly, design recipes , and ensure they can be executed by cost-effective staff."
+                description: "We create menus for maximum profits, distribute workload evenly and ensure they can be executed by cost-effective staff."
             },
             {
                 icon: marketLedIcon,
@@ -453,7 +458,7 @@ export const serviceDetailsData: ServiceDetail[] = [
     //     id: 8,
     //     slug: "ai-hospitality",
     //     title: "AI-Enabled Hospitality, Engineered for Performance",
-    //     subtitle: "Integrates advanced AI solutions into hotel operations across Southeast Asia.",
+    //     subtitle: "Integrates advanced AI solutions into hotel operations across south east asia- focusing on Vietnam and Indonesia.",
     //     heroImage: vertizeImage,
     //     heroDescription: "In partnership with Vertize, we bring cutting-edge AI technology to elevate guest experience and operational efficiency.",
     //     featurePoints: [
@@ -490,7 +495,7 @@ export const serviceDetailsData: ServiceDetail[] = [
     //         {
     //             icon: brandOperatorIcon,
     //             title: "Multi-Language Support",
-    //             description: "AI systems supporting multiple languages to serve diverse guest demographics across Southeast Asia."
+    //             description: "AI systems supporting multiple languages to serve diverse guest demographics across south east asia- focusing on Vietnam and Indonesia."
     //         },
     //         {
     //             icon: outletPerformanceIcon,

@@ -1,8 +1,8 @@
 import { useState, useEffect, useCallback, useRef } from "react";
-import hotelimage1 from "../../assets/image/home-page/testimonial/Arena Cam Ranh.webp";
+import hotelimage1 from "../../assets/image/home-page/testimonial/Wyndham.webp";
 import hotelimage2 from "../../assets/image/home-page/testimonial/almaResortUpscale.webp";
 import hotelimage3 from "../../assets/image/home-page/testimonial/marriot_nusa_penida.webp";
-import hotelimage4 from "../../assets/image/home-page/testimonial/tano_bano.webp";
+import hotelimage4 from "../../assets/image/home-page/testimonial/leah.webp";
 
 interface Testimonial {
   id: number;
@@ -15,32 +15,33 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     id: 1,
-    quote: `"Optimum Hospitality brought clarity, discipline. Within the first year, we saw a material improvement in GOP, stronger F&B performance, and better cost control across the asset. Their independent, owner-first approach made a tangible difference "`,
-    title: "Hotel Owner & Asset Partner",
-    hotel_name: "Arena Cam Ranh, Vietnam",
+    quote: "Optimum's audit at Wyndham Grand Phu Quoc delivered clear, prioritized recommendations that improved operational efficiency and guest experience.",
+    title: "Audit Engagement",
+    hotel_name: "Wyndham Grand Phu Quoc, Vietnam",
     image: hotelimage1,
   },
   {
     id: 2,
-    quote: `"The team at Optimum Hospitality transformed our hotel operations. Their data-driven approach and deep industry expertise helped us achieved tangible improvements in both revenue and guest satisfaction scores."`,
-    title: "Resort General Manager",
+    quote: "The team at Optimum Hospitality transformed our e‑commerce operations. Their data‑driven approach and deep industry expertise drove measurable increases in online revenue and conversion rates.",
+    title: "Resort Generation Manager",
     hotel_name: "Alma Resort, Vietnam",
     image: hotelimage2,
   },
   {
     id: 3,
+    quote: "Optimum's pre-opening planning and technical services ensured a smooth launch, robust systems, and operational readiness across every discipline.",
+    title: "Pre-Opening & Technical Services",
+    hotel_name: "The Leah Hanoi, Vietnam",
+    image: hotelimage4,
+  },
+  {
+    id: 4,
     quote: `"Working with Optimum Hospitality has been a game-changer for our property. Their hands-on management style and commitment to excellence have exceeded our expectations in every way."`,
     title: "Property Owner",
     hotel_name: "Marriott Nusa Penida,Indonesia",
     image: hotelimage3,
   },
-  {
-    id: 4,
-    quote: `"We were impressed by Optimum Hospitality to our property needs and their strategic recommendations"`,
-    title: "Investment Director",
-    hotel_name: "Tana Bana,Indonesia",
-    image: hotelimage4,
-  },
+  
 ];
 
 // Card dimensions
@@ -207,7 +208,7 @@ export default function TestimonialsSection() {
       // Initial render - first card is fully visible
       return {
         opacity: index === 0 ? 1 : 0.6,
-        filter: index === 0 ? "none" : "blur(1.5px)",
+        filter: "none",
         transform: index === 0 ? "scale(1)" : "scale(0.85)",
       };
     }
@@ -229,14 +230,11 @@ export default function TestimonialsSection() {
 
     // Center card (distance ~0) should be fully visible with NO blur
     const opacity = 1 - normalizedDistance * 0.4;
-    // Only apply blur if not in center zone (threshold 0.15)
-    const blur =
-      normalizedDistance < 0.15 ? 0 : (normalizedDistance - 0.15) * 1.8;
     const scale = 1 - normalizedDistance * 0.15;
 
     return {
       opacity: Math.max(0.6, opacity),
-      filter: blur < 0.05 ? "none" : `blur(${blur}px)`,
+      filter: "none",
       transform: `scale(${Math.max(0.85, scale)})`,
     };
   };

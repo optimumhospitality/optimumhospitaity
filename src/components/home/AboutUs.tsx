@@ -96,7 +96,7 @@ export default function AboutUs() {
                 value, and maintain full operational control. Optimum
                 Hospitality is a bespoke hotel and advisory, asset manager, and
                 independent hotel management company operating across South East
-                Asia.
+                Asia focusing on Vietnam and Indonesia.
               </p>
 
               {/* Second Paragraph */}

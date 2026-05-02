@@ -158,7 +158,7 @@ export default function TrustedBrands() {
                   <img
                     src={brand.logo}
                     alt={brand.name}
-                    className="h-7 md:h-8 lg:h-9 xl:h-10 max-w-[120px] lg:max-w-[140px] xl:max-w-[160px] w-auto object-contain opacity-80 hover:opacity-100 transition-opacity"
+                    className={`h-7 md:h-8 lg:h-9 xl:h-10 max-w-[120px] lg:max-w-[140px] xl:max-w-[160px] w-auto object-contain opacity-80 hover:opacity-100 transition-opacity ${brand.name === "The Angsana" ? "h-10 md:h-12 lg:h-14 xl:h-16 max-w-[160px] lg:max-w-[190px] xl:max-w-[220px] scale-125 lg:scale-[1.35]" : ""}`}
                   />
                 </div>
               ))}
@@ -185,7 +185,7 @@ export default function TrustedBrands() {
                             <img
                               src={brand.logo}
                               alt={brand.name}
-                              className="h-10 sm:h-12 w-auto object-contain opacity-70 brightness-0 invert"
+                              className={`h-10 sm:h-12 w-auto object-contain opacity-70 brightness-0 invert ${brand.name === "The Angsana" ? "h-14 sm:h-16 scale-150" : ""}`}
                             />
                           </div>
                         ))}

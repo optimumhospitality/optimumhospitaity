@@ -1,4 +1,3 @@
-import { useRef, useState, useEffect, useCallback } from "react";
 import CaseStudy1 from "../../assets/image/home-page/hotel-caseStudies/roomImage1.webp";
 import CaseStudy2 from "../../assets/image/home-page/hotel-caseStudies/roomImage2.webp";
 import CaseStudy3 from "../../assets/image/home-page/hotel-caseStudies/roomImage3.webp";
@@ -47,121 +46,7 @@ const projects = [
 ];
 
 export default function ClientProjects() {
-  const scrollRef = useRef<HTMLDivElement>(null);
-  const isInteractingRef = useRef(false);
-  const [, forceUpdate] = useState(0);
-  const isDragging = useRef(false);
-  const dragStartX = useRef(0);
-  const scrollStartX = useRef(0);
-  const hasInitialized = useRef(false);
-
-  // Duplicate projects for seamless infinite scroll
-  const duplicatedProjects = [
-    ...projects,
-    ...projects,
-    ...projects,
-    ...projects,
-  ];
-
-  // Initialize scroll position once
-  useEffect(() => {
-    const scrollContainer = scrollRef.current;
-    if (!scrollContainer || hasInitialized.current) return;
-
-    const singleSetWidth = scrollContainer.scrollWidth / 4;
-    scrollContainer.scrollLeft = singleSetWidth;
-    hasInitialized.current = true;
-  }, []);
-
-  // Auto-scroll - runs continuously, checks ref for interaction state
-  useEffect(() => {
-    const scrollContainer = scrollRef.current;
-    if (!scrollContainer) return;
-
-    let animationId: number;
-    const scrollSpeed = 1.2;
-
-    const autoScroll = () => {
-      if (!isInteractingRef.current && scrollContainer) {
-        scrollContainer.scrollLeft += scrollSpeed;
-
-        const currentScroll = scrollContainer.scrollLeft;
-        const singleWidth = scrollContainer.scrollWidth / 4;
-
-        // Seamless reset when reaching the end
-        if (currentScroll >= singleWidth * 3) {
-          scrollContainer.scrollLeft = singleWidth;
-        }
-        // Handle manual scroll backwards
-        if (currentScroll < singleWidth * 0.5) {
-          scrollContainer.scrollLeft = singleWidth * 2;
-        }
-      }
-      animationId = requestAnimationFrame(autoScroll);
-    };
-
-    animationId = requestAnimationFrame(autoScroll);
-
-    return () => cancelAnimationFrame(animationId);
-  }, []); // Empty dependency - never re-runs
-
-  // Mouse handlers
-  const handleMouseDown = useCallback((e: React.MouseEvent) => {
-    if (!scrollRef.current) return;
-    isDragging.current = true;
-    isInteractingRef.current = true;
-    dragStartX.current = e.pageX;
-    scrollStartX.current = scrollRef.current.scrollLeft;
-    scrollRef.current.style.cursor = "grabbing";
-    forceUpdate((n) => n + 1);
-  }, []);
-
-  const handleMouseMove = useCallback((e: React.MouseEvent) => {
-    if (!isDragging.current || !scrollRef.current) return;
-    e.preventDefault();
-    const deltaX = e.pageX - dragStartX.current;
-    scrollRef.current.scrollLeft = scrollStartX.current - deltaX;
-  }, []);
-
-  const handleMouseUp = useCallback(() => {
-    if (!scrollRef.current) return;
-    isDragging.current = false;
-    scrollRef.current.style.cursor = "grab";
-  }, []);
-
-  const handleMouseEnter = useCallback(() => {
-    isInteractingRef.current = true;
-  }, []);
-
-  const handleMouseLeave = useCallback(() => {
-    isDragging.current = false;
-    isInteractingRef.current = false;
-    if (scrollRef.current) {
-      scrollRef.current.style.cursor = "grab";
-    }
-  }, []);
-
-  // Touch handlers
-  const handleTouchStart = useCallback((e: React.TouchEvent) => {
-    if (!scrollRef.current) return;
-    isInteractingRef.current = true;
-    isDragging.current = true;
-    dragStartX.current = e.touches[0].pageX;
-    scrollStartX.current = scrollRef.current.scrollLeft;
-  }, []);
-
-  const handleTouchMove = useCallback((e: React.TouchEvent) => {
-    if (!scrollRef.current || !isDragging.current) return;
-    const deltaX = e.touches[0].pageX - dragStartX.current;
-    scrollRef.current.scrollLeft = scrollStartX.current - deltaX;
-  }, []);
-
-  const handleTouchEnd = useCallback(() => {
-    isDragging.current = false;
-    setTimeout(() => {
-      isInteractingRef.current = false;
-    }, 1500);
-  }, []);
+  
 
   return (
     <section className="bg-tertinary py-[60px] sm:py-[60px] lg:py-[100px] overflow-hidden">
@@ -178,47 +63,29 @@ export default function ClientProjects() {
         </div>
       </div>
 
-      {/* Scrollable Container */}
+      {/* Projects Grid (2 rows x 3 columns on large screens) */}
       <div className="relative w-full">
-        <div
-          ref={scrollRef}
-          className="flex overflow-x-scroll scrollbar-hide gap-6 sm:gap-8 px-4 sm:px-6 md:px-8 lg:px-[40px] pb-4 cursor-grab select-none"
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-          onMouseDown={handleMouseDown}
-          onMouseMove={handleMouseMove}
-          onMouseUp={handleMouseUp}
-          onTouchStart={handleTouchStart}
-          onTouchMove={handleTouchMove}
-          onTouchEnd={handleTouchEnd}
-        >
-          {duplicatedProjects.map((project, index) => (
-            <div
-              key={index}
-              className="flex-shrink-0 w-[300px] sm:w-[350px] md:w-[450px] lg:w-[624px]"
-            >
-              {/* Project Card */}
-              <div className="relative h-[400px] sm:h-[500px] md:h-[560px] lg:h-[624px] rounded-2xl overflow-hidden group">
-                {/* Image */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 px-4 sm:px-6 md:px-8 lg:px-[40px] pb-6">
+          {projects.map((project, index) => (
+            <div key={index} className="w-full">
+              <div className="relative h-[300px] sm:h-[360px] md:h-[420px] lg:h-[480px] rounded-2xl overflow-hidden group">
                 <img
                   src={project.image}
                   alt={project.hotelName}
-                  className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 pointer-events-none"
+                  className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                   draggable={false}
                 />
 
-                {/* Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
-                {/* Content */}
-                <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-5 md:p-6 text-white pointer-events-none">
-                  <p className="text-[16px] sm:text-[16px] text-white/80 mb-1 sm:mb-2 lg:text-[24px]">
+                <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-5 md:p-6 text-white">
+                  <p className="text-[16px] sm:text-[16px] text-white/80 mb-1 sm:mb-2 lg:text-[20px]">
                     {project.hotelName}
                   </p>
-                  <h3 className="text-[20px] sm:text-[20px] md:text-xl lg:text-2xl font-semibold mb-1 sm:mb-2 leading-tight lg:text-[36px]">
+                  <h3 className="text-[18px] sm:text-[18px] md:text-[20px] lg:text-[24px] font-semibold mb-1 sm:mb-2 leading-tight">
                     {project.title}
                   </h3>
-                  <p className="text-[16px] sm:text-[16px] text-white/70 lg:text-[24px]">
+                  <p className="text-[14px] sm:text-[14px] text-white/70 lg:text-[16px]">
                     {project.details}
                   </p>
                 </div>

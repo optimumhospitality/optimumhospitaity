@@ -30,7 +30,7 @@ export default function Partnership() {
               <img
                 src={optimumLogo}
                 alt="Optimum Hospitality"
-                className="h-8 sm:h-12 md:h-16 lg:h-20 w-auto max-w-[40%] object-contain"
+                className="h-10 sm:h-14 md:h-18 lg:h-24 w-auto max-w-[40%] object-contain"
               />
 
               <span className="text-2xl sm:text-4xl lg:text-6xl font-light text-white flex-shrink-0">

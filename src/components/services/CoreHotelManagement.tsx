@@ -91,6 +91,10 @@ const services: Service[] = [
         icon: brandOperatorIcon,
         text: "Brand and operator performance governance",
       },
+      {
+        icon: operationalAuditIcon,
+        text: "Operations and quality audits",
+      },
     ],
     image: hotelRoomImage2,
   },
@@ -136,7 +140,7 @@ const services: Service[] = [
     description:
       "Creative F&B concepts built to drive revenue and sustainable margins.",
     features: [
-      { icon: marketLedIcon, text: "Market-led concept positioning" },
+      { icon: marketLedIcon, text: "Market-led concept Development" },
       { icon: menuEngineeringIcon, text: "Menu engineering and cost control" },
       { icon: outletPerformanceIcon, text: "Outlet performance optimization" },
     ],
@@ -182,7 +186,7 @@ const services: Service[] = [
     id: 8,
     title: "AI-Enabled Hospitality, Engineered for Performance",
     description:
-      "Integrates advanced AI solutions into hotel operations across Southeast Asia.",
+      "Integrates advanced AI solutions into hotel operations across south east asia- focusing on Vietnam and Indonesia.",
     features: [
       { icon: iconGuest, text: "Guest Experience" },
       { icon: iconWorkflow, text: "Streamline workflows" },
@@ -291,7 +295,7 @@ export default function CoreHotelManagement() {
         <p className="text-[#626262] text-sm sm:text-base md:text-[20px] font-[400] max-w-3xl mx-auto">
           From pre-opening to performance turnaround, from strategic asset
           oversight to day-to-day hotel management, these are the services we
-          deliver across Southeast Asia.
+          deliver across south east asia- focusing on Vietnam and Indonesia.
         </p>
       </div>
 

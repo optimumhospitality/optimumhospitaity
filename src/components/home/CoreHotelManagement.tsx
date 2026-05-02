@@ -8,14 +8,14 @@ import gopImageHomeSection from "../../assets/image/home-page/coreHotelManagemen
 
 
 // Import images
-import hotelRoomImage1 from "../../assets/image/home-page/coreHotelManagement/IndependentHotelManagement.webp";
-import hotelRoomImage2 from "../../assets/image/home-page/coreHotelManagement/AssetManagement.webp";
-import hotelRoomImage3 from "../../assets/image/home-page/coreHotelManagement/upscale_group_photo.webp";
+import hotelRoomImage1 from "../../assets/image/home-page/coreHotelManagement/image1.webp";
+import hotelRoomImage2 from "../../assets/image/home-page/coreHotelManagement/Duyen.webp";
+import hotelRoomImage3 from "../../assets/image/home-page/coreHotelManagement/imagee3.webp";
 // import hotelRoomImage4 from "../../assets/image/home-page/coreHotelManagement/hotelRoomImage4.webp";
-import hotelRoomImage4 from "../../assets/image/home-page/coreHotelManagement/hotelFoodAndBeverages.webp";
+import hotelRoomImage4 from "../../assets/image/home-page/coreHotelManagement/2Q6A7607.webp";
 // import hotelRoomImage6 from "../../assets/image/home-page/coreHotelManagement/hotelRoomImage6.webp";
 // import hotelRoomImage7 from "../../assets/image/home-page/coreHotelManagement/hotelRoomImage7.webp";
-import hotelRoomImage8 from "../../assets/image/home-page/coreHotelManagement/hotelRoomImage8.webp";
+import hotelRoomImage8 from "../../assets/image/home-page/coreHotelManagement/image6.webp";
 
 // Import card icons
 // import dynamicExperienceIcon from "../../assets/image/home-page/coreHotelManagement/card-icon/dynamic-experience.webp";
@@ -92,6 +92,10 @@ const services: Service[] = [
       {
         icon: BarChart3,
         text:"Operational and financial performance analysis"
+      },
+      {
+        icon: ClipboardList,
+        text: "Operations and quality audits",
       }
     ],
     image: hotelRoomImage2,
@@ -108,7 +112,7 @@ const services: Service[] = [
       },
       {
         icon: Wrench,
-        text: "Design review and technical services",
+        text: "Design review and Pre-opening technical services",
       },
       {
         icon: DoorOpen,
@@ -148,7 +152,7 @@ const services: Service[] = [
     description:
       "Maximising F&B profitability through concept design, operational optimisation, and market-aligned positioning.",
     features: [
-      { icon: Target, text: "Market-led concept positioning" },
+      { icon: Target, text: "Market-led concept Development" },
       { icon: ChefHat, text: "Menu engineering and cost control" },
       { icon: BarChart3, text: "Outlet performance optimization" },
     ],

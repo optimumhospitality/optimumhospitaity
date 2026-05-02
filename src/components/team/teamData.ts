@@ -63,7 +63,7 @@ export const teamMembersData: TeamMemberData[] = [
     role: "Operations Director & Business Development",
     character: "Plays a pivotal role as an Owner Representative in ensuring harmonious collaboration.",
     about: [
-      "Khang is an experienced hospitality professional with extensive expertise in operations management and business development across Southeast Asia.",
+      "Khang is an experienced hospitality professional with extensive expertise in operations management and business development across south east asia- focusing on Vietnam and Indonesia.",
       "With a strong background in hotel operations, Khang has successfully led multiple property openings and operational turnarounds. His strategic approach to business development has helped expand Optimum Hospitality's presence in the Vietnamese market.",
       "Khang's deep understanding of local market dynamics and his ability to build strong relationships with stakeholders make him an invaluable asset to the team.",
       "His commitment to excellence and passion for the hospitality industry drives continuous improvement in all aspects of hotel operations."
@@ -159,7 +159,7 @@ export const teamMembersData: TeamMemberData[] = [
     role: "AI Strategy Partner, Vertize",
     character: "Innovative hospitality-focused technology entrepreneur with extensive experience",
     about: [
-      "Tom is an innovative hospitality-focused technology entrepreneur with extensive experience in AI strategy, automation, and digital transformation across hotels, resorts, and F&B concepts in Southeast Asia. His career spans commercial consulting, operational optimisation, and the development of advanced AI systems that enhance guest experience, streamline workflows, and unlock new revenue opportunities for operators and owners. Having lived in Vietnam for a total of +5 years, he has developed a strong understanding of the local business culture and the operational realities of the region’s hospitality industry.",
+      "Tom is an innovative hospitality-focused technology entrepreneur with extensive experience in AI strategy, automation, and digital transformation across hotels, resorts, and F&B concepts in south east asia- focusing on Vietnam and Indonesia. His career spans commercial consulting, operational optimisation, and the development of advanced AI systems that enhance guest experience, streamline workflows, and unlock new revenue opportunities for operators and owners. Having lived in Vietnam for a total of +5 years, he has developed a strong understanding of the local business culture and the operational realities of the region’s hospitality industry.",
       "After building Vertize into a specialised AI agency serving the hospitality sector, Tom partnered with Optimum Hospitality exclusivly to integrate next-generation AI capabilities into their advisory and management services. His work includes AI voice agents, automated service flows, digital concierge models, and data-driven operational intelligence, all designed to elevate service quality and improve financial performance. With hands-on collaboration with hotel teams across Vietnam, Tom brings a practical, results-driven approach that blends cultural insight with cutting-edge technology, helping properties operate more efficiently while preparing for the future of the industry.",
     ],
     image: tomBeirnaert,

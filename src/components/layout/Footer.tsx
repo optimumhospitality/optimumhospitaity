@@ -149,7 +149,7 @@ export default function Footer() {
                   <p>Chí Minh City · Vietnam</p> */}
                   <p>Ho Chi Minh City, Vietnam</p>
                   <p>Optimum Hospitality</p>
-                  <p>The Sentry, 15B/8 Le Thanh Ton,Saigon Ward</p>
+                  <p>The Sentry, 15B/8 Le Thanh Ton, Saigon Ward</p>
                   <p>Chí Minh City, Vietnam</p>
                 </div>
                 <div className="hidden min-[500px]:block w-[0.9px] bg-[#FFFFFF]/40 self-stretch -mr-2 sm:-mr-4 min-[750px]:-mr-6"></div>

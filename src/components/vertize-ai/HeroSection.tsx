@@ -40,7 +40,7 @@ export default function HeroSection() {
               In partnership with Vertize, Optimum Hospitality integrates
               advanced AI solutions into hotel operations to elevate guest
               experience, streamline workflows, and improve financial
-              performance across South East Asia.
+              performance across South East Asia focusing on Vietnam and Indonesia.
             </p>
 
             {/* CTA Buttons */}
