@@ -42,13 +42,13 @@ const caseStudies: CaseStudy[] = [
     achievement: "335-key, 5★ resort",
     image: roomImage2,
   },
-  {
-    id: 3,
-    hotelName: "Imperium Cam Ranh",
-    title: "E-commerce, distribution setup, revenue management",
-    achievement: "1450-key, 4★ luxury hotel",
-    image: roomImage3,
-  },
+  // {
+  //   id: 3,
+  //   hotelName: "Imperium Cam Ranh",
+  //   title: "E-commerce, distribution setup, revenue management",
+  //   achievement: "1450-key, 4★ luxury hotel",
+  //   image: roomImage3,
+  // },
   {
     id: 4,
     hotelName: "Alma Resort",
@@ -56,13 +56,13 @@ const caseStudies: CaseStudy[] = [
     achievement: "580-key, 5★ luxury hotel",
     image: roomImage4,
   },
-  {
-    id: 5,
-    hotelName: "Arena Hotel Nha Trang",
-    title: "E-commerce, distribution setup, revenue management",
-    achievement: "520-key, 5★ luxury hotel",
-    image: roomImage5,
-  },
+  // {
+  //   id: 5,
+  //   hotelName: "Arena Hotel Nha Trang",
+  //   title: "E-commerce, distribution setup, revenue management",
+  //   achievement: "520-key, 5★ luxury hotel",
+  //   image: roomImage5,
+  // },
   {
     id: 6,
     hotelName: "Angsana Ho Tram",
@@ -182,7 +182,7 @@ export default function HotelCaseStudy() {
           {/* Case Study Cards */}
           <div
             ref={cardsRef}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-4 md:gap-5 lg:gap-6 xl:gap-[24px]"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-4 md:gap-5 lg:gap-6 xl:gap-[24px]"
           >
             {caseStudies.map((study) => (
               <div
@@ -195,9 +195,8 @@ export default function HotelCaseStudy() {
                 <img
                   src={study.image}
                   alt={study.hotelName}
-                  className={`w-full h-full object-cover transition-transform duration-500 ${
-                    hoveredCard === study.id ? "scale-110" : "scale-100"
-                  }`}
+                  className={`w-full h-full object-cover transition-transform duration-500 ${hoveredCard === study.id ? "scale-110" : "scale-100"
+                    }`}
                 />
 
                 {/* Gradient Overlay */}
@@ -205,10 +204,10 @@ export default function HotelCaseStudy() {
 
                 {/* Content */}
                 <div className="absolute bottom-0 left-0 right-0 p-4 min-[500px]:p-3 sm:p-4 md:p-5 min-[900px]:p-6 lg:p-7 xl:p-8">
-                  <p className="text-[14px] min-[500px]:text-[10px] sm:text-[11px] md:text-[13px] min-[900px]:text-[16px] lg:text-[18px] xl:text-[22px] min-[1400px]:text-[24px] text-white/80 mb-1">
+                  <p className="text-[12px] min-[500px]:text-[10px] sm:text-[11px] md:text-[13px] min-[900px]:text-[16px] lg:text-[18px] xl:text-[22px] min-[1400px]:text-[28px] text-white/80 mb-1">
                     {study.hotelName}
                   </p>
-                  <h3 className="text-[18px] min-[500px]:text-[11px] sm:text-[13px] md:text-[16px] min-[900px]:text-[22px] lg:text-[26px] xl:text-[32px] min-[1400px]:text-[36px] font-semibold mb-1 leading-tight">
+                  <h3 className="text-[18px] min-[500px]:text-[11px] sm:text-[13px] md:text-[16px] min-[900px]:text-[22px] lg:text-[22px] xl:text-[26px] min-[1400px]:text-[36px] font-semibold mb-1 leading-tight">
                     {study.title}
                   </h3>
                   <p className="text-[14px] min-[500px]:text-[10px] sm:text-[11px] md:text-[13px] min-[900px]:text-[16px] lg:text-[18px] xl:text-[22px] min-[1400px]:text-[24px] text-white/70">
@@ -266,11 +265,10 @@ export default function HotelCaseStudy() {
                   <img
                     src={partner.logo}
                     alt={partner.name}
-                    className={`w-full object-contain filter brightness-0 invert opacity-90 ${
-                      index === 0
+                    className={`w-full object-contain filter brightness-0 invert opacity-90 ${index === 0
                         ? "h-20 min-[500px]:h-18 sm:h-22 md:h-38"
                         : "h-6 min-[500px]:h-5 sm:h-8 md:h-14"
-                    }`}
+                      }`}
                   />
                 </div>
               ))}
