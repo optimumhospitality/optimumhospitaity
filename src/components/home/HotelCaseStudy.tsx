@@ -8,9 +8,9 @@ gsap.registerPlugin(ScrollTrigger);
 // import type { LucideIcon } from "lucide-react";
 import roomImage1 from "../../assets/image/home-page/hotel-caseStudies/roomImage1.webp";
 import roomImage2 from "../../assets/image/home-page/hotel-caseStudies/roomImage2.webp";
-import roomImage3 from "../../assets/image/home-page/hotel-caseStudies/roomImage3.webp";
+// import roomImage3 from "../../assets/image/home-page/hotel-caseStudies/roomImage3.webp";
 import roomImage4 from "../../assets/image/home-page/hotel-caseStudies/roomImage4.webp";
-import roomImage5 from "../../assets/image/home-page/hotel-caseStudies/roomImage5.webp";
+// import roomImage5 from "../../assets/image/home-page/hotel-caseStudies/roomImage5.webp";
 import roomImage6 from "../../assets/image/home-page/hotel-caseStudies/angsana.webp";
 // import gopImageHomeSection from "../../assets/image/home-page/hotel-caseStudies/gopImageHomeSection.webp";
 
