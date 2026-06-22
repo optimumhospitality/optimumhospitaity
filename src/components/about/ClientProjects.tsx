@@ -22,10 +22,11 @@ const projects = [
   },
  {
     // id: 3,
-    quote: "Optimum's pre-opening planning and technical services ensured a smooth launch, robust systems, and operational readiness across every discipline.",
+    // quote: "Optimum's pre-opening planning and technical services ensured a smooth launch, robust systems, and operational readiness across every discipline.",
     title: "Pre-Opening & Technical Services",
     hotelName: "The Leah Hanoi, Vietnam",
     image: hotelimage4,
+    details: "95-keys, 5★ Hotel",
   },
   {
     image: CaseStudy4,
