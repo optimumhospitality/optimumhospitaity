@@ -1,9 +1,10 @@
 import CaseStudy1 from "../../assets/image/home-page/hotel-caseStudies/roomImage1.webp";
 import CaseStudy2 from "../../assets/image/home-page/hotel-caseStudies/roomImage2.webp";
-import CaseStudy3 from "../../assets/image/home-page/hotel-caseStudies/roomImage3.webp";
+// import CaseStudy3 from "../../assets/image/home-page/hotel-caseStudies/roomImage3.webp";
 import CaseStudy4 from "../../assets/image/home-page/hotel-caseStudies/roomImage4.webp";
 import CaseStudy5 from "../../assets/image/home-page/hotel-caseStudies/roomImage5.webp";
 import CaseStudy6 from "../../assets/image/home-page/hotel-caseStudies/angsana.webp";
+import hotelimage4 from "../../assets/image/home-page/testimonial/leah.webp";
 
 const projects = [
   {
@@ -16,14 +17,15 @@ const projects = [
   {
     image: CaseStudy2,
     hotelName: "Caravelle Hotel Saigon",
-    title: "Management, Renovation project management",
+    title: "Full Hotel Management and Renovation Project Management",
     details: "335-key, 5★ resort",
   },
-  {
-    image: CaseStudy3,
-    hotelName: "Imperium Cam Ranh",
-    title: "E-commerce, distribution setup, revenue management",
-    details: "1450-key, 4★ luxury hotel",
+ {
+    // id: 3,
+    quote: "Optimum's pre-opening planning and technical services ensured a smooth launch, robust systems, and operational readiness across every discipline.",
+    title: "Pre-Opening & Technical Services",
+    hotelName: "The Leah Hanoi, Vietnam",
+    image: hotelimage4,
   },
   {
     image: CaseStudy4,
@@ -40,8 +42,8 @@ const projects = [
    {
     image:CaseStudy6,
     hotelName:"Angsana Ho Tram ",
-    title: " E-commerce, distribution setup for Asset management",
-    details: "600-key, 4★ luxury hotel"
+    title: " Asset Management",
+    details: "52 Villas, 5★ & 162-key, 4★"
   }
 ];
 
@@ -78,8 +80,8 @@ export default function ClientProjects() {
 
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
-                <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-5 md:p-6 text-white">
-                  <p className="text-[16px] sm:text-[16px] text-white/80 mb-1 sm:mb-2 lg:text-[20px]">
+                <div className="absolute bottom-0 left-0 right-0 h-[40%] p-4 sm:p-5 md:p-6 text-white flex flex-col justify-start">
+                  <p className="text-[16px] sm:text-[16px] text-white/80 mb-1 sm:mb-2 lg:text-[20px] mt-auto sm:mt-0">
                     {project.hotelName}
                   </p>
                   <h3 className="text-[18px] sm:text-[18px] md:text-[20px] lg:text-[24px] font-semibold mb-1 sm:mb-2 leading-tight">

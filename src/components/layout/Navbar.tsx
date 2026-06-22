@@ -5,15 +5,16 @@ import { useLocomotiveScroll } from "../LocomotiveScrollProvider";
 
 // Services data matching CoreHotelManagement.tsx
 const servicesData = [
+  {
+    name: "Hotel Advisory, Feasibility and Pre-Opening Support",
+    href: "/services/project-development",
+  },
   { name: "Independent Hotel Management", href: "/services/hotel-management" },
   {
     name: "Asset Management and Owner Representation",
     href: "/services/asset-management",
   },
-  {
-    name: "Hotel Advisory, Feasibility and Pre-Opening Support",
-    href: "/services/project-development",
-  },
+  
   {
     name: "Food and Beverage Strategy and Concept Development",
     href: "/services/fb-concept-curation",

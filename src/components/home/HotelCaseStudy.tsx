@@ -38,7 +38,7 @@ const caseStudies: CaseStudy[] = [
   {
     id: 2,
     hotelName: "Caravelle Hotel Saigon",
-    title: "Management, Renovation project management",
+    title: "Full Hotel Management and Renovation Project Management",
     achievement: "335-key, 5★ resort",
     image: roomImage2,
   },
@@ -66,8 +66,8 @@ const caseStudies: CaseStudy[] = [
   {
     id: 6,
     hotelName: "Angsana Ho Tram",
-    title: "E-commerce, distribution setup for Asset management",
-    achievement: "600-key, 4★ luxury hotel",
+    title: "Asset Management",
+    achievement: "52 Villas, 5★ & 162-key, 4★",
     image: roomImage6,
   },
 ];
@@ -203,8 +203,8 @@ export default function HotelCaseStudy() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
 
                 {/* Content */}
-                <div className="absolute bottom-0 left-0 right-0 p-4 min-[500px]:p-3 sm:p-4 md:p-5 min-[900px]:p-6 lg:p-7 xl:p-8">
-                  <p className="text-[12px] min-[500px]:text-[10px] sm:text-[11px] md:text-[13px] min-[900px]:text-[16px] lg:text-[18px] xl:text-[22px] min-[1400px]:text-[28px] text-white/80 mb-1">
+                <div className="absolute bottom-0 left-0 right-0 h-[65%] p-4 min-[500px]:p-3 sm:p-4 md:p-5 min-[900px]:p-6 lg:p-7 xl:p-8 flex flex-col justify-start">
+                  <p className="text-[12px] min-[500px]:text-[10px] sm:text-[11px] md:text-[13px] min-[900px]:text-[16px] lg:text-[18px] xl:text-[22px] min-[1400px]:text-[28px] text-white/80 mb-1 mt-auto sm:mt-0">
                     {study.hotelName}
                   </p>
                   <h3 className="text-[18px] min-[500px]:text-[11px] sm:text-[13px] md:text-[16px] min-[900px]:text-[22px] lg:text-[22px] xl:text-[26px] min-[1400px]:text-[36px] font-semibold mb-1 leading-tight">
@@ -213,24 +213,6 @@ export default function HotelCaseStudy() {
                   <p className="text-[14px] min-[500px]:text-[10px] sm:text-[11px] md:text-[13px] min-[900px]:text-[16px] lg:text-[18px] xl:text-[22px] min-[1400px]:text-[24px] text-white/70">
                     {study.achievement}
                   </p>
-
-                  {/* View Case Study Button */}
-                  {/* <button className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary text-white text-xs sm:text-sm font-semibold rounded-md hover:bg-primary/90 transition-colors">
-                    VIEW CASE STUDY
-                    <svg
-                      className="w-4 h-4"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M17 8l4 4m0 0l-4 4m4-4H3"
-                      />
-                    </svg>
-                  </button> */}
                 </div>
               </div>
             ))}

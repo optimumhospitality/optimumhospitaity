@@ -64,6 +64,31 @@ const serviceSlugs = [
 const services: Service[] = [
   {
     id: 1,
+    title: "Hotel Advisory, Feasibility and Pre-Opening Support",
+    description:
+      "From concept to opening, we guide owners through feasibility studies, development strategy, and operational readiness.",
+    features: [
+      {
+        icon: Target,
+        text: "Feasibility studies and market analysis",
+      },
+      {
+        icon: Wrench,
+        text: "Design review and Pre-opening technical services",
+      },
+      {
+        icon: DoorOpen,
+        text: "Pre-opening leadership and budget control",
+      },
+      {
+        icon:ClipboardList,
+        text:"Operations Audit with Property Improvement Plan (PIP)"
+      }
+    ],
+    image: hotelRoomImage3,
+  },
+  {
+    id: 2,
     title: "Independent Hotel Management",
     description:
       "Hands-on hotel management that prioritises owner returns, operational discipline, and long-term asset value, with or without a brand affiliation.",
@@ -75,7 +100,7 @@ const services: Service[] = [
     image: hotelRoomImage1,
   },
   {
-    id: 2,
+    id: 3,
     title: "Asset Management and Owner Representation",
     description:
       "Protecting owner interests through financial oversight, operator performance monitoring, and strategic decision support.",
@@ -100,31 +125,7 @@ const services: Service[] = [
     ],
     image: hotelRoomImage2,
   },
-  {
-    id: 3,
-    title: "Hotel Advisory, Feasibility and Pre-Opening Support",
-    description:
-      "From concept to opening, we guide owners through feasibility studies, development strategy, and operational readiness.",
-    features: [
-      {
-        icon: Target,
-        text: "Feasibility studies and market analysis",
-      },
-      {
-        icon: Wrench,
-        text: "Design review and Pre-opening technical services",
-      },
-      {
-        icon: DoorOpen,
-        text: "Pre-opening leadership and budget control",
-      },
-      {
-        icon:ClipboardList,
-        text:"Operations Audit with Property Improvement Plan (PIP)"
-      }
-    ],
-    image: hotelRoomImage3,
-  },
+  
   // {
   //   id: 4,
   //   title: "Hotel & Resort Consulting",
